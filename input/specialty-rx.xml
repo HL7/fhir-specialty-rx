@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide
+    xmlns="http://hl7.org/fhir">
+    <id value="specialty-rx"/>
+    <meta>
+        <lastUpdated value="2020-03-24T02:23:04.509+00:00"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div>This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.</div>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/ncpdp/ImplementationGuide/specialty-rx"/>
+    <version value="0.1.00"/>
+    <name value="SpecialtyRx"/>
+    <title value="Specialty Medication Prescribing"/>
+    <status value="draft"/>
+    <publisher value="NCPDP"/>
+    <contact>
+        <name value="HL7 International - Pharmacy"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/medication"/>
+        </telecom>
+    </contact>
+    <contact>
+      <name value="Frank McKinney" />
+      <telecom>
+        <system value="email" />
+        <value value="frank.mckinney@pocp.com" />
+      </telecom>
+    </contact>
+    <description value="This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others." />
+    <jurisdiction>
+      <coding>
+        <system value="urn:iso:std:iso:3166" />
+        <code value="US" />
+        <display value="United States of America" />
+      </coding>
+    </jurisdiction>
+    <packageId value="hl7.fhir.us.specialty-rx"/>
+    <fhirVersion value="4.0.1"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="current"/>
+    </dependsOn>
+    <definition>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-patient"/>
+	      <display value="SpecialtyRxPatient"/>
+	    </reference>
+	    <name value="SpecialtyRxPatient"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-prescription"/>
+	      <display value="SpecialtyRxPrescription"/>
+	    </reference>
+	    <name value="SpecialtyRxPrescription"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-practitioner"/>
+	      <display value="SpecialtyRxPractitioner"/>
+	    </reference>
+	    <name value="SpecialtyRxPractitioner"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-condition"/>
+	      <display value="SpecialtyRxCondition"/>
+	    </reference>
+	    <name value="SpecialtyRxCondition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
+	      <display value="SpecialtyRxAllergyIntolerance"/>
+	    </reference>
+	    <name value="SpecialtyRxAllergyIntolerance"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-location"/>
+	      <display value="SpecialtyRxLocation"/>
+	    </reference>
+	    <name value="SpecialtyRxLocation"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+	  <page>
+	    <nameUrl value="index.html"/>
+	    <title value="IG Home Page"/>
+	    <generation value="html"/>
+	  </page>
+	  <!--
+	  <page>
+	    <nameUrl value="downloads.html"/>
+	    <title value="Downloads"/>
+	    <generation value="html"/>
+	  </page>
+	  -->
+	  <parameter>
+	    <code value="copyrightyear"/>
+	    <value value="2020+"/>
+	  </parameter>
+	  <parameter>
+	    <code value="releaselabel"/>
+	    <value value="CI Build"/>
+	  </parameter>
+	</definition>
+</ImplementationGuide>

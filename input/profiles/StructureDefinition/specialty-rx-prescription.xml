@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="specialty-rx-prescription"/>
+    <meta>
+        <lastUpdated value="2020-03-24T02:25:52.808+00:00"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-prescription"/>
+    <version value="0.1.00"/>
+    <name value="SpecialtyRxPrescription"/>
+    <title value="Specialty Prescription Prescription"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <date value="2020-03-20"/>
+    <publisher value="NCPDP"/>
+    <fhirVersion value="4.0.1"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MedicationRequest"/>
+    <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MedicationRequest">
+            <path value="MedicationRequest"/>
+        </element>
+    </differential>
+</StructureDefinition>

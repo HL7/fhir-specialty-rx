@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               url="http://hl7.org/fhir/us/ncpdp"
+               ciUrl="http://build.fhir.org/ig/HL7/specialty-rx"
+               defaultWorkgroup="pharm"
+               defaultVersion="current"
+               xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
+               ballotUrl="http://hl7.org/fhir/us/specialty-rx/2020Aug">
+   <version code="current" url="http://build.fhir.org/ig/HL7/specialty-rx"/>
+   <version code="0.1.0" url="http://hl7.org/fhir/us/specialty-rx/2020Aug"/>
+   <artifactPageExtension value="-definitions"/>
+   <artifactPageExtension value="-examples"/>
+   <artifactPageExtension value="-mappings"/>
+   <artifact name="SpecialtyRxPatient"
+             key="StructureDefinition-specialty-rx-patient"
+             id="StructureDefinition/specialty-rx-patient"/>
+   <artifact name="SpecialtyRxPrescription"
+             key="StructureDefinition-specialty-rx-prescription"
+             id="StructureDefinition/specialty-rx-prescription"/>
+   <artifact name="SpecialtyRxPractitioner"
+             key="StructureDefinition-specialty-rx-practitioner"
+             id="StructureDefinition/specialty-rx-practitioner"/>
+   <artifact name="SpecialtyRxCondition"
+             key="StructureDefinition-specialty-rx-condition"
+             id="StructureDefinition/specialty-rx-condition"/>
+   <artifact name="SpecialtyRxAllergyIntolerance"
+             key="StructureDefinition-specialty-rx-allergyintolerance"
+             id="StructureDefinition/specialty-rx-allergyintolerance"/>
+   <artifact name="SpecialtyRxLocation"
+             key="StructureDefinition-specialty-rx-location"
+             id="StructureDefinition/specialty-rx-location"/>
+   <page name="(NA)" key="NA"/>
+   <page name="(many)" key="many"/>
+   <page name="Table of Contents" key="toc"/>
+   <page name="IG Home Page" key="index"/>
+   <page name="Artifacts Summary" key="artifacts"/>
+</specification>
