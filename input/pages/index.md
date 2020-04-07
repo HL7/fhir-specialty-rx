@@ -49,5 +49,9 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Mar 20, 2020</td>
 		<td>Initial structure and content</td>
   	  </tr>
+  	  <tr>
+		<td>Apr 6, 2020</td>
+		<td>Additional content: Workflow page, refined profiles and examples for MedicationRequest, Patient, Practitioner, Condition, AllergyIntolerance </td>
+  	  </tr>
 	</tbody>
   </table>
