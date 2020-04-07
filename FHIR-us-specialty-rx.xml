@@ -7,31 +7,68 @@
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
                ballotUrl="http://hl7.org/fhir/us/specialty-rx/2020Aug">
    <version code="current" url="http://build.fhir.org/ig/HL7/specialty-rx"/>
-   <version code="0.1.0" url="http://hl7.org/fhir/us/specialty-rx/2020Aug"/>
+   <version code="0.1.00" url="http://hl7.org/fhir/us/specialty-rx/2020Aug"/>
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>
    <artifactPageExtension value="-mappings"/>
    <artifact name="SpecialtyRxPatient"
              key="StructureDefinition-specialty-rx-patient"
              id="StructureDefinition/specialty-rx-patient"/>
-   <artifact name="SpecialtyRxPrescription"
-             key="StructureDefinition-specialty-rx-prescription"
-             id="StructureDefinition/specialty-rx-prescription"/>
+   <artifact name="SpecialtyRxMedicationRequest"
+             key="StructureDefinition-specialty-rx-medicationrequest"
+             id="StructureDefinition/specialty-rx-medicationrequest"/>
    <artifact name="SpecialtyRxPractitioner"
              key="StructureDefinition-specialty-rx-practitioner"
              id="StructureDefinition/specialty-rx-practitioner"/>
    <artifact name="SpecialtyRxCondition"
              key="StructureDefinition-specialty-rx-condition"
              id="StructureDefinition/specialty-rx-condition"/>
+   <artifact name="SpecialtyRxPractitionerRole"
+             key="StructureDefinition-specialty-rx-practitionerrole"
+             id="StructureDefinition/specialty-rx-practitionerrole"/>
    <artifact name="SpecialtyRxAllergyIntolerance"
              key="StructureDefinition-specialty-rx-allergyintolerance"
              id="StructureDefinition/specialty-rx-allergyintolerance"/>
+   <artifact name="SpecialtyRxOrganization"
+             key="StructureDefinition-specialty-rx-organization"
+             id="StructureDefinition/specialty-rx-organization"/>
    <artifact name="SpecialtyRxLocation"
              key="StructureDefinition-specialty-rx-location"
              id="StructureDefinition/specialty-rx-location"/>
+   <artifact name="Specialty Rx Patient 1"
+             key="Patient-specialty-rx-patient-1"
+             id="Patient/specialty-rx-patient-1"/>
+   <artifact name="Specialty Rx Allergy/Intolerance 1"
+             key="AllergyIntolerance-specialty-rx-allergyintolerance-1"
+             id="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
+   <artifact name="Specialty Rx Practitioner 1"
+             key="Practitioner-specialty-rx-practitioner-1"
+             id="Practitioner/specialty-rx-practitioner-1"/>
+   <artifact name="Specialty Rx Condition 1"
+             key="Condition-specialty-rx-condition-1"
+             id="Condition/specialty-rx-condition-1"/>
+   <artifact name="Specialty Rx Medication Request 1"
+             key="MedicationRequest-specialty-rx-medicationrequest-1"
+             id="MedicationRequest/specialty-rx-medicationrequest-1"/>
+   <artifact name="Specialty Rx Medication Direct Endpoint 1"
+             key="Endpoint-specialty-rx-endpoint-direct-1"
+             id="Endpoint/specialty-rx-endpoint-direct-1"/>
+   <artifact name="Specialty Rx Practitioner Role 1"
+             key="PractitionerRole-specialty-rx-practitionerrole-1"
+             id="PractitionerRole/specialty-rx-practitionerrole-1"/>
+   <artifact name="Specialty Rx Organization 1"
+             key="Organization-specialty-rx-organization-1"
+             id="Organization/specialty-rx-organization-1"/>
+   <artifact name="Specialty Rx Location 1"
+             key="Location-specialty-rx-location-1"
+             id="Location/specialty-rx-location-1"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc"/>
    <page name="IG Home Page" key="index"/>
+   <page name="Workflow Scenarios" key="workflow"/>
+   <page name="Terminology" key="terminology"/>
+   <page name="Capability Statements" key="capstatements"/>
+   <page name="Downloads" key="downloads"/>
    <page name="Artifacts Summary" key="artifacts"/>
 </specification>

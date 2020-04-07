@@ -53,5 +53,9 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Apr 6, 2020</td>
 		<td>Additional content: Workflow page, refined profiles and examples for MedicationRequest, Patient, Practitioner, Condition, AllergyIntolerance </td>
   	  </tr>
+  	  <tr>
+		<td>Apr 7, 2020</td>
+		<td>Additional content: profiles and examples for PractitionerRole, Endpoint, Organization, Location, Endpoint</td>
+  	  </tr>
 	</tbody>
   </table>

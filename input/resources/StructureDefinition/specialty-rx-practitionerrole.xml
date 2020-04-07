@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-practitionerrole" />
+  <meta>
+    <lastUpdated value="2020-03-24T02:25:52.808+00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitionerrole" />
+  <version value="0.1.00" />
+  <name value="SpecialtyRxPractitionerRole" />
+  <title value="Specialty Prescription Practitioner Role" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-03-20" />
+  <publisher value="NCPDP" />
+  <description value="This profile tailors the Practitioner Role resource to support specialty medication dispensing and enrollment in related programs." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole">
+      <path value="PractitionerRole" />
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="openAtEnd" />
+      </slicing>
+      <type>
+        <code value="ContactPoint" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.system">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.value">
+      <path value="PractitionerRole.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:WorkPhone">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="WorkPhone" />
+      <min value="0" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.system:WorkPhone">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+      <fixedCode value="phone" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.use:WorkPhone">
+      <path value="PractitionerRole.telecom.use" />
+      <min value="1" />
+      <fixedCode value="work" />
+    </element>
+    <element id="PractitionerRole.telecom:Email">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="Email" />
+      <min value="0" id="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.system:Email">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+      <fixedCode value="email" />
+    </element>
+    <element id="PractitionerRole.telecom:Fax">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="Fax" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom.system:Fax">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+      <fixedCode value="fax" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -82,10 +82,26 @@
 	  </resource>
   	  <resource>
 	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-practitionerrole"/>
+	      <display value="SpecialtyRxPractitionerRole"/>
+	    </reference>
+	    <name value="SpecialtyRxPractitionerRole"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
 	      <display value="SpecialtyRxAllergyIntolerance"/>
 	    </reference>
 	    <name value="SpecialtyRxAllergyIntolerance"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-organization"/>
+	      <display value="SpecialtyRxOrganization"/>
+	    </reference>
+	    <name value="SpecialtyRxOrganization"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -139,6 +155,42 @@
             </reference>
             <name value="Specialty Rx Medication Request 1"/>
             <description value="An example medication request illustrating required elements in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Endpoint/specialty-rx-endpoint-direct-1"/>
+                <display value="specialty-rx-endpoint-direct-1"/>
+            </reference>
+            <name value="Specialty Rx Medication Direct Endpoint 1"/>
+            <description value="An example endpoint illustrating a practitioner's Direct Project address in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="PractitionerRole/specialty-rx-practitionerrole-1"/>
+                <display value="specialty-rx-practitionerrole-1"/>
+            </reference>
+            <name value="Specialty Rx Practitioner Role 1"/>
+            <description value="An example endpoint illustrating a practitioner's office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Organization/specialty-rx-organization-1"/>
+                <display value="specialty-rx-organization-1"/>
+            </reference>
+            <name value="Specialty Rx Organization 1"/>
+            <description value="An example endpoint illustrating a provider organization in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Location/specialty-rx-location-1"/>
+                <display value="specialty-rx-location-1"/>
+            </reference>
+            <name value="Specialty Rx Location 1"/>
+            <description value="An example endpoint illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
       <page>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PractitionerRole xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-practitionerrole-1" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitionerrole" />
+  </meta>
+  <practitioner>
+    <reference value="Practitioner/specialty-rx-practitioner-1" />
+    <display value="Jane Smith MD" />
+  </practitioner>
+  <organization>
+    <reference value="Organization/specialty-rx-organization-1" />
+    <display value="Our Clinics" />
+  </organization>
+  <code>
+    <coding>
+      <system value="http://nucc.org/provider-taxonomy" />
+      <code value="261QP2300X" />
+      <display value="Primary Care" />
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="394814009" />
+      <display value="General practice (specialty)" />
+    </coding>
+  </specialty>
+  <location>
+    <reference value="Location/specialty-rx-location-1" />
+    <display value="Our Clinics - West Metro Office" />
+  </location>
+  <endpoint>
+    <reference value="Endpoint/specialty-rx-endpoint-direct-1" />
+    <display value="Jane.Smith.MD@direct.example.org" />
+  </endpoint>
+</PractitionerRole>
