@@ -1,0 +1,44 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="overview"> </a>
+  <h3>Overview</h3>
+  <p>
+    This FHIR implementation Guide describes the exchange of data (demographic, prescription, clinical and financial) for dispensing specialty medications by pharmacies as well as facilitating enrollment of patients in programs offered by third parties such as but not limited to Hub vendors and Pharmaceutical manufacturers.
+  </p>
+  <p>
+	This guide is co-branded between HL7 and the National Council for Prescription Drug Programs (NCPDP)
+  </p>
+  <a name="scope"> </a>
+  <h3>Scope of this guide</h3>
+  <p>
+    This guide is intended be used in the United States. It reflects US pharmacy processes and conventions.
+  </p>  
+  <a name="authors"> </a>
+  <h3>Authors</h3>
+  <table>
+    <tbody>
+	  <tr>
+		<td>HL7 Pharmacy Workgroup</td>
+		<td></td>
+  	  </tr>
+	  <tr>
+		<td>NCPDP Workgroup 18</td>
+		<td>Specialty Requirements for ePrescribing Taskgroup</td>
+  	  </tr>
+	  <tr>
+		<td>Frank McKinney</td>
+		<td><a href="mailto:frank.mckinney@pocp.com">frank.mckinney@pocp.com</a></td>
+	  </tr>
+	</tbody>
+  </table>
+  <a name="changes"> </a>
+  <h3>Change log</h3>
+  <table>
+    <tbody>
+	  <tr>
+		<td>Mar 20, 2020</td>
+		<td>Initial structure and content</td>
+  	  </tr>
+	</tbody>
+  </table>
+</div>

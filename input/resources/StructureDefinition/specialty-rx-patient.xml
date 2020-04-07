@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-patient" />
+  <meta>
+    <lastUpdated value="2020-04-02T19:08:32.041+00:00" />
+  </meta>
+  <text>
+    <status value="additional" />
+    <div xmlns="http://www.w3.org/1999/xhtml">This profile tailors the Patient resource for carrying the patient information needed to support specialty medication dispensing and enrollment in related programs.         </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+  <version value="0.1.00" />
+  <name value="SpecialtyRxPatient" />
+  <title value="Specialty Prescription Patient" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-03-20" />
+  <publisher value="NCPDP" />
+  <description value="This profile tailors the Patient resource for carrying the patient information needed to support specialty medication dispensing and enrollment in related programs." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="Identifier" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="uri" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:SsnLast4">
+      <path value="Patient.identifier" />
+      <sliceName value="SsnLast4" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+      <patternIdentifier>
+        <system value="http://example.org/ssn-last-4" />
+      </patternIdentifier>
+      <maxLength value="4" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <min value="1" />
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <min value="1" />
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <min value="1" />
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.line">
+      <path value="Patient.address.line" />
+      <min value="1" />
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.state">
+      <path value="Patient.address.state" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.postalCode">
+      <path value="Patient.address.postalCode" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

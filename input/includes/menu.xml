@@ -2,35 +2,31 @@
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="https://www.google.com">Menu item</a>
-      </li>
-      <li>
-        <a href="https://www.google.com">Menu item</a>
+        <a href="workflow.html">Workflow</a>
       </li>
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="https://www.google.com">Menu item</a>
+        <a href="artifacts.html">Profiles and Extensions</a>
       </li>
       <li>
-        <a href="https://www.google.com">Menu item</a>
+        <a href="terminology.html">Terminology</a>
       </li>
       <li>
-        <a href="https://www.google.com">Menu item</a>
+        <a href="capstatements.html">Capability Statements</a>
       </li>
     </ul>
   </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
@@ -40,9 +36,7 @@
         <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
       </li>
       <li>
-      	<!--
         <a href="downloads.html">Downloads</a>
-        -->
       </li>
     </ul>
   </li>

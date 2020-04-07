@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-condition-1" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-condition" />
+  </meta>
+  <clinicalStatus> 
+    <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/> 
+      <code value="active"/> 
+    </coding> 
+  </clinicalStatus> 
+
+  <verificationStatus> 
+    <coding> 
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/> 
+      <code value="confirmed"/> 
+    </coding> 
+  </verificationStatus> 
+  <category> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="439401001"/> 
+      <display value="diagnosis"/> 
+    </coding> 
+  </category> 
+  <severity> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="6736007"/> 
+      <display value="Moderate"/> 
+    </coding> 
+  </severity> 
+  <code> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="368009"/> 
+      <display value="Heart valve disorder"/> 
+    </coding> 
+  </code> 
+  <bodySite> 
+    <coding> 
+      <system value="http://snomed.info/sct"/> 
+      <code value="40768004"/> 
+      <display value="Left thorax"/> 
+    </coding> 
+    <text value="heart structure"/> 
+  </bodySite> 
+  <subject> 
+    <reference value="Patient/specialty-rx-patient-1"/> 
+    <display value="Timothy Doe"/> 
+  </subject> 
+<onsetDateTime value="2017-10-01"/>
+  <recordedDate value="2017-10-05"/> 
+  <asserter> 
+    <reference value="Practitioner/specialty-rx-practitioner-1"/> 
+    <display value="Jane Smith"/> 
+  </asserter> 
+  <evidence> 
+    <code> 
+      <coding> 
+        <system value="http://snomed.info/sct"/> 
+        <code value="426396005"/> 
+        <display value="Cardiac chest pain"/> 
+      </coding> 
+    </code> 
+  </evidence> 
+</Condition> 

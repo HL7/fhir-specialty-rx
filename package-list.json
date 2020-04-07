@@ -1,7 +1,7 @@
 ﻿{
    "package-id": "hl7.fhir.us.specialty-rx",
    "title": "Specialty Medication Prescribing",
-   "canonical": "http://hl7.org/fhir/us/specialty-rx",
+   "canonical": "http://hl7.org/fhir/us/ncpdp",
    "introduction": "his implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.",
    "list": [
       {

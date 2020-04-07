@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-practitioner" />
+  <meta>
+    <lastUpdated value="2020-03-24T02:25:52.808+00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
+  <version value="0.1.00" />
+  <name value="SpecialtyRxPractitioner" />
+  <title value="Specialty Prescription Practitioner" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-03-20" />
+  <publisher value="NCPDP" />
+  <description value="This profile tailors the Practitioner resource to support specialty medication dispensing and enrollment in related programs." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Practitioner" />
+  <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Practitioner">
+      <path value="Practitioner" />
+    </element>
+    <element id="Practitioner.name.given">
+      <path value="Practitioner.name.given" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom">
+      <path value="Practitioner.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="openAtEnd" />
+      </slicing>
+      <min value="1" />
+      <type>
+        <code value="ContactPoint" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom.system">
+      <path value="Practitioner.telecom.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom.value">
+      <path value="Practitioner.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom:HomePhone">
+      <path value="Practitioner.telecom" />
+      <sliceName value="HomePhone" />
+      <min value="1" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom.system:HomePhone">
+      <path value="Practitioner.telecom.system" />
+      <min value="1" />
+      <fixedCode value="phone" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom:Email">
+      <path value="Practitioner.telecom" />
+      <sliceName value="Email" />
+      <min value="0" id="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom.system:Email">
+      <path value="Practitioner.telecom.system" />
+      <min value="1" />
+      <fixedCode value="email" />
+    </element>
+    <element id="Practitioner.telecom:Fax">
+      <path value="Practitioner.telecom" />
+      <sliceName value="Fax" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.telecom.system:Fax">
+      <path value="Practitioner.telecom.system" />
+      <min value="1" />
+      <fixedCode value="fax" />
+    </element>
+    <element id="Practitioner.address">
+      <path value="Practitioner.address" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.address.line">
+      <path value="Practitioner.address.line" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.address.city">
+      <path value="Practitioner.address.city" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.address.state">
+      <path value="Practitioner.address.state" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.address.postalCode">
+      <path value="Practitioner.address.postalCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.qualification">
+      <path value="Practitioner.qualification" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
