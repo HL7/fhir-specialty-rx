@@ -1,0 +1,125 @@
+{
+  "package": "hl7.fhir.us.specialty-rx",
+  "version": "0.1.00",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "US",
+  "extensions": [],
+  "profiles": {
+    "AllergyIntolerance": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance",
+        "title": "Specialty Prescription Allergy Intolerance"
+      }
+    ],
+    "CareTeam": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-careteam",
+        "title": "Specialty Prescription Care Team"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-condition",
+        "title": "Specialty Prescription Condition"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-lab-observation",
+        "title": "Specialty Prescription Lab Observation"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-location",
+        "title": "Specialty Prescription Location"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest",
+        "title": "Specialty Prescription Prescription"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient",
+        "title": "Specialty Prescription Patient"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-provider-organization",
+        "title": "Specialty Prescription Provider Organization"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner",
+        "title": "Specialty Prescription Practitioner"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitionerrole",
+        "title": "Specialty Prescription Practitioner Role"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-relatedperson",
+        "title": "Specialty Prescription Related Person"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race": [
+      "Patient"
+    ]
+  }
+}

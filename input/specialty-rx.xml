@@ -98,10 +98,10 @@
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-organization"/>
-	      <display value="SpecialtyRxOrganization"/>
+	      <reference value="StructureDefinition/specialty-rx-provider-organization"/>
+	      <display value="SpecialtyRxProviderOrganization"/>
 	    </reference>
-	    <name value="SpecialtyRxOrganization"/>
+	    <name value="SpecialtyRxProviderOrganization"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -112,7 +112,39 @@
 	    <name value="SpecialtyRxLocation"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
-	  <resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-careteam"/>
+	      <display value="SpecialtyRxCareTeam"/>
+	    </reference>
+	    <name value="SpecialtyRxCareTeam"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-relatedperson"/>
+	      <display value="SpecialtyRxRelatedPerson"/>
+	    </reference>
+	    <name value="SpecialtyRxRelatedPerson"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-payor-organization"/>
+	      <display value="SpecialtyRxPayorOrganization"/>
+	    </reference>
+	    <name value="SpecialtyRxPayorOrganization"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-lab-observation"/>
+	      <display value="SpecialtyRxLabObservation"/>
+	    </reference>
+	    <name value="SpecialtyRxLabObservation"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+	  	  <resource>
 	      <reference>
 	        <reference value="Patient/specialty-rx-patient-1"/>
                 <display value="specialty-rx-patient-1"/>
@@ -177,8 +209,8 @@
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Organization/specialty-rx-organization-1"/>
-                <display value="specialty-rx-organization-1"/>
+	        <reference value="Organization/specialty-rx-provider-organization-1"/>
+                <display value="specialty-rx-provider-organization-1"/>
             </reference>
             <name value="Specialty Rx Organization 1"/>
             <description value="An example endpoint illustrating a provider organization in the Specialty Medication Prescribing profile"/>
@@ -191,6 +223,42 @@
             </reference>
             <name value="Specialty Rx Location 1"/>
             <description value="An example endpoint illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="CareTeam/specialty-rx-careteam-1"/>
+                <display value="specialty-rx-careteam-1"/>
+            </reference>
+            <name value="Specialty Rx Care Team 1"/>
+            <description value="An example endpoint illustrating a care team  in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="RelatedPerson/specialty-rx-relatedperson-1"/>
+                <display value="specialty-rx-relatedperson-1"/>
+            </reference>
+            <name value="Specialty Rx Related Person 1"/>
+            <description value="An example endpoint illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Organization/specialty-rx-payor-organization-1"/>
+                <display value="specialty-rx-payor-organization-1"/>
+            </reference>
+            <name value="Specialty Rx Payer Organization 1"/>
+            <description value="An example endpoint illustrating a payor organization in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Observation/specialty-rx-lab-observation-1"/>
+                <display value="specialty-rx-lab-observation-1"/>
+            </reference>
+            <name value="Specialty Rx Lab Observation 1"/>
+            <description value="An example endpoint illustrating a lab observation in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
       <page>

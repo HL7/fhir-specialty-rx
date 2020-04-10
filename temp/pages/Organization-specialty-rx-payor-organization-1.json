@@ -1,0 +1,53 @@
+{
+  "resourceType": "Organization",
+  "id": "specialty-rx-payor-organization-1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payor-organization"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: specialty-rx-payor-organization-1</p><p><b>meta</b>: </p><p><b>identifier</b>: 1669519278</p><p><b>active</b>: true</p><p><b>type</b>: Payer <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/organization-type code 'pay' = 'Payer', given as 'Payer'})</span></p><p><b>name</b>: Our Payor</p><p><b>telecom</b>: ph: 952-555-5555, contac-our-clinict@example.org</p><p><b>address</b>: 11000 77th St Minneapolis MN 55008 USA </p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "1669519278"
+    }
+  ],
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay",
+          "display": "Payer"
+        }
+      ]
+    }
+  ],
+  "name": "Our Payor",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "952-555-5555"
+    },
+    {
+      "system": "email",
+      "value": "contac-our-clinict@example.org"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "11000 77th St"
+      ],
+      "city": "Minneapolis",
+      "state": "MN",
+      "postalCode": "55008",
+      "country": "USA"
+    }
+  ]
+}

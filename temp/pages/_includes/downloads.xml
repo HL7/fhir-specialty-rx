@@ -1,0 +1,48 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+   <div class="markdown-toc">
+      <p>Contents:</p>
+      <ul>
+         <li>
+            <a href="#full-guide">Full Implementation Guide</a>
+         </li>
+         <li>
+            <a href="#validator">Validator Pack and Definitions</a>
+         </li>
+         <li>
+            <a href="#examples">Examples</a>
+         </li>
+      </ul>
+   </div>
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="full-guide">  </a>
+  <h3>Full Implementation Guide</h3>
+  <p>
+    The entire implementation guide (including the HTML files, definitions, validation information, etc.) may be downloaded [here](full-ig.zip).
+  </p>
+  <a name="validator">  </a>
+  <h3>Validator Pack and Definitions</h3>
+  <p>
+    The following file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this Implementation Guide:
+    <br/>
+	     <a href="validator.pack">Validator Pack</a>
+      <br/>
+    In addition there are format specific definitions files.
+    <br/>
+	     <a href="definitions.xml.zip">XML</a>
+      <br/>
+	     <a href="definitions.json.zip">JSON</a>
+      <br/>
+	     <a href="definitions.ttl.zip">TTL</a>
+  </p>  
+  <a name="examples">  </a>
+  <h3>Examples</h3>
+  <p>
+    All the examples that are used in this Implementation Guide available for download:
+    <br/>
+	     <a href="examples.xml.zip">XML</a>
+      <br/>
+	     <a href="examples.json.zip">JSON</a>
+      <br/>
+	     <a href="examples.ttl.zip">TTL</a>
+  </p>
+</div>

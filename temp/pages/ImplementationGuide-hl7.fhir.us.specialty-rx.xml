@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.us.specialty-rx"/>
+  <meta>
+    <lastUpdated value="2020-03-23T21:23:04.509-05:00"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <div>This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.</div>
+        </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/ncpdp/ImplementationGuide/hl7.fhir.us.specialty-rx"/>
+  <version value="0.1.00"/>
+  <name value="SpecialtyRx"/>
+  <title value="Specialty Medication Prescribing"/>
+  <status value="draft"/>
+  <date value="2020-04-10T09:52:27-05:00"/>
+  <publisher value="NCPDP"/>
+  <contact>
+    <name value="HL7 International - Pharmacy"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/medication"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Frank McKinney"/>
+    <telecom>
+      <system value="email"/>
+      <value value="frank.mckinney@pocp.com"/>
+    </telecom>
+  </contact>
+  <description value="This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.us.specialty-rx"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn>
+    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+    <packageId value="hl7.fhir.us.core"/>
+    <version value="current"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="CI Build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/us/ncpdp/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-patient.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-patient"/>
+        <display value="SpecialtyRxPatient"/>
+      </reference>
+      <name value="SpecialtyRxPatient"/>
+      <description value="This profile tailors the Patient resource for carrying the patient information needed to support specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-medicationrequest.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-medicationrequest"/>
+        <display value="Specialty Rx Medication Request"/>
+      </reference>
+      <name value="SpecialtyRxMedicationRequest"/>
+      <description value="This profile tailors the MedicationRequest resource to support specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-practitioner.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-practitioner"/>
+        <display value="SpecialtyRxPractitioner"/>
+      </reference>
+      <name value="SpecialtyRxPractitioner"/>
+      <description value="This profile tailors the Practitioner resource to support specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-condition.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-condition"/>
+        <display value="SpecialtyRxCondition"/>
+      </reference>
+      <name value="SpecialtyRxCondition"/>
+      <description value="This profile tailors the Condition resource to support specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-practitionerrole.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-practitionerrole"/>
+        <display value="SpecialtyRxPractitionerRole"/>
+      </reference>
+      <name value="SpecialtyRxPractitionerRole"/>
+      <description value="This profile tailors the Practitioner Role resource to support specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-allergyintolerance.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
+        <display value="SpecialtyRxAllergyIntolerance"/>
+      </reference>
+      <name value="SpecialtyRxAllergyIntolerance"/>
+      <description value="This profile tailors the AllergyIntolerance resource to support specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-provider-organization.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-provider-organization"/>
+        <display value="SpecialtyRxProviderOrganization"/>
+      </reference>
+      <name value="SpecialtyRxProviderOrganization"/>
+      <description value="This profile tailors the Organization resource to represent a provider organization (clinic, health system, etc.) in the Specialty Medication Prescribing process."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-location.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-location"/>
+        <display value="SpecialtyRxLocation"/>
+      </reference>
+      <name value="SpecialtyRxLocation"/>
+      <description value="This profile tailors the Location resource to support specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-careteam.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-careteam"/>
+        <display value="SpecialtyRxCareTeam"/>
+      </reference>
+      <name value="SpecialtyRxCareTeam"/>
+      <description value="This profile tailors the CareTeam resource to reference caregivers in the specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-relatedperson.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-relatedperson"/>
+        <display value="SpecialtyRxRelatedPerson"/>
+      </reference>
+      <name value="SpecialtyRxRelatedPerson"/>
+      <description value="This profile tailors the RelatedPerson resource to capture caregivers in the specialty medication dispensing and enrollment in related programs."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-payor-organization.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-payor-organization"/>
+        <display value="SpecialtyRxPayorOrganization"/>
+      </reference>
+      <name value="SpecialtyRxPayorOrganization"/>
+      <description value="This profile tailors the Organization resource to represent a payor organization in the Specialty Medication Prescribing process."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-specialty-rx-lab-observation.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/specialty-rx-lab-observation"/>
+        <display value="SpecialtyRxLabObservation"/>
+      </reference>
+      <name value="SpecialtyRxLabObservation"/>
+      <description value="This profile tailors the Observation resource to represent a patient lab result in the Specialty Medication Prescribing process."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Patient-specialty-rx-patient-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Patient/specialty-rx-patient-1"/>
+        <display value="specialty-rx-patient-1"/>
+      </reference>
+      <name value="Specialty Rx Patient 1"/>
+      <description value="An example patient illustrating required elements in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="AllergyIntolerance-specialty-rx-allergyintolerance-1.html"/>
+      </extension>
+      <reference>
+        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
+        <display value="specialty-rx-allergyintolerance-1"/>
+      </reference>
+      <name value="Specialty Rx Allergy/Intolerance 1"/>
+      <description value="An example allergy/intolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-specialty-rx-practitioner-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/specialty-rx-practitioner-1"/>
+        <display value="specialty-rx-practitioner-1"/>
+      </reference>
+      <name value="Specialty Rx Practitioner 1"/>
+      <description value="An example practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Condition-specialty-rx-condition-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Condition/specialty-rx-condition-1"/>
+        <display value="specialty-rx-condition-1"/>
+      </reference>
+      <name value="Specialty Rx Condition 1"/>
+      <description value="An example condition illustrating required elements in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="MedicationRequest-specialty-rx-medicationrequest-1.html"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/specialty-rx-medicationrequest-1"/>
+        <display value="specialty-rx-medicationrequest-1"/>
+      </reference>
+      <name value="Specialty Rx Medication Request 1"/>
+      <description value="An example medication request illustrating required elements in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Endpoint"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Endpoint-specialty-rx-endpoint-direct-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Endpoint/specialty-rx-endpoint-direct-1"/>
+        <display value="specialty-rx-endpoint-direct-1"/>
+      </reference>
+      <name value="Specialty Rx Medication Direct Endpoint 1"/>
+      <description value="An example endpoint illustrating a practitioner&#39;s Direct Project address in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="PractitionerRole-specialty-rx-practitionerrole-1.html"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/specialty-rx-practitionerrole-1"/>
+        <display value="specialty-rx-practitionerrole-1"/>
+      </reference>
+      <name value="Specialty Rx Practitioner Role 1"/>
+      <description value="An example endpoint illustrating a practitioner&#39;s office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-specialty-rx-provider-organization-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Organization/specialty-rx-provider-organization-1"/>
+        <display value="specialty-rx-provider-organization-1"/>
+      </reference>
+      <name value="Specialty Rx Organization 1"/>
+      <description value="An example endpoint illustrating a provider organization in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Location-specialty-rx-location-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Location/specialty-rx-location-1"/>
+        <display value="specialty-rx-location-1"/>
+      </reference>
+      <name value="Specialty Rx Location 1"/>
+      <description value="An example endpoint illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CareTeam"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CareTeam-specialty-rx-careteam-1.html"/>
+      </extension>
+      <reference>
+        <reference value="CareTeam/specialty-rx-careteam-1"/>
+        <display value="specialty-rx-careteam-1"/>
+      </reference>
+      <name value="Specialty Rx Care Team 1"/>
+      <description value="An example endpoint illustrating a care team  in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="RelatedPerson"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="RelatedPerson-specialty-rx-relatedperson-1.html"/>
+      </extension>
+      <reference>
+        <reference value="RelatedPerson/specialty-rx-relatedperson-1"/>
+        <display value="specialty-rx-relatedperson-1"/>
+      </reference>
+      <name value="Specialty Rx Related Person 1"/>
+      <description value="An example endpoint illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Organization-specialty-rx-payor-organization-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Organization/specialty-rx-payor-organization-1"/>
+        <display value="specialty-rx-payor-organization-1"/>
+      </reference>
+      <name value="Specialty Rx Payer Organization 1"/>
+      <description value="An example endpoint illustrating a payor organization in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Observation-specialty-rx-lab-observation-1.html"/>
+      </extension>
+      <reference>
+        <reference value="Observation/specialty-rx-lab-observation-1"/>
+        <display value="specialty-rx-lab-observation-1"/>
+      </reference>
+      <name value="Specialty Rx Lab Observation 1"/>
+      <description value="An example endpoint illustrating a lab observation in the Specialty Medication Prescribing profile"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="IG Home Page"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="workflow.html"/>
+        <title value="Workflow Scenarios"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="capstatements.html"/>
+        <title value="Capability Statements"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

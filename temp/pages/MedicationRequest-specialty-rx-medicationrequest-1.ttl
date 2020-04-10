@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/ncpdp/MedicationRequest/specialty-rx-medicationrequest-1> a fhir:MedicationRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "specialty-rx-medicationrequest-1"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: specialty-rx-medicationrequest-1</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: Prozac 10 MG Oral Capsule <span style=\"background: LightGoldenRodYellow\">(Details : {RxNorm code '205535' = 'PROzac 10 MG Oral Capsule', given as 'Prozac 10 MG Oral Capsule'}; {http://terminology.hl7.org/CodeSystem/ndc-11 code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>subject</b>: <a href=\"Patient-specialty-rx-patient-1.html\">Generated Summary: id: specialty-rx-patient-1; 1234; active; Timothy V. Doe ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: male; birthDate: 1987-02-20</a></p><p><b>authoredOn</b>: Mar 10, 2020 12:00:00 AM</p><p><b>requester</b>: <a href=\"Practitioner-specialty-rx-practitioner-1.html\">Generated Summary: id: specialty-rx-practitioner-1; 9941339108; Jane Smith ; ph: 555-555-5555(HOME), fax: 555-555-1234(HOME), jane.doe@example.org(WORK)</a></p><p><b>dosageInstruction</b>: </p><blockquote><p><b>dispenseRequest</b></p><h3>InitialFills</h3><table class=\"grid\"><tr><td>-</td><td><b>Quantity</b></td></tr><tr><td>*</td><td>60 EA</td></tr></table><p><b>numberOfRepeatsAllowed</b>: 2</p><p><b>expectedSupplyDuration</b>: 30 days<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code d = 'd')</span></p><p><b>performer</b>: Our Specialty Pharmacy</p></blockquote><h3>Substitutions</h3><table class=\"grid\"><tr><td>-</td><td><b>Allowed[x]</b></td></tr><tr><td>*</td><td>false</td></tr></table></div>"
+  ];
+  fhir:MedicationRequest.status [ fhir:value "active"];
+  fhir:MedicationRequest.intent [ fhir:value "order"];
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "205535" ];
+       fhir:Coding.display [ fhir:value "Prozac 10 MG Oral Capsule" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ndc-11" ];
+       fhir:Coding.code [ fhir:value "00777310402" ];
+       fhir:Coding.display [ fhir:value "Prozac 10mg capsule" ]
+     ]
+  ];
+  fhir:MedicationRequest.subject [
+     fhir:link <http://hl7.org/fhir/us/ncpdp/Patient/specialty-rx-patient-1>;
+     fhir:Reference.reference [ fhir:value "Patient/specialty-rx-patient-1" ]
+  ];
+  fhir:MedicationRequest.authoredOn [ fhir:value "2020-03-10"^^xsd:date];
+  fhir:MedicationRequest.requester [
+     fhir:link <http://hl7.org/fhir/us/ncpdp/Practitioner/specialty-rx-practitioner-1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/specialty-rx-practitioner-1" ]
+  ];
+  fhir:MedicationRequest.dosageInstruction [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "Take 1 tablet twice a day" ]
+  ];
+  fhir:MedicationRequest.dispenseRequest [
+     fhir:MedicationRequest.dispenseRequest.initialFill [
+       fhir:MedicationRequest.dispenseRequest.initialFill.quantity [
+         fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "EA" ]
+       ]
+     ];
+     fhir:MedicationRequest.dispenseRequest.numberOfRepeatsAllowed [ fhir:value "2"^^xsd:nonNegativeInteger ];
+     fhir:MedicationRequest.dispenseRequest.expectedSupplyDuration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "days" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "d" ]
+     ];
+     fhir:MedicationRequest.dispenseRequest.performer [
+       fhir:Reference.identifier [
+         fhir:Identifier.value [ fhir:value "TBD Pharmacy ID" ]
+       ];
+       fhir:Reference.display [ fhir:value "Our Specialty Pharmacy" ]
+     ]
+  ];
+  fhir:MedicationRequest.substitution [
+     fhir:MedicationRequest.substitution.allowedBoolean [ fhir:value "false"^^xsd:boolean ]
+  ] .
+
+<http://hl7.org/fhir/us/ncpdp/Patient/specialty-rx-patient-1> a fhir:us .
+
+<http://hl7.org/fhir/us/ncpdp/Practitioner/specialty-rx-practitioner-1> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/ncpdp/MedicationRequest/specialty-rx-medicationrequest-1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/ncpdp/MedicationRequest/specialty-rx-medicationrequest-1.ttl> .
+
+# -------------------------------------------------------------------------------------
+

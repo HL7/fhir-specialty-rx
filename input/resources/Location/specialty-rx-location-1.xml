@@ -23,7 +23,7 @@
     <postalCode value="55345" />
   </address>
   <managingOrganization>
-    <reference value="Organization/specialty-rx-organization-1" />
+    <reference value="Organization/specialty-rx-provider-organization-1" />
     <display value="Our Clinics" />
   </managingOrganization>
 </Location>

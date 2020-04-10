@@ -9,7 +9,7 @@
     <display value="Jane Smith MD" />
   </practitioner>
   <organization>
-    <reference value="Organization/specialty-rx-organization-1" />
+    <reference value="Organization/specialty-rx-provider-organization-1" />
     <display value="Our Clinics" />
   </organization>
   <code>

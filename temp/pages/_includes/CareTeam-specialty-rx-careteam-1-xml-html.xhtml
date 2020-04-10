@@ -1,0 +1,46 @@
+{% raw %}<pre class="xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam">CareTeam</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;specialty-rx-careteam-1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-careteam&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: specialty-rx-careteam-1&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Timothy Doe's care team&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-specialty-rx-patient-1.html&quot;&gt;Timothy Doe. Generated Summary: id: specialty-rx-patient-1; 1234; active; Timothy V. Doe ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: male; birthDate: 1987-02-20&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: General Practice &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details : {http://nucc.org/provider-taxonomy code '208D00000X' = 'General Practice', given as 'General Practice'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=&quot;Practitioner-specialty-rx-practitioner-1.html&quot;&gt;Jane Smith MD. Generated Summary: id: specialty-rx-practitioner-1; 9941339108; Jane Smith ; ph: 555-555-5555(HOME), fax: 555-555-1234(HOME), jane.doe@example.org(WORK)&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: Spouse (person) &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details : {SNOMED CT code '127848009' = 'Spouse', given as 'Spouse (person)'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=&quot;RelatedPerson-specialty-rx-relatedperson-1.html&quot;&gt;Maria Fleming-Doe. Generated Summary: id: specialty-rx-relatedperson-1; active; &lt;span title=&quot;Codes: {http://terminology.hl7.org/CodeSystem/v2-0131 N}, {http://terminology.hl7.org/CodeSystem/v3-RoleCode WIFE}&quot;&gt;Next-of-Kin&lt;/span&gt;; Maria Fleming-Doe ; ph: 952-555-5555; gender: female&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Timothy Doe&amp;#39;s care team&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/specialty-rx-patient-1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Timothy Doe&quot;/&gt;
+  &lt;/subject&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant">participant</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://nucc.org/provider-taxonomy&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;208D00000X&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;General Practice&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/role&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/specialty-rx-practitioner-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Jane Smith MD&quot;/&gt;
+    &lt;/member&gt;
+  &lt;/participant&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant">participant</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;127848009&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Spouse (person)&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/role&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;RelatedPerson/specialty-rx-relatedperson-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Maria Fleming-Doe&quot;/&gt;
+    &lt;/member&gt;
+  &lt;/participant&gt;
+&lt;/CareTeam&gt;</pre>
+{% endraw %}

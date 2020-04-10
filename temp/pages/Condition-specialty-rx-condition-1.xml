@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="specialty-rx-condition-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-condition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: specialty-rx-condition-1</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/condition-clinical code 'active' = 'Active)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/condition-ver-status code 'confirmed' = 'Confirmed)</span></p><p><b>category</b>: diagnosis <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '439401001' = 'Diagnosis (observable entity)', given as 'diagnosis'})</span></p><p><b>severity</b>: Moderate <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '6736007' = 'Moderate', given as 'Moderate'})</span></p><p><b>code</b>: Heart valve disorder <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '368009' = 'Heart valve disorder', given as 'Heart valve disorder'})</span></p><p><b>bodySite</b>: heart structure <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '40768004' = 'Left thorax', given as 'Left thorax'})</span></p><p><b>subject</b>: <a href="Patient-specialty-rx-patient-1.html">Timothy Doe. Generated Summary: id: specialty-rx-patient-1; 1234; active; Timothy V. Doe ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: male; birthDate: 1987-02-20</a></p><p><b>onset</b>: Oct 1, 2017 12:00:00 AM</p><p><b>recordedDate</b>: Oct 5, 2017 12:00:00 AM</p><p><b>asserter</b>: <a href="Practitioner-specialty-rx-practitioner-1.html">Jane Smith. Generated Summary: id: specialty-rx-practitioner-1; 9941339108; Jane Smith ; ph: 555-555-5555(HOME), fax: 555-555-1234(HOME), jane.doe@example.org(WORK)</a></p><h3>Evidences</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Cardiac chest pain <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '426396005' = 'Cardiac chest pain (finding)', given as 'Cardiac chest pain'})</span></td></tr></table></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="439401001"/>
+      <display value="diagnosis"/>
+    </coding>
+  </category>
+  <severity>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="6736007"/>
+      <display value="Moderate"/>
+    </coding>
+  </severity>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="368009"/>
+      <display value="Heart valve disorder"/>
+    </coding>
+  </code>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="40768004"/>
+      <display value="Left thorax"/>
+    </coding>
+    <text value="heart structure"/>
+  </bodySite>
+  <subject>
+    <reference value="Patient/specialty-rx-patient-1"/>
+    <display value="Timothy Doe"/>
+  </subject>
+  <onsetDateTime value="2017-10-01"/>
+  <recordedDate value="2017-10-05"/>
+  <asserter>
+    <reference value="Practitioner/specialty-rx-practitioner-1"/>
+    <display value="Jane Smith"/>
+  </asserter>
+  <evidence>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="426396005"/>
+        <display value="Cardiac chest pain"/>
+      </coding>
+    </code>
+  </evidence>
+</Condition>

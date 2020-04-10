@@ -55,7 +55,11 @@ The implementation guide supports business functions related to fulfillment of s
   	  </tr>
   	  <tr>
 		<td>Apr 7, 2020</td>
-		<td>Additional content: profiles and examples for PractitionerRole, Endpoint, Organization, Location, Endpoint</td>
+		<td>Additional content: profiles and examples for PractitionerRole, Endpoint, Organization, Location</td>
   	  </tr>
-	</tbody>
+  	  <tr>
+		<td>Apr 10, 2020</td>
+		<td>Additional content: profiles and examples for Provider-Organization, Payor-Organization, Observation, RelatedPerson, CareTeam</td>
+  	  </tr>
+</tbody>
   </table>

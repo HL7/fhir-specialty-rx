@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/ncpdp/RelatedPerson/specialty-rx-relatedperson-1> a fhir:RelatedPerson;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "specialty-rx-relatedperson-1"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-relatedperson";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-relatedperson>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: specialty-rx-relatedperson-1</p><p><b>meta</b>: </p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-specialty-rx-patient-1.html\">Generated Summary: id: specialty-rx-patient-1; 1234; active; Timothy V. Doe ; ph: 555-555-5555(HOME), amy.shaw@example.com; gender: male; birthDate: 1987-02-20</a></p><p><b>relationship</b>: Next-of-Kin <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/v2-0131 code 'N' = 'Next-of-Kin; {http://terminology.hl7.org/CodeSystem/v3-RoleCode code 'WIFE' = 'wife)</span></p><p><b>name</b>: Maria Fleming-Doe </p><p><b>telecom</b>: ph: 952-555-5555</p><p><b>gender</b>: female</p><p><b>address</b>: 2224 Century Ave Minnetonka MN 55345 </p></div>"
+  ];
+  fhir:RelatedPerson.active [ fhir:value "true"^^xsd:boolean];
+  fhir:RelatedPerson.patient [
+     fhir:link <http://hl7.org/fhir/us/ncpdp/Patient/specialty-rx-patient-1>;
+     fhir:Reference.reference [ fhir:value "Patient/specialty-rx-patient-1" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0131" ];
+       fhir:Coding.code [ fhir:value "N" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "WIFE" ]
+     ]
+  ];
+  fhir:RelatedPerson.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Fleming-Doe" ];
+     fhir:HumanName.given [
+       fhir:value "Maria";
+       fhir:index 0
+     ]
+  ];
+  fhir:RelatedPerson.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "952-555-5555" ]
+  ];
+  fhir:RelatedPerson.gender [ fhir:value "female"];
+  fhir:RelatedPerson.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "2224 Century Ave";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Minnetonka" ];
+     fhir:Address.state [ fhir:value "MN" ];
+     fhir:Address.postalCode [ fhir:value "55345" ]
+  ] .
+
+<http://hl7.org/fhir/us/ncpdp/Patient/specialty-rx-patient-1> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/ncpdp/RelatedPerson/specialty-rx-relatedperson-1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/ncpdp/RelatedPerson/specialty-rx-relatedperson-1.ttl> .
+
+# -------------------------------------------------------------------------------------
+

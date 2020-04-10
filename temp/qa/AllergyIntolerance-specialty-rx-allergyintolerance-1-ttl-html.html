@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+  <title>AllergyIntolerance-specialty-rx-allergyintolerance-1-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:AllergyIntolerance;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;specialty-rx-allergyintolerance-1&quot;];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n      &lt;p&gt;\n        &lt;b&gt; Generated Narrative with Details&lt;/b&gt;\n      &lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; id&lt;/b&gt; : medication&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; clinicalStatus&lt;/b&gt; : Active &lt;span&gt; (Details : {http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical code 'active'      = 'Active', given as 'Active'})&lt;/span&gt;&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; verificationStatus&lt;/b&gt; : Unconfirmed &lt;span&gt; (Details : {http://terminology.hl7.org/CodeSystem/allergyintolerance-verification code      'unconfirmed' = 'Unconfirmed', given as 'Unconfirmed'})&lt;/span&gt;&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; category&lt;/b&gt; : medication&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; criticality&lt;/b&gt; : high&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; code&lt;/b&gt; : Penicillin G &lt;span&gt; (Details : {RxNorm code '7980' = 'Penicillin G', given as 'Penicillin G'})&lt;/span&gt;&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; patient&lt;/b&gt; : &lt;a&gt; Patient/specialty-rx-patient-1&lt;/a&gt;&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; recordedDate&lt;/b&gt; : 01/03/2010&lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt; recorder&lt;/b&gt; : &lt;a&gt; Practitioner/specialty-rx-practitioner-1&lt;/a&gt;&lt;/p&gt;\n      &lt;h3&gt; Reactions&lt;/h3&gt;\n      &lt;table&gt;\n        &lt;tr&gt;\n          &lt;td&gt; -&lt;/td&gt;\n          &lt;td&gt;\n            &lt;b&gt; Manifestation&lt;/b&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr&gt;\n          &lt;td&gt; *&lt;/td&gt;\n          &lt;td&gt; Hives &lt;span&gt; (Details : {SNOMED CT code '247472004' = 'Weal', given as 'Hives'})&lt;/span&gt;&lt;/td&gt;\n        &lt;/tr&gt;\n      &lt;/table&gt;\n    &lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.clinicalStatus">fhir:AllergyIntolerance.clinicalStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Active&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.verificationStatus">fhir:AllergyIntolerance.verificationStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/allergyintolerance-verification&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;unconfirmed&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Unconfirmed&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.category">fhir:AllergyIntolerance.category</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;medication&quot;;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.criticality">fhir:AllergyIntolerance.criticality</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;high&quot;];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.code">fhir:AllergyIntolerance.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;7980&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Penicillin G&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.patient">fhir:AllergyIntolerance.patient</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/specialty-rx-patient-1&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.recordedDate">fhir:AllergyIntolerance.recordedDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2010-03-01&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.recorder">fhir:AllergyIntolerance.recorder</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Practitioner/specialty-rx-practitioner-1&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.reaction">fhir:AllergyIntolerance.reaction</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.reaction.manifestation">fhir:AllergyIntolerance.reaction.manifestation</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         a sct:247472004;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;247472004&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Hives&quot; ]       ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</pre>
+
+</body>
+</html>

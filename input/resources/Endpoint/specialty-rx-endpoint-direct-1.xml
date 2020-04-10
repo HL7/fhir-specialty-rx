@@ -8,7 +8,7 @@
   </connectionType>
   <name value="Jane.Smith.MD@direct.example.org" />
   <managingOrganization>
-    <reference value="Organization/specialty-rx-organization-1" />
+    <reference value="Organization/specialty-rx-provider-organization-1" />
   </managingOrganization>
   <payloadType>
     <coding>

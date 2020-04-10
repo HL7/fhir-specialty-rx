@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="specialty-rx-provider-organization-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-provider-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: specialty-rx-provider-organization-1</p><p><b>meta</b>: </p><p><b>identifier</b>: 1669519278</p><p><b>active</b>: true</p><p><b>type</b>: Healthcare Provider <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/organization-type code 'prov' = 'Healthcare Provider', given as 'Healthcare Provider'})</span></p><p><b>name</b>: Our Clinics</p><p><b>telecom</b>: ph: 952-555-5555, contac-our-clinict@example.org</p><p><b>address</b>: 220 Maple St Minneapolis MN 55008 USA </p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi"/>
+    <value value="1669519278"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Our Clinics"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="952-555-5555"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="contac-our-clinict@example.org"/>
+  </telecom>
+  <address>
+    <line value="220 Maple St"/>
+    <city value="Minneapolis"/>
+    <state value="MN"/>
+    <postalCode value="55008"/>
+    <country value="USA"/>
+  </address>
+</Organization>
