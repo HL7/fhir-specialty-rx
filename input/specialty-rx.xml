@@ -50,66 +50,10 @@
     <definition>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-patient"/>
-	      <display value="SpecialtyRxPatient"/>
-	    </reference>
-	    <name value="SpecialtyRxPatient"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-medicationrequest"/>
-	      <display value="Specialty Rx Medication Request"/>
-	    </reference>
-	    <name value="SpecialtyRxMedicationRequest"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-practitioner"/>
-	      <display value="SpecialtyRxPractitioner"/>
-	    </reference>
-	    <name value="SpecialtyRxPractitioner"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-condition"/>
-	      <display value="SpecialtyRxCondition"/>
-	    </reference>
-	    <name value="SpecialtyRxCondition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-practitionerrole"/>
-	      <display value="SpecialtyRxPractitionerRole"/>
-	    </reference>
-	    <name value="SpecialtyRxPractitionerRole"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
 	      <display value="SpecialtyRxAllergyIntolerance"/>
 	    </reference>
 	    <name value="SpecialtyRxAllergyIntolerance"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-provider-organization"/>
-	      <display value="SpecialtyRxProviderOrganization"/>
-	    </reference>
-	    <name value="SpecialtyRxProviderOrganization"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-location"/>
-	      <display value="SpecialtyRxLocation"/>
-	    </reference>
-	    <name value="SpecialtyRxLocation"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -122,10 +66,42 @@
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-relatedperson"/>
-	      <display value="SpecialtyRxRelatedPerson"/>
+	      <reference value="StructureDefinition/specialty-rx-condition"/>
+	      <display value="SpecialtyRxCondition"/>
 	    </reference>
-	    <name value="SpecialtyRxRelatedPerson"/>
+	    <name value="SpecialtyRxCondition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-endpoint-direct"/>
+	      <display value="SpecialtyRxEndpointDirect"/>
+	    </reference>
+	    <name value="SpecialtyRxEndpointDirect"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-location"/>
+	      <display value="SpecialtyRxLocation"/>
+	    </reference>
+	    <name value="SpecialtyRxLocation"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-medicationrequest"/>
+	      <display value="Specialty Rx Medication Request"/>
+	    </reference>
+	    <name value="SpecialtyRxMedicationRequest"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-lab-observation"/>
+	      <display value="SpecialtyRxLabObservation"/>
+	    </reference>
+	    <name value="SpecialtyRxLabObservation"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -138,91 +114,51 @@
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-lab-observation"/>
-	      <display value="SpecialtyRxLabObservation"/>
+	      <reference value="StructureDefinition/specialty-rx-provider-organization"/>
+	      <display value="SpecialtyRxProviderOrganization"/>
 	    </reference>
-	    <name value="SpecialtyRxLabObservation"/>
+	    <name value="SpecialtyRxProviderOrganization"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
-	  	  <resource>
-	      <reference>
-	        <reference value="Patient/specialty-rx-patient-1"/>
-                <display value="specialty-rx-patient-1"/>
-            </reference>
-            <name value="Specialty Rx Patient 1"/>
-            <description value="An example patient illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-patient"/>
+	      <display value="SpecialtyRxPatient"/>
+	    </reference>
+	    <name value="SpecialtyRxPatient"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-practitioner"/>
+	      <display value="SpecialtyRxPractitioner"/>
+	    </reference>
+	    <name value="SpecialtyRxPractitioner"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-practitionerrole"/>
+	      <display value="SpecialtyRxPractitionerRole"/>
+	    </reference>
+	    <name value="SpecialtyRxPractitionerRole"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-relatedperson"/>
+	      <display value="SpecialtyRxRelatedPerson"/>
+	    </reference>
+	    <name value="SpecialtyRxRelatedPerson"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
 	  <resource>
 	      <reference>
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
                 <display value="specialty-rx-allergyintolerance-1"/>
             </reference>
             <name value="Specialty Rx Allergy/Intolerance 1"/>
-            <description value="An example allergy/intolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>	  
-	  <resource>
-	      <reference>
-	        <reference value="Practitioner/specialty-rx-practitioner-1"/>
-                <display value="specialty-rx-practitioner-1"/>
-            </reference>
-            <name value="Specialty Rx Practitioner 1"/>
-            <description value="An example practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>	  
-	  <resource>
-	      <reference>
-	        <reference value="Condition/specialty-rx-condition-1"/>
-                <display value="specialty-rx-condition-1"/>
-            </reference>
-            <name value="Specialty Rx Condition 1"/>
-            <description value="An example condition illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>	  
-      	  <resource>
-	      <reference>
-	        <reference value="MedicationRequest/specialty-rx-medicationrequest-1"/>
-                <display value="specialty-rx-medicationrequest-1"/>
-            </reference>
-            <name value="Specialty Rx Medication Request 1"/>
-            <description value="An example medication request illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="Endpoint/specialty-rx-endpoint-direct-1"/>
-                <display value="specialty-rx-endpoint-direct-1"/>
-            </reference>
-            <name value="Specialty Rx Medication Direct Endpoint 1"/>
-            <description value="An example endpoint illustrating a practitioner's Direct Project address in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="PractitionerRole/specialty-rx-practitionerrole-1"/>
-                <display value="specialty-rx-practitionerrole-1"/>
-            </reference>
-            <name value="Specialty Rx Practitioner Role 1"/>
-            <description value="An example endpoint illustrating a practitioner's office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="Organization/specialty-rx-provider-organization-1"/>
-                <display value="specialty-rx-provider-organization-1"/>
-            </reference>
-            <name value="Specialty Rx Organization 1"/>
-            <description value="An example endpoint illustrating a provider organization in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="Location/specialty-rx-location-1"/>
-                <display value="specialty-rx-location-1"/>
-            </reference>
-            <name value="Specialty Rx Location 1"/>
-            <description value="An example endpoint illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
+            <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 	<resource>
@@ -231,25 +167,43 @@
                 <display value="specialty-rx-careteam-1"/>
             </reference>
             <name value="Specialty Rx Care Team 1"/>
-            <description value="An example endpoint illustrating a care team  in the Specialty Medication Prescribing profile"/>
+            <description value="An example CareTeam illustrating a care team  in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	  <resource>
+	      <reference>
+	        <reference value="Condition/specialty-rx-condition-1"/>
+                <display value="specialty-rx-condition-1"/>
+            </reference>
+            <name value="Specialty Rx Condition 1"/>
+            <description value="An example Condition illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="RelatedPerson/specialty-rx-relatedperson-1"/>
-                <display value="specialty-rx-relatedperson-1"/>
+	        <reference value="Endpoint/specialty-rx-endpoint-direct-1"/>
+                <display value="specialty-rx-endpoint-direct-1"/>
             </reference>
-            <name value="Specialty Rx Related Person 1"/>
-            <description value="An example endpoint illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
+            <name value="Specialty Rx Medication Direct Endpoint 1"/>
+            <description value="An example Endpoint illustrating a practitioner's Direct Project address in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Organization/specialty-rx-payor-organization-1"/>
-                <display value="specialty-rx-payor-organization-1"/>
+	        <reference value="Location/specialty-rx-location-1"/>
+                <display value="specialty-rx-location-1"/>
             </reference>
-            <name value="Specialty Rx Payer Organization 1"/>
-            <description value="An example endpoint illustrating a payor organization in the Specialty Medication Prescribing profile"/>
+            <name value="Specialty Rx Location 1"/>
+            <description value="An example Location illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+      	  <resource>
+	      <reference>
+	        <reference value="MedicationRequest/specialty-rx-medicationrequest-1"/>
+                <display value="specialty-rx-medicationrequest-1"/>
+            </reference>
+            <name value="Specialty Rx Medication Request 1"/>
+            <description value="An example MedicationRequest illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 	<resource>
@@ -258,7 +212,61 @@
                 <display value="specialty-rx-lab-observation-1"/>
             </reference>
             <name value="Specialty Rx Lab Observation 1"/>
-            <description value="An example endpoint illustrating a lab observation in the Specialty Medication Prescribing profile"/>
+            <description value="An example Observation illustrating a lab observation in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Organization/specialty-rx-payor-organization-1"/>
+                <display value="specialty-rx-payor-organization-1"/>
+            </reference>
+            <name value="Specialty Rx Payer Organization 1"/>
+            <description value="An example Organization illustrating a payor organization in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Organization/specialty-rx-provider-organization-1"/>
+                <display value="specialty-rx-provider-organization-1"/>
+            </reference>
+            <name value="Specialty Rx Organization 1"/>
+            <description value="An example Organization illustrating a provider organization in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	  	  <resource>
+	      <reference>
+	        <reference value="Patient/specialty-rx-patient-1"/>
+                <display value="specialty-rx-patient-1"/>
+            </reference>
+            <name value="Specialty Rx Patient 1"/>
+            <description value="An example Patient illustrating required elements in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>
+	  <resource>
+	      <reference>
+	        <reference value="Practitioner/specialty-rx-practitioner-1"/>
+                <display value="specialty-rx-practitioner-1"/>
+            </reference>
+            <name value="Specialty Rx Practitioner 1"/>
+            <description value="An example Practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="PractitionerRole/specialty-rx-practitionerrole-1"/>
+                <display value="specialty-rx-practitionerrole-1"/>
+            </reference>
+            <name value="Specialty Rx Practitioner Role 1"/>
+            <description value="An example PractitionerRole illustrating a practitioner's office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="RelatedPerson/specialty-rx-relatedperson-1"/>
+                <display value="specialty-rx-relatedperson-1"/>
+            </reference>
+            <name value="Specialty Rx Related Person 1"/>
+            <description value="An example RelatedPerson illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
       <page>

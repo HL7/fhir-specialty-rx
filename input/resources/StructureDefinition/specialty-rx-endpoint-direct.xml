@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-endpoint-direct" />
+  <meta>
+    <lastUpdated value="2020-04-10T19:50:00.000+00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-endpoint-direct" />
+  <version value="0.1.00" />
+  <name value="SpecialtyRxEndpointDirect" />
+  <title value="Specialty Rx Endpoint Direct" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-04-10" />
+  <publisher value="NCPDP" />
+  <description value="This profile tailors the Endpoint resource to carry a Direct address in specialty medication dispensing and enrollment in related programs." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Endpoint" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Endpoint" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Endpoint">
+      <path value="Endpoint" />
+    </element>
+    <element id="Endppoint.connectionType">
+      <path value="Endpoint.connectionType" />
+      <fixedCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type" />
+        <code value="direct-project" />
+      </fixedCoding>
+      <mustSupport value="true" />
+    </element>
+    <element id="Endpoint.address">
+      <path value="Endpoint.address" />
+      <label value="Direct Address" />
+      <short value="Direct Address" />
+    </element>
+  </differential>
+</StructureDefinition>

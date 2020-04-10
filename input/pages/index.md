@@ -59,7 +59,7 @@ The implementation guide supports business functions related to fulfillment of s
   	  </tr>
   	  <tr>
 		<td>Apr 10, 2020</td>
-		<td>Additional content: profiles and examples for Provider-Organization, Payor-Organization, Observation, RelatedPerson, CareTeam</td>
+		<td>Additional content: profiles and examples for Provider-Organization, Payor-Organization, Observation, RelatedPerson, CareTeam, Consent, Provenance</td>
   	  </tr>
 </tbody>
   </table>

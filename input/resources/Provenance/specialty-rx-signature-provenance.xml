@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Provenance xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-signature-provenance" />
+  <target>
+    <reference value="Consent/specialty-rx-consent-1" />
+  </target>
+  <recorded value="2020-04-10T20:10:00.000+00:00" />
+  <agent>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType" />
+        <code value="AUT" />
+      </coding>
+    </role>
+    <who>
+      <reference value="Patient/specialty-rx-patient-1" />
+    </who>
+  </agent>
+  <signature>
+    <type>
+      <system value="urn:iso-astm:E1762-95:2013" />
+      <code value="1.2.840.10065.1.12.1.1" />
+      <display value="Author's Signature" />
+    </type>
+    <when value="2016-05-26T00:41:10-04:00" />
+    <who>
+      <reference value="Patient/specialty-rx-patient-1" />
+    </who>
+    <targetFormat value="application/fhir+xml" />
+    <sigFormat value="application/signature+xml" />
+    <data value="SGVyZSBpcyBhIHNpZ25hdHVyZQ==" />
+  </signature>
+</Provenance>
