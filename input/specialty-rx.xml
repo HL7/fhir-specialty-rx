@@ -35,7 +35,7 @@
     <description value="This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others." />
     <jurisdiction>
       <coding>
-        <system value="urn:iso:std:iso:3166" />
+        <system value="urn:iso:std:iso:3166:-2" />
         <code value="US" />
         <display value="United States of America" />
       </coding>
@@ -47,7 +47,17 @@
         <packageId value="hl7.fhir.us.core"/>
         <version value="current"/>
     </dependsOn>
-    <definition>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/davinci-cdex/ImplementationGuide/davinci-cdex"/>
+        <packageId value="hl7.fhir.us.davinci-cdex"/>
+        <version value="current"/>
+    </dependsOn>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/davinci-hrex"/>
+        <packageId value="hl7.fhir.us.davinci-hrex"/>
+        <version value="current"/>
+    </dependsOn>
+	 <definition>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
@@ -152,6 +162,40 @@
 	    <name value="SpecialtyRxRelatedPerson"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-communication"/>
+	      <display value="SpecialtyRxCommunication"/>
+	    </reference>
+	    <name value="SpecialtyRxCommunication"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-consent"/>
+	      <display value="SpecialtyRxConsent"/>
+	    </reference>
+	    <name value="SpecialtyRxConsent"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-signature-provenance"/>
+	      <display value="SpecialtyRxSignatureProvenance"/>
+	    </reference>
+	    <name value="SpecialtyRxSignatureProvenance"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  <!--
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-communication-based-on-cdex"/>
+	      <display value="SpecialtyRxCommunicationBasedOnCDex"/>
+	    </reference>
+	    <name value="SpecialtyRxCommunicationBasedOnCDex"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  -->
 	  <resource>
 	      <reference>
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
@@ -269,6 +313,69 @@
             <description value="An example RelatedPerson illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Communication/specialty-rx-communication-1-per-cdex"/>
+                <display value="specialty-rx-communication-1-per-cdex"/>
+            </reference>
+            <name value="Specialty Rx Communication 1 per CDex"/>
+            <description value="An example Communication illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
+	      <exampleBoolean value="true"/>
+      </resource>
+		<resource>
+	      <reference>
+	        <reference value="CommunicationRequest/specialty-rx-communicationrequest-1-per-cdex"/>
+                <display value="specialty-rx-communicationrequest-1-per-cdex"/>
+            </reference>
+            <name value="Specialty Rx CommunicationRequest 1 per CDex"/>
+            <description value="An example CommunicationRequest illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+	<resource>
+	      <reference>
+	        <reference value="Communication/cdex-example-solicited-attachment"/>
+                <display value="cdex-example-solicited-attachment"/>
+            </reference>
+            <name value="cdex-example-solicited-attachment"/>
+            <description value="cdex-example-solicited-attachment"/>
+	      <exampleBoolean value="true"/>
+      </resource>
+		<resource>
+	      <reference>
+	        <reference value="CommunicationRequest/cdex-example-attachment-request"/>
+                <display value="cdex-example-attachment-request"/>
+            </reference>
+            <name value="cdex-example-attachment-request"/>
+            <description value="cdex-example-attachment-request"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-request-bundle-1"/>
+                <display value="specialty-rx-request-bundle-1"/>
+            </reference>
+            <name value="specialty-rx-request-bundle-1"/>
+            <description value="specialty-rx-request-bundle-1"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="MessageHeader/specialty-rx-request-messageheader-1"/>
+                <display value="specialty-rx-request-messageheader-1"/>
+            </reference>
+            <name value="specialty-rx-request-messageheader-1"/>
+            <description value="specialty-rx-messageheader-bundle-1"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="Organization/specialty-rx-pharmacy-organization-1"/>
+                <display value="specialty-rx-pharmacy-organization-1"/>
+            </reference>
+            <name value="specialty-rx-pharmacy-organization-1"/>
+            <description value="specialty-rx-pharmacy-organization-1"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
       <page>
 	      <nameUrl value="toc.html"/>
 	      <title value="Table of Contents"/>
@@ -281,6 +388,11 @@
 		  <page>
 		    <nameUrl value="workflow.html"/>
 		    <title value="Workflow Scenarios"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
+		    <nameUrl value="cdex-message-flow.html"/>
+		    <title value="Message Flow using CDex"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

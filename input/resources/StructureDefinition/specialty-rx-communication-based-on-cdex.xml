@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-communication-based-on-cdex" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-04-22T14:00:00.000-00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communication-based-on-cdex" />
+  <version value="0.1.0" />
+  <name value="SpecialtyRxCommunicationBasedOnCdex" />
+  <title value="Specialty Rx Communication Based On CDex" />
+  <status value="active" />
+  <date value="2020-04-22T16:00:00-00:00" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Communication" />
+  <baseDefinition value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-communication" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Communication.basedOn">
+      <path value="Communication.basedOn" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="reference" />
+        </discriminator>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Communication.basedOn:communication_request_slice">
+      <path value="Communication.basedOn" />
+      <sliceName value="communication_request_slice" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-communicationrequest" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

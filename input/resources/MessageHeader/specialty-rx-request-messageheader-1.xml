@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-request-messageheader-1" />
+  <eventCoding>
+    <system value="http://example.org/placeholder-specialty-rx-events" />
+    <code value="specialty-rx-request" />
+    <display value="Specialty Rx Request" />
+  </eventCoding>
+  <source>
+    <name value="Our Pharmacy" />
+    <endpoint value="http://example.org/our-pharmacy" />
+  </source>
+  <focus>
+    <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+  </focus>
+</MessageHeader>

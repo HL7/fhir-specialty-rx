@@ -50,6 +50,15 @@
    <artifact name="SpecialtyRxRelatedPerson"
              key="StructureDefinition-specialty-rx-relatedperson"
              id="StructureDefinition/specialty-rx-relatedperson"/>
+   <artifact name="SpecialtyRxCommunication"
+             key="StructureDefinition-specialty-rx-communication"
+             id="StructureDefinition/specialty-rx-communication"/>
+   <artifact name="SpecialtyRxConsent"
+             key="StructureDefinition-specialty-rx-consent"
+             id="StructureDefinition/specialty-rx-consent"/>
+   <artifact name="SpecialtyRxSignatureProvenance"
+             key="StructureDefinition-specialty-rx-signature-provenance"
+             id="StructureDefinition/specialty-rx-signature-provenance"/>
    <artifact name="Specialty Rx Allergy/Intolerance 1"
              key="AllergyIntolerance-specialty-rx-allergyintolerance-1"
              id="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
@@ -89,11 +98,33 @@
    <artifact name="Specialty Rx Related Person 1"
              key="RelatedPerson-specialty-rx-relatedperson-1"
              id="RelatedPerson/specialty-rx-relatedperson-1"/>
+   <artifact name="Specialty Rx Communication 1 per CDex"
+             key="Communication-specialty-rx-communication-1-per-cdex"
+             id="Communication/specialty-rx-communication-1-per-cdex"/>
+   <artifact name="Specialty Rx CommunicationRequest 1 per CDex"
+             key="CommunicationRequest-specialty-rx-communicationrequest-1-per-cdex"
+             id="CommunicationRequest/specialty-rx-communicationrequest-1-per-cdex"/>
+   <artifact name="cdex-example-solicited-attachment"
+             key="Communication-cdex-example-solicited-attachment"
+             id="Communication/cdex-example-solicited-attachment"/>
+   <artifact name="cdex-example-attachment-request"
+             key="CommunicationRequest-cdex-example-attachment-request"
+             id="CommunicationRequest/cdex-example-attachment-request"/>
+   <artifact name="specialty-rx-request-bundle-1"
+             key="Bundle-specialty-rx-request-bundle-1"
+             id="Bundle/specialty-rx-request-bundle-1"/>
+   <artifact name="specialty-rx-request-messageheader-1"
+             key="MessageHeader-specialty-rx-request-messageheader-1"
+             id="MessageHeader/specialty-rx-request-messageheader-1"/>
+   <artifact name="specialty-rx-pharmacy-organization-1"
+             key="Organization-specialty-rx-pharmacy-organization-1"
+             id="Organization/specialty-rx-pharmacy-organization-1"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc"/>
    <page name="IG Home Page" key="index"/>
    <page name="Workflow Scenarios" key="workflow"/>
+   <page name="Message Flow using CDex" key="cdex-message-flow"/>
    <page name="Terminology" key="terminology"/>
    <page name="Capability Statements" key="capstatements"/>
    <page name="Downloads" key="downloads"/>

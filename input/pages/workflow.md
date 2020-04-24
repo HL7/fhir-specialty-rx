@@ -75,6 +75,13 @@ The actors below respond to a specialty Rx data request:
 
 In both workflows, Specialty Rx Data exchanges takes place after the specialty medication prescription has been received by the Third Party System (or received by a user of the system, e.g., by fax).
 
+### Options for compiling a response
+
+- The flow is asynchronous, enabling it to support both...
+
+- - situations where the entire response content can be generated systematically (e.g., if the responding system contains all of the requested information) 
+  - situations where a person must create some or all of the response content (e.g., by answering open-ended questions submitted in the request)
+
 ### Example use scenarios
 
 #### "Unsolicited" workflow containing a predefined set of request information
@@ -83,52 +90,21 @@ In this scenario, a Prescriber System sends information related to a specialty m
 
 The Prescriber System collects predefined information associated with a specialty medication prescription and initiates a Specialty Rx Data Response containing the information to a Third Party System.
 
-The Specialty Rx Data Response bundle contains the following resources:
-
-- MessageHeader
-- MedicationRequest (reflecting the specialty medication prescription)
-- Patient (the subject of the MedicationRequest)
-- Practitioner (the prescriber of the MedicationRequest)
-- Organization (the dispensing pharmacy)
-- QuestionnaireResponse
-
-​    *Related information, such as...*
-
-- List (referencing requested allergies, conditions, etc.)
-- AllergyIntolerance
-- MedicationStatement
-- Condition
-- Observation
-- Coverage
-
-
-
 #### "Solicited" workflow referencing a predefined set of request information
 
-In this scenario, a Third Party System requests information related to a specialty medication prescription it's received, The request refers to a predefined Questionnaire.
+In this scenario, a Third Party System requests information related to a specialty medication prescription it's received, The request refers to a predefined set of information. 
 
-The Third Party system creates a Specialty Rx Data Request message bundle and submits it to the Prescriber System. The request bundle contains the following resources:
+The Third Party system creates a Specialty Rx Data Request bundle and submits it to the Prescriber System.
 
-- MessageHeader
-- MedicationRequest (reflecting the specialty medication prescription)
-- Patient (the subject of the MedicationRequest)
-- Practitioner (the prescriber of the MedicationRequest)
-- Organization (the dispensing pharmacy)
-- reference identifying a predefined Questionnaire. (The Prescriber System already has access to the predefined Questionnaire identified in the request.)
-
-The Prescriber System collects the information specified in the predefined questionnaire and initiates an asynchronous Specialty Rx Data Response to the requesting Third Party System.
-
-- *The response bundle contains resources as described above*
-
-
+The Prescriber System collects the information specified in the predefined request and initiates an asynchronous Specialty Rx Data Response to the requesting Third Party System.
 
 #### "Solicited" workflow requesting an ad-hoc set of information
 
 In this scenario, a Third Party System requests an ad-hoc set of information related to a specialty medication prescription it's received. 
 
-The Third Party system creates a Specialty Rx Data Request message bundle and submits it to the Prescriber System. The request bundle contains the same resources as identified in the previous example, except with the addition of a Questionnaire resource containing ad-hoc information requests.
+The Third Party system creates a Specialty Rx Data Request bundle and submits it to the Prescriber System. The request bundle contains the same resources as identified in the previous example, except that the request contains ad-hoc information requests.
 
-The Prescriber System collects the information specified in the request's Questionnaire resource and initiates an asynchronous Specialty Rx Data Response to the requesting Third Party System.
+The Prescriber System collects the information specified in the request and initiates an asynchronous Specialty Rx Data Response to the requesting Third Party System.
 
 - The response bundle contains the resources necessary to supply the requested information.
 

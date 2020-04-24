@@ -7,7 +7,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="workflow.html">Workflow</a>
+        <a href="workflow.html">Workflow Scenarios</a>
+      </li>
+      <li>
+        <a href="cdex-message-flow.html">Message Flow using CDex</a>
       </li>
     </ul>
   </li>
@@ -17,7 +20,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="artifacts.html">Profiles and Extensions</a>
+        <a href="artifacts.html">Profiles and Examples</a>
       </li>
       <li>
         <a href="terminology.html">Terminology</a>
