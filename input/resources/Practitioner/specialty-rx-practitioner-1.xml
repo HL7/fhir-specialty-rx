@@ -43,7 +43,7 @@
   </telecom>
   <telecom>
     <system value="email" />
-    <value value="jane.doe@example.org" />
+    <value value="jane.smith@example.org" />
     <use value="work" />
   </telecom>
   <address>

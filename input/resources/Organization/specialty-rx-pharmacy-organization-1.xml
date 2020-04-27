@@ -20,7 +20,7 @@
   </telecom>
   <telecom>
     <system value="email" />
-    <value value="contac-our-clinict@example.org" />
+    <value value="contact-our-pharmacy@example.org" />
   </telecom>
   <address>
     <line value="220 Oak St" />

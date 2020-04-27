@@ -23,7 +23,7 @@
   </telecom>
   <telecom>
     <system value="email" />
-    <value value="contac-our-clinict@example.org" />
+    <value value="contact-our-clinic@example.org" />
   </telecom>
   <address>
     <line value="220 Maple St" />
