@@ -364,7 +364,16 @@
                 <display value="specialty-rx-request-messageheader-1"/>
             </reference>
             <name value="specialty-rx-request-messageheader-1"/>
-            <description value="specialty-rx-messageheader-bundle-1"/>
+            <description value="specialty-rx-response-messageheader-1"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="MessageHeader/specialty-rx-response-messageheader-1"/>
+                <display value="specialty-rx-response-messageheader-1"/>
+            </reference>
+            <name value="specialty-rx-response-messageheader-1"/>
+            <description value="specialty-rx-response-messageheader-1"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
 		<resource>
@@ -374,6 +383,15 @@
             </reference>
             <name value="specialty-rx-pharmacy-organization-1"/>
             <description value="specialty-rx-pharmacy-organization-1"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-response-bundle-1"/>
+                <display value="specialty-rx-response-bundle-1"/>
+            </reference>
+            <name value="specialty-rx-response-bundle-1"/>
+            <description value="specialty-rx-response-bundle-1"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
       <page>

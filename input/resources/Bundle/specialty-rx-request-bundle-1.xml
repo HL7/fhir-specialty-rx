@@ -4,7 +4,7 @@
   <type value="message" />
   <timestamp value="2019-11-15T13:10:13-05:00" />
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a" />
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e30094reqa" />
     <resource>
       <MessageHeader>
         <id value="specialty-rx-request-messageheader-1" />
@@ -18,13 +18,13 @@
           <endpoint value="http://example.org/our-pharmacy" />
         </source>
         <focus>
-          <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+          <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e30094reqb" />
         </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e30094reqb" />
     <resource>
       <CommunicationRequest>
         <id value="specialty-rx-communicationrequest-1-per-cdex" />
@@ -78,16 +78,16 @@
           <reference value="PractitionerRole/specialty-rx-practitionerrole-1" />
         </requester>
         <recipient>
-          <reference value="Organization/specialty-rx-provider-organization-1" />
+          <reference value="Organization/specialty-rx-pharmacy-organization-1" />
         </recipient>
         <sender>
-          <reference value="Organization/specialty-rx-payor-organization-1" />
+          <reference value="Organization/specialty-rx-provider-organization-1" />
         </sender>
       </CommunicationRequest>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c" />
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e30094reqc" />
     <resource>
       <MedicationRequest>
         <id value="specialty-rx-medicationrequest-1" />
@@ -146,7 +146,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d" />
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e30094reqd" />
     <resource>
       <Patient>
         <id value="specialty-rx-patient-1" />
@@ -218,7 +218,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0e" />
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e30094reqe" />
     <resource>
       <Practitioner>
         <id value="specialty-rx-practitioner-1" />
@@ -278,7 +278,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0f" />
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e30094reqf" />
     <resource>
       <Organization>
         <id value="specialty-rx-pharmacy-organization-1" />
