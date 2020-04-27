@@ -61,5 +61,11 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Apr 10, 2020</td>
 		<td>Additional content: profiles and examples for Provider-Organization, Payor-Organization, Observation, RelatedPerson, CareTeam, Consent, Provenance</td>
   	  </tr>
+  	  <tr>
+		<td>Apr 24, 2020</td>
+		<td>Additional content: profiles and examples related to request and response using the CDex profile (CommunicationRequest, Communication, request and response Bundles, additional Organization example for the pharmacy). <br><b>Notes:</b><br> Encountering challenges conforming to CDex Communication profile... specifically the Communication.basedOn element's slicing to require the basedOn resource to conform to CDex Communication. Investigating: no error is encountered when adjusting the slice discriminator to basedOn.resolve() (vs basedOn.reference as defined in CDex). Currently using an IG-defined Communication profile that modifies CDex in that respect... changing basedOn descriminator to basedOn.resolve(). <br><br>Encountering build error when jurisdiction system is not set to urn:iso:std:iso:3166:-2, which seems wrong (-2 is the state-level code system according to FHIR docs)</td>
+  	  </tr>
+
+
 </tbody>
   </table>
