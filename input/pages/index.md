@@ -43,7 +43,8 @@ The implementation guide supports business functions related to fulfillment of s
   </table>
 
 ### Change log
-  <table>
+  <table style="width:100%">
+      <colgroup><col span="1" style="width:150px"><col></colgroup> 
     <tbody>
 	  <tr>
 		<td>Mar 20, 2020</td>
@@ -63,8 +64,11 @@ The implementation guide supports business functions related to fulfillment of s
   	  </tr>
   	  <tr>
 		<td>Apr 24, 2020</td>
-		<td>Additional content: profiles and examples related to request and response using the CDex profile (CommunicationRequest, Communication, request and response Bundles, additional Organization example for the pharmacy). <br><b>Notes:</b><br> Encountering challenges conforming to CDex Communication profile... specifically the Communication.basedOn element's slicing to require the basedOn resource to conform to CDex Communication. Investigating: no error is encountered when adjusting the slice discriminator to basedOn.resolve() (vs basedOn.reference as defined in CDex). Currently using an IG-defined Communication profile that modifies CDex in that respect... changing basedOn descriminator to basedOn.resolve(). <br><br>Encountering build error when jurisdiction system is not set to urn:iso:std:iso:3166:-2, which seems wrong (-2 is the state-level code system according to FHIR docs)</td>
+		<td>Additional content: profiles and examples related to request and response using the CDex profile (CommunicationRequest, Communication, request and response Bundles, additional Organization example for the pharmacy). <br><b>Notes:</b><br> <ul>
+            <li>Encountering challenges conforming to CDex Communication profile... specifically the Communication.basedOn element's slicing to require the basedOn resource to conform to CDex Communication. Investigating: no error is encountered when adjusting the slice discriminator to basedOn.resolve() (vs basedOn.reference as defined in CDex). Currently using an IG-defined Communication profile that replaces basedOn descriminator with basedOn.resolve().</li><li>Encountering build error when jurisdiction system is not set to urn:iso:std:iso:3166:-2, which seems odd (-2 is the state-level code system according to FHIR docs)</li><li>Encountering build error in specialty-rx-response-bundle-1, also related to Communication.basedOn, if the CommunicationRequest is not included in the bundle. Might need to reference differently? Investigating</li>
+            </ul></td>
   	  </tr>
+
 
 
 </tbody>

@@ -11,10 +11,10 @@
   <title value="Specialty Rx Communication" />
   <status value="active" />
   <date value="2020-04-22T16:00:00-00:00" />
-  <description value="This profile tailors the Communication resource to support specialty medication dispensing and enrollment in related programs. (It is currently a variation on the CDex profile. Will likely use the CDex profile or base this profile on it." />
+  <description value="This profile tailors the Communication resource to support specialty medication dispensing and enrollment in related programs. (This is currently a variation on the CDex profile with modified .basedOn slicing. The IG will likely use the CDex profile unchanged, or base this profile on it, once current challenges are resolved)" />
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166" />
+      <system value="urn:iso:std:iso:3166:-2" />
       <code value="urn:iso:std:iso:3166" />
       <display value="United States of America" />
     </coding>
