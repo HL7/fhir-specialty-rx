@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommunicationRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-communicationrequest-1" />
+  <meta>
+    <versionId value="4" />
+    <lastUpdated value="2020-04-21T21:00:00.000-00:00" />
+    <profile value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-communicationrequest" />
+  </meta>
+  <identifier>
+    <system value="http://www.example.com/ourpharmacy/inforequests" />
+    <value value="ABC123" />
+  </identifier>
+  <status value="active" />
+  <category>
+    <coding>
+      <system value="http://example.org/messagetypes" />
+      <code value="SolicitedDataRequest" />
+    </coding>
+  </category>
+  <priority value="routine" />
+  <medium>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationMode" />
+      <code value="WRITTEN" />
+      <display value="written" />
+    </coding>
+    <text value="written" />
+  </medium>
+  <subject>
+    <reference value="Patient/specialty-rx-patient-1" />
+  </subject>
+  <about>
+    <reference value="MedicationRequest/specialty-rx-medicationrequest-1" />
+  </about>
+  <payload>
+    <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+      <valueString value="Condition?patient=specialty-rx-patient-1" />
+    </extension>
+    <contentString value="Please provide the patient's conditions" />
+  </payload>
+  <payload>
+    <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+      <valueString value="AllergyIntolerance?patient=specialty-rx-patient-1" />
+    </extension>
+    <contentString value="Please send the patient's allergies and intolerances" />
+  </payload>
+  <occurrenceDateTime value="2020-04-20T08:00:00-05:00" />
+  <authoredOn value="2020-04-21T21:00:00-00:00" />
+  <requester>
+    <reference value="Organization/specialty-rx-pharmacy-organization-1" />
+  </requester>
+  <recipient>
+    <reference value="Organization/specialty-rx-pharmacy-organization-1" />
+  </recipient>
+  <sender>
+    <reference value="Organization/specialty-rx-provider-organization-1" />
+  </sender>
+</CommunicationRequest>

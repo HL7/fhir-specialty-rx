@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-unsolicited-standard-bundle-1" />
+  <type value="message" />
+  <timestamp value="2019-11-15T13:10:13-05:00" />
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a" />
+    <resource>
+      <MessageHeader>
+        <id value="specialty-rx-response-messageheader-1" />
+        <eventCoding>
+          <system value="http://example.org/placeholder-specialty-rx-events" />
+          <code value="specialty-rx-response" />
+          <display value="Specialty Rx Response" />
+        </eventCoding>
+        <source>
+          <name value="Our Clinics" />
+          <endpoint value="http://example.org/our-clinics/fhir" />
+        </source>
+        <focus>
+          <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+    <resource>
+      <Communication>
+        <id value="specialty-rx-communication-1" />
+        <meta>
+          <versionId value="1" />
+          <lastUpdated value="2020-04-21T21:00:00.000-00:00" />
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communication" />
+        </meta>
+        <text>
+          <status value="generated" />
+          <div xmlns="http://www.w3.org/1999/xhtml">Communciation containing requested patient information. Per CDex profile</div>
+        </text>
+        <identifier>
+          <system value="http://www.example.com/ourpharmacy/inforequests" />
+          <value value="ABC123" />
+        </identifier>
+        <status value="completed" />
+        <category>
+          <coding>
+            <system value="http://example.org/messagetypes" />
+            <code value="SolicitedData" />
+          </coding>
+        </category>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <about>
+          <reference value="MedicationRequest/specialty-rx-medicationrequest-1" />
+        </about>
+        <sent value="2020-04-21T21:00:00-00:00" />
+        <recipient>
+          <reference value="Organization/specialty-rx-pharmacy-organization-1" />
+        </recipient>
+        <sender>
+          <reference value="Organization/specialty-rx-provider-organization-1" />
+        </sender>
+        <payload>
+          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+            <valueString value="MedicationStatement?patient=specialty-rx-patient-1&amp;_list=$current-medications" />
+          </extension>
+          <contentReference>
+            <reference value="List/1" />
+          </contentReference>
+        </payload>
+        <payload>
+          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+            <valueString value="AllergyIntolerance?patient=specialty-rx-patient-1&amp;_list=$current-allergies" />
+          </extension>
+          <contentReference>
+            <reference value="List/2" />
+          </contentReference>
+        </payload>
+        <payload>
+          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+            <valueString value="Condition?patient=specialty-rx-patient-1&amp;_list=$current-problems" />
+          </extension>
+          <contentReference>
+            <reference value="List/3" />
+          </contentReference>
+        </payload>
+        <payload>
+          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|8302-2" />
+          </extension>
+          <contentReference>
+            <reference value="Observation/Observation-9ee3483b900847de88fb035ef1d124df" />
+          </contentReference>
+        </payload>
+        <payload>
+          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|29463-7" />
+          </extension>
+          <contentReference>
+            <reference value="Observation/Observation-b0923b0ede8f4e439041fcf55d3a12c1" />
+          </contentReference>
+        </payload>
+        <payload>
+          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|13956-8" />
+          </extension>
+          <contentReference>
+            <reference value="Observation/Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+          </contentReference>
+        </payload>
+        <payload>
+          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|13956-8" />
+          </extension>
+          <contentReference>
+            <reference value="Observation/Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+          </contentReference>
+        </payload>
+      </Communication>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c" />
+    <resource>
+      <MedicationRequest>
+        <id value="specialty-rx-medicationrequest-1" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
+        </meta>
+        <status value="active" />
+        <intent value="order" />
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+            <code value="205535" />
+            <display value="Prozac 10 MG Oral Capsule" />
+          </coding>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
+            <code value="00777310402" />
+            <display value="Prozac 10mg capsule" />
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <authoredOn value="2020-03-10" />
+        <requester>
+          <reference value="Practitioner/specialty-rx-practitioner-1" />
+        </requester>
+        <dosageInstruction>
+          <text value="Take 1 tablet twice a day" />
+        </dosageInstruction>
+        <dispenseRequest>
+          <initialFill>
+            <quantity>
+              <value value="60" />
+              <unit value="EA" />
+            </quantity>
+          </initialFill>
+          <numberOfRepeatsAllowed value="2" />
+          <expectedSupplyDuration>
+            <value value="30" />
+            <unit value="days" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="d" />
+          </expectedSupplyDuration>
+          <performer>
+            <identifier>
+              <value value="TBD Pharmacy ID" />
+            </identifier>
+            <display value="Our Specialty Pharmacy" />
+          </performer>
+        </dispenseRequest>
+        <substitution>
+          <allowedBoolean value="false" />
+        </substitution>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d" />
+    <resource>
+      <Patient>
+        <id value="specialty-rx-patient-1" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+        </meta>
+        <identifier>
+          <system value="http://example.org/ssn-last-4" />
+          <value value="1234" />
+        </identifier>
+        <active value="true" />
+        <name>
+          <family value="Doe" />
+          <given value="Timothy" />
+          <given value="V." />
+        </name>
+        <telecom>
+          <system value="phone" />
+          <value value="555-555-5555" />
+          <use value="home" />
+        </telecom>
+        <telecom>
+          <system value="email" />
+          <value value="amy.shaw@example.com" />
+        </telecom>
+        <gender value="male" />
+        <birthDate value="1987-02-20" />
+        <address>
+          <line value="2224 Century Ave" />
+          <city value="Minnetonka" />
+          <state value="MN" />
+          <postalCode value="55345" />
+          <country value="US" />
+        </address>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47" />
+              <code value="en-US" />
+              <display value="English (Region=United States)" />
+            </coding>
+          </language>
+        </communication>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0e" />
+    <resource>
+      <Practitioner>
+        <id value="specialty-rx-practitioner-1" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
+        </meta>
+        <text>
+          <status value="generated" />
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>
+              <b>Generated Narrative with Details</b>
+            </p>
+            <p>
+              <b>id</b>: specialty-rx-practitioner-1</p>
+            <p>
+              <b>meta</b>: </p>
+            <p>
+              <b>identifier</b>: 9901348150</p>
+            <p>
+              <b>name</b>: Jane Smith </p>
+            <p>
+              <b>address</b>: 101 Oak Lane, Minnetonka, MN 55345(WORK)</p>
+          </div>
+        </text>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/us-npi" />
+          <value value="9941339108" />
+        </identifier>
+        <name>
+          <family value="Smith" />
+          <given value="Jane" />
+          <prefix value="Dr" />
+        </name>
+        <telecom>
+          <system value="phone" />
+          <value value="555-555-5555" />
+          <use value="home" />
+        </telecom>
+        <telecom>
+          <system value="fax" />
+          <value value="555-555-1234" />
+          <use value="home" />
+        </telecom>
+        <telecom>
+          <system value="email" />
+          <value value="jane.doe@example.org" />
+          <use value="work" />
+        </telecom>
+        <address>
+          <use value="home" />
+          <line value="101 Oak Lane" />
+          <city value="Minnetonka" />
+          <state value="MN" />
+          <postalCode value="55345" />
+        </address>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0f" />
+    <resource>
+      <Organization>
+        <id value="specialty-rx-pharmacy-organization-1" />
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/us-npi" />
+          <value value="1669512345" />
+        </identifier>
+        <active value="true" />
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+            <code value="prov" />
+            <display value="Healthcare Provider" />
+          </coding>
+        </type>
+        <name value="Our Pharmacy" />
+        <telecom>
+          <system value="phone" />
+          <value value="952-555-5555" />
+        </telecom>
+        <telecom>
+          <system value="email" />
+          <value value="contac-our-clinict@example.org" />
+        </telecom>
+        <address>
+          <line value="220 Oak St" />
+          <city value="Minneapolis" />
+          <state value="MN" />
+          <postalCode value="55008" />
+          <country value="USA" />
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="List/1" />
+    <resource>
+      <List>
+        <id value="1" />
+        <status value="current" />
+        <mode value="working" />
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="10160-0" />
+            <display value="History of Medication use" />
+          </coding>
+          <text value="History of medication use" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <entry>
+          <item>
+            <reference value="MedicationStatement/1" />
+          </item>
+        </entry>
+        <entry>
+          <item>
+            <reference value="MedicationStatement/2" />
+          </item>
+        </entry>
+        <entry>
+          <item>
+            <reference value="MedicationStatement/3" />
+          </item>
+        </entry>
+      </List>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="MedicationStatement/1" />
+    <resource>
+      <MedicationStatement>
+        <id value="1" />
+        <status value="active" />
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/sid/ndc" />
+            <code value="00093505998" />
+          </coding>
+          <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+            <code value="617310" />
+          </coding>
+          <text value="atorvastatin 20 MG Oral Tablet" />
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <dateAsserted value="2019-10-05" />
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="MedicationStatement/2" />
+    <resource>
+      <MedicationStatement>
+        <id value="2" />
+        <status value="active" />
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/sid/ndc" />
+            <code value="00069306075" />
+          </coding>
+          <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+            <code value="750149" />
+          </coding>
+          <text value="{6 (Azithromycin 250 MG Oral Tablet [Zithromax]) } Pack [Z-PAK]" />
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <dateAsserted value="2019-10-05" />
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="MedicationStatement/3" />
+    <resource>
+      <MedicationStatement>
+        <id value="2" />
+        <status value="active" />
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/sid/ndc" />
+            <code value="33261082890" />
+          </coding>
+          <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+            <code value="197885" />
+          </coding>
+          <text value="Hydrochlorothiazide 12.5 MG / Lisinopril 10 MG Oral Tablet" />
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <dateAsserted value="2019-10-05" />
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="List/2" />
+    <resource>
+      <List>
+        <id value="2" />
+        <status value="current" />
+        <mode value="working" />
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="48765-2" />
+            <display value="Allergies and adverse reactions Document" />
+          </coding>
+          <text value="Allergies and adverse reactions Document" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <entry>
+          <item>
+            <reference value="AllergyIntolerance/1" />
+          </item>
+        </entry>
+        <entry>
+          <item>
+            <reference value="AllergyIntolerance/2" />
+          </item>
+        </entry>
+        <entry>
+          <item>
+            <reference value="AllergyIntolerance/3" />
+          </item>
+        </entry>
+      </List>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="AllergyIntolerance/1" />
+    <resource>
+      <AllergyIntolerance>
+        <id value="1" />
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+            <code value="active" />
+            <display value="Active" />
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+            <code value="confirmed" />
+            <display value="Confirmed" />
+          </coding>
+        </verificationStatus>
+        <code>
+          <text value="Cashew" />
+        </code>
+        <patient>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </patient>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="AllergyIntolerance/2" />
+    <resource>
+      <AllergyIntolerance>
+        <id value="2" />
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+            <code value="active" />
+            <display value="Active" />
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+            <code value="confirmed" />
+            <display value="Confirmed" />
+          </coding>
+        </verificationStatus>
+        <code>
+          <text value="Bees" />
+        </code>
+        <patient>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </patient>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="AllergyIntolerance/3" />
+    <resource>
+      <AllergyIntolerance>
+        <id value="3" />
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+            <code value="active" />
+            <display value="Active" />
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+            <code value="confirmed" />
+            <display value="Confirmed" />
+          </coding>
+        </verificationStatus>
+        <code>
+          <text value="Penicillins" />
+        </code>
+        <patient>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </patient>
+        <reaction>
+          <manifestation>
+            <text value="Hives" />
+          </manifestation>
+        </reaction>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="List/3" />
+    <resource>
+      <List>
+        <id value="3" />
+        <status value="current" />
+        <mode value="working" />
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="11450-4" />
+            <display value="Problem list - Reported" />
+          </coding>
+          <text value="Problem list - Reported" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <entry>
+          <item>
+            <reference value="Condition/1" />
+          </item>
+        </entry>
+        <entry>
+          <item>
+            <reference value="Condition/2" />
+          </item>
+        </entry>
+        <entry>
+          <item>
+            <reference value="Condition/3" />
+          </item>
+        </entry>
+      </List>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Condition/1" />
+    <resource>
+      <Condition>
+        <id value="1" />
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+            <code value="active" />
+            <display value="Active" />
+          </coding>
+          <text value="Active" />
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+            <code value="confirmed" />
+            <display value="Confirmed" />
+          </coding>
+          <text value="Confirmed" />
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://hl7.org/CodeSystem/condition-category" />
+            <code value="problem-list-item" />
+            <display value="Problem List Item" />
+          </coding>
+          <text value="Problem" />
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="13644009" />
+            <display value="Hypercholesterolemia (disorder)" />
+          </coding>
+          <text value="Hypercholesterolemia" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Condition/2" />
+    <resource>
+      <Condition>
+        <id value="2" />
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+            <code value="active" />
+            <display value="Active" />
+          </coding>
+          <text value="Active" />
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+            <code value="confirmed" />
+            <display value="Confirmed" />
+          </coding>
+          <text value="Confirmed" />
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://hl7.org/CodeSystem/condition-category" />
+            <code value="problem-list-item" />
+            <display value="Problem List Item" />
+          </coding>
+          <text value="Problem" />
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="84172003" />
+            <display value="Spondylitis (disorder)" />
+          </coding>
+          <text value="Psoriatic spondylitis" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Condition/3" />
+    <resource>
+      <Condition>
+        <id value="3" />
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+            <code value="active" />
+            <display value="Active" />
+          </coding>
+          <text value="Active" />
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+            <code value="confirmed" />
+            <display value="Confirmed" />
+          </coding>
+          <text value="Confirmed" />
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://hl7.org/CodeSystem/condition-category" />
+            <code value="problem-list-item" />
+            <display value="Problem List Item" />
+          </coding>
+          <text value="Problem" />
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="426979002" />
+            <display value="Mild persistent asthma (disorder)" />
+          </coding>
+          <text value="Mild persistent asthma" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Observation-9ee3483b900847de88fb035ef1d124df" />
+    <resource>
+      <Observation>
+        <id value="Observation-9ee3483b900847de88fb035ef1d124df" />
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+            <code value="vital-signs" />
+            <display value="Vital Signs" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="8302-2" />
+            <display value="Body height" />
+          </coding>
+          <text value="Body height" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <effectiveDateTime value="2018-05-02T03:25:22.015+00:00" />
+        <valueQuantity>
+          <value value="78" />
+          <unit value="[in_i]" />
+          <system value="http://unitsofmeasure.org" />
+          <code value="[in_i]" />
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Observation-b0923b0ede8f4e439041fcf55d3a12c1" />
+    <resource>
+      <Observation>
+        <id value="Observation-b0923b0ede8f4e439041fcf55d3a12c1" />
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+            <code value="vital-signs" />
+            <display value="Vital Signs" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="29463-7" />
+            <display value="Body weight" />
+          </coding>
+          <text value="Body weight" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <effectiveDateTime value="2018-05-02T03:25:22.021+00:00" />
+        <valueQuantity>
+          <value value="112.74" />
+          <unit value="[lb_av]" />
+          <system value="http://unitsofmeasure.org" />
+          <code value="[lb_av]" />
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+    <resource>
+      <Observation>
+        <id value="Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+            <code value="laboratory" />
+            <display value="Laboratory" />
+          </coding>
+          <text value="Laboratory" />
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="13956-8" />
+            <display value="Mycobacterium tuberculosis DNA [Presence] in Unspecified specimen by NAA with probe detection" />
+          </coding>
+          <text value="Mycobacterium tuberculosis DNA" />
+        </code>
+        <subject>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </subject>
+        <effectiveDateTime value="2018-01-12" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="10828004" />
+            <display value="Positive" />
+          </coding>
+          <text value="Positive" />
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>
