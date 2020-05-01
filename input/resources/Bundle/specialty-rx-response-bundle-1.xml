@@ -27,7 +27,7 @@
     <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
     <resource>
       <Communication>
-        <id value="specialty-rx-communication-1-per-cdex" />
+        <id value="specialty-rx-communication-1" />
         <meta>
           <versionId value="1" />
           <lastUpdated value="2020-04-21T21:00:00.000-00:00" />
@@ -42,7 +42,7 @@
           <value value="ABC123" />
         </identifier>
         <basedOn>
-          <reference value="CommunicationRequest/specialty-rx-communicationrequest-1-per-cdex" />
+          <reference value="CommunicationRequest/specialty-rx-communicationrequest-1" />
           <type value="CommunicationRequest" />
         </basedOn>
         <status value="completed" />
@@ -75,7 +75,7 @@
         </payload>
         <payload>
           <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="Condition?patient=specialty-rx-patient-1" />
+            <valueString value="AllergyIntolerance?patient=specialty-rx-patient-1" />
           </extension>
           <contentReference>
             <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1" />
@@ -475,7 +475,7 @@
     <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0i" />
     <resource>
       <CommunicationRequest>
-        <id value="specialty-rx-communicationrequest-1-per-cdex" />
+        <id value="specialty-rx-communicationrequest-1" />
         <meta>
           <versionId value="4" />
           <lastUpdated value="2020-04-21T21:00:00.000-00:00" />

@@ -68,6 +68,11 @@ The implementation guide supports business functions related to fulfillment of s
             <li>Investigating challenges conforming to CDex Communication profile... specifically the Communication.basedOn element's slicing to require the basedOn resource to conform to CDex Communication. Currently using an IG-defined Communication profile that adjusts the basedOn slicing discriminator to basedOn.resolve().</li><li>Encountering build error in specialty-rx-response-bundle-1, also related to Communication.basedOn, if the CommunicationRequest is not included in the bundle (and it probably shouldn't be included). Investigating</li>
             </ul></td>
   	  </tr>
+          	  <tr>
+		<td>May 1, 2020</td>
+		<td>Additional example content including an unsolicited standard Specialty Rx Bundle containing current medications, allergies, conditions and vitals. Refined existing examples</td>
+  	  </tr>
+
 
 
 

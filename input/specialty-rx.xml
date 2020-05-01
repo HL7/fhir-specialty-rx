@@ -186,16 +186,6 @@
 	    <name value="SpecialtyRxSignatureProvenance"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-	  <!--
-	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-communication-based-on-cdex"/>
-	      <display value="SpecialtyRxCommunicationBasedOnCDex"/>
-	    </reference>
-	    <name value="SpecialtyRxCommunicationBasedOnCDex"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-	  -->
 	  <resource>
 	      <reference>
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
@@ -205,7 +195,7 @@
             <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
-	<resource>
+	  <resource>
 	      <reference>
 	        <reference value="CareTeam/specialty-rx-careteam-1"/>
                 <display value="specialty-rx-careteam-1"/>
@@ -315,22 +305,23 @@
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Communication/specialty-rx-communication-1-per-cdex"/>
-                <display value="specialty-rx-communication-1-per-cdex"/>
+	        <reference value="Communication/specialty-rx-communication-1"/>
+                <display value="specialty-rx-communication-1"/>
             </reference>
-            <name value="Specialty Rx Communication 1 per CDex"/>
+            <name value="Specialty Rx Communication 1"/>
             <description value="An example Communication illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
 	      <exampleBoolean value="true"/>
       </resource>
 		<resource>
 	      <reference>
-	        <reference value="CommunicationRequest/specialty-rx-communicationrequest-1-per-cdex"/>
-                <display value="specialty-rx-communicationrequest-1-per-cdex"/>
+	        <reference value="CommunicationRequest/specialty-rx-communicationrequest-1"/>
+                <display value="specialty-rx-communicationrequest-1"/>
             </reference>
-            <name value="Specialty Rx CommunicationRequest 1 per CDex"/>
+            <name value="Specialty Rx CommunicationRequest 1"/>
             <description value="An example CommunicationRequest illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
+	<!--
 	<resource>
 	      <reference>
 	        <reference value="Communication/cdex-example-solicited-attachment"/>
@@ -349,22 +340,32 @@
             <description value="cdex-example-attachment-request"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
+      -->
 		<resource>
 	      <reference>
 	        <reference value="Bundle/specialty-rx-request-bundle-1"/>
                 <display value="specialty-rx-request-bundle-1"/>
             </reference>
-            <name value="specialty-rx-request-bundle-1"/>
-            <description value="specialty-rx-request-bundle-1"/>
+            <name value="Specialty Rx Request Bundle 1"/>
+            <description value="Example of a Specialty Rx request bundle asking for patient condition and allergy information."/>
 	      <exampleBoolean value="true"/>
       </resource>	       
 		<resource>
 	      <reference>
+	        <reference value="Bundle/specialty-rx-unsolicited-standard-bundle-1"/>
+                <display value="specialty-rx-unsolicited-standard-bundle-1"/>
+            </reference>
+            <name value="Specialty Rx Unsolicited Standard Bundle 1"/>
+            <description value="Example of an unsolicited Specialty Rx bundle based on a predefined definition."/>
+	      <exampleBoolean value="true"/>
+      </resource>	 
+      <resource>
+	      <reference>
 	        <reference value="MessageHeader/specialty-rx-request-messageheader-1"/>
                 <display value="specialty-rx-request-messageheader-1"/>
             </reference>
-            <name value="specialty-rx-request-messageheader-1"/>
-            <description value="specialty-rx-response-messageheader-1"/>
+            <name value="Specialty Rx Request MessageHeader 1"/>
+            <description value="Example MessageHeader resource as it is used in a Specialty Rx response"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
 		<resource>
@@ -372,8 +373,8 @@
 	        <reference value="MessageHeader/specialty-rx-response-messageheader-1"/>
                 <display value="specialty-rx-response-messageheader-1"/>
             </reference>
-            <name value="specialty-rx-response-messageheader-1"/>
-            <description value="specialty-rx-response-messageheader-1"/>
+            <name value="Specialty Rx Response MessageHeader 1"/>
+            <description value="Example MessageHeader resource as it is used in a Specialty Rx response"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
 		<resource>
@@ -381,8 +382,8 @@
 	        <reference value="Organization/specialty-rx-pharmacy-organization-1"/>
                 <display value="specialty-rx-pharmacy-organization-1"/>
             </reference>
-            <name value="specialty-rx-pharmacy-organization-1"/>
-            <description value="specialty-rx-pharmacy-organization-1"/>
+            <name value="Specialty Rx Pharmacy Organization 1"/>
+            <description value="Example Organization resource representing a pharmacy"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
 		<resource>
@@ -390,8 +391,8 @@
 	        <reference value="Bundle/specialty-rx-response-bundle-1"/>
                 <display value="specialty-rx-response-bundle-1"/>
             </reference>
-            <name value="specialty-rx-response-bundle-1"/>
-            <description value="specialty-rx-response-bundle-1"/>
+            <name value="Specialty Rx Response Bundle 1"/>
+            <description value="Example of a Specialty Rx response bundle returning patient condition and allergy information."/>
 	      <exampleBoolean value="true"/>
       </resource>	       
       <page>
