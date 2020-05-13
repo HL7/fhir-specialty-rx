@@ -20,11 +20,13 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="artifacts.html">Profiles and Examples</a>
+        <a href="artifacts.html">Profiles, Terminology, Examples</a>
       </li>
+	<!--
       <li>
         <a href="terminology.html">Terminology</a>
       </li>
+    -->
       <li>
         <a href="capstatements.html">Capability Statements</a>
       </li>

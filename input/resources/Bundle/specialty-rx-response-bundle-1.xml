@@ -9,7 +9,7 @@
       <MessageHeader>
         <id value="specialty-rx-response-messageheader-1" />
         <eventCoding>
-          <system value="http://example.org/placeholder-specialty-rx-events" />
+          <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
           <code value="specialty-rx-response" />
           <display value="Specialty Rx Response" />
         </eventCoding>

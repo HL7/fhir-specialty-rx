@@ -1,5 +1,5 @@
 ### Overview
-This FHIR implementation Guide describes the exchange of data (demographic, prescription, clinical and financial) for dispensing specialty medications by pharmacies as well as facilitating enrollment of patients in programs offered by third parties such as but not limited to Hub vendors and Pharmaceutical manufacturers.
+This FHIR implementation Guide describes the exchange of data (demographic, prescription, clinical and financial) for dispensing specialty medications by pharmacies as well as facilitating enrollment of patients in programs offered by third parties such as, but not limited to, Hub vendors and Pharmaceutical manufacturers.
 
 This guide is co-branded between HL7 and the National Council for Prescription Drug Programs (NCPDP)
 
@@ -72,6 +72,12 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>May 1, 2020</td>
 		<td>Additional example content including an unsolicited standard Specialty Rx Bundle containing current medications, allergies, conditions and vitals. Refined existing examples</td>
   	  </tr>
+        </tr>
+          	  <tr>
+		<td>May 12, 2020</td>
+		<td>Added event-type code system and value set. Cleaned up narrative wording. Corrections.</td>
+  	  </tr>
+
 
 
 

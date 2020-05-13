@@ -24,7 +24,7 @@
 
   - An additional Organization if the information is to be delivered to party other than the dispensing pharmacy
 
-  *Note: CDex allows requests to also contain task information for partners that are using a workflow model. That is not required by the Specialty Rx IG. Support for workflow in this IG is TBD*
+  *Note: CDex allows requests to also contain task information for partners that are using a workflow model. That is not required by the Specialty Rx Implementation Guide. Support for workflow in this IG is TBD*
 
 #### Response or Unsolicited exchange
 

@@ -2,7 +2,7 @@
 <MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-request-messageheader-1" />
   <eventCoding>
-    <system value="http://example.org/placeholder-specialty-rx-events" />
+    <system value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-event-type" />
     <code value="specialty-rx-request" />
     <display value="Specialty Rx Request" />
   </eventCoding>

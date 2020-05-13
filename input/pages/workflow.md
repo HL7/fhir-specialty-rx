@@ -4,14 +4,14 @@
 
 In the Specialty Medication Prescribing (Specialty Rx) workflow, the requesting system is used by a stakeholder that requires information to perform an activity related to a specialty medication prescription. 
 
-The actors below may initiate a specialty Rx data request. They are referred to generally as *Third Party System* in the workflow scenarios below.
+The actors below may initiate a Specialty Rx Data Request. They are referred to generally as *Third Party System* in the workflow scenarios below.
 
 ***Pharmacy***
 
    The pharmacy typically will:
 
 - Receive the NewRx transaction requiring more information to be provided before it can be dispensed
-- Request additional information from prescriber or their EHR system
+- Request additional information from prescriber or their electronic health record (EHR) system
 - Determine when additional information necessary to dispense medication has been satisfied
 
 ***Other Third Parties*** (examples include but are not limited to intermediary, hub, manufacturer)
@@ -23,9 +23,9 @@ The actors below may initiate a specialty Rx data request. They are referred to 
 
 #### Responding system
 
-The responding system in the Specialty Rx workflow is the electronic health record (EHR) system used by the prescriber of the specialty medication or associated staff. It is referred to as the *Prescriber System* in the workflow scenarios below.
+The responding system in the Specialty Rx workflow is the EHR system used by the prescriber of the specialty medication or associated staff. It is referred to as the *Prescriber System* in the workflow scenarios below.
 
-The actors below respond to a specialty Rx data request:
+The actors below respond to a Specialty Rx Data Request:
 
 ***Prescriber***
 
@@ -53,15 +53,15 @@ The actors below respond to a specialty Rx data request:
 
 1. The Third Party System initiates a Specialty Rx Data Request when additional information relating to a specialty prescription is needed to facilitate dispensing or other activity.
 
-- This might be triggered automatically by the Third Party System upon receiving an electronic prescription (NewRx) or 
-
-- A person using the Third Party System might initiate the request manually, e.g., after receiving a faxed prescription
+   - This might be triggered automatically by the Third Party System upon receiving an electronic prescription (NewRx) or 
+   - A person using the Third Party System might initiate the request manually, e.g., after receiving a faxed prescription
 
 2. The Prescriber System collects the requested information and responds with a Specialty Rx Data Response.
 
   *Notes:*
 
 - The response is typically asynchronous.
+
 - The process may repeat one or more times, for example if the user of the Third Party System realizes they need additional information as a follow-up to information received in a previous Specialty Rx Data Response.
 - The solicited workflow may follow an unsolicited workflow (described below).
   For example, the Prescriber system transmits a new specialty medication prescription to a pharmacy and also initiates an "unsolicited" Specialty Rx Data Response to the pharmacy, containing related information. Upon review of the prescription and accompanying information, pharmacy staff realizes they need additional information and initiates a Specialty Rx Data Request back to the Prescriber System. 
@@ -70,23 +70,24 @@ The actors below respond to a specialty Rx data request:
 
 1. At the time that a specialty medication prescription is ordered, the Prescriber System...
 
-- transmits the prescription to the pharmacy and/or other Third Party System
-- also collects related information and initiates a Specialty Rx Data Response to the Third Party System, to accompany the prescription
+   - transmits the prescription to the pharmacy and/or other Third Party System
+   - also collects related information and initiates a Specialty Rx Data Response to the Third Party System, to accompany the prescription
 
 In both workflows, Specialty Rx Data exchanges takes place after the specialty medication prescription has been received by the Third Party System (or received by a user of the system, e.g., by fax).
 
 ### Options for compiling a response
 
-- The flow is asynchronous, enabling it to support both...
+The flow is asynchronous, enabling it to support both...
 
-- - situations where the entire response content can be generated systematically (e.g., if the responding system contains all of the requested information) 
-  - situations where a person must create some or all of the response content (e.g., by answering open-ended questions submitted in the request)
+- situations where the entire response content can be generated systematically (e.g., if the responding system contains all of the requested information) 
+
+- situations where a person must create some or all of the response content (e.g., by answering open-ended questions submitted in the request)
 
 ### Example use scenarios
 
 #### "Unsolicited" workflow containing a predefined set of request information
 
-In this scenario, a Prescriber System sends information related to a specialty medication prescription previously sent to the Third Party System, (One-way exchange initiated by a Prescriber System)
+In this scenario, a Prescriber System sends information related to a specialty medication prescription previously sent to the Third Party System (One-way exchange initiated by a Prescriber System).
 
 The Prescriber System collects predefined information associated with a specialty medication prescription and initiates a Specialty Rx Data Response containing the information to a Third Party System.
 
@@ -106,5 +107,5 @@ The Third Party system creates a Specialty Rx Data Request bundle and submits it
 
 The Prescriber System collects the information specified in the request and initiates an asynchronous Specialty Rx Data Response to the requesting Third Party System.
 
-- The response bundle contains the resources necessary to supply the requested information.
+The response bundle contains the resources necessary to supply the requested information.
 

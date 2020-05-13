@@ -9,7 +9,7 @@
       <MessageHeader>
         <id value="specialty-rx-response-messageheader-1" />
         <eventCoding>
-          <system value="http://example.org/placeholder-specialty-rx-events" />
+          <system value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-event-type" />
           <code value="specialty-rx-response" />
           <display value="Specialty Rx Response" />
         </eventCoding>
@@ -334,9 +334,9 @@
           <coding>
             <system value="http://loinc.org" />
             <code value="10160-0" />
-            <display value="History of Medication use" />
+            <display value="History of Medication use Narrative" />
           </coding>
-          <text value="History of medication use" />
+          <text value="History of Medication use Narrative" />
         </code>
         <subject>
           <reference value="Patient/specialty-rx-patient-1" />
@@ -623,11 +623,11 @@
         </category>
         <code>
           <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="13644009" />
-            <display value="Hypercholesterolemia (disorder)" />
+            <system value="http://hl7.org/fhir/sid/icd-10" />
+            <code value="E7800" />
+            <display value="Pure hypercholesterolemia, unspecified" />
           </coding>
-          <text value="Hypercholesterolemia" />
+          <text value="Pure hypercholesterolemia, unspecified" />
         </code>
         <subject>
           <reference value="Patient/specialty-rx-patient-1" />
@@ -666,9 +666,9 @@
         </category>
         <code>
           <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="84172003" />
-            <display value="Spondylitis (disorder)" />
+            <system value="http://hl7.org/fhir/sid/icd-10" />
+            <code value="L4053" />
+            <display value="Psoriatic spondylitis" />
           </coding>
           <text value="Psoriatic spondylitis" />
         </code>
@@ -709,11 +709,11 @@
         </category>
         <code>
           <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="426979002" />
-            <display value="Mild persistent asthma (disorder)" />
+            <system value="http://hl7.org/fhir/sid/icd-10" />
+            <code value="J4520" />
+            <display value="Mild intermittent asthma, uncomplicated" />
           </coding>
-          <text value="Mild persistent asthma" />
+          <text value="Mild intermittent asthma, uncomplicated" />
         </code>
         <subject>
           <reference value="Patient/specialty-rx-patient-1" />

@@ -35,7 +35,7 @@
     <description value="This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others." />
     <jurisdiction>
       <coding>
-        <system value="urn:iso:std:iso:3166:-2" />
+        <system value="urn:iso:std:iso:3166" />
         <code value="US" />
         <display value="United States of America" />
       </coding>
@@ -170,6 +170,7 @@
 	    <name value="SpecialtyRxCommunication"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+	<!--
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-consent"/>
@@ -178,12 +179,29 @@
 	    <name value="SpecialtyRxConsent"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+  	-->
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-signature-provenance"/>
 	      <display value="SpecialtyRxSignatureProvenance"/>
 	    </reference>
 	    <name value="SpecialtyRxSignatureProvenance"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="CodeSystem/specialty-rx-event-type-code-system"/>
+	      <display value="SpecialtyRxEventTypeCodeSystem"/>
+	    </reference>
+	    <name value="SpecialtyRxEventTypeCodeSystem"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/specialty-rx-event-type-value-set"/>
+	      <display value="SpecialtyRxEventTypeValueSet"/>
+	    </reference>
+	    <name value="SpecialtyRxEventTypeValueSet"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  <resource>
