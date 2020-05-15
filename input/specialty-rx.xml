@@ -179,7 +179,7 @@
 	    <name value="SpecialtyRxConsent"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-  	-->
+
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-signature-provenance"/>
@@ -188,6 +188,7 @@
 	    <name value="SpecialtyRxSignatureProvenance"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+  	-->
   	  <resource>
 	    <reference>
 	      <reference value="CodeSystem/specialty-rx-event-type-code-system"/>
@@ -204,7 +205,88 @@
 	    <name value="SpecialtyRxEventTypeValueSet"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-	  <resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-pharmacy-organization"/>
+	      <display value="SpecialtyRxPharmacyOrganization"/>
+	    </reference>
+	    <name value="SpecialtyRxPharmacyOrganization"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-request-messagedefinition"/>
+	      <display value="SpecialtyRxRequestMessageDefinition"/>
+	    </reference>
+	    <name value="SpecialtyRxMessageDefinition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-response-messagedefinition"/>
+	      <display value="SpecialtyRxResponseMessageDefinition"/>
+	    </reference>
+	    <name value="SpecialtyRxResponseMessageDefinition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-request-messageheader"/>
+	      <display value="SpecialtyRxRequestMessageHeader"/>
+	    </reference>
+	    <name value="SpecialtyRxRequestMessageHeader"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-response-messageheader"/>
+	      <display value="SpecialtyRxResponseMessageHeader"/>
+	    </reference>
+	    <name value="SpecialtyRxResponseMessageHeader"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-request-bundle"/>
+	      <display value="SpecialtyRxRequestBundle"/>
+	    </reference>
+	    <name value="SpecialtyRxRequestBundle"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-response-bundle"/>
+	      <display value="SpecialtyRxResponseBundle"/>
+	    </reference>
+	    <name value="SpecialtyRxResponseBundle"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+  	  <resource>
+	    <reference>
+	      <reference value="CapabilityStatement/specialty-rx-data-source-capabilitystatement"/>
+	      <display value="SpecialtyRxDataSourceCapabilityStatement"/>
+	    </reference>
+	    <name value="SpecialtyRxDataSourceCapabilityStatement"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="CapabilityStatement/specialty-rx-data-recipient-capabilitystatement"/>
+	      <display value="SpecialtyRxDataRecipientCapabilityStatement"/>
+	    </reference>
+	    <name value="SpecialtyRxDataRecipientCapabilityStatement"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="NamingSystem/specialty-rx-ncpdp-provider-id-namingsystem"/>
+	      <display value="SpecialtyRxNcpdpProviderIdNamingSystem"/>
+	    </reference>
+	    <name value="SpecialtyRxNcpdpProviderIdNamingSystem"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+  	  <resource>
 	      <reference>
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
                 <display value="specialty-rx-allergyintolerance-1"/>
@@ -438,17 +520,17 @@
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
-		    <nameUrl value="capstatements.html"/>
-		    <title value="Capability Statements"/>
-	        <generation value="markdown"/>
-		  </page>
-		  <page>
 		    <nameUrl value="downloads.html"/>
 		    <title value="Downloads"/>
 		    <generation value="html"/>
 		  </page>
-    	</page>
-	  <parameter>
+		  <page>
+		    <nameUrl value="message-submission.html"/>
+		    <title value="Message submission"/>
+		    <generation value="markdown"/>
+		  </page>	
+		  </page>
+    	<parameter>
 	    <code value="copyrightyear"/>
 	    <value value="2020+"/>
 	  </parameter>

@@ -12,26 +12,12 @@
       <li>
         <a href="cdex-message-flow.html">Message Flow using CDex</a>
       </li>
-    </ul>
+   	<li>
+        <a href="message-submission.html">Message Submission</a>
+      </li>
+	</ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="artifacts.html">Profiles, Terminology, Examples</a>
-      </li>
-	<!--
-      <li>
-        <a href="terminology.html">Terminology</a>
-      </li>
-    -->
-      <li>
-        <a href="capstatements.html">Capability Statements</a>
-      </li>
-    </ul>
-  </li>
+  <li><a href="artifacts.html">FHIR Artifacts</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>

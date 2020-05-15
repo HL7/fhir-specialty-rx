@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-unsolicited-standard-bundle-1" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-response-bundle" />
+  </meta>
   <type value="message" />
   <timestamp value="2019-11-15T13:10:13-05:00" />
   <entry>
@@ -8,8 +11,11 @@
     <resource>
       <MessageHeader>
         <id value="specialty-rx-response-messageheader-1" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-response-messageheader" />
+        </meta>
         <eventCoding>
-          <system value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-event-type" />
+          <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
           <code value="specialty-rx-response" />
           <display value="Specialty Rx Response" />
         </eventCoding>

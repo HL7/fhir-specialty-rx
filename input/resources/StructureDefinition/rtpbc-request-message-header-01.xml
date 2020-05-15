@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-request-message-header-01" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-messageheader" />
+  </meta>
+  <eventCoding>
+    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+    <code value="rtpbc-request" />
+    <display value="RTPBC Request" />
+  </eventCoding>
+  <source>
+    <name value="MyPatientApp" />
+    <endpoint value="http://example.org/MyPatientApp" />
+  </source>
+  <focus>
+	<type value="Claim"/>
+    <identifier>
+    	<value value="rtpbc-claim-03"/>
+    </identifier>
+  </focus>
+</MessageHeader>

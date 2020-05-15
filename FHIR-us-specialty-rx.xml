@@ -53,15 +53,42 @@
    <artifact name="SpecialtyRxCommunication"
              key="StructureDefinition-specialty-rx-communication"
              id="StructureDefinition/specialty-rx-communication"/>
-   <artifact name="SpecialtyRxSignatureProvenance"
-             key="StructureDefinition-specialty-rx-signature-provenance"
-             id="StructureDefinition/specialty-rx-signature-provenance"/>
    <artifact name="SpecialtyRxEventTypeCodeSystem"
              key="CodeSystem-specialty-rx-event-type-code-system"
              id="CodeSystem/specialty-rx-event-type-code-system"/>
    <artifact name="SpecialtyRxEventTypeValueSet"
              key="ValueSet-specialty-rx-event-type-value-set"
              id="ValueSet/specialty-rx-event-type-value-set"/>
+   <artifact name="SpecialtyRxPharmacyOrganization"
+             key="StructureDefinition-specialty-rx-pharmacy-organization"
+             id="StructureDefinition/specialty-rx-pharmacy-organization"/>
+   <artifact name="SpecialtyRxMessageDefinition"
+             key="MessageDefinition-specialty-rx-request-messagedefinition"
+             id="MessageDefinition/specialty-rx-request-messagedefinition"/>
+   <artifact name="SpecialtyRxResponseMessageDefinition"
+             key="MessageDefinition-specialty-rx-response-messagedefinition"
+             id="MessageDefinition/specialty-rx-response-messagedefinition"/>
+   <artifact name="SpecialtyRxRequestMessageHeader"
+             key="StructureDefinition-specialty-rx-request-messageheader"
+             id="StructureDefinition/specialty-rx-request-messageheader"/>
+   <artifact name="SpecialtyRxResponseMessageHeader"
+             key="StructureDefinition-specialty-rx-response-messageheader"
+             id="StructureDefinition/specialty-rx-response-messageheader"/>
+   <artifact name="SpecialtyRxRequestBundle"
+             key="StructureDefinition-specialty-rx-request-bundle"
+             id="StructureDefinition/specialty-rx-request-bundle"/>
+   <artifact name="SpecialtyRxResponseBundle"
+             key="StructureDefinition-specialty-rx-response-bundle"
+             id="StructureDefinition/specialty-rx-response-bundle"/>
+   <artifact name="SpecialtyRxDataSourceCapabilityStatement"
+             key="CapabilityStatement-specialty-rx-data-source-capabilitystatement"
+             id="CapabilityStatement/specialty-rx-data-source-capabilitystatement"/>
+   <artifact name="SpecialtyRxDataRecipientCapabilityStatement"
+             key="CapabilityStatement-specialty-rx-data-recipient-capabilitystatement"
+             id="CapabilityStatement/specialty-rx-data-recipient-capabilitystatement"/>
+   <artifact name="SpecialtyRxNcpdpProviderIdNamingSystem"
+             key="NamingSystem-specialty-rx-ncpdp-provider-id-namingsystem"
+             id="NamingSystem/specialty-rx-ncpdp-provider-id-namingsystem"/>
    <artifact name="Specialty Rx Allergy/Intolerance 1"
              key="AllergyIntolerance-specialty-rx-allergyintolerance-1"
              id="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
@@ -132,7 +159,7 @@
    <page name="Workflow Scenarios" key="workflow"/>
    <page name="Message Flow using CDex" key="cdex-message-flow"/>
    <page name="Terminology" key="terminology"/>
-   <page name="Capability Statements" key="capstatements"/>
    <page name="Downloads" key="downloads"/>
+   <page name="Message submission" key="message-submission"/>
    <page name="Artifacts Summary" key="artifacts"/>
 </specification>

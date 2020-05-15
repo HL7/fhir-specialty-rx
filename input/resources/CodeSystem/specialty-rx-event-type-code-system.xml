@@ -24,11 +24,11 @@
   <concept>
     <code value="specialty-rx-request" />
     <display value="Specialty Rx Request" />
-    <definition value="Specialty Rx information request" />
+    <definition value="Specialty Rx data request" />
   </concept>
   <concept>
     <code value="specialty-rx-response" />
     <display value="Specialty Rx Response" />
-    <definition value="Specialty Rx information response" />
+    <definition value="Specialty Rx data response" />
   </concept>
 </CodeSystem>
