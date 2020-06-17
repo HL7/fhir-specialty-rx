@@ -170,6 +170,14 @@
 	    <name value="SpecialtyRxCommunication"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-communicationrequest"/>
+	      <display value="SpecialtyRxCommunicationRequest"/>
+	    </reference>
+	    <name value="SpecialtyRxCommunicationRequest"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
 	<!--
   	  <resource>
 	    <reference>
@@ -191,7 +199,7 @@
   	-->
   	  <resource>
 	    <reference>
-	      <reference value="CodeSystem/specialty-rx-event-type-code-system"/>
+	      <reference value="CodeSystem/specialty-rx-event-type"/>
 	      <display value="SpecialtyRxEventTypeCodeSystem"/>
 	    </reference>
 	    <name value="SpecialtyRxEventTypeCodeSystem"/>
@@ -199,10 +207,34 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="ValueSet/specialty-rx-event-type-value-set"/>
+	      <reference value="ValueSet/specialty-rx-event-type"/>
 	      <display value="SpecialtyRxEventTypeValueSet"/>
 	    </reference>
 	    <name value="SpecialtyRxEventTypeValueSet"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="CodeSystem/specialty-rx-communication-category"/>
+	      <display value="SpecialtyRxCommunicationCategoryCodeSystem"/>
+	    </reference>
+	    <name value="SpecialtyRxCommunicationCategoryCodeSystem"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/specialty-rx-communication-category"/>
+	      <display value="SpecialtyRxCommunicationCategoryValueSet"/>
+	    </reference>
+	    <name value="SpecialtyRxCommunicationCategoryValueSet"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/specialty-rx-condition-code"/>
+	      <display value="SpecialtyRxConditionCodeValueSet"/>
+	    </reference>
+	    <name value="SpecialtyRxConditionCodeValueSet"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
@@ -215,7 +247,7 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-request-messagedefinition"/>
+	      <reference value="MessageDefinition/specialty-rx-request"/>
 	      <display value="SpecialtyRxRequestMessageDefinition"/>
 	    </reference>
 	    <name value="SpecialtyRxMessageDefinition"/>
@@ -223,7 +255,7 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-response-messagedefinition"/>
+	      <reference value="MessageDefinition/specialty-rx-response"/>
 	      <display value="SpecialtyRxResponseMessageDefinition"/>
 	    </reference>
 	    <name value="SpecialtyRxResponseMessageDefinition"/>
@@ -261,7 +293,14 @@
 	    <name value="SpecialtyRxResponseBundle"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-coverage"/>
+	      <display value="SpecialtyRxCoverage"/>
+	    </reference>
+	    <name value="SpecialtyRxCoverage"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
   	  <resource>
 	    <reference>
 	      <reference value="CapabilityStatement/specialty-rx-data-source-capabilitystatement"/>
@@ -293,7 +332,7 @@
             </reference>
             <name value="Specialty Rx Allergy/Intolerance 1"/>
             <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance"/>
       </resource>	  
 	  <resource>
 	      <reference>
@@ -302,7 +341,7 @@
             </reference>
             <name value="Specialty Rx Care Team 1"/>
             <description value="An example CareTeam illustrating a care team  in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-careteam"/>
       </resource>	  
 	  <resource>
 	      <reference>
@@ -311,7 +350,7 @@
             </reference>
             <name value="Specialty Rx Condition 1"/>
             <description value="An example Condition illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-condition"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -320,7 +359,7 @@
             </reference>
             <name value="Specialty Rx Medication Direct Endpoint 1"/>
             <description value="An example Endpoint illustrating a practitioner's Direct Project address in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-endpoint-direct"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -329,7 +368,7 @@
             </reference>
             <name value="Specialty Rx Location 1"/>
             <description value="An example Location illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-location"/>
       </resource>	  
       	  <resource>
 	      <reference>
@@ -338,7 +377,7 @@
             </reference>
             <name value="Specialty Rx Medication Request 1"/>
             <description value="An example MedicationRequest illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -347,7 +386,7 @@
             </reference>
             <name value="Specialty Rx Lab Observation 1"/>
             <description value="An example Observation illustrating a lab observation in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-lab-observation"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -356,7 +395,7 @@
             </reference>
             <name value="Specialty Rx Payer Organization 1"/>
             <description value="An example Organization illustrating a payor organization in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payor-organization"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -365,7 +404,7 @@
             </reference>
             <name value="Specialty Rx Organization 1"/>
             <description value="An example Organization illustrating a provider organization in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-provider-organization"/>
       </resource>	  
 	  	  <resource>
 	      <reference>
@@ -374,7 +413,7 @@
             </reference>
             <name value="Specialty Rx Patient 1"/>
             <description value="An example Patient illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient"/>
       </resource>
 	  <resource>
 	      <reference>
@@ -383,7 +422,7 @@
             </reference>
             <name value="Specialty Rx Practitioner 1"/>
             <description value="An example Practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -392,7 +431,7 @@
             </reference>
             <name value="Specialty Rx Practitioner Role 1"/>
             <description value="An example PractitionerRole illustrating a practitioner's office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitionerrole"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -401,7 +440,7 @@
             </reference>
             <name value="Specialty Rx Related Person 1"/>
             <description value="An example RelatedPerson illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-relatedperson"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -410,7 +449,7 @@
             </reference>
             <name value="Specialty Rx Communication 1"/>
             <description value="An example Communication illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communication"/>
       </resource>
 		<resource>
 	      <reference>
@@ -419,7 +458,7 @@
             </reference>
             <name value="Specialty Rx CommunicationRequest 1"/>
             <description value="An example CommunicationRequest illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communicationrequest"/>
       </resource>	       
 	<!--
 	<resource>
@@ -447,6 +486,16 @@
                 <display value="specialty-rx-request-bundle-1"/>
             </reference>
             <name value="Specialty Rx Request Bundle 1"/>
+            <description value="Example of a Specialty Rx request bundle asking for patient condition and allergy information."/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-request-bundle-1-relative"/>
+                <display value="specialty-rx-request-bundle-1-relative"/>
+            </reference>
+            <name value="Specialty Rx Request Bundle 1 Relative References"/>
             <description value="Example of a Specialty Rx request bundle asking for patient condition and allergy information."/>
 	      <exampleBoolean value="true"/>
       </resource>	       
@@ -495,6 +544,15 @@
             <description value="Example of a Specialty Rx response bundle returning patient condition and allergy information."/>
 	      <exampleBoolean value="true"/>
       </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="Coverage/specialty-rx-coverage-1"/>
+                <display value="specialty-rx-coverage-1"/>
+            </reference>
+            <name value="Specialty Rx Coverage 1"/>
+            <description value="Example of a Specialty Rx Coverage resource containing pharmacy benefit plan information."/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
       <page>
 	      <nameUrl value="toc.html"/>
 	      <title value="Table of Contents"/>
@@ -512,6 +570,16 @@
 		  <page>
 		    <nameUrl value="cdex-message-flow.html"/>
 		    <title value="Message Flow using CDex"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
+		    <nameUrl value="patient-matching.html"/>
+		    <title value="Patient Matching and Processing Detail"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
+		    <nameUrl value="request-queries.html"/>
+		    <title value="Data Request Query Strings"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

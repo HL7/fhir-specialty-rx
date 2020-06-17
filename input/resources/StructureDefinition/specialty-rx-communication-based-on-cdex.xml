@@ -52,7 +52,7 @@
       <sliceName value="communication_request_slice" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-communicationrequest" />
+        <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communicationrequest" />
       </type>
       <mustSupport value="true" />
     </element>

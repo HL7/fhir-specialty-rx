@@ -12,7 +12,13 @@
       <li>
         <a href="cdex-message-flow.html">Message Flow using CDex</a>
       </li>
-   	<li>
+      <li>
+        <a href="patient-matching.html">Patient Matching and Processing Detail</a>
+      </li>
+      <li>
+        <a href="request-queries.html">Data Request Query Strings</a>
+      </li>
+   	  <li>
         <a href="message-submission.html">Message Submission</a>
       </li>
 	</ul>

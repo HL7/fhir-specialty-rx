@@ -34,6 +34,15 @@
     <element id="Patient">
       <path value="Patient" />
     </element>
+    <element id="Patient.meta">
+      <path value="Patient.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.meta.source">
+      <path value="Patient.meta.source" />
+      <comment value="Holds the URL of the server that provided this Patient resource. For example, if provided by an EHR, this is the EHR's FHIR server URL"/> 
+      <mustSupport value="true" />
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>

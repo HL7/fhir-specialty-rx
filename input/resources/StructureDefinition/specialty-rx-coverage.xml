@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-coverage" />
+  <meta>
+    <lastUpdated value="2020-06-15T00:00:00-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-coverage" />
+  <version value="0.0.1" />
+  <name value="SpecialtyRxCoverage" />
+  <title value="Specialty Rx Coverage" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-06-15T00:00:00-05:00" />
+  <publisher value="NCPDP" />
+  <description value="This profile constrains the Coverage resource for carrying insurance coverage information in the specialty medication prescribing process" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Coverage" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Coverage" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Coverage">
+      <path value="Coverage" />
+    </element>
+    <element id="Coverage.subscriberId">
+      <path value="Coverage.subscriberId" />
+      <label value="Health Plan Cardholder ID" />
+      <short value="Health Plan Cardholder ID" />
+      <comment value="Either *PBM Member ID* (.class.type = 'rxid') or *Subscriber ID* must be populated" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor">
+      <path value="Coverage.payor" />
+      <label value="Payer ID" />
+      <short value="Payer ID" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor.identifier">
+      <path value="Coverage.payor.identifier" />
+      <label value="Payer ID" />
+      <short value="Payer ID" />
+      <definition value="Payer ID as defined in the participants' environment. E.g., an identifier defined in an eligibility service to represent the payer." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor.identifier.value">
+      <path value="Coverage.payor.identifier.value" />
+      <label value="Payer ID Value" />
+      <short value="Payer ID Value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class">
+      <path value="Coverage.class" />
+      <label value="Pharmacy coverage identifiers" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <description value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
+        <ordered value="false" />
+        <rules value="open" />
+      </slicing>
+      <short value="Pharmacy coverage identifiers" />
+      <definition value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
+      <comment value="Populate with identifiers retrieved from an insurance card, an eligibility service or other source agreed between trading partners" />
+      <min value="0" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class.type">
+      <path value="Coverage.class.type" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Coverage Class Codes" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/coverage-class" />
+      </binding>
+    </element>
+    <element id="Coverage.class:bin">
+      <path value="Coverage.class" />
+      <sliceName value="bin" />
+      <label value="IIN (BIN) number" />
+      <short value="IIN (BIN) number" />
+      <comment value="Populate as agreed between trading partners" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class:bin.type">
+      <path value="Coverage.class.type" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+          <code value="rxbin" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Coverage.class:pcn">
+      <path value="Coverage.class" />
+      <sliceName value="pcn" />
+      <label value="Processor Control Number (PCN)" />
+      <short value="Processor Control Number (PCN)" />
+      <comment value="Populate as agreed between trading partners" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class:pcn.type">
+      <path value="Coverage.class.type" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+          <code value="rxpcn" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Coverage.class:rxgroup-id">
+      <path value="Coverage.class" />
+      <sliceName value="rxgroup-id" />
+      <label value="Pharmacy Benefit Group ID" />
+      <short value="Pharmacy Benefit Group ID" />
+      <definition value="The patient's Group ID associated with their pharmacy benefit" />
+      <comment value="Populate as agreed between trading partners" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class:rxgroup-id.type">
+      <path value="Coverage.class.type" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+          <code value="rxgroup" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Coverage.class:pbm-member-id">
+      <path value="Coverage.class" />
+      <sliceName value="pbm-member-id" />
+      <label value="PBM Member ID" />
+      <short value="PBM Member ID" />
+      <definition value="The patient's pharmacy benefit member ID (which may differ from their overall health insurance ID)" />
+      <comment value="Populate as agreed between trading partners" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class:pbm-member-id.type">
+      <path value="Coverage.class.type" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+          <code value="rxid" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+  </differential>
+</StructureDefinition>

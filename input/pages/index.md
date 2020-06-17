@@ -81,6 +81,22 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Added messaging detail: Request and response MessageDefinition, MessageHeader, and Bundle profiles. Added intial CapabilityStatements. Refined examples to reference messaging profiles. Added Message Submission page. 
 <br/>Noted in-process clinical profiles that currently have no constraints beyond US Core (which will be removed if the workground determines the associated US Core profiles can be use as-is). Other refinements.</td>
   	  </tr>
+      <tr>
+		<td>June 16, 2020</td>
+		<td>Changes...
+            <ul>
+              <li>added guidance page describing patient matching and request/response processing detail</li>
+              <li>added guidance page describing request query strings</li>
+              <li>added CommunicationRequest resource that further constrains the CDex profile. Specifically limits the .about element to contain the responding system's Patient resource and/or the related MediationRequest and clarify population of subject</li>
+              <li>refined CommunicationRequest resource to limit the .about element to contain the requesting system's Patient resource and/or the related MediationRequest and clarify population of subject</li>
+              <li>added ValueSet constraining the US Core Condition Code (removing ICD-9-CM)and binding w/in the Condition profile</li>
+              <li>added CodeSystem and ValueSet for communication categories used in the Communication and CommunicationResponse</li>
+              <li>added Coverage profile (and example resource) that identifies pertinent elements to identify pharmacy and medical coverage</li>
+              <li>Adjusted example file references so that they appear on profile pages</li>
+            </ul>
+		</td>
+  	  </tr>
+
 
 
 

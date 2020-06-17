@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-lab-observation-1" />
+  <meta>
+    <lastUpdated value="2020-04-10T14:20:00.000+00:00" />
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-lab-observation" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="Laboratory" />
+    </coding>
+    <text value="Laboratory" />
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="1975-2" />
+      <display value="Bilirub SerPl-mCnc" />
+    </coding>
+    <text value="Bilirub SerPl-mCnc" />
+  </code>
+  <subject>
+    <reference value="Patient/specialty-rx-patient-1" />
+    <display value="Amy Shaw" />
+  </subject>
+  <effectiveDateTime value="2019-07-07" />
+  <valueQuantity>
+    <value value="8.6" />
+    <unit value="mg/dL" />
+    <system value="http://unitsofmeasure.org" />
+  </valueQuantity>
+  <referenceRange>
+    <low>
+      <value value="2.0" />
+      <unit value="mg/dL" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="mg/dL" />
+    </low>
+    <high>
+      <value value="7.0" />
+      <unit value="mg/dL" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="mg/dL" />
+    </high>
+    <appliesTo>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning" />
+        <code value="normal" />
+        <display value="Normal Range" />
+      </coding>
+      <text value="Normal Range" />
+    </appliesTo>
+  </referenceRange>
+</Observation>

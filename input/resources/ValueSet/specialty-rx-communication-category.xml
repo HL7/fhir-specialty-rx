@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-communication-category" />
+  <meta>
+    <lastUpdated value="2020-05-01T00:00:00-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-communication-category" />
+  <version value="1.0.0" />
+  <name value="SpecialtyRxCommunicationCategoryValueSet" />
+  <title value="Specialty Rx Communication Category Value Set" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-05-01T00:00:00-05:00" />
+  <publisher value="NCPDP" />
+  <description value="This value set contains information communication categories used in Specialty Rx exchanges." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-communication-category" />
+    </include>
+  </compose>
+</ValueSet>

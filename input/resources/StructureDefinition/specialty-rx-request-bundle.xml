@@ -101,7 +101,7 @@
       <max value="1" />
       <type>
         <code value="CommunicationRequest" />
-        <profile value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-communicationrequest" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communicationrequest" />
       </type>
       <mustSupport value="true" />
     </element>

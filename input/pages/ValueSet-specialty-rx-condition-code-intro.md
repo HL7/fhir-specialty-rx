@@ -1,0 +1,2 @@
+<p>The Specialty Rx exchanges can contain information about patient conditions.The allowed condition code systems include those defined in the US Core Condition Code value set, with the exception of ICD-9-CM. 
+<br>

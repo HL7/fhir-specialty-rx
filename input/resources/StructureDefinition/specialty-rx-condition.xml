@@ -30,5 +30,13 @@
     <element id="Condition">
       <path value="Condition" />
     </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Valueset to describe the actual problem experienced by the patient" />
+        <valueSet value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-condition-code" />
+      </binding>
+    </element>
   </differential>
 </StructureDefinition>
