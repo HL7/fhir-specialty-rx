@@ -1,3 +1,31 @@
+### High-Level Exchange Flows
+
+#### Unsolicited
+
+In this flow, patient information is exchanged based on a request from a pharmacy or other party.
+
+<br>
+
+<div><p>
+  <img src="high-level-exchange-flow-solicited.png" style="float:none">  
+    </p>
+</div>
+
+<br>
+
+#### Solicited
+
+In this flow, the prescribing system proactively sends patient information related to a prescription.
+
+<br>
+
+<div><p>
+  <img src="high-level-exchange-flow-unsolicited.png" style="float:none">  
+    </p>
+</div>
+
+<br>
+
 ###  System Roles
 
 #### Requesting system
