@@ -1,6 +1,6 @@
 ### High-Level Exchange Flows
 
-#### Unsolicited
+#### Solicited
 
 In this flow, patient information is exchanged based on a request from a pharmacy or other party.
 
@@ -13,7 +13,7 @@ In this flow, patient information is exchanged based on a request from a pharmac
 
 <br>
 
-#### Solicited
+#### Unsolicited
 
 In this flow, the prescribing system proactively sends patient information related to a prescription.
 
