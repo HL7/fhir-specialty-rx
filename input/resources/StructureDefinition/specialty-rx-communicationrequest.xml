@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-communicationrequest" />
-  <meta>
-    <lastUpdated value="2020-06-15T00:00:00.000-00:00" />
-  </meta>
   <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communicationrequest" />
   <version value="0.1.0" />
   <name value="SpecialtyRxCommunicationRequest" />
   <title value="Specialty Rx CommunicationRequest" />
   <status value="active" />
-  <date value="2020-06-15T00:00:00-00:00" />
-  <description value="This profile tailors the CommunicationRequest resource to support specialty medication dispensing and enrollment in related programs. It constrains the CDex CommunicationRequest profile." />
+  <date value="2020-06-26T00:00:00+00:00" />
+  <description value="This profile tailors the Communication resource to support specialty medication dispensing and enrollment in related programs" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166:-2" />
-      <code value="urn:iso:std:iso:3166" />
+      <code value="US" />
       <display value="United States of America" />
     </coding>
   </jurisdiction>
@@ -22,7 +19,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="CommunicationRequest" />
-  <baseDefinition value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-communicationrequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest" />
   <derivation value="constraint" />
   <differential>
     <element id="CommunicationRequest">
@@ -34,19 +31,15 @@
       <label value="Requester's Patient Resource" />
       <short value="Requester's Patient" />
       <definition value="Reference to a Patient resource that represents the requester's patient record. Contains demographics and identifiers to be used by the responding party to locate the patient in its system." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+      </type>
+      <mustSupport value="true" />
     </element>
     <element id="CommunicationRequest.about">
       <path value="CommunicationRequest.about" />
-      <!--
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="about.resolve()" />
-        </discriminator>
-        <ordered value="false" />
-        <rules value="closed" />
-      </slicing>
-      -->
       <requirements value="May contain (a) a Patient resource representing the responding data source's patient record and/or (b) a MedicationRequest resource representing the medication prescription related to this request." />
       <min value="0" />
       <max value="2" />
@@ -57,30 +50,68 @@
       </type>
       <mustSupport value="true" />
     </element>
-<!--
-    <element id="CommunicationRequest.about:responder-patient">
-      <path value="CommunicationRequest.about" />
-      <sliceName value="responder-patient" />
-      <definition value="A Patient resource representing the responding data source's patient record. Obtained either (a) from a previous related Communication from the responder or (b) the result of a Patient/$match operation submitted to the responder's server" />
+    <element id="CommunicationRequest.payload">
+      <path value="CommunicationRequest.payload" />
+      <min value="1" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CommunicationRequest.payload.extension:payloadQueryString">
+      <path value="CommunicationRequest.payload.extension" />
+      <sliceName value="payloadQueryString" />
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string" />
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="CommunicationRequest.about:medicationrequest">
-      <path value="CommunicationRequest.about" />
-      <sliceName value="medicationrequest" />
+    <element id="CommunicationRequest.payload.extension:payloadClinicalNoteType">
+      <path value="CommunicationRequest.payload.extension" />
+      <sliceName value="payloadClinicalNoteType" />
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-clinical-note-type" />
       </type>
       <mustSupport value="true" />
     </element>
--->
+    <element id="CommunicationRequest.payload.content[x]">
+      <path value="CommunicationRequest.payload.content[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CommunicationRequest.requester">
+      <path value="CommunicationRequest.requester" />
+      <short value="The person or organization creating the CommunicationRequest" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="CommunicationRequest.recipient">
+      <path value="CommunicationRequest.recipient" />
+      <short value="The recipient(s) of the Communication resulting from this request (not the recipient of the request)." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="CommunicationRequest.sender">
+      <path value="CommunicationRequest.sender" />
+      <short value="The sender of the Communication resulting from this request (not the sender of the request)." />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="CommunicationRequest.note">
+      <path value="CommunicationRequest.note" />
+      <short value="Additional human readable info about the request, such as &quot;Requesting discharge summary but if unavailable please send alternative documentation supporting the claim&quot;." />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>

@@ -35,7 +35,7 @@
     <reference value="Organization/specialty-rx-provider-organization-1" />
   </sender>
   <payload>
-    <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+    <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
       <valueString value="Condition?patient=specialty-rx-patient-1" />
     </extension>
     <contentReference>
@@ -43,7 +43,7 @@
     </contentReference>
   </payload>
   <payload>
-    <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+    <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
       <valueString value="Condition?patient=specialty-rx-patient-1" />
     </extension>
     <contentReference>

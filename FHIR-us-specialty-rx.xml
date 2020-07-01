@@ -74,24 +74,39 @@
    <artifact name="SpecialtyRxPharmacyOrganization"
              key="StructureDefinition-specialty-rx-pharmacy-organization"
              id="StructureDefinition/specialty-rx-pharmacy-organization"/>
-   <artifact name="SpecialtyRxMessageDefinition"
+   <artifact name="SpecialtyRxRequestMessageDefinition"
              key="MessageDefinition-specialty-rx-request"
              id="MessageDefinition/specialty-rx-request"/>
    <artifact name="SpecialtyRxResponseMessageDefinition"
              key="MessageDefinition-specialty-rx-response"
              id="MessageDefinition/specialty-rx-response"/>
+   <artifact name="SpecialtyRxDataQueryMessageDefinition"
+             key="MessageDefinition-specialty-rx-data-query-message"
+             id="MessageDefinition/specialty-rx-data-query-message"/>
+   <artifact name="SpecialtyRxQueryResponseMessageDefinition"
+             key="MessageDefinition-specialty-rx-query-response-message"
+             id="MessageDefinition/specialty-rx-query-response-message"/>
+   <artifact name="SpecialtyRxQuestionnaireMessageDefinition"
+             key="MessageDefinition-specialty-rx-questionnaire-message"
+             id="MessageDefinition/specialty-rx-questionnaire-message"/>
+   <artifact name="SpecialtyRxQuestionnaireResponseMessageDefinition"
+             key="MessageDefinition-specialty-rx-questionnaire-response-message"
+             id="MessageDefinition/specialty-rx-questionnaire-response-message"/>
    <artifact name="SpecialtyRxRequestMessageHeader"
              key="StructureDefinition-specialty-rx-request-messageheader"
              id="StructureDefinition/specialty-rx-request-messageheader"/>
    <artifact name="SpecialtyRxResponseMessageHeader"
              key="StructureDefinition-specialty-rx-response-messageheader"
              id="StructureDefinition/specialty-rx-response-messageheader"/>
-   <artifact name="SpecialtyRxRequestBundle"
+   <artifact name="SpecialtyRxReqestBundle"
              key="StructureDefinition-specialty-rx-request-bundle"
              id="StructureDefinition/specialty-rx-request-bundle"/>
    <artifact name="SpecialtyRxResponseBundle"
              key="StructureDefinition-specialty-rx-response-bundle"
              id="StructureDefinition/specialty-rx-response-bundle"/>
+   <artifact name="SpecialtyRxQueryResponseBundle"
+             key="StructureDefinition-specialty-rx-query-response-bundle"
+             id="StructureDefinition/specialty-rx-query-response-bundle"/>
    <artifact name="SpecialtyRxCoverage"
              key="StructureDefinition-specialty-rx-coverage"
              id="StructureDefinition/specialty-rx-coverage"/>
@@ -104,6 +119,18 @@
    <artifact name="SpecialtyRxNcpdpProviderIdNamingSystem"
              key="NamingSystem-specialty-rx-ncpdp-provider-id-namingsystem"
              id="NamingSystem/specialty-rx-ncpdp-provider-id-namingsystem"/>
+   <artifact name="SpecialtyRxPayloadQueryString"
+             key="StructureDefinition-specialty-rx-payload-query-string"
+             id="StructureDefinition/specialty-rx-payload-query-string"/>
+   <artifact name="SpecialtyRxPayloadClinicalNoteType"
+             key="StructureDefinition-specialty-rx-payload-clinical-note-type"
+             id="StructureDefinition/specialty-rx-payload-clinical-note-type"/>
+   <artifact name="SpecialtyRxPopulateQuestionnaire"
+             key="OperationDefinition-specialty-rx-populate-questionnaire"
+             id="OperationDefinition/specialty-rx-populate-questionnaire"/>
+   <artifact name="SpecialtyRxQueryData"
+             key="OperationDefinition-specialty-rx-query-data"
+             id="OperationDefinition/specialty-rx-query-data"/>
    <artifact name="Specialty Rx Allergy/Intolerance 1"
              key="AllergyIntolerance-specialty-rx-allergyintolerance-1"
              id="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
@@ -152,9 +179,6 @@
    <artifact name="Specialty Rx Request Bundle 1"
              key="Bundle-specialty-rx-request-bundle-1"
              id="Bundle/specialty-rx-request-bundle-1"/>
-   <artifact name="Specialty Rx Request Bundle 1 Relative References"
-             key="Bundle-specialty-rx-request-bundle-1-relative"
-             id="Bundle/specialty-rx-request-bundle-1-relative"/>
    <artifact name="Specialty Rx Unsolicited Standard Bundle 1"
              key="Bundle-specialty-rx-unsolicited-standard-bundle-1"
              id="Bundle/specialty-rx-unsolicited-standard-bundle-1"/>
@@ -173,12 +197,24 @@
    <artifact name="Specialty Rx Coverage 1"
              key="Coverage-specialty-rx-coverage-1"
              id="Coverage/specialty-rx-coverage-1"/>
+   <artifact name="Specialty Rx Data Query 1"
+             key="Bundle-specialty-rx-data-query-1"
+             id="Bundle/specialty-rx-data-query-1"/>
+   <artifact name="Specialty Rx Data Query Response 1"
+             key="Bundle-specialty-rx-data-query-response-1"
+             id="Bundle/specialty-rx-data-query-response-1"/>
+   <artifact name="Specialty Rx Questionnaire Request 1"
+             key="Bundle-specialty-rx-questionnaire-request-1"
+             id="Bundle/specialty-rx-questionnaire-request-1"/>
+   <artifact name="Specialty Rx Questionnaire Response 1"
+             key="Bundle-specialty-rx-questionnaire-response-1"
+             id="Bundle/specialty-rx-questionnaire-response-1"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc"/>
    <page name="IG Home Page" key="index"/>
    <page name="Workflow Scenarios" key="workflow"/>
-   <page name="Message Flow using CDex" key="cdex-message-flow"/>
+   <page name="Message Flow" key="message-flow"/>
    <page name="Patient Matching and Processing Detail" key="patient-matching"/>
    <page name="Data Request Query Strings" key="request-queries"/>
    <page name="Terminology" key="terminology"/>

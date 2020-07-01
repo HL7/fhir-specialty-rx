@@ -33,13 +33,13 @@
     <reference value="MedicationRequest/specialty-rx-medicationrequest-1" />
   </about>
   <payload>
-    <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+    <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
       <valueString value="Condition?patient=specialty-rx-patient-1" />
     </extension>
     <contentString value="Please provide the patient's conditions" />
   </payload>
   <payload>
-    <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
+    <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
       <valueString value="AllergyIntolerance?patient=specialty-rx-patient-1" />
     </extension>
     <contentString value="Please send the patient's allergies and intolerances" />

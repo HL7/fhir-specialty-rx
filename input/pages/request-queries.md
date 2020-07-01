@@ -2,7 +2,7 @@
 
 The Specialty Rx data request specifies the desired patient information in the payload element of a CommunicationRequest resource. 
 
-The process utilizes the *cdex-payload-query-string* extension (defined in the Da Vinci Clinical Data Exchange (CDex) Implementation Guide) to specify each query using standard FHIR search parameters. The query string is conveyed in the extension's valueString element.
+The process utilizes the *specialty-rx-payload-query-string* extension to specify each query using standard FHIR search parameters. The query string is conveyed in the extension's valueString element.
 
 **Example:** Excerpt from CommunicationRequest
 
@@ -11,7 +11,7 @@ The process utilizes the *cdex-payload-query-string* extension (defined in the D
     {
       "extension" : [
         {
-          "url" : "http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string",
+          "url" : "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string",
           "valueString" : "Condition?patient=specialty-rx-patient-1"
         }
       ],

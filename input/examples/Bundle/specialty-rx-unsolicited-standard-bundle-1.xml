@@ -24,16 +24,16 @@
           <endpoint value="http://example.org/our-clinics/fhir" />
         </source>
         <focus>
-          <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+          <reference value="https://example.com/base/CommunicationRequest/comrequest1" />
         </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+    <fullUrl value="https://example.com/base/CommunicationRequest/comrequest1" />
     <resource>
       <Communication>
-        <id value="specialty-rx-communication-1" />
+        <id value="comrequest1" />
         <meta>
           <versionId value="1" />
           <lastUpdated value="2020-04-21T21:00:00.000-00:00" />
@@ -41,7 +41,7 @@
         </meta>
         <text>
           <status value="generated" />
-          <div xmlns="http://www.w3.org/1999/xhtml">Communciation containing requested patient information. Per CDex profile</div>
+          <div xmlns="http://www.w3.org/1999/xhtml">Communciation containing requested patient information.</div>
         </text>
         <identifier>
           <system value="http://www.example.com/ourpharmacy/inforequests" />
@@ -55,82 +55,82 @@
           </coding>
         </category>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <about>
-          <reference value="MedicationRequest/specialty-rx-medicationrequest-1" />
+          <reference value="MedicationRequest/prescription1" />
         </about>
         <sent value="2020-04-21T21:00:00-00:00" />
         <recipient>
-          <reference value="Organization/specialty-rx-pharmacy-organization-1" />
+          <reference value="Organization/pharmacy1" />
         </recipient>
         <sender>
           <reference value="Organization/specialty-rx-provider-organization-1" />
         </sender>
         <payload>
-          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="MedicationStatement?patient=specialty-rx-patient-1&amp;_list=$current-medications" />
+          <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
+            <valueString value="MedicationStatement?patient=patient1&amp;_list=$current-medications" />
           </extension>
           <contentReference>
             <reference value="List/1" />
           </contentReference>
         </payload>
         <payload>
-          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="AllergyIntolerance?patient=specialty-rx-patient-1&amp;_list=$current-allergies" />
+          <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
+            <valueString value="AllergyIntolerance?patient=patient1&amp;_list=$current-allergies" />
           </extension>
           <contentReference>
             <reference value="List/2" />
           </contentReference>
         </payload>
         <payload>
-          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="Condition?patient=specialty-rx-patient-1&amp;_list=$current-problems" />
+          <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
+            <valueString value="Condition?patient=patient1&amp;_list=$current-problems" />
           </extension>
           <contentReference>
             <reference value="List/3" />
           </contentReference>
         </payload>
         <payload>
-          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|8302-2" />
+          <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
+            <valueString value="Observation?patient=patient1&amp;code=http://loinc.org|8302-2" />
           </extension>
           <contentReference>
-            <reference value="Observation/Observation-9ee3483b900847de88fb035ef1d124df" />
+            <reference value="Observation/9ee3483b900847de88fb035ef1d124df" />
           </contentReference>
         </payload>
         <payload>
-          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|29463-7" />
+          <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
+            <valueString value="Observation?patient=patient1&amp;code=http://loinc.org|29463-7" />
           </extension>
           <contentReference>
-            <reference value="Observation/Observation-b0923b0ede8f4e439041fcf55d3a12c1" />
+            <reference value="Observation/b0923b0ede8f4e439041fcf55d3a12c1" />
           </contentReference>
         </payload>
         <payload>
-          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|13956-8" />
+          <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
+            <valueString value="Observation?patient=patient1&amp;code=http://loinc.org|13956-8" />
           </extension>
           <contentReference>
-            <reference value="Observation/Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+            <reference value="Observation/e93c7cb5a9fe48598051b8d4c3d64773" />
           </contentReference>
         </payload>
         <payload>
-          <extension url="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string">
-            <valueString value="Observation?patient=specialty-rx-patient-1&amp;code=http://loinc.org|13956-8" />
+          <extension url="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string">
+            <valueString value="Observation?patient=patient1&amp;code=http://loinc.org|13956-8" />
           </extension>
           <contentReference>
-            <reference value="Observation/Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+            <reference value="Observation/e93c7cb5a9fe48598051b8d4c3d64773" />
           </contentReference>
         </payload>
       </Communication>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c" />
+    <fullUrl value="https://example.com/base/MedicationRequest/prescription1" />
     <resource>
       <MedicationRequest>
-        <id value="specialty-rx-medicationrequest-1" />
+        <id value="prescription1" />
         <meta>
           <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
         </meta>
@@ -140,20 +140,15 @@
           <coding>
             <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
             <code value="205535" />
-            <display value="Prozac 10 MG Oral Capsule" />
-          </coding>
-          <coding>
-            <system value="http://hl7.org/fhir/sid/ndc" />
-            <code value="00777310402" />
-            <display value="Prozac 10mg capsule" />
+            <display value="PROzac 10 MG Oral Capsule" />
           </coding>
         </medicationCodeableConcept>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <authoredOn value="2020-03-10" />
         <requester>
-          <reference value="Practitioner/specialty-rx-practitioner-1" />
+          <reference value="Practitioner/practitioner1" />
         </requester>
         <dosageInstruction>
           <text value="Take 1 tablet twice a day" />
@@ -186,10 +181,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d" />
+    <fullUrl value="https://example.com/base/Patient/patient1" />
     <resource>
       <Patient>
-        <id value="specialty-rx-patient-1" />
+        <id value="patient1" />
         <meta>
           <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
         </meta>
@@ -234,10 +229,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0e" />
+    <fullUrl value="https://example.com/base/Practitioner/practitioner1" />
     <resource>
       <Practitioner>
-        <id value="specialty-rx-practitioner-1" />
+        <id value="practitioner1" />
         <meta>
           <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
         </meta>
@@ -248,7 +243,7 @@
               <b>Generated Narrative with Details</b>
             </p>
             <p>
-              <b>id</b>: specialty-rx-practitioner-1</p>
+              <b>id</b>: practitioner1</p>
             <p>
               <b>meta</b>: </p>
             <p>
@@ -294,10 +289,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0f" />
+    <fullUrl value="https://example.com/base/Organization/pharmacy1" />
     <resource>
       <Organization>
-        <id value="specialty-rx-pharmacy-organization-1" />
+        <id value="pharmacy1" />
         <identifier>
           <system value="http://hl7.org/fhir/sid/us-npi" />
           <value value="1669512345" />
@@ -330,7 +325,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="List/1" />
+    <fullUrl value="https://example.com/base/List/1" />
     <resource>
       <List>
         <id value="1" />
@@ -345,7 +340,7 @@
           <text value="History of Medication use Narrative" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <entry>
           <item>
@@ -366,16 +361,12 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="MedicationStatement/1" />
+    <fullUrl value="https://example.com/base/MedicationStatement/1" />
     <resource>
       <MedicationStatement>
         <id value="1" />
         <status value="active" />
         <medicationCodeableConcept>
-          <coding>
-            <system value="http://hl7.org/fhir/sid/ndc" />
-            <code value="00093505998" />
-          </coding>
           <coding>
             <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
             <code value="617310" />
@@ -383,23 +374,19 @@
           <text value="atorvastatin 20 MG Oral Tablet" />
         </medicationCodeableConcept>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <dateAsserted value="2019-10-05" />
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="MedicationStatement/2" />
+    <fullUrl value="https://example.com/base/MedicationStatement/2" />
     <resource>
       <MedicationStatement>
         <id value="2" />
         <status value="active" />
         <medicationCodeableConcept>
-          <coding>
-            <system value="http://hl7.org/fhir/sid/ndc" />
-            <code value="00069306075" />
-          </coding>
           <coding>
             <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
             <code value="750149" />
@@ -407,23 +394,19 @@
           <text value="{6 (Azithromycin 250 MG Oral Tablet [Zithromax]) } Pack [Z-PAK]" />
         </medicationCodeableConcept>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <dateAsserted value="2019-10-05" />
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="MedicationStatement/3" />
+    <fullUrl value="https://example.com/base/MedicationStatement/3" />
     <resource>
       <MedicationStatement>
         <id value="2" />
         <status value="active" />
         <medicationCodeableConcept>
-          <coding>
-            <system value="http://hl7.org/fhir/sid/ndc" />
-            <code value="33261082890" />
-          </coding>
           <coding>
             <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
             <code value="197885" />
@@ -431,14 +414,14 @@
           <text value="Hydrochlorothiazide 12.5 MG / Lisinopril 10 MG Oral Tablet" />
         </medicationCodeableConcept>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <dateAsserted value="2019-10-05" />
       </MedicationStatement>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="List/2" />
+    <fullUrl value="https://example.com/base/List/2" />
     <resource>
       <List>
         <id value="2" />
@@ -453,7 +436,7 @@
           <text value="Allergies and adverse reactions Document" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <entry>
           <item>
@@ -474,7 +457,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="AllergyIntolerance/1" />
+    <fullUrl value="https://example.com/base/AllergyIntolerance/1" />
     <resource>
       <AllergyIntolerance>
         <id value="1" />
@@ -496,13 +479,13 @@
           <text value="Cashew" />
         </code>
         <patient>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </patient>
       </AllergyIntolerance>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="AllergyIntolerance/2" />
+    <fullUrl value="https://example.com/base/AllergyIntolerance/2" />
     <resource>
       <AllergyIntolerance>
         <id value="2" />
@@ -524,13 +507,13 @@
           <text value="Bees" />
         </code>
         <patient>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </patient>
       </AllergyIntolerance>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="AllergyIntolerance/3" />
+    <fullUrl value="https://example.com/base/AllergyIntolerance/3" />
     <resource>
       <AllergyIntolerance>
         <id value="3" />
@@ -552,7 +535,7 @@
           <text value="Penicillins" />
         </code>
         <patient>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </patient>
         <reaction>
           <manifestation>
@@ -563,7 +546,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="List/3" />
+    <fullUrl value="https://example.com/base/List/3" />
     <resource>
       <List>
         <id value="3" />
@@ -578,7 +561,7 @@
           <text value="Problem list - Reported" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <entry>
           <item>
@@ -599,7 +582,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Condition/1" />
+    <fullUrl value="https://example.com/base/Condition/1" />
     <resource>
       <Condition>
         <id value="1" />
@@ -636,13 +619,13 @@
           <text value="Hypercholesterolemia (disorder)" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
       </Condition>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Condition/2" />
+    <fullUrl value="https://example.com/base/Condition/2" />
     <resource>
       <Condition>
         <id value="2" />
@@ -679,13 +662,13 @@
           <text value="Spondylitis (disorder)" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
       </Condition>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Condition/3" />
+    <fullUrl value="https://example.com/base/Condition/3" />
     <resource>
       <Condition>
         <id value="3" />
@@ -722,16 +705,16 @@
           <text value="Intermittent asthma (disorder)" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
       </Condition>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Observation-9ee3483b900847de88fb035ef1d124df" />
+    <fullUrl value="https://example.com/base/Observation/9ee3483b900847de88fb035ef1d124df" />
     <resource>
       <Observation>
-        <id value="Observation-9ee3483b900847de88fb035ef1d124df" />
+        <id value="9ee3483b900847de88fb035ef1d124df" />
         <status value="final" />
         <category>
           <coding>
@@ -749,7 +732,7 @@
           <text value="Body height" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <effectiveDateTime value="2018-05-02T03:25:22.015+00:00" />
         <valueQuantity>
@@ -762,10 +745,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Observation-b0923b0ede8f4e439041fcf55d3a12c1" />
+    <fullUrl value="https://example.com/base/Observation/b0923b0ede8f4e439041fcf55d3a12c1" />
     <resource>
       <Observation>
-        <id value="Observation-b0923b0ede8f4e439041fcf55d3a12c1" />
+        <id value="b0923b0ede8f4e439041fcf55d3a12c1" />
         <status value="final" />
         <category>
           <coding>
@@ -783,7 +766,7 @@
           <text value="Body weight" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <effectiveDateTime value="2018-05-02T03:25:22.021+00:00" />
         <valueQuantity>
@@ -796,10 +779,10 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+    <fullUrl value="https://example.com/base/Observation/e93c7cb5a9fe48598051b8d4c3d64773" />
     <resource>
       <Observation>
-        <id value="Observation-e93c7cb5a9fe48598051b8d4c3d64773" />
+        <id value="e93c7cb5a9fe48598051b8d4c3d64773" />
         <status value="final" />
         <category>
           <coding>
@@ -818,7 +801,7 @@
           <text value="Mycobacterium tuberculosis DNA" />
         </code>
         <subject>
-          <reference value="Patient/specialty-rx-patient-1" />
+          <reference value="Patient/patient1" />
         </subject>
         <effectiveDateTime value="2018-01-12" />
         <valueCodeableConcept>

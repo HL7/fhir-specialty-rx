@@ -29,6 +29,26 @@
   <concept>
     <code value="specialty-rx-response" />
     <display value="Specialty Rx Response" />
-    <definition value="Specialty Rx data response" />
+    <definition value="Specialty Rx response" />
+  </concept>
+  <concept>
+    <code value="specialty-rx-data-query" />
+    <display value="Specialty Rx Data Query" />
+    <definition value="Specialty Rx data query" />
+  </concept>
+  <concept>
+    <code value="specialty-rx-query-response" />
+    <display value="Specialty Rx Query Response" />
+    <definition value="Specialty Rx query response" />
+  </concept>
+  <concept>
+      <code value="specialty-rx-info-gather-request" />
+    <display value="Specialty Rx Info Gathering Request" />
+    <definition value="Specialty Rx information gathering request" />
+  </concept>
+  <concept>
+    <code value="specialty-rx-info-gather-response" />
+    <display value="Specialty Rx Info Gathering Response" />
+    <definition value="Specialty Rx information gathering response" />
   </concept>
 </CodeSystem>

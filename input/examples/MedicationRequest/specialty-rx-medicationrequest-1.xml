@@ -13,9 +13,9 @@
       <display value="Prozac 10 MG Oral Capsule" />
     </coding>
     <coding>
-      <system value="http://hl7.org/fhir/sid/ndc" />
-      <code value="00777310402" />
-      <display value="Prozac 10mg capsule" />
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="205535" />
+      <display value="PROzac 10 MG Oral Capsule" />
     </coding>
   </medicationCodeableConcept>
   <subject>

@@ -11,11 +11,11 @@
   <title value="Specialty Rx Communication" />
   <status value="active" />
   <date value="2020-04-22T16:00:00-00:00" />
-  <description value="This profile tailors the Communication resource to support specialty medication dispensing and enrollment in related programs. (This is currently a variation on the CDex profile with modified .basedOn slicing. The IG will likely use the CDex profile unchanged, or base this profile on it, once current challenges are resolved)" />
+  <description value="This profile tailors the Communication resource to support specialty medication dispensing and enrollment in related programs." />
   <jurisdiction>
     <coding>
-      <system value="urn:iso:std:iso:3166:-2" />
-      <code value="urn:iso:std:iso:3166" />
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
       <display value="United States of America" />
     </coding>
   </jurisdiction>
@@ -91,7 +91,6 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -100,7 +99,6 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -118,7 +116,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -130,7 +128,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-clinical-note-type" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-clinical-note-type" />
       </type>
       <mustSupport value="true" />
     </element>

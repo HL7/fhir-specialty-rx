@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-populate-questionnaire" />
+  <url value="http://hl7.org/fhir/us/ncpdp/OperationDefinition/specialty-rx-populate-questionnaire" />
+  <name value="SpecialtyRxPopulateQuestionnaire" />
+  <status value="draft" />
+  <kind value="operation" />
+  <date value="2020-06-26" />
+  <publisher value="NCPDP" />
+  <description value="Operation requesting population of the submitted Questionnaire, for the specified patient" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <code value="specialty-rx-populate-questionnaire" />
+  <system value="true" />
+  <type value="false" />
+  <instance value="false" />
+  <parameter>
+    <name value="questionnaire" />
+    <use value="in" />
+    <min value="1" />
+    <max value="1" />
+    <documentation value="The Questionnaire resource to be populated" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/StructureDefinition/Questionnaire" />
+  </parameter>
+  <parameter>
+    <name value="requester-patient-in" />
+    <use value="in" />
+    <min value="1" />
+    <max value="1" />
+    <documentation value="The requester's Patient resource representing the individual that is to be the *QuestionnaireResponse.subject*" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+  </parameter>
+  <parameter>
+    <name value="responder-patient-in" />
+    <use value="in" />
+    <min value="0" />
+    <max value="1" />
+    <documentation value="The responder's Patient resource representing the individual for whom the Questionnaire has been completed. The returned QuestionnaireResponse instance will reference this Patient in QuestionnaireResponse.subject" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+  </parameter>
+  <parameter>
+    <name value="medication-request" />
+    <use value="in" />
+    <min value="0" />
+    <max value="1" />
+    <documentation value="The MedicationRequest to which this request relates" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
+  </parameter>
+  <parameter>
+    <name value="pharmacy" />
+    <use value="in" />
+    <min value="0" />
+    <max value="1" />
+    <documentation value="The dispensing pharmacy referenced in the prescription" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-pharmacy-organization" />
+  </parameter>
+  <parameter>
+    <name value="prescriber" />
+    <use value="in" />
+    <min value="0" />
+    <max value="1" />
+    <documentation value="The prescribing practitioner referenced in the prescription" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
+  </parameter>
+  <parameter>
+    <name value="questionnaire-response" />
+    <use value="out" />
+    <min value="1" />
+    <max value="1" />
+    <documentation value="The populated set of answers for the specified Questionnaire" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+  </parameter>
+  <parameter>
+    <name value="responder-patient-out" />
+    <use value="out" />
+    <min value="1" />
+    <max value="1" />
+    <documentation value="The responder’s patient referenced as the QuestionnaireResponse.subject" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+  </parameter>
+</OperationDefinition>

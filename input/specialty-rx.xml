@@ -47,16 +47,6 @@
         <packageId value="hl7.fhir.us.core"/>
         <version value="current"/>
     </dependsOn>
-    <dependsOn>
-        <uri value="http://hl7.org/fhir/us/davinci-cdex/ImplementationGuide/davinci-cdex"/>
-        <packageId value="hl7.fhir.us.davinci-cdex"/>
-        <version value="current"/>
-    </dependsOn>
-    <dependsOn>
-        <uri value="http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/davinci-hrex"/>
-        <packageId value="hl7.fhir.us.davinci-hrex"/>
-        <version value="current"/>
-    </dependsOn>
 	 <definition>
   	  <resource>
 	    <reference>
@@ -250,7 +240,7 @@
 	      <reference value="MessageDefinition/specialty-rx-request"/>
 	      <display value="SpecialtyRxRequestMessageDefinition"/>
 	    </reference>
-	    <name value="SpecialtyRxMessageDefinition"/>
+	    <name value="SpecialtyRxRequestMessageDefinition"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
@@ -259,6 +249,38 @@
 	      <display value="SpecialtyRxResponseMessageDefinition"/>
 	    </reference>
 	    <name value="SpecialtyRxResponseMessageDefinition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-data-query-message"/>
+	      <display value="SpecialtyRxDataQueryMessageDefinition"/>
+	    </reference>
+	    <name value="SpecialtyRxDataQueryMessageDefinition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-query-response-message"/>
+	      <display value="SpecialtyRxQueryResponseMessageDefinition"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResponseMessageDefinition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-questionnaire-message"/>
+	      <display value="SpecialtyRxQuestionnaireMessageDefinition"/>
+	    </reference>
+	    <name value="SpecialtyRxQuestionnaireMessageDefinition"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-questionnaire-response-message"/>
+	      <display value="SpecialtyRxQuestionnaireResponseMessageDefinition"/>
+	    </reference>
+	    <name value="SpecialtyRxQuestionnaireResponseMessageDefinition"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
@@ -282,7 +304,7 @@
 	      <reference value="StructureDefinition/specialty-rx-request-bundle"/>
 	      <display value="SpecialtyRxRequestBundle"/>
 	    </reference>
-	    <name value="SpecialtyRxRequestBundle"/>
+	    <name value="SpecialtyRxReqestBundle"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
@@ -293,6 +315,14 @@
 	    <name value="SpecialtyRxResponseBundle"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-query-response-bundle"/>
+	      <display value="SpecialtyRxQueryResponseBundle"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResponseBundle"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-coverage"/>
@@ -326,11 +356,43 @@
 	    <exampleBoolean value="false"/>
 	  </resource>	
   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-payload-query-string"/>
+	      <display value="SpecialtyRxPayloadQueryString"/>
+	    </reference>
+	    <name value="SpecialtyRxPayloadQueryString"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-payload-clinical-note-type"/>
+	      <display value="SpecialtyRxPayloadClincialNoteType"/>
+	    </reference>
+	    <name value="SpecialtyRxPayloadClinicalNoteType"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
+	      <reference value="OperationDefinition/specialty-rx-populate-questionnaire"/>
+	      <display value="SpecialtyRxPopulateQuestionnaire"/>
+	    </reference>
+	    <name value="SpecialtyRxPopulateQuestionnaire"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
+	      <reference value="OperationDefinition/specialty-rx-query-data"/>
+	      <display value="SpecialtyRxQueryData"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryData"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+ 	  <resource>
 	      <reference>
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
                 <display value="specialty-rx-allergyintolerance-1"/>
             </reference>
-            <name value="Specialty Rx Allergy/Intolerance 1"/>
+            <name value="Specialty Rx Allergy/Intolerance 1"/><description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
             <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance"/>
       </resource>	  
@@ -448,7 +510,7 @@
                 <display value="specialty-rx-communication-1"/>
             </reference>
             <name value="Specialty Rx Communication 1"/>
-            <description value="An example Communication illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
+            <description value="An example Communication illustrating a response in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communication"/>
       </resource>
 		<resource>
@@ -457,45 +519,15 @@
                 <display value="specialty-rx-communicationrequest-1"/>
             </reference>
             <name value="Specialty Rx CommunicationRequest 1"/>
-            <description value="An example CommunicationRequest illustrating a response in the Specialty Medication Prescribing profile (based on CDex)"/>
+            <description value="An example CommunicationRequest illustrating a response in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-communicationrequest"/>
-      </resource>	       
-	<!--
-	<resource>
-	      <reference>
-	        <reference value="Communication/cdex-example-solicited-attachment"/>
-                <display value="cdex-example-solicited-attachment"/>
-            </reference>
-            <name value="cdex-example-solicited-attachment"/>
-            <description value="cdex-example-solicited-attachment"/>
-	      <exampleBoolean value="true"/>
       </resource>
-		<resource>
-	      <reference>
-	        <reference value="CommunicationRequest/cdex-example-attachment-request"/>
-                <display value="cdex-example-attachment-request"/>
-            </reference>
-            <name value="cdex-example-attachment-request"/>
-            <description value="cdex-example-attachment-request"/>
-	      <exampleBoolean value="true"/>
-      </resource>	       
-      -->
 		<resource>
 	      <reference>
 	        <reference value="Bundle/specialty-rx-request-bundle-1"/>
                 <display value="specialty-rx-request-bundle-1"/>
             </reference>
             <name value="Specialty Rx Request Bundle 1"/>
-            <description value="Example of a Specialty Rx request bundle asking for patient condition and allergy information."/>
-	      <exampleBoolean value="true"/>
-      </resource>	       
-
-		<resource>
-	      <reference>
-	        <reference value="Bundle/specialty-rx-request-bundle-1-relative"/>
-                <display value="specialty-rx-request-bundle-1-relative"/>
-            </reference>
-            <name value="Specialty Rx Request Bundle 1 Relative References"/>
             <description value="Example of a Specialty Rx request bundle asking for patient condition and allergy information."/>
 	      <exampleBoolean value="true"/>
       </resource>	       
@@ -552,7 +584,44 @@
             <name value="Specialty Rx Coverage 1"/>
             <description value="Example of a Specialty Rx Coverage resource containing pharmacy benefit plan information."/>
 	      <exampleBoolean value="true"/>
-      </resource>	       
+      </resource>	  
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-data-query-1"/>
+                <display value="specialty-rx-data-query-1"/>
+            </reference>
+            <name value="Specialty Rx Data Query 1"/>
+            <description value="Example of a message containing a specialty-rx-query-data operation request."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-data-query-response-1"/>
+                <display value="specialty-rx-data-query-response-1"/>
+            </reference>
+            <name value="Specialty Rx Data Query Response 1"/>
+            <description value="Example of a response message containing the results of a specialty-rx-query-data operation request."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-questionnaire-request-1"/>
+                <display value="specialty-rx-questionnaire-request-1"/>
+            </reference>
+            <name value="Specialty Rx Questionnaire Request 1"/>
+            <description value="Example of a request message containing a specialty-rx-complete-questionnaire operation request."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-questionnaire-response-1"/>
+                <display value="specialty-rx-questionnaire-response-1"/>
+            </reference>
+            <name value="Specialty Rx Questionnaire Response 1"/>
+            <description value="Example of a response message containing the results of a specialty-rx-populate-questionnaire operation (a completed QuestionnaireResponse)."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+      
       <page>
 	      <nameUrl value="toc.html"/>
 	      <title value="Table of Contents"/>
@@ -568,8 +637,8 @@
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
-		    <nameUrl value="cdex-message-flow.html"/>
-		    <title value="Message Flow using CDex"/>
+		    <nameUrl value="message-flow.html"/>
+		    <title value="Message Flow"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

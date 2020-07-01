@@ -19,7 +19,7 @@ In order to respond to Specialty Rx data requests (specified using query stateme
        {
          "extension" : [
            {
-             "url" : "http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-payload-query-string",
+             "url" : "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string",
              "valueString" : "Condition?patient=specialty-rx-patient-1"
            }
          ],
