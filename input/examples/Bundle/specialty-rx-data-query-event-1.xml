@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-data-query-event-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-data-query-message-bundle" />
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-data-query-message-bundle-event" />
   </meta>
   <type value="message" />
   <timestamp value="2020-07-08T08:10:13-05:00" />

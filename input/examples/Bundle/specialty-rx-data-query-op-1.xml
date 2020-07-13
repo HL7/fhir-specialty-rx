@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-data-query-op-1" />
-  <!-- 
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-data-query-message" /> 
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-data-query-message-bundle-op" />
   </meta>
-  -->
   <type value="message" />
-  <timestamp value="2019-11-15T13:10:13-05:00" />
+  <timestamp value="2020-07-08T08:10:13-05:00" />
   <entry>
     <fullUrl value="https://example.com/base/MessageHeader/reqheader1" />
     <resource>
@@ -32,17 +30,20 @@
     <resource>
       <Parameters>
         <id value="61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+		<meta>
+			<profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-data-query-parameters" />
+		</meta>
         <parameter>
           <name value="query-string" />
-          <valueString value="Condition?patient=patient1" />
+          <valueString value="Condition" />
         </parameter>
         <parameter>
           <name value="query-string" />
-          <valueString value="AllergyIntolerance?patient=patient1" />
+          <valueString value="AllergyIntolerance" />
         </parameter>
         <parameter>
           <name value="query-string" />
-          <valueString value="MedicationStatement?patient=patient1" />
+          <valueString value="MedicationStatement" />
         </parameter>
         <parameter>
           <name value="requester-patient-in" />
@@ -50,81 +51,11 @@
             <reference value="Patient/patient1" />
           </valueReference>
         </parameter>
-        <parameter>
-          <name value="medication-request" />
-          <valueReference>
-            <reference value="MedicationRequest/prescription1" />
-          </valueReference>
-        </parameter>
-        <parameter>
-          <name value="prescriber" />
-          <valueReference>
-            <reference value="Practitioner/practitioner1" />
-          </valueReference>
-        </parameter>
-        <parameter>
-          <name value="pharmacy" />
-          <valueReference>
-            <reference value="Organization/pharmacy1" />
-          </valueReference>
-        </parameter>
       </Parameters>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.com/base/MedicationRequest/prescription1" />
-    <resource>
-      <MedicationRequest>
-        <id value="prescription1" />
-        <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
-        </meta>
-        <status value="active" />
-        <intent value="order" />
-        <medicationCodeableConcept>
-          <coding>
-            <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
-            <code value="205535" />
-            <display value="PROzac 10 MG Oral Capsule" />
-          </coding>
-        </medicationCodeableConcept>
-        <subject>
-          <reference value="Patient/patient1" />
-        </subject>
-        <authoredOn value="2020-03-10" />
-        <requester>
-          <reference value="Practitioner/practitioner1" />
-        </requester>
-        <dosageInstruction>
-          <text value="Take 1 tablet twice a day" />
-        </dosageInstruction>
-        <dispenseRequest>
-          <initialFill>
-            <quantity>
-              <value value="60" />
-              <unit value="EA" />
-            </quantity>
-          </initialFill>
-          <numberOfRepeatsAllowed value="2" />
-          <expectedSupplyDuration>
-            <value value="30" />
-            <unit value="days" />
-            <system value="http://unitsofmeasure.org" />
-            <code value="d" />
-          </expectedSupplyDuration>
-          <performer>
-            <reference value="Organization/pharmacy1" />
-            <display value="Our Specialty Pharmacy" />
-          </performer>
-        </dispenseRequest>
-        <substitution>
-          <allowedBoolean value="false" />
-        </substitution>
-      </MedicationRequest>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="https://example.com/base/Patient/patient1" />
+    <fullUrl value="http://example.org/MyPharmacyApp/Patient/patient1" />
     <resource>
       <Patient>
         <id value="patient1" />
@@ -169,84 +100,6 @@
           </language>
         </communication>
       </Patient>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="https://example.com/base/Practitioner/practitioner1" />
-    <resource>
-      <Practitioner>
-        <id value="practitioner1" />
-        <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
-        </meta>
-        <identifier>
-          <system value="http://hl7.org/fhir/sid/us-npi" />
-          <value value="9941339108" />
-        </identifier>
-        <name>
-          <family value="Smith" />
-          <given value="Jane" />
-          <prefix value="Dr" />
-        </name>
-        <telecom>
-          <system value="phone" />
-          <value value="555-555-5555" />
-          <use value="home" />
-        </telecom>
-        <telecom>
-          <system value="fax" />
-          <value value="555-555-1234" />
-          <use value="home" />
-        </telecom>
-        <telecom>
-          <system value="email" />
-          <value value="jane.doe@example.org" />
-          <use value="work" />
-        </telecom>
-        <address>
-          <use value="home" />
-          <line value="101 Oak Lane" />
-          <city value="Minnetonka" />
-          <state value="MN" />
-          <postalCode value="55345" />
-        </address>
-      </Practitioner>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="https://example.com/base/Organization/pharmacy1" />
-    <resource>
-      <Organization>
-        <id value="pharmacy1" />
-        <identifier>
-          <system value="http://hl7.org/fhir/sid/us-npi" />
-          <value value="1669512345" />
-        </identifier>
-        <active value="true" />
-        <type>
-          <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
-            <code value="prov" />
-            <display value="Healthcare Provider" />
-          </coding>
-        </type>
-        <name value="Our Pharmacy" />
-        <telecom>
-          <system value="phone" />
-          <value value="952-555-5555" />
-        </telecom>
-        <telecom>
-          <system value="email" />
-          <value value="contac-our-clinict@example.org" />
-        </telecom>
-        <address>
-          <line value="220 Oak St" />
-          <city value="Minneapolis" />
-          <state value="MN" />
-          <postalCode value="55008" />
-          <country value="USA" />
-        </address>
-      </Organization>
     </resource>
   </entry>
 </Bundle>

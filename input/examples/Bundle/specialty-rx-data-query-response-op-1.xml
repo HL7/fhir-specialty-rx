@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-data-query-response-op-1" />
-  <!--
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-message-bundle" />
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-message-bundle-op" />
   </meta>
-  -->
   <type value="message" />
   <timestamp value="2019-11-15T13:10:17-05:00" />
   <entry>
