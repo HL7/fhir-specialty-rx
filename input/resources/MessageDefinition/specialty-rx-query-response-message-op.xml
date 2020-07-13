@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-query-response-message-op" />
+  <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-query-response-message-op" />
+  <name value="SpecialtyRxQueryResponseMessageDefinitionOp" />
+  <title value="Specialty Rx Query Response Message Definition - Custom Operation" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-06-26T00:00:00-00:00" />
+  <publisher value="NCPDP" />
+  <description value="Message conveying the result of one or more queries for data related to a prescribed specialty medication. Response to invocation of the specialty-rx-query-data operation" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <purpose value="Transmit the result of queries for data related to a prescribed specialty medication. Consists of FHIR resources returned without human intervention" />
+  <eventCoding>
+    <system value="urn:ietf:rfc:3986" />
+    <code value="http://hl7.org/fhir/us/ncpdp/OperationDefinition/specialty-rx-query-data" />
+  </eventCoding>
+  <category value="currency" />
+  <focus>
+    <code value="Parameters" />
+    <min value="1" />
+    <max value="1" />
+  </focus>
+</MessageDefinition>

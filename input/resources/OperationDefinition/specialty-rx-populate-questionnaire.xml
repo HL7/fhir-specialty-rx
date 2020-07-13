@@ -74,13 +74,13 @@
     <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
   </parameter>
   <parameter>
-    <name value="questionnaire-response" />
+    <name value="requester-patient-out" />
     <use value="out" />
     <min value="1" />
     <max value="1" />
-    <documentation value="The populated set of answers for the specified Questionnaire" />
+    <documentation value="The requester's Patient resource representing the individual that is to be the *QuestionnaireResponse.subject*" />
     <type value="Reference" />
-    <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
   </parameter>
   <parameter>
     <name value="responder-patient-out" />
@@ -90,5 +90,14 @@
     <documentation value="The responder’s patient referenced as the QuestionnaireResponse.subject" />
     <type value="Reference" />
     <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+  </parameter>
+  <parameter>
+    <name value="questionnaire-response" />
+    <use value="out" />
+    <min value="1" />
+    <max value="1" />
+    <documentation value="The populated set of answers for the specified Questionnaire" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
   </parameter>
 </OperationDefinition>

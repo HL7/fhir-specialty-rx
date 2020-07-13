@@ -24,7 +24,7 @@
     <use value="in" />
     <min value="1" />
     <max value="*" />
-    <documentation value="A FHIR query string in the form [resource type]?patient=[patient ref]. (e.g., “Condition?patient=specialty-rx-patient-1”)" />
+    <documentation value="A FHIR query string in the form [resource type][?(optional filter parameters)]. (e.g., “Condition”)" />
     <type value="string" />
   </parameter>
   <parameter>
@@ -32,7 +32,7 @@
     <use value="in" />
     <min value="1" />
     <max value="1" />
-    <documentation value="The requester's Patient resource representing the individual that is to be the *QuestionnaireResponse.subject*" />
+    <documentation value="The requester's Patient resource representing the individual for whom information is being requested" />
     <type value="Reference" />
     <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
   </parameter>
@@ -41,7 +41,7 @@
     <use value="in" />
     <min value="0" />
     <max value="1" />
-    <documentation value="The responder's Patient resource representing the individual for whom the Questionnaire has been completed. The returned QuestionnaireResponse instance will reference this Patient in QuestionnaireResponse.subject" />
+    <documentation value="The responder's Patient resource representing the individual for whom information is being returned" />
     <type value="Reference" />
     <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
   </parameter>
@@ -73,11 +73,20 @@
     <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
   </parameter>
   <parameter>
-    <name value="responder-patient-out" />
+    <name value="requester-patient-out" />
     <use value="out" />
     <min value="1" />
     <max value="1" />
-    <documentation value="The responder’s patient referenced as the QuestionnaireResponse.subject" />
+    <documentation value="The requester's Patient resource representing the individual for whom information was requested" />
+    <type value="Reference" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+  </parameter>
+  <parameter>
+    <name value="responder-patient-out" />
+    <use value="out" />
+    <min value="0" />
+    <max value="1" />
+    <documentation value="The responder's Patient resource representing the individual for whom information is being returned" />
     <type value="Reference" />
     <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
   </parameter>
@@ -86,8 +95,8 @@
     <use value="out" />
     <min value="1" />
     <max value="1" />
-    <documentation value="The populated set of answers for the specified Questionnaire" />
+    <documentation value="Bundle containing the query results -- returned in List resources" />
     <type value="Reference" />
-    <targetProfile value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+    <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-result-bundle" />
   </parameter>
 </OperationDefinition>

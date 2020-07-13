@@ -85,7 +85,7 @@
         <code value="Identifier" />
       </type>
       <patternIdentifier>
-        <system value="http://example.org/ssn-last-4" />
+        <system value="http://example.org/patient-id" />
       </patternIdentifier>
       <maxLength value="4" />
       <mustSupport value="true" />

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-response-messageheader-comm-1" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-response-messageheader-comm" />
+  </meta>
+  <eventCoding>
+    <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+    <code value="specialty-rx-response" />
+    <display value="Specialty Rx Response" />
+  </eventCoding>
+  <source>
+    <name value="Our Clinics" />
+    <endpoint value="http://example.org/our-clinics/fhir" />
+  </source>
+  <focus>
+    <identifier id="communication-100" />
+    <display value="A Communication resource" />
+  </focus>
+</MessageHeader>

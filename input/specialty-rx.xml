@@ -237,94 +237,6 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-request"/>
-	      <display value="SpecialtyRxRequestMessageDefinition"/>
-	    </reference>
-	    <name value="SpecialtyRxRequestMessageDefinition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-response"/>
-	      <display value="SpecialtyRxResponseMessageDefinition"/>
-	    </reference>
-	    <name value="SpecialtyRxResponseMessageDefinition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-data-query-message"/>
-	      <display value="SpecialtyRxDataQueryMessageDefinition"/>
-	    </reference>
-	    <name value="SpecialtyRxDataQueryMessageDefinition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-query-response-message"/>
-	      <display value="SpecialtyRxQueryResponseMessageDefinition"/>
-	    </reference>
-	    <name value="SpecialtyRxQueryResponseMessageDefinition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-questionnaire-message"/>
-	      <display value="SpecialtyRxQuestionnaireMessageDefinition"/>
-	    </reference>
-	    <name value="SpecialtyRxQuestionnaireMessageDefinition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-questionnaire-response-message"/>
-	      <display value="SpecialtyRxQuestionnaireResponseMessageDefinition"/>
-	    </reference>
-	    <name value="SpecialtyRxQuestionnaireResponseMessageDefinition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-request-messageheader"/>
-	      <display value="SpecialtyRxRequestMessageHeader"/>
-	    </reference>
-	    <name value="SpecialtyRxRequestMessageHeader"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-response-messageheader"/>
-	      <display value="SpecialtyRxResponseMessageHeader"/>
-	    </reference>
-	    <name value="SpecialtyRxResponseMessageHeader"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-request-bundle"/>
-	      <display value="SpecialtyRxRequestBundle"/>
-	    </reference>
-	    <name value="SpecialtyRxReqestBundle"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-response-bundle"/>
-	      <display value="SpecialtyRxResponseBundle"/>
-	    </reference>
-	    <name value="SpecialtyRxResponseBundle"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-   	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-query-response-bundle"/>
-	      <display value="SpecialtyRxQueryResponseBundle"/>
-	    </reference>
-	    <name value="SpecialtyRxQueryResponseBundle"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	
-  	  <resource>
-	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-coverage"/>
 	      <display value="SpecialtyRxCoverage"/>
 	    </reference>
@@ -524,56 +436,11 @@
       </resource>
 		<resource>
 	      <reference>
-	        <reference value="Bundle/specialty-rx-request-bundle-1"/>
-                <display value="specialty-rx-request-bundle-1"/>
-            </reference>
-            <name value="Specialty Rx Request Bundle 1"/>
-            <description value="Example of a Specialty Rx request bundle asking for patient condition and allergy information."/>
-	      <exampleBoolean value="true"/>
-      </resource>	       
-		<resource>
-	      <reference>
-	        <reference value="Bundle/specialty-rx-unsolicited-standard-bundle-1"/>
-                <display value="specialty-rx-unsolicited-standard-bundle-1"/>
-            </reference>
-            <name value="Specialty Rx Unsolicited Standard Bundle 1"/>
-            <description value="Example of an unsolicited Specialty Rx bundle based on a predefined definition."/>
-	      <exampleBoolean value="true"/>
-      </resource>	 
-      <resource>
-	      <reference>
-	        <reference value="MessageHeader/specialty-rx-request-messageheader-1"/>
-                <display value="specialty-rx-request-messageheader-1"/>
-            </reference>
-            <name value="Specialty Rx Request MessageHeader 1"/>
-            <description value="Example MessageHeader resource as it is used in a Specialty Rx response"/>
-	      <exampleBoolean value="true"/>
-      </resource>	       
-		<resource>
-	      <reference>
-	        <reference value="MessageHeader/specialty-rx-response-messageheader-1"/>
-                <display value="specialty-rx-response-messageheader-1"/>
-            </reference>
-            <name value="Specialty Rx Response MessageHeader 1"/>
-            <description value="Example MessageHeader resource as it is used in a Specialty Rx response"/>
-	      <exampleBoolean value="true"/>
-      </resource>	       
-		<resource>
-	      <reference>
 	        <reference value="Organization/specialty-rx-pharmacy-organization-1"/>
                 <display value="specialty-rx-pharmacy-organization-1"/>
             </reference>
             <name value="Specialty Rx Pharmacy Organization 1"/>
             <description value="Example Organization resource representing a pharmacy"/>
-	      <exampleBoolean value="true"/>
-      </resource>	       
-		<resource>
-	      <reference>
-	        <reference value="Bundle/specialty-rx-response-bundle-1"/>
-                <display value="specialty-rx-response-bundle-1"/>
-            </reference>
-            <name value="Specialty Rx Response Bundle 1"/>
-            <description value="Example of a Specialty Rx response bundle returning patient condition and allergy information."/>
 	      <exampleBoolean value="true"/>
       </resource>	       
 		<resource>
@@ -585,19 +452,287 @@
             <description value="Example of a Specialty Rx Coverage resource containing pharmacy benefit plan information."/>
 	      <exampleBoolean value="true"/>
       </resource>	  
+
+<!-- *********************************************************************************************************************************************
+ message definitions 
+********************************************************************************************************************************************* -->
+<!-- shared message resources  *********************************************************************************************** -->
+
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-data-query-parameters"/>
+	      <display value="SpecialtyRxDataQueryParameters"/>
+	    </reference>
+	    <name value="SpecialtyRxDataQueryParameters"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-query-response-parameters"/>
+	      <display value="SpecialtyRxQueryResponseParameters"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResponseParameters"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-query-result-bundle"/>
+	      <display value="SpecialtyRxQueryResultBundle"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResultBundle"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+	  
+
+<!-- original cdex-based  ******************************************************************************************************************** -->
+		<!-- MessageDefinition  -->
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-request-comm"/>
+	      <display value="SpecialtyRxRequestMessageDefinition using CommunicationRequest"/>
+	    </reference>
+	    <name value="SpecialtyRxRequestMessageDefinitionComm"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-response-comm"/>
+	      <display value="SpecialtyRxResponseMessageDefinition using Communication"/>
+	    </reference>
+	    <name value="SpecialtyRxResponseMessageDefinitionComm"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+		<!-- MessageHeader  -->
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-request-messageheader-comm"/>
+	      <display value="SpecialtyRxRequestMessageHeaderComm"/>
+	    </reference>
+	    <name value="SpecialtyRxRequestMessageHeader using Communication"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-response-messageheader-comm"/>
+	      <display value="SpecialtyRxResponseMessageHeader using CommunicationResponse"/>
+	    </reference>
+	    <name value="SpecialtyRxResponseMessageHeaderComm"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+		<!-- Request and response bundle  -->
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-request-bundle-comm"/>
+	      <display value="SpecialtyRxRequestBundle using CommunicationRequest"/>
+	    </reference>
+	    <name value="SpecialtyRxReqestBundleComm"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-response-bundle-comm"/>
+	      <display value="SpecialtyRxResponseBundle using CommunicationRequest"/>
+	    </reference>
+	    <name value="SpecialtyRxResponseBundleComm"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+		<!-- Example request and response  -->
+			<!--  message headers  -->
+      <resource>
+	      <reference>
+	        <reference value="MessageHeader/specialty-rx-request-messageheader-comm-1"/>
+                <display value="specialty-rx-request-messageheader-comm-1"/>
+            </reference>
+            <name value="Specialty Rx Request MessageHeader Comm 1"/>
+            <description value="Example MessageHeader resource as it is used in a Specialty Rx response. Focus is CommunicationRequest"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
 		<resource>
 	      <reference>
-	        <reference value="Bundle/specialty-rx-data-query-1"/>
-                <display value="specialty-rx-data-query-1"/>
+	        <reference value="MessageHeader/specialty-rx-response-messageheader-comm-1"/>
+                <display value="specialty-rx-response-messageheader-comm-1"/>
             </reference>
-            <name value="Specialty Rx Data Query 1"/>
+            <name value="Specialty Rx Response MessageHeader Comm 1"/>
+            <description value="Example MessageHeader resource as it is used in a Specialty Rx response. Focus is Communication"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+
+			<!-- full messages  -->
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-request-bundle-comm-1"/>
+                <display value="specialty-rx-request-bundle-comm-1"/>
+            </reference>
+            <name value="Specialty Rx Request Bundle Comm 1"/>
+            <description value="Example of a Specialty Rx request bundle asking for patient condition and allergy information. Uses CommunicationRequest"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-response-bundle-comm-1"/>
+                <display value="specialty-rx-response-bundle-comm-1"/>
+            </reference>
+            <name value="Specialty Rx Response Bundle Comm 1"/>
+            <description value="Example of a Specialty Rx response bundle returning patient condition and allergy information. Uses Communication"/>
+	      <exampleBoolean value="true"/>
+      </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-unsolicited-standard-bundle-comm-1"/>
+                <display value="specialty-rx-unsolicited-standard-bundle-comm-1"/>
+            </reference>
+            <name value="Specialty Rx Unsolicited Standard Bundle Comm 1"/>
+            <description value="Example of an unsolicited Specialty Rx bundle based on a predefined definition. Uses Communication"/>
+	      <exampleBoolean value="true"/>
+      </resource>	 
+
+
+
+
+<!--  event type based  ***************************************************************************************************************** -->
+		<!-- MessageDefinition  -->
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-data-query-message-event"/>
+	      <display value="SpecialtyRxDataQueryMessageDefinitionEvent"/>
+	    </reference>
+	    <name value="SpecialtyRxDataQueryMessageDefinitionEvent"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-query-response-message-event"/>
+	      <display value="SpecialtyRxQueryResponseMessageDefinitionEvent"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResponseMessageDefinitionEvent"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+
+
+		<!-- MessageHeader  -->
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-query-data-messageheader-event"/>
+	      <display value="SpecialtyRxQueryDataMessageHeaderEvent"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryDataMessageHeader using Event"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-query-response-messageheader-event"/>
+	      <display value="SpecialtyRxQueryResponseMessageHeaderEvent"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResponseMessageHeader using Event"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  
+		<!-- Request and response bundle  -->
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-data-query-message-bundle"/>
+	      <display value="SpecialtyRxDataQueryBundle"/>
+	    </reference>
+	    <name value="SpecialtyRxDataQueryBundle"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-query-response-message-bundle"/>
+	      <display value="SpecialtyRxQueryResponseMessageBundle"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResponseMessageBundle"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+
+
+		<!-- Example request and response  -->
+			<!-- message headers  -->
+
+			<!-- full messages  -->
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-data-query-event-1"/>
+                <display value="specialty-rx-data-query-event-1"/>
+            </reference>
+            <name value="Specialty Rx Data Query using Event 1"/>
+            <description value="Example data query message (using specialty-rx-data-query event code)."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+
+
+<!-- custom operation based  *********************************************************************************************** -->
+	<!-- operation: specialty-rx-query-data operation  -->
+		<!-- MessageDefinition  -->
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-data-query-message-op"/>
+	      <display value="SpecialtyRxDataQueryMessageDefinition using Custom Operation"/>
+	    </reference>
+	    <name value="SpecialtyRxDataQueryMessageDefinitionOp"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-query-response-message-op"/>
+	      <display value="SpecialtyRxQueryResponseMessageDefinition using custom operation"/>
+	    </reference>
+	    <name value="SpecialtyRxQueryResponseMessageDefinitionOp"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+		<!-- MessageHeader  -->
+
+
+
+	<!--  operation: specialty-rx-populate-questionnaire   -->
+		<!-- MessageDefinition  -->
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-questionnaire-message-op"/>
+	      <display value="SpecialtyRxQuestionnaireMessageDefinition using Custom Operation"/>
+	    </reference>
+	    <name value="SpecialtyRxQuestionnaireMessageDefinitionOp"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-questionnaire-response-message-op"/>
+	      <display value="SpecialtyRxQuestionnaireResponseMessageDefinition usin Custom Operation"/>
+	    </reference>
+	    <name value="SpecialtyRxQuestionnaireResponseMessageDefinitionOp"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+
+		<!-- MessageHeader  -->
+
+
+		<!-- Request and response bundle  -->
+	  
+
+
+		<!-- Example request and response  -->
+			<!-- message headers  -->
+
+			<!-- full messages  -->
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-data-query-op-1"/>
+                <display value="specialty-rx-data-query-op-1"/>
+            </reference>
+            <name value="Specialty Rx Data Query using Custom Operation1"/>
             <description value="Example of a message containing a specialty-rx-query-data operation request."/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 		<resource>
 	      <reference>
-	        <reference value="Bundle/specialty-rx-data-query-response-1"/>
-                <display value="specialty-rx-data-query-response-1"/>
+	        <reference value="Bundle/specialty-rx-data-query-response-op-1"/>
+                <display value="specialty-rx-data-query-response-op-1"/>
             </reference>
             <name value="Specialty Rx Data Query Response 1"/>
             <description value="Example of a response message containing the results of a specialty-rx-query-data operation request."/>
@@ -621,6 +756,8 @@
             <description value="Example of a response message containing the results of a specialty-rx-populate-questionnaire operation (a completed QuestionnaireResponse)."/>
 	      <exampleBoolean value="true"/>
       </resource>	  
+
+	  
       
       <page>
 	      <nameUrl value="toc.html"/>

@@ -16,9 +16,9 @@ The $process-message operation takes a single FHIR resource input parameter cons
 
 <br>
 
-<a href="Bundle-specialty-rx-request-bundle-1.html">Example bundled Specialty Rx data request</a>
+<a href="Bundle-specialty-rx-request-bundle-comm-1.html">Example bundled Specialty Rx data request</a>
 
-<a href="Bundle-specialty-rx-response-bundle-1.html">Example bundled Specialty Rx data response</a>
+<a href="Bundle-specialty-rx-response-bundle-comm-1.html">Example bundled Specialty Rx data response</a>
 
 <br><br>
 

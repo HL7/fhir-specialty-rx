@@ -5,7 +5,7 @@
     <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
   </meta>
   <identifier>
-    <system value="http://example.org/ssn-last-4" />
+    <system value="http://example.org/patient-id" />
     <value value="1234" />
   </identifier>
   <active value="true" />

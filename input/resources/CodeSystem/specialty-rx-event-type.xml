@@ -32,9 +32,9 @@
     <definition value="Specialty Rx response" />
   </concept>
   <concept>
-    <code value="specialty-rx-data-query" />
-    <display value="Specialty Rx Data Query" />
-    <definition value="Specialty Rx data query" />
+    <code value="specialty-rx-query-data" />
+    <display value="Specialty Rx Query Data" />
+    <definition value="Specialty Rx query data" />
   </concept>
   <concept>
     <code value="specialty-rx-query-response" />
