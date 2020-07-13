@@ -100,6 +100,10 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>June 30, 2020</td>
 		<td>Removed dependencies on Da Vinci CDex and HRex profiles. Added new operation and messaging approach for team review</td>
   	  </tr>
+      <tr>
+		<td>July 13, 2020</td>
+		<td>Reorganized and fleshed out message approaches: (a) event-type with Parameters as focus, (b) invoke operation.</td>
+  	  </tr>
         </tbody>
   </table>
 
