@@ -32,25 +32,25 @@ The responder locates the desired patient and completes the query string as foll
 
 In the Specialty Rx Query Response, the responder returns the full search string that was ultimately executed--including patient parameter--in the .link element of each returned searchset Bundle.
 
-*Bundle*
+<pre>
+Bundle
+    .link
+        .relation = "self"
+        .url = "MedicationRequest?patient=12345&status=active"
+    .entry
+</pre>
 
-​     *.link*
-
-​			*.relation = "self"*
-
-​     		*.url = "Observation&patient=340520450&category=vital-signs&date=ge2019-01-01"*
-
-​     *.entry*    *[resource(s) returned by the search]*
+</pre>
 
 ### Required searches
 
 To ensure that the most common data requests are supported by all participants, responders MUST be able to return information in response to the following search strings. (The required search parameters match those required for each resource by the US Core.)  
 
-<table style="border:1px solid black;">
+<table class="grid">
 <thead>
 <tr>
 <th>Resource</th>
-<th style="width:300px">Parameters</th>
+<th style="width:150px">Parameters</th>
 <th>Example</th>
 </tr>
 </thead>
