@@ -45,7 +45,7 @@
     <dependsOn>
         <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
         <packageId value="hl7.fhir.us.core"/>
-        <version value="current"/>
+        <version value="3.1.0"/>
     </dependsOn>
 	 <definition>
   	  <resource>
@@ -481,11 +481,18 @@
                 <display value="specialty-rx-query-response-1"/>
             </reference>
             <name value="Specialty Rx Query Response 1"/>
-            <description value="Example data query response message (using specialty-rx-query-response event code)."/>
+            <description value="Example data query response message (single search)."/>
 	      <exampleBoolean value="true"/>
       </resource>	  
-
-      
+	<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-query-response-2"/>
+                <display value="specialty-rx-query-response-2"/>
+            </reference>
+            <name value="Specialty Rx Query Response 2"/>
+            <description value="Example data query response message (multiple searches)."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
       <page>
 	      <nameUrl value="toc.html"/>
 	      <title value="Table of Contents"/>

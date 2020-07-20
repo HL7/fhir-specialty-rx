@@ -97,7 +97,7 @@
       <path value="Parameters.parameter" />
       <sliceName value="search-result" />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <mustSupport value="true" />
     </element>
     <element id="Parameters.parameter:search-result.name">
