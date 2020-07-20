@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-questionnaire-op" />
+  <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-questionnaire-op" />
+  <name value="SpecialtyRxQuestionnaireMessageDefinitionOp" />
+  <title value="Specialty Rx Questionnaire Message Definition using Custom Operation" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-06-26T00:00:00-00:00" />
+  <publisher value="NCPDP" />
+  <description value="Message conveying a Questionnaire to obtain information related to a prescribed specialty medication. Invokes the specialty-rx-populate-questionnaire operation" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <purpose value="Transmit a Questionnaire to retrieve information related to a prescribed specialty medication. Response consists of a QuestionnaireResponse completed manually" />
+  <eventCoding>
+    <system value="urn:ietf:rfc:3986" />
+    <code value="http://hl7.org/fhir/us/ncpdp/OperationDefinition/specialty-rx-populate-questionnaire" />
+  </eventCoding>
+  <category value="currency" />
+  <focus>
+    <code value="Parameters" />
+    <min value="1" />
+    <max value="1" />
+  </focus>
+  <allowedResponse>
+    <message value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-questionnaire-response-op" />
+    <situation value="Returned when processing completes without encountering a system error" />
+  </allowedResponse>
+</MessageDefinition>

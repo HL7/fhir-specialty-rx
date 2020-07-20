@@ -12,7 +12,7 @@
   <experimental value="false" />
   <date value="2020-07-02T00:00:00-05:00" />
   <publisher value="NCPDP" />
-  <description value="This profile tailors the Parameters resource to convey Specialty Rx data query outputs." />
+  <description value="This profile tailors the Parameters resource to convey Specialty Rx Query outputs." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -93,23 +93,23 @@
     </element>
 
 
-    <element id="Parameters.parameter:query-results">
+    <element id="Parameters.parameter:search-result">
       <path value="Parameters.parameter" />
-      <sliceName value="query-results" />
+      <sliceName value="search-result" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Parameters.parameter:query-results.name">
+    <element id="Parameters.parameter:search-result.name">
       <path value="Parameters.parameter.name" />
-      <fixedString value="query-results" />
+      <fixedString value="search-result" />
       <mustSupport value="true" />
     </element>
-    <element id="Parameters.parameter:query-results.value[x]">
+    <element id="Parameters.parameter:search-result.value[x]">
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-result-bundle"/>
+      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-search-result-bundle"/>
 <!--
       	<aggregation value="bundled"/>
 -->

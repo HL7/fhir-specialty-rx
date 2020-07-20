@@ -1,37 +1,46 @@
-### Specifying a query string
+### Data request queries
 
-The Specialty Rx data request specifies the desired patient information in the payload element of a CommunicationRequest resource. 
+The Specialty Rx Query message requests specific information from a patient's records in the responding system. The desired information is specified as FHIR search statements in parameters contained in the request. Responders are expected to execute these searches for the patient supplied in the request and return the results in a Specialty Rx Query Response message.
 
-The process utilizes the *specialty-rx-payload-query-string* extension to specify each query using standard FHIR search parameters. The query string is conveyed in the extension's valueString element.
+#### Specifying a query string
 
-**Example:** Excerpt from CommunicationRequest
+Specialty Rx messaging enables requesters to submit requests without performing a patient match ahead of time. This accommodates the typical situation where the requester hasn't participated in previous FHIR exchanges with the responder and so doesn't possess the responder's patient resource. This  is accomplished by omitting the patient parameter from submitted search strings.
 
-```
- "payload" : [
-    {
-      "extension" : [
-        {
-          "url" : "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payload-query-string",
-          "valueString" : "Condition?patient=specialty-rx-patient-1"
-        }
-      ],
-      "contentString" : "Please provide the patient's conditions"
-    }
-```
+For example, a search for a given patient's vital signs might typically be stated as:
 
-<br>
+- *Observation?patient=[patient id]&category=vital-signs&date=[date period range]*
+
+In the Specialty Rx Query, the patient search parameter is omitted, with the expectation that the responder will append it after locating the desired patient in its system:
+
+- *Observation?category=vital-signs&date=[date period range]*
+
+In the Specialty Rx Query Response, the responder returns the full search string, including patient parameter, in the Bundle.entry.link element of the response Bundle containing each List of search results.
+
+*Bundle*
+
+​     *.entry*
+
+​        *.link.relation = "self"*
+
+​        *.link.url = "Observation&patient=340520450&category=vital-signs&date=ge2019-01-01"*
+
+​        *.fullUrl = [list URL]*
+
+​        *.resource.List = [the List resource containing the resulting set of Observations]*
+
+ 
 
 ### Required query strings
 
 To ensure that the most common data requests are supported by all participants, responders MUST be able to respond to the following query strings:
 
-| Query String                                                 | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Condition?patient=[patient ref]                              | All patient conditions                                       |
-| AllergyIntolerance?patient=[patient ref]                     | All patient allergies and intolerances                       |
-| Observation?patient=[patient ref]&category=vital-signs&date=[date period range] | All patient vital signs recorded in the specified date period |
-| Coverage?patient=[patient ref]                               | All patient insurance coverage                               |
-| MedicationStatement?patient=[patient ref]                    | All patient medications                                      |
+| Query String                                              | Description                                                  |
+| --------------------------------------------------------- | ------------------------------------------------------------ |
+| Condition                                                 | All patient conditions                                       |
+| AllergyIntolerance                                        | All patient allergies and intolerances                       |
+| Observation?category=vital-signs&date=[date period range] | All patient vital signs recorded in the specified date period |
+| Coverage                                                  | All patient insurance coverage                               |
+| MedicationStatement                                       | All patient medications                                      |
 
 <br>
 
@@ -39,10 +48,10 @@ To ensure that the most common data requests are supported by all participants, 
 
 Responders SHOULD support the following queries, which make up the standard set of requests used in the Specialty Rx process:
 
-| Query String                                               | Description                                                  |
-| ---------------------------------------------------------- | ------------------------------------------------------------ |
-| Observation?patient=[patient ref]&date=[date period range] | All patient observations recorded during the specified date period |
-| *others TBD*                                               |                                                              |
+| Query String                         | Description                                                  |
+| ------------------------------------ | ------------------------------------------------------------ |
+| Observation?date=[date period range] | All patient observations recorded during the specified date period |
+| *others TBD*                         |                                                              |
 
 <br>
 

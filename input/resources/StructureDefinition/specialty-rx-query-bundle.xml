@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="specialty-rx-query-response-bundle" />
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-bundle" />
-  <name value="SpecialtyRxQueryResponseBundle" />
-  <title value="Specialty Rx Query Response Message Bundle" />
+  <id value="specialty-rx-query-bundle" />
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-bundle" />
+  <name value="SpecialtyRxQueryBundle" />
+  <title value="Specialty Rx Query Message Bundle" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-07-02T00:00:00-05:00" />
   <publisher value="NCPDP" />
-  <description value="This profile constrains a Bundle resource for use as the response message in a Specialty Rx Query process--with a Parameters resource as the bundle's message focus." />
+  <description value="This profile constrains a Bundle resource for use as the request message in a Specialty Rx Query process--with a Parameters resource as the bundle's message focus." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -84,7 +84,7 @@
       <max value="1" />
       <type>
         <code value="MessageHeader" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-messageheader" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-messageheader" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -101,7 +101,7 @@
       <max value="1" />
       <type>
         <code value="Parameters" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-parameters" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-parameters" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -111,8 +111,9 @@
       <label value="Patient (requester's and responder's)" />
       <short value="Patient" />
       <definition value="The patient resource captured in the requesting system. Optionally also the patient resource captured in the responding system." />
-      <comment value="The patient resource in the requesting system and responding system." />
-      <min value="2" />
+      <comment value="The patient resource in the requesting system must always be populated. The responding system's patient resource may also be populated, e.g., if retrieved previously in a patient match." />
+      <requirements value="If the requesting party does not possess the responding system's patient resource and it is unable to perform a patient match, it may include only the patient as known to the requesting system. In this scenario, the responding system will perform a patient match using the requester's patient before performing the enclosed searches. If the responding system succeeds in matching the patient, it appends a patient filter referencing the found patient to each of the enclosed search strings (e.g., ?patient=[found patient id]) before executing them. If the patient match doesn't succeed, the responding system replies without executing the requested searches." />
+      <min value="1" />
       <max value="2" />
       <mustSupport value="true" />
     </element>
@@ -126,23 +127,54 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Bundle.entry:query-result">
+    <element id="Bundle.entry:medicationrequest">
       <path value="Bundle.entry" />
-      <sliceName value="query-result" />
-      <label value="Query result bundle" />
-      <short value="Query result bundle" />
-      <definition value="Bundle holding Lists that contain query results." />
-      <min value="1" />
-      <max value="*" />
+      <sliceName value="medicationrequest" />
+      <min value="0" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Bundle.entry:query-result.resource">
+    <element id="Bundle.entry:medicationrequest.resource">
       <path value="Bundle.entry.resource" />
       <min value="1" />
       <max value="1" />
       <type>
-        <code value="Bundle" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-search-result-bundle" />
+        <code value="MedicationRequest" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:pharmacy">
+      <path value="Bundle.entry" />
+      <sliceName value="pharmacy" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:pharmacy.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Organization" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-pharmacy-organization" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:practitioner">
+      <path value="Bundle.entry" />
+      <sliceName value="practitioner" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:practitioner.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Practitioner" />
+        <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" />
       </type>
       <mustSupport value="true" />
     </element>

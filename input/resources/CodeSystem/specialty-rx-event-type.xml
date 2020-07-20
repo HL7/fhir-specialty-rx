@@ -22,33 +22,23 @@
   <caseSensitive value="false" />
   <content value="complete" />
   <concept>
-    <code value="specialty-rx-request" />
-    <display value="Specialty Rx Request" />
-    <definition value="Specialty Rx data request" />
+    <code value="query" />
+    <display value="Query" />
+    <definition value="Specialty Rx query" />
   </concept>
   <concept>
-    <code value="specialty-rx-response" />
-    <display value="Specialty Rx Response" />
-    <definition value="Specialty Rx response" />
-  </concept>
-  <concept>
-    <code value="specialty-rx-query-data" />
-    <display value="Specialty Rx Query Data" />
-    <definition value="Specialty Rx query data" />
-  </concept>
-  <concept>
-    <code value="specialty-rx-query-response" />
-    <display value="Specialty Rx Query Response" />
+    <code value="query-response" />
+    <display value="Query Response" />
     <definition value="Specialty Rx query response" />
   </concept>
   <concept>
-      <code value="specialty-rx-info-gather-request" />
-    <display value="Specialty Rx Info Gathering Request" />
-    <definition value="Specialty Rx information gathering request" />
+      <code value="questionnaire" />
+    <display value="Questionnaire" />
+    <definition value="Specialty Rx Questionnaire" />
   </concept>
   <concept>
-    <code value="specialty-rx-info-gather-response" />
-    <display value="Specialty Rx Info Gathering Response" />
-    <definition value="Specialty Rx information gathering response" />
+    <code value="questionnaire-response" />
+    <display value="Questionnaire Response" />
+    <definition value="Specialty Rx questionnaire response" />
   </concept>
 </CodeSystem>

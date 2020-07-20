@@ -8,7 +8,7 @@
   <experimental value="false" />
   <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="NCPDP" />
-  <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Specialty Rx Response (Communication) posted with the `$process-message` operation, and optionally requesting data using the Specialty Rx Request (CommunicationRequest) process." />
+  <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of receiving a Specialty Rx Query Response posted with the `$process-message` operation, and optionally requesting data using the Specialty Rx Query message, requesting completion of questionnaire questions using the Specialty Rx Questionnaire message and receiving completed answers in the Specialty Rx Questionnaire Response message." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
