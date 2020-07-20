@@ -23,17 +23,4 @@
       <display value="Jane Smith MD" />
     </member>
   </participant>
-  <participant>
-    <role>
-      <coding>
-        <system value="http://snomed.info/sct" />
-        <code value="127848009" />
-        <display value="Spouse (person)" />
-      </coding>
-    </role>
-    <member>
-      <reference value="RelatedPerson/specialty-rx-relatedperson-1" />
-      <display value="Maria Fleming-Doe" />
-    </member>
-  </participant>
 </CareTeam>

@@ -13,10 +13,10 @@
       },
       {
          "version": "0.1.00",
-         "date": "2020-03-20",
+         "date": "2021-03-20",
          "descmd": "STU1 Ballot",
          "changes": "",
-         "path": "http://hl7.org/fhir/us/specialty-rx/2020Aug",
+         "path": "http://hl7.org/fhir/us/ncpdp/specialty-rx/2020Aug",
          "status": "ballot",
          "sequence": "STU1",
          "fhirversion" : "4.0.1"

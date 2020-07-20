@@ -104,6 +104,10 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>July 13, 2020</td>
 		<td>Reorganized and fleshed out message approaches: (a) event-type with Parameters as focus, (b) invoke operation.</td>
   	  </tr>
+      <tr>
+		<td>July 20, 2020</td>
+		<td>Refined message structure and naming. Removed content associated with alternate models.</td>
+  	  </tr>
         </tbody>
   </table>
 

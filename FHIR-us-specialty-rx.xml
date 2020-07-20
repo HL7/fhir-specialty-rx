@@ -5,9 +5,9 @@
                defaultWorkgroup="pharm"
                defaultVersion="current"
                xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
-               ballotUrl="http://hl7.org/fhir/us/specialty-rx/2020Aug">
+               ballotUrl="http://hl7.org/fhir/us/ncpdp/specialty-rx/2020Aug">
    <version code="current" url="http://build.fhir.org/ig/HL7/specialty-rx"/>
-   <version code="0.1.00" url="http://hl7.org/fhir/us/specialty-rx/2020Aug"/>
+   <version code="0.1.00" url="http://hl7.org/fhir/us/ncpdp/specialty-rx/2020Aug"/>
    <artifactPageExtension value="-definitions"/>
    <artifactPageExtension value="-examples"/>
    <artifactPageExtension value="-mappings"/>
