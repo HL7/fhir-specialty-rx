@@ -1,10 +1,10 @@
-### Data request queries
+### Search conventions
 
 The Specialty Rx Query message requests specific information from a given patient's records in the responding system. The desired information is specified as FHIR search statements which are sent as parameters in the message. Responders are expected to execute these searches for the patient supplied in the request and return the results in a Specialty Rx Query Response message.
 
 ### Specifying a query string
 
-Specialty Rx messaging enables requesters to submit requests without performing a patient match ahead of time. This accommodates a typical situation where the requester hasn't participated in previous FHIR exchanges with the responder and, so, doesn't possess the Patient resource ID representing their shared patient in the responder's system. 
+Specialty Rx messaging enables requesters to submit requests without performing a patient match ahead of time. This accommodates a typical situation where the requester hasn't participated in previous FHIR exchanges about this patient with the responder and doesn't possess the responder's Patient resource ID. This also addresses challenges that may arise if the requester interacts with the responder via an intermediary--for example if the requester lacks details about the responder's endpoint or is otherwise unable to submit patient match requests directly to the responder.
 
 To support this scenario, the Specialty Rx Query message omits the patient parameter from submitted search strings, with the expectation that the responder will append it after locating the desired patient in its system. 
 
@@ -25,7 +25,7 @@ The requester identifies the desired patient by including one or both the follow
 
 The responder locates the desired patient and completes the query string as follows, based on the submitted patient information:
 
-- If only the **request includes only the requester's Patient**, the responder performs a matching process and locates the associated patient in its own system. It appends its Patient ID to each submitted search string.
+- If the **request includes only the requester's Patient**, the responder performs a matching process and locates the associated patient in its own system. It appends its Patient ID to each submitted search string.
 - If the **request includes both the requester's Patient and responder's Patient**, the responder confirms the match and then appends its Patient ID to each submitted search string. 
 
 ### Returning the executed search string in the response message
@@ -39,9 +39,6 @@ Bundle
         .url = "MedicationRequest?patient=12345&status=active"
     .entry
 </pre>
-
-</pre>
-
 ### Required searches
 
 To ensure that the most common data requests are supported by all participants, responders MUST be able to return information in response to the following search strings. (The required search parameters match those required for each resource by the US Core.)  
@@ -65,7 +62,7 @@ To ensure that the most common data requests are supported by all participants, 
 <td>clinical-status<br/>patient</td>
     <td><em>AllergyIntolerance?clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active</em>
 <br />Returns all patient allergies and intolerances
-</tr>
+    </td></tr>
 <tr>
 <td>Observation</td>
 <td>status<br/>category <br/>code<br/>date<br/>patient</td>

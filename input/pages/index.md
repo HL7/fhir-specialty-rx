@@ -25,7 +25,7 @@ The implementation guide supports business functions related to fulfillment of s
 
 ### Authors
 
-  <table>
+  <table class="grid">
     <tbody>
 	  <tr>
 		<td>HL7 Pharmacy Workgroup</td>
@@ -107,6 +107,10 @@ The implementation guide supports business functions related to fulfillment of s
       <tr>
 		<td>July 20, 2020</td>
 		<td>Refined message structure and naming. Removed content associated with alternate models.</td>
+  	  </tr>
+      <tr>
+		<td>July 21, 2020</td>
+		<td>Adjustments to guidance to match adjusted message structures.</td>
   	  </tr>
         </tbody>
   </table>

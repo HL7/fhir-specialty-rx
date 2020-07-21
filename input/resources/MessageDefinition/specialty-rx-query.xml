@@ -2,13 +2,13 @@
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query" />
   <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-query" />
-  <name value="SpecialtyRxQueryMessageDefinitionEvent" />
-  <title value="Specialty Rx Query Message Definition - Event Based" />
+  <name value="SpecialtyRxQueryMessageDefinition" />
+  <title value="Specialty Rx Query Message Definition" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-26T00:00:00-00:00" />
   <publisher value="NCPDP" />
-  <description value="Message conveying one or more queries for data related to a prescribed specialty medication. References the specialty-rx-query-data event" />
+  <description value="Message conveying one or more queries for data related to a prescribed specialty medication. References the specialty-rx-query event" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />

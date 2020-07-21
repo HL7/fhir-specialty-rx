@@ -408,17 +408,17 @@
   	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-query"/>
-	      <display value="SpecialtyRxQueryMessageDefinitionEvent"/>
+	      <display value="SpecialtyRxQueryMessageDefinition"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryMessageDefinitionEvent"/>
+	    <name value="SpecialtyRxQueryMessageDefinition"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-query-response"/>
-	      <display value="SpecialtyRxQueryResponseMessageDefinitionEvent"/>
+	      <display value="SpecialtyRxQueryResponseMessageDefinition"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryResponseMessageDefinitionEvent"/>
+	    <name value="SpecialtyRxQueryResponseMessageDefinition"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 
@@ -472,7 +472,7 @@
                 <display value="specialty-rx-query-1"/>
             </reference>
             <name value="Specialty Rx Query 1"/>
-            <description value="Example data query message (using specialty-rx-data-query event code)."/>
+            <description value="Example data query message"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 	<resource>
@@ -519,7 +519,7 @@
 		  </page>
 		  <page>
 		    <nameUrl value="request-queries.html"/>
-		    <title value="Data Request Query Strings"/>
+		    <title value="Search conventions"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

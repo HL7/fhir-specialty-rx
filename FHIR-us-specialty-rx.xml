@@ -128,10 +128,10 @@
    <artifact name="SpecialtyRxSearchResultBundle"
              key="StructureDefinition-specialty-rx-search-result-bundle"
              id="StructureDefinition/specialty-rx-search-result-bundle"/>
-   <artifact name="SpecialtyRxQueryMessageDefinitionEvent"
+   <artifact name="SpecialtyRxQueryMessageDefinition"
              key="MessageDefinition-specialty-rx-query"
              id="MessageDefinition/specialty-rx-query"/>
-   <artifact name="SpecialtyRxQueryResponseMessageDefinitionEvent"
+   <artifact name="SpecialtyRxQueryResponseMessageDefinition"
              key="MessageDefinition-specialty-rx-query-response"
              id="MessageDefinition/specialty-rx-query-response"/>
    <artifact name="SpecialtyRxQueryMessageHeader"
@@ -162,7 +162,7 @@
    <page name="Workflow Scenarios" key="workflow"/>
    <page name="Message Flow" key="message-flow"/>
    <page name="Patient Matching and Processing Detail" key="patient-matching"/>
-   <page name="Data Request Query Strings" key="request-queries"/>
+   <page name="Search conventions" key="request-queries"/>
    <page name="Terminology" key="terminology"/>
    <page name="Downloads" key="downloads"/>
    <page name="Message submission" key="message-submission"/>

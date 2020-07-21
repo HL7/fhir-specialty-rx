@@ -7,7 +7,7 @@
   <type value="message" />
   <timestamp value="2019-11-15T13:10:17-05:00" />
   <entry>
-    <fullUrl value="https://example.com/base/MessageHeader/resheader1" />
+    <fullUrl value="http://example.org/MyEHR/MessageHeader/resheader1" />
     <resource>
       <MessageHeader>
         <id value="res1" />
@@ -56,11 +56,12 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.com/base/Patient/patient1" />
+    <fullUrl value="http://example.org/MyPharmacyApp/Patient/patient1" />
     <resource>
       <Patient>
         <id value="patient1" />
         <meta>
+          <source value="http://example.org/MyPharmacyApp" />
           <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
@@ -104,7 +105,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.com/base/Patient/patientEHR" />
+    <fullUrl value="http://example.org/MyEHR/Patient/patientEHR" />
     <resource>
       <Patient>
         <id value="patientEHR" />
@@ -159,7 +160,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.com/base/Bundle/1234567" />
+    <fullUrl value="http://example.org/MyEHR/Bundle/1234567" />
     <resource>
       <Bundle>
         <id value="1234567" />
@@ -174,7 +175,7 @@
           <url value="Condition?patient=patientEHR" />
         </link>
         <entry>
-          <fullUrl value="https://example.com/base/Condition/1" />
+          <fullUrl value="http://example.org/MyEHR/Condition/1" />
           <resource>
             <Condition>
               <id value="1" />
@@ -220,7 +221,7 @@
           </search>
         </entry>
         <entry>
-          <fullUrl value="https://example.com/base/Condition/2" />
+          <fullUrl value="http://example.org/MyEHR/Condition/2" />
           <resource>
             <Condition>
               <id value="2" />
@@ -266,7 +267,7 @@
           </search>
         </entry>
         <entry>
-          <fullUrl value="https://example.com/base/Condition/3" />
+          <fullUrl value="http://example.org/MyEHR/Condition/3" />
           <resource>
             <Condition>
               <id value="3" />
