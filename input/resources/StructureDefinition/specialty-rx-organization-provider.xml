@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-organization-provider" />
+  <meta>
+    <lastUpdated value="2020-04-09T23:55:00.000+00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-provider" />
+  <version value="0.1.00" />
+  <name value="SpecialtyRxOrganizationProvider" />
+  <title value="Specialty Rx Organization - Provider" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-03-20" />
+  <publisher value="NCPDP" />
+  <description value="This profile tailors the Organization resource to represent a provider organization (clinic, health system, etc.) in the Specialty Medication Prescribing process." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization">
+      <path value="Organization" />
+    </element>
+    <element id="Organization.type.coding">
+      <path value="Organization.type.coding" />
+      <fixedCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+        <code value="prov" />
+        <display value="Healthcare Provider" />
+      </fixedCoding>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

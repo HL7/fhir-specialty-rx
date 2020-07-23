@@ -6,8 +6,8 @@
   </meta>
   <url value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-condition-code" />
   <version value="1.0.0" />
-  <name value="SpecialtyRxConditionCodeValueSet" />
-  <title value="Specialty Rx Condition Code Value Set" />
+  <name value="SpecialtyRxValueSetConditionCode" />
+  <title value="Specialty Rx Value Set - Condition Code" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-15T00:00:00-05:00" />

@@ -5,8 +5,8 @@
     <lastUpdated value="2020-06-15T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
-  <name value="SpecialtyRxEventTypeCodeSystem" />
-  <title value="Specialty Rx Event Type Code System" />
+  <name value="SpecialtyRxCodeSystemEventType" />
+  <title value="Specialty Rx Code System - Event Type" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-15T00:00:00-05:00" />

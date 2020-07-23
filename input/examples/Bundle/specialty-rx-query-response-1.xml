@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query-response-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-bundle" />
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response" />
   </meta>
   <type value="message" />
   <timestamp value="2019-11-15T13:10:17-05:00" />
@@ -35,13 +35,13 @@
       <Parameters>
         <id value="61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
         <parameter>
-          <name value="requester-patient-out" />
+          <name value="requester-patient" />
           <valueReference>
             <reference value="Patient/patient1" />
           </valueReference>
         </parameter>
         <parameter>
-          <name value="responder-patient-out" />
+          <name value="responder-patient" />
           <valueReference>
             <reference value="Patient/patientEHR" />
           </valueReference>
@@ -165,7 +165,7 @@
       <Bundle>
         <id value="1234567" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-search-result-bundle" />
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
         <timestamp value="2019-11-15T13:10:17-05:00" />

@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-bundle" />
+    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query" />
   </meta>
   <type value="message" />
   <timestamp value="2020-07-08T08:10:13-05:00" />
@@ -32,7 +32,7 @@
       <Parameters>
         <id value="61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
 		<meta>
-			<profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-parameters" />
+			<profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-query" />
 		</meta>
         <parameter>
           <name value="query-string" />
@@ -47,7 +47,7 @@
           <valueString value="MedicationStatement" />
         </parameter>
         <parameter>
-          <name value="requester-patient-in" />
+          <name value="requester-patient" />
           <valueReference>
             <reference value="Patient/patient1" />
           </valueReference>

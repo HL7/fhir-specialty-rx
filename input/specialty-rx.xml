@@ -98,26 +98,26 @@
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-lab-observation"/>
-	      <display value="SpecialtyRxLabObservation"/>
+	      <reference value="StructureDefinition/specialty-rx-observation-lab"/>
+	      <display value="SpecialtyRxObservationLab"/>
 	    </reference>
-	    <name value="SpecialtyRxLabObservation"/>
+	    <name value="SpecialtyRxObservationLab"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-payor-organization"/>
-	      <display value="SpecialtyRxPayorOrganization"/>
+	      <reference value="StructureDefinition/specialty-rx-organization-payer"/>
+	      <display value="SpecialtyRxOrganizationPayer"/>
 	    </reference>
-	    <name value="SpecialtyRxPayorOrganization"/>
+	    <name value="SpecialtyRxOrganizationPayer"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-provider-organization"/>
-	      <display value="SpecialtyRxProviderOrganization"/>
+	      <reference value="StructureDefinition/specialty-rx-organization-provider"/>
+	      <display value="SpecialtyRxOrganizationProvider"/>
 	    </reference>
-	    <name value="SpecialtyRxProviderOrganization"/>
+	    <name value="SpecialtyRxOrganizationProvider"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -174,33 +174,33 @@
   	  <resource>
 	    <reference>
 	      <reference value="CodeSystem/specialty-rx-event-type"/>
-	      <display value="SpecialtyRxEventTypeCodeSystem"/>
+	      <display value="SpecialtyRxCodeSystemEventType"/>
 	    </reference>
-	    <name value="SpecialtyRxEventTypeCodeSystem"/>
+	    <name value="SpecialtyRxCodeSystemEventType"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>
-	      <display value="SpecialtyRxEventTypeValueSet"/>
+	      <display value="SpecialtyRxValueSetEventType"/>
 	    </reference>
-	    <name value="SpecialtyRxEventTypeValueSet"/>
+	    <name value="SpecialtyRxValueSetEventType"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-condition-code"/>
-	      <display value="SpecialtyRxConditionCodeValueSet"/>
+	      <display value="SpecialtyRxValueSetConditionCode"/>
 	    </reference>
-	    <name value="SpecialtyRxConditionCodeValueSet"/>
+	    <name value="SpecialtyRxValueSetConditionCode"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-pharmacy-organization"/>
-	      <display value="SpecialtyRxPharmacyOrganization"/>
+	      <reference value="StructureDefinition/specialty-rx-organization-pharmacy"/>
+	      <display value="SpecialtyRxOrganizationPharmacy"/>
 	    </reference>
-	    <name value="SpecialtyRxPharmacyOrganization"/>
+	    <name value="SpecialtyRxOrganizationPharmacy"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
@@ -213,26 +213,26 @@
 	  </resource>	
   	  <resource>
 	    <reference>
-	      <reference value="CapabilityStatement/specialty-rx-data-source-capabilitystatement"/>
-	      <display value="SpecialtyRxDataSourceCapabilityStatement"/>
+	      <reference value="CapabilityStatement/specialty-rx-data-source"/>
+	      <display value="SpecialtyRxDataSource"/>
 	    </reference>
-	    <name value="SpecialtyRxDataSourceCapabilityStatement"/>
+	    <name value="SpecialtyRxDataSource"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="CapabilityStatement/specialty-rx-data-recipient-capabilitystatement"/>
-	      <display value="SpecialtyRxDataRecipientCapabilityStatement"/>
+	      <reference value="CapabilityStatement/specialty-rx-data-recipient"/>
+	      <display value="SpecialtyRxDataRecipient"/>
 	    </reference>
-	    <name value="SpecialtyRxDataRecipientCapabilityStatement"/>
+	    <name value="SpecialtyRxDataRecipient"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="NamingSystem/specialty-rx-ncpdp-provider-id-namingsystem"/>
-	      <display value="SpecialtyRxNcpdpProviderIdNamingSystem"/>
+	      <reference value="NamingSystem/specialty-rx-ncpdp-provider-id"/>
+	      <display value="SpecialtyRxNamingSystemNcpdpProviderId"/>
 	    </reference>
-	    <name value="SpecialtyRxNcpdpProviderIdNamingSystem"/>
+	    <name value="SpecialtyRxNamingSystemNcpdpProviderId"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
  	  <resource>
@@ -240,7 +240,7 @@
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
                 <display value="specialty-rx-allergyintolerance-1"/>
             </reference>
-            <name value="Specialty Rx Allergy/Intolerance 1"/><description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
+            <name value="Specialty Rx Allergy/Intolerance 1"/>
             <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance"/>
       </resource>	  
@@ -291,30 +291,30 @@
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Observation/specialty-rx-lab-observation-1"/>
-                <display value="specialty-rx-lab-observation-1"/>
+	        <reference value="Observation/specialty-rx-observation-lab-1"/>
+                <display value="specialty-rx-observation-lab-1"/>
             </reference>
-            <name value="Specialty Rx Lab Observation 1"/>
+            <name value="Specialty Rx Observation - Lab 1"/>
             <description value="An example Observation illustrating a lab observation in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-lab-observation"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-observation-lab"/>
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Organization/specialty-rx-payor-organization-1"/>
-                <display value="specialty-rx-payor-organization-1"/>
+	        <reference value="Organization/specialty-rx-organization-payer-1"/>
+                <display value="specialty-rx-organization-payer-1"/>
             </reference>
-            <name value="Specialty Rx Payer Organization 1"/>
+            <name value="Specialty Rx Organization - Payer 1"/>
             <description value="An example Organization illustrating a payor organization in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-payor-organization"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-payer"/>
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Organization/specialty-rx-provider-organization-1"/>
-                <display value="specialty-rx-provider-organization-1"/>
+	        <reference value="Organization/specialty-rx-organization-provider-1"/>
+                <display value="specialty-rx-organization-provider-1"/>
             </reference>
             <name value="Specialty Rx Organization 1"/>
             <description value="An example Organization illustrating a provider organization in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-provider-organization"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-provider"/>
       </resource>	  
 	  	  <resource>
 	      <reference>
@@ -354,10 +354,10 @@
       </resource>	  
 		<resource>
 	      <reference>
-	        <reference value="Organization/specialty-rx-pharmacy-organization-1"/>
-                <display value="specialty-rx-pharmacy-organization-1"/>
+	        <reference value="Organization/specialty-rx-organization-pharmacy-1"/>
+                <display value="specialty-rx-organization-pharmacy-1"/>
             </reference>
-            <name value="Specialty Rx Pharmacy Organization 1"/>
+            <name value="Specialty Rx Organization - Pharmacy 1"/>
             <description value="Example Organization resource representing a pharmacy"/>
 	      <exampleBoolean value="true"/>
       </resource>	       
@@ -378,26 +378,26 @@
 
    	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-query-parameters"/>
-	      <display value="SpecialtyRxDataQueryParameters"/>
+	      <reference value="StructureDefinition/specialty-rx-parameters-query"/>
+	      <display value="Specialty Rx Parameters - Query"/>
 	    </reference>
-	    <name value="SpecialtyRxDataQueryParameters"/>
+	    <name value="SpecialtyRxParametersQuery"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
    	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-query-response-parameters"/>
-	      <display value="SpecialtyRxQueryResponseParameters"/>
+	      <reference value="StructureDefinition/specialty-rx-parameters-query-response"/>
+	      <display value="Specialty Rx Parameters - Query Response"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryResponseParameters"/>
+	    <name value="SpecialtyRxParametersQueryResponse"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
    	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-search-result-bundle"/>
-	      <display value="SpecialtyRxSearchResultBundle"/>
+	      <reference value="StructureDefinition/specialty-rx-bundle-search-result"/>
+	      <display value="Specialty Rx Bundle - Search Result"/>
 	    </reference>
-	    <name value="SpecialtyRxSearchResultBundle"/>
+	    <name value="SpecialtyRxBundleSearchResult"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
 	  
@@ -408,17 +408,17 @@
   	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-query"/>
-	      <display value="SpecialtyRxQueryMessageDefinition"/>
+	      <display value="SpecialtyRxMessageDefinitionQuery"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryMessageDefinition"/>
+	    <name value="SpecialtyRxMessageDefinitionQuery"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-query-response"/>
-	      <display value="SpecialtyRxQueryResponseMessageDefinition"/>
+	      <display value="SpecialtyRxMessageDefinitionQueryResponse"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryResponseMessageDefinition"/>
+	    <name value="SpecialtyRxMessageDefinitionQueryResponse"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 
@@ -427,36 +427,36 @@
 		<!-- MessageHeader  -->
 	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-query-messageheader"/>
-	      <display value="SpecialtyRxQueryMessageHeader"/>
+	      <reference value="StructureDefinition/specialty-rx-messageheader-query"/>
+	      <display value="Specialty Rx MessageHeader - Query"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryMessageHeader"/>
+	    <name value="SpecialtyRxMessageHeaderQuery"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-query-response-messageheader"/>
-	      <display value="SpecialtyRxQueryResponseMessageHeader"/>
+	      <reference value="StructureDefinition/specialty-rx-messageheader-query-response"/>
+	      <display value="SpecialtyRxMessageHeaderQueryResponse"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryResponseMessageHeader"/>
+	    <name value="Specialty Rx MessageHeader - Query Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  
 		<!-- Request and response bundle  -->
    	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-query-bundle"/>
-	      <display value="SpecialtyRxQueryBundle"/>
+	      <reference value="StructureDefinition/specialty-rx-bundle-query"/>
+	      <display value="Specialty Rx Bundle - Query Message"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryBundle"/>
+	    <name value="SpecialtyRxBundleQuery"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
 	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-query-response-bundle"/>
-	      <display value="SpecialtyRxQueryResponseBundle"/>
+	      <reference value="StructureDefinition/specialty-rx-bundle-query-response"/>
+	      <display value="Specialty Rx Bundle - Query Response Message"/>
 	    </reference>
-	    <name value="SpecialtyRxQueryResponseBundle"/>
+	    <name value="SpecialtyRxBundleQueryResponse"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
 

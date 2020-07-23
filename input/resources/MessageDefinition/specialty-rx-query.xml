@@ -2,8 +2,8 @@
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query" />
   <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-query" />
-  <name value="SpecialtyRxQueryMessageDefinition" />
-  <title value="Specialty Rx Query Message Definition" />
+  <name value="SpecialtyRxMessageDefinitionQuery" />
+  <title value="Specialty Rx Message Definition - Query" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-26T00:00:00-00:00" />

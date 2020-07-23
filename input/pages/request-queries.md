@@ -84,7 +84,7 @@ To ensure that the most common data requests are supported by all participants, 
 
 ### Optional searches
 
-Requesters MAY include searches other than those outlined above. Responders MUST return a [search-result](StructureDefinition-specialty-rx-search-result-bundle.html) for each, which SHOULD include an OperationOutcome indicating when the responder does not support the submitted search or search parameter.  
+Requesters MAY include searches other than those outlined above. Responders MUST return a [search-result](StructureDefinition-specialty-rx-bundle-search-result.html) for each, which SHOULD include an OperationOutcome indicating when the responder does not support the submitted search or search parameter.  
 
 <br>
 
