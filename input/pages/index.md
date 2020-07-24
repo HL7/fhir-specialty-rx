@@ -112,6 +112,10 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>July 21, 2020</td>
 		<td>Adjustments to guidance to match adjusted message structures.</td>
   	  </tr>
+      <tr>
+		<td>July 23, 2020</td>
+		<td>Cleaned up resource naming. Adjusted patient and parameters profiles. Added rough questionnaire and questionnaire response messages and components</td>
+  	  </tr>
         </tbody>
   </table>
 

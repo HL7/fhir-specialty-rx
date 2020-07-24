@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-questionnaire-response-1" />
+  <meta>
+	<profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-questionnaire-response" />  
+  </meta>
+  <type value="message" />
+  <timestamp value="2020-07-23T00:00:00-05:00" />
+  <entry>
+    <fullUrl value="https://example.com/base/MessageHeader/resheader1" />
+    <resource>
+      <MessageHeader>
+        <id value="res1" />
+        <eventCoding>
+          <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+          <code value="questionnaire-response" />
+        </eventCoding>
+        <source>
+          <name value="MyEHR" />
+          <endpoint value="http://example.org/MyEHR" />
+        </source>
+        <response>
+          <identifier value="req1" />
+          <code value="ok" />
+        </response>
+        <focus>
+          <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+    <resource>
+      <Parameters>
+        <id value="61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-questionnaire-response" />
+        </meta>
+        <parameter>
+          <name value="questionnaire-response" />
+          <valueReference>
+            <reference value="QuestionnaireResponse/1" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="requester-patient" />
+          <valueReference>
+            <reference value="Patient/patient1" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="responder-patient" />
+          <valueReference>
+            <reference value="Patient/patientEHR" />
+          </valueReference>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://example.com/base/Patient/patient1" />
+    <resource>
+      <Patient>
+        <id value="patient1" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+        </meta>
+        <identifier>
+          <system value="http://example.org/patient-id" />
+          <value value="1234" />
+        </identifier>
+        <active value="true" />
+        <name>
+          <family value="Doe" />
+          <given value="Timothy" />
+          <given value="V." />
+        </name>
+        <telecom>
+          <system value="phone" />
+          <value value="555-555-5555" />
+          <use value="home" />
+        </telecom>
+        <telecom>
+          <system value="email" />
+          <value value="tim.doe@example.com" />
+        </telecom>
+        <gender value="male" />
+        <birthDate value="1987-02-20" />
+        <address>
+          <line value="2224 Century Ave" />
+          <city value="Minnetonka" />
+          <state value="MN" />
+          <postalCode value="55345" />
+          <country value="US" />
+        </address>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47" />
+              <code value="en-US" />
+              <display value="English (Region=United States)" />
+            </coding>
+          </language>
+        </communication>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://example.com/base/Patient/patientEHR" />
+    <resource>
+      <Patient>
+        <id value="patientEHR" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="PI" />
+              <display value="Patient internal identifier" />
+            </coding>
+            <text value="Patient internal identifier" />
+          </type>
+          <system value="http://example.org/MyEHR" />
+          <value value="30455" />
+        </identifier>
+        <active value="true" />
+        <name>
+          <family value="Doe" />
+          <given value="Tim" />
+        </name>
+        <telecom>
+          <system value="phone" />
+          <value value="555-555-5555" />
+          <use value="home" />
+        </telecom>
+        <telecom>
+          <system value="email" />
+          <value value="tim.doe@example.com" />
+        </telecom>
+        <gender value="male" />
+        <birthDate value="1987-02-20" />
+        <address>
+          <line value="2224 Century Avenue" />
+          <city value="Minnetonka" />
+          <state value="MN" />
+          <postalCode value="55345" />
+          <country value="US" />
+        </address>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47" />
+              <code value="en-US" />
+              <display value="English (Region=United States)" />
+            </coding>
+          </language>
+        </communication>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://example.com/base/QuestionnaireResponse/1" />
+    <resource>
+      <QuestionnaireResponse>
+        <id value="1" />
+        <status value="completed" />
+        <authored value="2019-11-15T13:10:13-05:00" />
+        <item>
+          <linkId value="LeftVentricularEjectionFraction_Value" />
+          <text value="What is the patient's left ventricular ejection fraction?" />
+          <answer>
+            <valueString value="77%" />
+          </answer>
+        </item>
+        <item>
+          <linkId value="ProgressNotesAttachment" />
+          <text value="Include recent progress note(s) as PDF document" />
+          <answer>
+            <valueAttachment>
+              <contentType value="application/pdf" />
+              <data value="VGhpcyBpcyBhIFBERg==" />
+            </valueAttachment>
+          </answer>
+        </item>
+      </QuestionnaireResponse>
+    </resource>
+  </entry>
+</Bundle>

@@ -3,7 +3,7 @@
   <id value="specialty-rx-questionnaire-response" />
   <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-questionnaire-response" />
   <name value="SpecialtyRxMessageDefinitionQuestionnaireResponse" />
-  <title value="Specialty Rx Message Definition - Questionnaire Response " />
+  <title value="Specialty Rx Message Definition - Questionnaire Response" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-26T00:00:00-00:00" />

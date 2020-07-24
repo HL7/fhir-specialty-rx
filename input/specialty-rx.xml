@@ -51,41 +51,41 @@
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
-	      <display value="SpecialtyRxAllergyIntolerance"/>
+	      <display value="Specialty Rx AllergyIntolerance"/>
 	    </reference>
-	    <name value="SpecialtyRxAllergyIntolerance"/>
+	    <name value="Specialty Rx AllergyIntolerance"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-careteam"/>
-	      <display value="SpecialtyRxCareTeam"/>
+	      <display value="Specialty Rx CareTeam"/>
 	    </reference>
-	    <name value="SpecialtyRxCareTeam"/>
+	    <name value="Specialty Rx CareTeam"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-condition"/>
-	      <display value="SpecialtyRxCondition"/>
+	      <display value="Specialty Rx Condition"/>
 	    </reference>
-	    <name value="SpecialtyRxCondition"/>
+	    <name value="Specialty Rx Condition"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-endpoint-direct"/>
-	      <display value="SpecialtyRxEndpointDirect"/>
+	      <display value="Specialty Rx Endpoint - Direct"/>
 	    </reference>
-	    <name value="SpecialtyRxEndpointDirect"/>
+	    <name value="Specialty Rx Endpoint - Direct"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-location"/>
-	      <display value="SpecialtyRxLocation"/>
+	      <display value="Specialty Rx Location"/>
 	    </reference>
-	    <name value="SpecialtyRxLocation"/>
+	    <name value="Specialty Rx Location"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -93,63 +93,63 @@
 	      <reference value="StructureDefinition/specialty-rx-medicationrequest"/>
 	      <display value="Specialty Rx Medication Request"/>
 	    </reference>
-	    <name value="SpecialtyRxMedicationRequest"/>
+	    <name value="Specialty Rx Medication Request"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-observation-lab"/>
-	      <display value="SpecialtyRxObservationLab"/>
+	      <display value="Specialty Rx Observation - Lab"/>
 	    </reference>
-	    <name value="SpecialtyRxObservationLab"/>
+	    <name value="Specialty Rx Observation - Lab"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-organization-payer"/>
-	      <display value="SpecialtyRxOrganizationPayer"/>
+	      <display value="Specialty Rx Organization - Payer"/>
 	    </reference>
-	    <name value="SpecialtyRxOrganizationPayer"/>
+	    <name value="Specialty Rx Organization - Payer"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-organization-provider"/>
-	      <display value="SpecialtyRxOrganizationProvider"/>
+	      <display value="Specialty Rx Organization - Provider"/>
 	    </reference>
-	    <name value="SpecialtyRxOrganizationProvider"/>
+	    <name value="Specialty Rx Organization - Provider"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-patient"/>
-	      <display value="SpecialtyRxPatient"/>
+	      <display value="Specialty Rx Patient"/>
 	    </reference>
-	    <name value="SpecialtyRxPatient"/>
+	    <name value="Specialty Rx Patient"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-practitioner"/>
-	      <display value="SpecialtyRxPractitioner"/>
+	      <display value="Specialty Rx Practitioner"/>
 	    </reference>
-	    <name value="SpecialtyRxPractitioner"/>
+	    <name value="Specialty Rx Practitioner"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-practitionerrole"/>
-	      <display value="SpecialtyRxPractitionerRole"/>
+	      <display value="Specialty Rx PractitionerRole"/>
 	    </reference>
-	    <name value="SpecialtyRxPractitionerRole"/>
+	    <name value="Specialty Rx PractitionerRole"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-relatedperson"/>
-	      <display value="SpecialtyRxRelatedPerson"/>
+	      <display value="Specialty Rx RelatedPerson"/>
 	    </reference>
-	    <name value="SpecialtyRxRelatedPerson"/>
+	    <name value="Specialty Rx RelatedPerson"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
 	<!--
@@ -174,89 +174,89 @@
   	  <resource>
 	    <reference>
 	      <reference value="CodeSystem/specialty-rx-event-type"/>
-	      <display value="SpecialtyRxCodeSystemEventType"/>
+	      <display value="Specialty Rx CodeSystem - Event Type"/>
 	    </reference>
-	    <name value="SpecialtyRxCodeSystemEventType"/>
+	    <name value="Specialty Rx CodeSystem - Event Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>
-	      <display value="SpecialtyRxValueSetEventType"/>
+	      <display value="Specialty Rx ValueSet - Event Type"/>
 	    </reference>
-	    <name value="SpecialtyRxValueSetEventType"/>
+	    <name value="Specialty Rx ValueSet - Event Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-condition-code"/>
-	      <display value="SpecialtyRxValueSetConditionCode"/>
+	      <display value="Specialty Rx ValueSet - Condition Code"/>
 	    </reference>
-	    <name value="SpecialtyRxValueSetConditionCode"/>
+	    <name value="Specialty Rx ValueSet - Condition Code"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-organization-pharmacy"/>
-	      <display value="SpecialtyRxOrganizationPharmacy"/>
+	      <display value="Specialty Rx Organization - Pharmacy"/>
 	    </reference>
-	    <name value="SpecialtyRxOrganizationPharmacy"/>
+	    <name value="Specialty Rx Organization - Pharmacy"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-coverage"/>
-	      <display value="SpecialtyRxCoverage"/>
+	      <display value="Specialty Rx Coverage"/>
 	    </reference>
-	    <name value="SpecialtyRxCoverage"/>
+	    <name value="Specialty Rx Coverage"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
   	  <resource>
 	    <reference>
 	      <reference value="CapabilityStatement/specialty-rx-data-source"/>
-	      <display value="SpecialtyRxDataSource"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Source"/>
 	    </reference>
-	    <name value="SpecialtyRxDataSource"/>
+	    <name value="Specialty Rx CapabilityStatement - Data Source"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="CapabilityStatement/specialty-rx-data-recipient"/>
-	      <display value="SpecialtyRxDataRecipient"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Recipient"/>
 	    </reference>
-	    <name value="SpecialtyRxDataRecipient"/>
+	    <name value="Specialty Rx CapabilityStatement - Data Recipient"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="NamingSystem/specialty-rx-ncpdp-provider-id"/>
-	      <display value="SpecialtyRxNamingSystemNcpdpProviderId"/>
+	      <display value="Specialty Rx NamingSystem - NCPDP Provider ID"/>
 	    </reference>
-	    <name value="SpecialtyRxNamingSystemNcpdpProviderId"/>
+	    <name value="Specialty Rx NamingSystem - NCPDP Provider ID"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
  	  <resource>
 	      <reference>
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
-                <display value="specialty-rx-allergyintolerance-1"/>
+                <display value="Specialty Rx AllergyIntolerance - 1"/>
             </reference>
-            <name value="Specialty Rx Allergy/Intolerance 1"/>
+            <name value="Specialty Rx AllergyIntolerance - 1"/>
             <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance"/>
       </resource>	  
 	  <resource>
 	      <reference>
 	        <reference value="CareTeam/specialty-rx-careteam-1"/>
-                <display value="specialty-rx-careteam-1"/>
+                <display value="Specialty Rx CareTeam 1"/>
             </reference>
-            <name value="Specialty Rx Care Team 1"/>
+            <name value="Specialty Rx CareTeam 1"/>
             <description value="An example CareTeam illustrating a care team  in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-careteam"/>
       </resource>	  
 	  <resource>
 	      <reference>
 	        <reference value="Condition/specialty-rx-condition-1"/>
-                <display value="specialty-rx-condition-1"/>
+                <display value="Specialty Rx Condition 1"/>
             </reference>
             <name value="Specialty Rx Condition 1"/>
             <description value="An example Condition illustrating required elements in the Specialty Medication Prescribing profile"/>
@@ -265,16 +265,16 @@
 	<resource>
 	      <reference>
 	        <reference value="Endpoint/specialty-rx-endpoint-direct-1"/>
-                <display value="specialty-rx-endpoint-direct-1"/>
+                <display value="Specialty Rx Endpoint - Direct 1"/>
             </reference>
-            <name value="Specialty Rx Medication Direct Endpoint 1"/>
+            <name value="Specialty Rx Endpoint - Direct 1"/>
             <description value="An example Endpoint illustrating a practitioner's Direct Project address in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-endpoint-direct"/>
       </resource>	  
 	<resource>
 	      <reference>
 	        <reference value="Location/specialty-rx-location-1"/>
-                <display value="specialty-rx-location-1"/>
+                <display value="Specialty Rx Location 1"/>
             </reference>
             <name value="Specialty Rx Location 1"/>
             <description value="An example Location illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
@@ -283,16 +283,16 @@
       	  <resource>
 	      <reference>
 	        <reference value="MedicationRequest/specialty-rx-medicationrequest-1"/>
-                <display value="specialty-rx-medicationrequest-1"/>
+                <display value="Specialty Rx MedicationRequest 1"/>
             </reference>
-            <name value="Specialty Rx Medication Request 1"/>
+            <name value="Specialty Rx MedicationRequest 1"/>
             <description value="An example MedicationRequest illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest"/>
       </resource>	  
 	<resource>
 	      <reference>
 	        <reference value="Observation/specialty-rx-observation-lab-1"/>
-                <display value="specialty-rx-observation-lab-1"/>
+                <display value="Specialty Rx Observation - Lab 1"/>
             </reference>
             <name value="Specialty Rx Observation - Lab 1"/>
             <description value="An example Observation illustrating a lab observation in the Specialty Medication Prescribing profile"/>
@@ -301,7 +301,7 @@
 	<resource>
 	      <reference>
 	        <reference value="Organization/specialty-rx-organization-payer-1"/>
-                <display value="specialty-rx-organization-payer-1"/>
+                <display value="Specialty Rx Organization - Payer 1"/>
             </reference>
             <name value="Specialty Rx Organization - Payer 1"/>
             <description value="An example Organization illustrating a payor organization in the Specialty Medication Prescribing profile"/>
@@ -310,16 +310,16 @@
 	<resource>
 	      <reference>
 	        <reference value="Organization/specialty-rx-organization-provider-1"/>
-                <display value="specialty-rx-organization-provider-1"/>
+                <display value="Specialty Rx Organization - Provider 1"/>
             </reference>
-            <name value="Specialty Rx Organization 1"/>
+            <name value="SSpecialty Rx Organization - Provider 1"/>
             <description value="An example Organization illustrating a provider organization in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-provider"/>
       </resource>	  
 	  	  <resource>
 	      <reference>
 	        <reference value="Patient/specialty-rx-patient-1"/>
-                <display value="specialty-rx-patient-1"/>
+                <display value="Specialty Rx Patient 1"/>
             </reference>
             <name value="Specialty Rx Patient 1"/>
             <description value="An example Patient illustrating required elements in the Specialty Medication Prescribing profile"/>
@@ -328,7 +328,7 @@
 	  <resource>
 	      <reference>
 	        <reference value="Practitioner/specialty-rx-practitioner-1"/>
-                <display value="specialty-rx-practitioner-1"/>
+                <display value="Specialty Rx Practitioner 1"/>
             </reference>
             <name value="Specialty Rx Practitioner 1"/>
             <description value="An example Practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
@@ -337,25 +337,25 @@
 	<resource>
 	      <reference>
 	        <reference value="PractitionerRole/specialty-rx-practitionerrole-1"/>
-                <display value="specialty-rx-practitionerrole-1"/>
+                <display value="Specialty Rx PractitionerRole 1"/>
             </reference>
-            <name value="Specialty Rx Practitioner Role 1"/>
+            <name value="Specialty Rx PractitionerRole 1"/>
             <description value="An example PractitionerRole illustrating a practitioner's office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitionerrole"/>
       </resource>	  
 	<resource>
 	      <reference>
 	        <reference value="RelatedPerson/specialty-rx-relatedperson-1"/>
-                <display value="specialty-rx-relatedperson-1"/>
+                <display value="Specialty Rx RelatedPerson 1"/>
             </reference>
-            <name value="Specialty Rx Related Person 1"/>
+            <name value="Specialty Rx RelatedPerson 1"/>
             <description value="An example RelatedPerson illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-relatedperson"/>
       </resource>	  
 		<resource>
 	      <reference>
 	        <reference value="Organization/specialty-rx-organization-pharmacy-1"/>
-                <display value="specialty-rx-organization-pharmacy-1"/>
+                <display value="Specialty Rx Organization - Pharmacy 1"/>
             </reference>
             <name value="Specialty Rx Organization - Pharmacy 1"/>
             <description value="Example Organization resource representing a pharmacy"/>
@@ -364,7 +364,7 @@
 		<resource>
 	      <reference>
 	        <reference value="Coverage/specialty-rx-coverage-1"/>
-                <display value="specialty-rx-coverage-1"/>
+                <display value="Specialty Rx Coverage 1"/>
             </reference>
             <name value="Specialty Rx Coverage 1"/>
             <description value="Example of a Specialty Rx Coverage resource containing pharmacy benefit plan information."/>
@@ -381,7 +381,7 @@
 	      <reference value="StructureDefinition/specialty-rx-parameters-query"/>
 	      <display value="Specialty Rx Parameters - Query"/>
 	    </reference>
-	    <name value="SpecialtyRxParametersQuery"/>
+	    <name value="Specialty Rx Parameters - Query"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
    	  <resource>
@@ -389,7 +389,23 @@
 	      <reference value="StructureDefinition/specialty-rx-parameters-query-response"/>
 	      <display value="Specialty Rx Parameters - Query Response"/>
 	    </reference>
-	    <name value="SpecialtyRxParametersQueryResponse"/>
+	    <name value="Specialty Rx Parameters - Query Response"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-parameters-questionnaire"/>
+	      <display value="Specialty Rx Parameters - Questionnaire"/>
+	    </reference>
+	    <name value="Specialty Rx Parameters - Questionnaire"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-parameters-questionnaire-response"/>
+	      <display value="Specialty Rx Parameters - Questionnaire Response"/>
+	    </reference>
+	    <name value="Specialty Rx Parameters - Questionnaire Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
    	  <resource>
@@ -397,7 +413,7 @@
 	      <reference value="StructureDefinition/specialty-rx-bundle-search-result"/>
 	      <display value="Specialty Rx Bundle - Search Result"/>
 	    </reference>
-	    <name value="SpecialtyRxBundleSearchResult"/>
+	    <name value="Specialty Rx Bundle - Search Result"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
 	  
@@ -408,17 +424,33 @@
   	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-query"/>
-	      <display value="SpecialtyRxMessageDefinitionQuery"/>
+	      <display value="Specialty Rx MessageDefinition - Query"/>
 	    </reference>
-	    <name value="SpecialtyRxMessageDefinitionQuery"/>
+	    <name value="Specialty Rx MessageDefinition - Query"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-query-response"/>
-	      <display value="SpecialtyRxMessageDefinitionQueryResponse"/>
+	      <display value="Specialty Rx MessageDefinition - Query Response"/>
 	    </reference>
-	    <name value="SpecialtyRxMessageDefinitionQueryResponse"/>
+	    <name value="Specialty Rx MessageDefinition - Query Response"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-questionnaire"/>
+	      <display value="Specialty Rx MessageDefinition - Questionnaire"/>
+	    </reference>
+	    <name value="Specialty Rx MessageDefinition - Questionnaire"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-questionnaire-response"/>
+	      <display value="Specialty Rx MessageDefinition - Questionnaire Response"/>
+	    </reference>
+	    <name value="Specialty Rx MessageDefinition - Questionnaire Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 
@@ -430,15 +462,32 @@
 	      <reference value="StructureDefinition/specialty-rx-messageheader-query"/>
 	      <display value="Specialty Rx MessageHeader - Query"/>
 	    </reference>
-	    <name value="SpecialtyRxMessageHeaderQuery"/>
+	    <name value="Specialty Rx MessageHeader - Query"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-messageheader-query-response"/>
-	      <display value="SpecialtyRxMessageHeaderQueryResponse"/>
+	      <display value="Specialty Rx MessageHeader - Query Response"/>
 	    </reference>
 	    <name value="Specialty Rx MessageHeader - Query Response"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-messageheader-questionnaire"/>
+	      <display value="Specialty Rx MessageHeader - Questionnaire"/>
+	    </reference>
+	    <name value="Specialty Rx MessageHeader - Questionnaire"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-messageheader-questionnaire-response"/>
+	      <display value="Specialty Rx MessageHeader - Questionnaire Response"/>
+	    </reference>
+	    <name value="Specialty Rx MessageHeader - Questionnaire Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  
@@ -448,7 +497,7 @@
 	      <reference value="StructureDefinition/specialty-rx-bundle-query"/>
 	      <display value="Specialty Rx Bundle - Query Message"/>
 	    </reference>
-	    <name value="SpecialtyRxBundleQuery"/>
+	    <name value="Specialty Rx Bundle - Query Message"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
 	  <resource>
@@ -456,7 +505,23 @@
 	      <reference value="StructureDefinition/specialty-rx-bundle-query-response"/>
 	      <display value="Specialty Rx Bundle - Query Response Message"/>
 	    </reference>
-	    <name value="SpecialtyRxBundleQueryResponse"/>
+	    <name value="Specialty Rx Bundle - Query Response Message"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-bundle-questionnaire"/>
+	      <display value="Specialty Rx Bundle - Questionnaire Message"/>
+	    </reference>
+	    <name value="Specialty Rx Bundle - Questionnaire Message"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-bundle-questionnaire-response"/>
+	      <display value="Specialty Rx Bundle - Questionnaire Response Message"/>
+	    </reference>
+	    <name value="Specialty Rx Bundle - Questionnaire Response Message"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
 
@@ -491,6 +556,24 @@
             </reference>
             <name value="Specialty Rx Query Response 2"/>
             <description value="Example data query response message (multiple searches)."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+		<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-questionnaire-1"/>
+                <display value="specialty-rx-questionnaire-1"/>
+            </reference>
+            <name value="Specialty Rx Questionnaire 1"/>
+            <description value="Example questionnaire message"/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-questionnaire-response-1"/>
+                <display value="specialty-rx-questionnaire-response-1"/>
+            </reference>
+            <name value="Specialty Rx Questionnaire Response 1"/>
+            <description value="Example data questionnaire response message."/>
 	      <exampleBoolean value="true"/>
       </resource>	  
       <page>
