@@ -43,7 +43,7 @@ The implementation guide supports business functions related to fulfillment of s
   </table>
 
 ### Change log
-  <table style="width:100%">
+  <table class="grid" style="width:100%">
       <colgroup><col span="1" style="width:150px"><col></colgroup> 
     <tbody>
 	  <tr>
@@ -116,8 +116,15 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>July 23, 2020</td>
 		<td>Cleaned up resource naming. Adjusted patient and parameters profiles. Added rough questionnaire and questionnaire response messages and components</td>
   	  </tr>
+        <tr>
+		<td>July 27, 2020</td>
+		<td>Added a page outlining the message structures. Added clarification to the Search Conventions page that Patient references within searchset bundles in the Query Response should resolve to the responder-patient resource in the response's main message bundle</td>
+  	  </tr>
+
         </tbody>
+
   </table>
+
 
 
 

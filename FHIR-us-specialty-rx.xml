@@ -190,6 +190,7 @@
    <page name="Table of Contents" key="toc"/>
    <page name="IG Home Page" key="index"/>
    <page name="Workflow Scenarios" key="workflow"/>
+   <page name="Message Structures" key="message-structure"/>
    <page name="Message Flow" key="message-flow"/>
    <page name="Patient Matching and Processing Detail" key="patient-matching"/>
    <page name="Search conventions" key="request-queries"/>

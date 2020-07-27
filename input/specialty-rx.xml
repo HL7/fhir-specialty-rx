@@ -591,6 +591,11 @@
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
+		    <nameUrl value="message-structure.html"/>
+		    <title value="Message Structures"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
 		    <nameUrl value="message-flow.html"/>
 		    <title value="Message Flow"/>
 	        <generation value="markdown"/>

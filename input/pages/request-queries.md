@@ -39,6 +39,10 @@ Bundle
         .url = "MedicationRequest?patient=12345&status=active"
     .entry
 </pre>
+#### Patient references within search results
+
+All searches performed within a request/response exchange flow relate to a single patient, who is represented in the *responder-patient* parameter in the Query Response message bundle. Patient references contained in resources in searchset bundles SHOULD be resolvable to the *responder-patient* entry in the outer, Query Response message bundle.
+
 ### Required searches
 
 To ensure that the most common data requests are supported by all participants, responders MUST be able to return information in response to the following search strings. (The required search parameters match those required for each resource by the US Core.)  
