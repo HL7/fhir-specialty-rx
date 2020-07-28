@@ -7,7 +7,7 @@
   <type value="message" />
   <timestamp value="2020-07-08T08:10:13-05:00" />
   <entry>
-    <fullUrl value="https://example.com/base/MessageHeader/reqheader1" />
+    <fullUrl value="https://example.org/MyPharmacyApp/MessageHeader/reqheader1" />
     <resource>
       <MessageHeader>
         <id value="req1" />

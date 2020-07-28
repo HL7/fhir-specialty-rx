@@ -14,8 +14,8 @@
     <role>
       <coding>
         <system value="http://nucc.org/provider-taxonomy" />
-        <code value="208D00000X" />
-        <display value="General Practice" />
+        <code value="261QP2300X" />
+        <display value="Primary Care" />
       </coding>
     </role>
     <member>

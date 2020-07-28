@@ -359,7 +359,7 @@
             </reference>
             <name value="Specialty Rx Organization - Pharmacy 1"/>
             <description value="Example Organization resource representing a pharmacy"/>
-	      <exampleBoolean value="true"/>
+			<exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-pharmacy"/>
       </resource>	       
 		<resource>
 	      <reference>
@@ -368,7 +368,7 @@
             </reference>
             <name value="Specialty Rx Coverage 1"/>
             <description value="Example of a Specialty Rx Coverage resource containing pharmacy benefit plan information."/>
-	      <exampleBoolean value="true"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-coverage"/>
       </resource>	  
 
 <!-- *********************************************************************************************************************************************
@@ -410,6 +410,14 @@
 	  </resource>	
    	  <resource>
 	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-parameters-proactive-data"/>
+	      <display value="Specialty Rx Parameters - Proactive Data"/>
+	    </reference>
+	    <name value="Specialty Rx Parameters - Proactive Data"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+   	  <resource>
+	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-bundle-search-result"/>
 	      <display value="Specialty Rx Bundle - Search Result"/>
 	    </reference>
@@ -435,6 +443,14 @@
 	      <display value="Specialty Rx MessageDefinition - Query Response"/>
 	    </reference>
 	    <name value="Specialty Rx MessageDefinition - Query Response"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-proactive-data"/>
+	      <display value="Specialty Rx MessageDefinition - Proactive Data"/>
+	    </reference>
+	    <name value="Specialty Rx MessageDefinition - Proactive Data"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  <resource>
@@ -473,7 +489,14 @@
 	    <name value="Specialty Rx MessageHeader - Query Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-messageheader-proactive-data"/>
+	      <display value="Specialty Rx MessageHeader - Proactive Data"/>
+	    </reference>
+	    <name value="Specialty Rx MessageHeader - Proactive Data"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
 	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-messageheader-questionnaire"/>
@@ -506,6 +529,14 @@
 	      <display value="Specialty Rx Bundle - Query Response Message"/>
 	    </reference>
 	    <name value="Specialty Rx Bundle - Query Response Message"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-bundle-proactive-data"/>
+	      <display value="Specialty Rx Bundle - Proactive Data Message"/>
+	    </reference>
+	    <name value="Specialty Rx Bundle - Proactive Data Message"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
    	  <resource>
@@ -558,6 +589,15 @@
             <description value="Example data query response message (multiple searches)."/>
 	      <exampleBoolean value="true"/>
       </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-proactive-data-1"/>
+                <display value="specialty-rx-proactive-data-1"/>
+            </reference>
+            <name value="Specialty Rx Proactive Data 1"/>
+            <description value="Example proactive data message."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
 		<resource>
 	      <reference>
 	        <reference value="Bundle/specialty-rx-questionnaire-1"/>
@@ -593,11 +633,6 @@
 		  <page>
 		    <nameUrl value="message-structure.html"/>
 		    <title value="Message Structures"/>
-	        <generation value="markdown"/>
-		  </page>
-		  <page>
-		    <nameUrl value="message-flow.html"/>
-		    <title value="Message Flow"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

@@ -131,6 +131,9 @@
    <artifact name="Specialty Rx Parameters - Questionnaire Response"
              key="StructureDefinition-specialty-rx-parameters-questionnaire-response"
              id="StructureDefinition/specialty-rx-parameters-questionnaire-response"/>
+   <artifact name="Specialty Rx Parameters - Proactive Data"
+             key="StructureDefinition-specialty-rx-parameters-proactive-data"
+             id="StructureDefinition/specialty-rx-parameters-proactive-data"/>
    <artifact name="Specialty Rx Bundle - Search Result"
              key="StructureDefinition-specialty-rx-bundle-search-result"
              id="StructureDefinition/specialty-rx-bundle-search-result"/>
@@ -140,6 +143,9 @@
    <artifact name="Specialty Rx MessageDefinition - Query Response"
              key="MessageDefinition-specialty-rx-query-response"
              id="MessageDefinition/specialty-rx-query-response"/>
+   <artifact name="Specialty Rx MessageDefinition - Proactive Data"
+             key="MessageDefinition-specialty-rx-proactive-data"
+             id="MessageDefinition/specialty-rx-proactive-data"/>
    <artifact name="Specialty Rx MessageDefinition - Questionnaire"
              key="MessageDefinition-specialty-rx-questionnaire"
              id="MessageDefinition/specialty-rx-questionnaire"/>
@@ -152,6 +158,9 @@
    <artifact name="Specialty Rx MessageHeader - Query Response"
              key="StructureDefinition-specialty-rx-messageheader-query-response"
              id="StructureDefinition/specialty-rx-messageheader-query-response"/>
+   <artifact name="Specialty Rx MessageHeader - Proactive Data"
+             key="StructureDefinition-specialty-rx-messageheader-proactive-data"
+             id="StructureDefinition/specialty-rx-messageheader-proactive-data"/>
    <artifact name="Specialty Rx MessageHeader - Questionnaire"
              key="StructureDefinition-specialty-rx-messageheader-questionnaire"
              id="StructureDefinition/specialty-rx-messageheader-questionnaire"/>
@@ -164,6 +173,9 @@
    <artifact name="Specialty Rx Bundle - Query Response Message"
              key="StructureDefinition-specialty-rx-bundle-query-response"
              id="StructureDefinition/specialty-rx-bundle-query-response"/>
+   <artifact name="Specialty Rx Bundle - Proactive Data Message"
+             key="StructureDefinition-specialty-rx-bundle-proactive-data"
+             id="StructureDefinition/specialty-rx-bundle-proactive-data"/>
    <artifact name="Specialty Rx Bundle - Questionnaire Message"
              key="StructureDefinition-specialty-rx-bundle-questionnaire"
              id="StructureDefinition/specialty-rx-bundle-questionnaire"/>
@@ -179,6 +191,9 @@
    <artifact name="Specialty Rx Query Response 2"
              key="Bundle-specialty-rx-query-response-2"
              id="Bundle/specialty-rx-query-response-2"/>
+   <artifact name="Specialty Rx Proactive Data 1"
+             key="Bundle-specialty-rx-proactive-data-1"
+             id="Bundle/specialty-rx-proactive-data-1"/>
    <artifact name="Specialty Rx Questionnaire 1"
              key="Bundle-specialty-rx-questionnaire-1"
              id="Bundle/specialty-rx-questionnaire-1"/>
@@ -191,7 +206,6 @@
    <page name="IG Home Page" key="index"/>
    <page name="Workflow Scenarios" key="workflow"/>
    <page name="Message Structures" key="message-structure"/>
-   <page name="Message Flow" key="message-flow"/>
    <page name="Patient Matching and Processing Detail" key="patient-matching"/>
    <page name="Search conventions" key="request-queries"/>
    <page name="Terminology" key="terminology"/>

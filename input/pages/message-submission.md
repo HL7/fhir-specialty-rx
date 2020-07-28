@@ -1,5 +1,5 @@
 ### Operation: $process-message
-The Specialty Rx Query and Query Response message bundles are pushed to their recipients using the $process-message operation...
+All Specialty Rx messages are submitted to their recipients using the $process-message operation...
 * URL: [base]/$process-message
 
 <br>
@@ -8,7 +8,7 @@ The Specialty Rx Query and Query Response message bundles are pushed to their re
 
 Specialty Rx Query Responses are expected to be systematically produced using data in the patient's electronic health record. They may be returned synchronously or asynchronously in near real-time. 
 
-Specialty Rx Questionnaire Responses are expected to typically depend on human intervention--to be returned asynchronously when complete. 
+Specialty Rx Questionnaire Responses will typically require human intervention--to be returned asynchronously when complete. 
 
 <br/>
 

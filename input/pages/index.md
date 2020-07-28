@@ -120,10 +120,14 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>July 27, 2020</td>
 		<td>Added a page outlining the message structures. Added clarification to the Search Conventions page that Patient references within searchset bundles in the Query Response should resolve to the responder-patient resource in the response's main message bundle</td>
   	  </tr>
+      <tr>
+		<td>July 28, 2020</td>
+		<td>Added unsolicited data message (Proactive Data) and associated structures and example. Updated page outlining the message structures. Updated Workflows page graphics - unsolicited flow. Updated Workflow Scenarios and Message Submission . Several s adjustments to examples. Added illustrations to message examples</td>
+  	  </tr>
+      </tbody>
+</table>
 
-        </tbody>
-
-  </table>
+<br />
 
 
 

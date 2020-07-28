@@ -7,7 +7,7 @@
   <type value="message" />
   <timestamp value="2020-07-23T00:00:00-05:00" />
   <entry>
-    <fullUrl value="https://example.com/base/MessageHeader/resheader1" />
+    <fullUrl value="https://example.org/MyEHR/MessageHeader/msgheader1" />
     <resource>
       <MessageHeader>
         <id value="res1" />
@@ -59,11 +59,12 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.com/base/Patient/patient1" />
+    <fullUrl value="https://example.org/MyPharmacyApp/Patient/patient1" />
     <resource>
       <Patient>
         <id value="patient1" />
         <meta>
+          <source value="http://example.org/MyPharmacyApp" />
           <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
@@ -107,7 +108,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.com/base/Patient/patientEHR" />
+    <fullUrl value="https://example.org/MyEHR/Patient/patientEHR" />
     <resource>
       <Patient>
         <id value="patientEHR" />
@@ -162,7 +163,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.com/base/QuestionnaireResponse/1" />
+    <fullUrl value="https://example.org/MyEHR/QuestionnaireResponse/1" />
     <resource>
       <QuestionnaireResponse>
         <id value="1" />

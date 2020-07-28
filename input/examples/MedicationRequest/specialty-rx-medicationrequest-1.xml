@@ -32,7 +32,7 @@
     <initialFill>
       <quantity>
         <value value="60" />
-        <unit value="EA" />
+        <unit value="{each}" />
       </quantity>
     </initialFill>
     <numberOfRepeatsAllowed value="2" />

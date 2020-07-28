@@ -32,6 +32,11 @@
     <definition value="Specialty Rx query response" />
   </concept>
   <concept>
+    <code value="proactive-data" />
+    <display value="Proactive Data" />
+    <definition value="Specialty Rx proactive data" />
+  </concept>
+  <concept>
       <code value="questionnaire" />
     <display value="Questionnaire" />
     <definition value="Specialty Rx Questionnaire" />
