@@ -113,13 +113,13 @@ It is a message Bundle with:
 
 <br />
 
-### Proactive Data Message
+### Query Response - Unsolicited Message
 
-The Proactive Data message transmits information from a patient's health record to a stakeholder involved in fulfillment of a specialty medication. This message is not preceded by a request but instead is by a process event--typically sent when the medication is prescribed.
+The Query Response - Unsolicited message transmits information from a patient's health record to a stakeholder involved in fulfillment of a specialty medication. This message is not preceded by a request but instead is by a process event--typically sent when the medication is prescribed.
 
 It is a message Bundle with: 
 
-- an event type equal to 'proactive-data'
+- an event type equal to 'query-response-unsolicited'
 - a Parameters resource as the focus (see below)
 - a mandatory Patient representing the patient in the sender's system
 - mandatory MedicationRequest, Practitioner, Organization resources to represent the associated specialty prescription

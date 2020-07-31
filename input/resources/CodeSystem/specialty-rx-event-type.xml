@@ -32,9 +32,14 @@
     <definition value="Specialty Rx query response" />
   </concept>
   <concept>
-    <code value="proactive-data" />
-    <display value="Proactive Data" />
-    <definition value="Specialty Rx proactive data" />
+    <code value="query-response-unsolicited" />
+    <display value="Query Response - Unsolicited" />
+    <definition value="Specialty Rx unsolicited query response" />
+  </concept>
+  <concept>
+    <code value="query-response-error" />
+    <display value="Query Response Error" />
+    <definition value="Specialty Rx query response error" />
   </concept>
   <concept>
       <code value="questionnaire" />

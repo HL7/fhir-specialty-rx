@@ -131,9 +131,9 @@
    <artifact name="Specialty Rx Parameters - Questionnaire Response"
              key="StructureDefinition-specialty-rx-parameters-questionnaire-response"
              id="StructureDefinition/specialty-rx-parameters-questionnaire-response"/>
-   <artifact name="Specialty Rx Parameters - Proactive Data"
-             key="StructureDefinition-specialty-rx-parameters-proactive-data"
-             id="StructureDefinition/specialty-rx-parameters-proactive-data"/>
+   <artifact name="Specialty Rx Parameters - Query Response - Unsolicited"
+             key="StructureDefinition-specialty-rx-parameters-query-response-unsolicited"
+             id="StructureDefinition/specialty-rx-parameters-query-response-unsolicited"/>
    <artifact name="Specialty Rx Bundle - Search Result"
              key="StructureDefinition-specialty-rx-bundle-search-result"
              id="StructureDefinition/specialty-rx-bundle-search-result"/>
@@ -143,9 +143,12 @@
    <artifact name="Specialty Rx MessageDefinition - Query Response"
              key="MessageDefinition-specialty-rx-query-response"
              id="MessageDefinition/specialty-rx-query-response"/>
-   <artifact name="Specialty Rx MessageDefinition - Proactive Data"
-             key="MessageDefinition-specialty-rx-proactive-data"
-             id="MessageDefinition/specialty-rx-proactive-data"/>
+   <artifact name="Specialty Rx MessageDefinition - Query Response Error"
+             key="MessageDefinition-specialty-rx-query-response-error"
+             id="MessageDefinition/specialty-rx-query-response-error"/>
+   <artifact name="Specialty Rx MessageDefinition - Query Response - Unsolicited"
+             key="MessageDefinition-specialty-rx-query-response-unsolicited"
+             id="MessageDefinition/specialty-rx-query-response-unsolicited"/>
    <artifact name="Specialty Rx MessageDefinition - Questionnaire"
              key="MessageDefinition-specialty-rx-questionnaire"
              id="MessageDefinition/specialty-rx-questionnaire"/>
@@ -158,9 +161,12 @@
    <artifact name="Specialty Rx MessageHeader - Query Response"
              key="StructureDefinition-specialty-rx-messageheader-query-response"
              id="StructureDefinition/specialty-rx-messageheader-query-response"/>
-   <artifact name="Specialty Rx MessageHeader - Proactive Data"
-             key="StructureDefinition-specialty-rx-messageheader-proactive-data"
-             id="StructureDefinition/specialty-rx-messageheader-proactive-data"/>
+   <artifact name="Specialty Rx MessageHeader - Query Response Error"
+             key="StructureDefinition-specialty-rx-messageheader-query-response-error"
+             id="StructureDefinition/specialty-rx-messageheader-query-response-error"/>
+   <artifact name="Specialty Rx MessageHeader - Query Response - Unsolicited"
+             key="StructureDefinition-specialty-rx-messageheader-query-response-unsolicited"
+             id="StructureDefinition/specialty-rx-messageheader-query-response-unsolicited"/>
    <artifact name="Specialty Rx MessageHeader - Questionnaire"
              key="StructureDefinition-specialty-rx-messageheader-questionnaire"
              id="StructureDefinition/specialty-rx-messageheader-questionnaire"/>
@@ -173,9 +179,12 @@
    <artifact name="Specialty Rx Bundle - Query Response Message"
              key="StructureDefinition-specialty-rx-bundle-query-response"
              id="StructureDefinition/specialty-rx-bundle-query-response"/>
-   <artifact name="Specialty Rx Bundle - Proactive Data Message"
-             key="StructureDefinition-specialty-rx-bundle-proactive-data"
-             id="StructureDefinition/specialty-rx-bundle-proactive-data"/>
+   <artifact name="Specialty Rx Bundle - Query Response Error Message"
+             key="StructureDefinition-specialty-rx-bundle-query-response-error"
+             id="StructureDefinition/specialty-rx-bundle-query-response-error"/>
+   <artifact name="Specialty Rx Bundle - Query Response - Unsolicited Message"
+             key="StructureDefinition-specialty-rx-bundle-query-response-unsolicited"
+             id="StructureDefinition/specialty-rx-bundle-query-response-unsolicited"/>
    <artifact name="Specialty Rx Bundle - Questionnaire Message"
              key="StructureDefinition-specialty-rx-bundle-questionnaire"
              id="StructureDefinition/specialty-rx-bundle-questionnaire"/>
@@ -191,9 +200,15 @@
    <artifact name="Specialty Rx Query Response 2"
              key="Bundle-specialty-rx-query-response-2"
              id="Bundle/specialty-rx-query-response-2"/>
-   <artifact name="Specialty Rx Proactive Data 1"
-             key="Bundle-specialty-rx-proactive-data-1"
-             id="Bundle/specialty-rx-proactive-data-1"/>
+   <artifact name="Specialty Rx Query Response 3 with operation outcome"
+             key="Bundle-specialty-rx-query-response-3-w-op-outcome"
+             id="Bundle/specialty-rx-query-response-3-w-op-outcome"/>
+   <artifact name="Specialty Rx Query Response Error 1"
+             key="Bundle-specialty-rx-query-response-error-1"
+             id="Bundle/specialty-rx-query-response-error-1"/>
+   <artifact name="Specialty Rx Query Response - Unsolicited 1"
+             key="Bundle-specialty-rx-query-response-unsolicited-1"
+             id="Bundle/specialty-rx-query-response-unsolicited-1"/>
    <artifact name="Specialty Rx Questionnaire 1"
              key="Bundle-specialty-rx-questionnaire-1"
              id="Bundle/specialty-rx-questionnaire-1"/>
@@ -211,5 +226,6 @@
    <page name="Terminology" key="terminology"/>
    <page name="Downloads" key="downloads"/>
    <page name="Message submission" key="message-submission"/>
+   <page name="Error handling" key="error-handling"/>
    <page name="Artifacts Summary" key="artifacts"/>
 </specification>

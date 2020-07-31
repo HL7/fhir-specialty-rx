@@ -122,10 +122,15 @@ The implementation guide supports business functions related to fulfillment of s
   	  </tr>
       <tr>
 		<td>July 28, 2020</td>
-		<td>Added unsolicited data message (Proactive Data) and associated structures and example. Updated page outlining the message structures. Updated Workflows page graphics - unsolicited flow. Updated Workflow Scenarios and Message Submission . Several s adjustments to examples. Added illustrations to message examples</td>
+		<td>Added unsolicited data message (Query Response - Unsolicited) and associated structures and example. Updated page outlining the message structures. Updated Workflows page graphics - unsolicited flow. Updated Workflow Scenarios and Message Submission . Several s adjustments to examples. Added illustrations to message examples</td>
+  	  </tr>
+      <tr>
+		<td>July 31, 2020</td>
+		<td>Added query error profiles and examples for fatal response error and individual search error. Renamed proactive-data profiles to query-response-unsolicited. Added error handling page</td>
   	  </tr>
       </tbody>
 </table>
+
 
 <br />
 

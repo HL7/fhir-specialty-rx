@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-bundle-query-response-error" />
+  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response-error" />
+  <name value="SpecialtyRxBundleQueryResponseError" />
+  <title value="Specialty Rx Bundle - Query Response Error Message" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-07-31T00:00:00-05:00" />
+  <publisher value="NCPDP" />
+  <description value="This profile constrains a Bundle resource for use as an error message in response to a Specialty Rx Query--with an OperationOutcome resource as the bundle's message focus." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Bundle" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Bundle" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Bundle">
+      <path value="Bundle" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Bundle.type">
+      <path value="Bundle.type" />
+      <type>
+        <code value="code" />
+      </type>
+      <fixedCode value="message" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.total">
+      <path value="Bundle.total" />
+      <min value="0" />
+      <max value="0" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Bundle.entry">
+      <path value="Bundle.entry" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="resource" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+      <max value="2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry.search">
+      <path value="Bundle.entry.search" />
+      <min value="0" />
+      <max value="0" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Bundle.entry.request">
+      <path value="Bundle.entry.request" />
+      <min value="0" />
+      <max value="0" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Bundle.entry.response">
+      <path value="Bundle.entry.response" />
+      <min value="0" />
+      <max value="0" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Bundle.entry:messageheader">
+      <path value="Bundle.entry" />
+      <sliceName value="messageheader" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:messageheader.resource">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="MessageHeader" />
+        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-messageheader-query-response-error" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:operationoutcome">
+      <path value="Bundle.entry" />
+      <sliceName value="operationoutcome" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Bundle.entry:parameters.operationoutcome">
+      <path value="Bundle.entry.resource" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="OperationOutcome" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

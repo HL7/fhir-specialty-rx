@@ -410,10 +410,10 @@
 	  </resource>	
    	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-parameters-proactive-data"/>
-	      <display value="Specialty Rx Parameters - Proactive Data"/>
+	      <reference value="StructureDefinition/specialty-rx-parameters-query-response-unsolicited"/>
+	      <display value="Specialty Rx Parameters - Query Response - Unsolicited"/>
 	    </reference>
-	    <name value="Specialty Rx Parameters - Proactive Data"/>
+	    <name value="Specialty Rx Parameters - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
    	  <resource>
@@ -445,12 +445,20 @@
 	    <name value="Specialty Rx MessageDefinition - Query Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="MessageDefinition/specialty-rx-query-response-error"/>
+	      <display value="Specialty Rx MessageDefinition - Query Response Error"/>
+	    </reference>
+	    <name value="Specialty Rx MessageDefinition - Query Response Error"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
 	  <resource>
 	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-proactive-data"/>
-	      <display value="Specialty Rx MessageDefinition - Proactive Data"/>
+	      <reference value="MessageDefinition/specialty-rx-query-response-unsolicited"/>
+	      <display value="Specialty Rx MessageDefinition - Query Response - Unsolicited"/>
 	    </reference>
-	    <name value="Specialty Rx MessageDefinition - Proactive Data"/>
+	    <name value="Specialty Rx MessageDefinition - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  <resource>
@@ -491,10 +499,18 @@
 	  </resource>	  
 	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-messageheader-proactive-data"/>
-	      <display value="Specialty Rx MessageHeader - Proactive Data"/>
+	      <reference value="StructureDefinition/specialty-rx-messageheader-query-response-error"/>
+	      <display value="Specialty Rx MessageHeader - Query Response Error"/>
 	    </reference>
-	    <name value="Specialty Rx MessageHeader - Proactive Data"/>
+	    <name value="Specialty Rx MessageHeader - Query Response Error"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-messageheader-query-response-unsolicited"/>
+	      <display value="Specialty Rx MessageHeader - Query Response - Unsolicited"/>
+	    </reference>
+	    <name value="Specialty Rx MessageHeader - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  <resource>
@@ -533,10 +549,18 @@
 	  </resource>	
 	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-bundle-proactive-data"/>
-	      <display value="Specialty Rx Bundle - Proactive Data Message"/>
+	      <reference value="StructureDefinition/specialty-rx-bundle-query-response-error"/>
+	      <display value="Specialty Rx Bundle - Query Response Error Message"/>
 	    </reference>
-	    <name value="Specialty Rx Bundle - Proactive Data Message"/>
+	    <name value="Specialty Rx Bundle - Query Response Error Message"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	
+	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-bundle-query-response-unsolicited"/>
+	      <display value="Specialty Rx Bundle - Query Response - Unsolicited Message"/>
+	    </reference>
+	    <name value="Specialty Rx Bundle - Query Response - Unsolicited Message"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
    	  <resource>
@@ -591,11 +615,29 @@
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Bundle/specialty-rx-proactive-data-1"/>
-                <display value="specialty-rx-proactive-data-1"/>
+	        <reference value="Bundle/specialty-rx-query-response-3-w-op-outcome"/>
+                <display value="specialty-rx-query-response-3-w-op-outcome"/>
             </reference>
-            <name value="Specialty Rx Proactive Data 1"/>
-            <description value="Example proactive data message."/>
+            <name value="Specialty Rx Query Response 3 with operation outcome"/>
+            <description value="Example data query response message (including OperationOutcome for invalid search)."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-query-response-error-1"/>
+                <display value="specialty-rx-query-response-error-1"/>
+            </reference>
+            <name value="Specialty Rx Query Response Error 1"/>
+            <description value="Example data query response error message (temporary system error)."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-query-response-unsolicited-1"/>
+                <display value="specialty-rx-query-response-unsolicited-1"/>
+            </reference>
+            <name value="Specialty Rx Query Response - Unsolicited 1"/>
+            <description value="Example unsolicited query response message."/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 		<resource>
@@ -658,6 +700,11 @@
 		  <page>
 		    <nameUrl value="message-submission.html"/>
 		    <title value="Message submission"/>
+		    <generation value="markdown"/>
+		  </page>	
+		  <page>
+		    <nameUrl value="error-handling.html"/>
+		    <title value="Error handling"/>
 		    <generation value="markdown"/>
 		  </page>	
 		  </page>

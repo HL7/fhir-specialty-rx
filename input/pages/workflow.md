@@ -92,7 +92,7 @@ The actors below may participate in generation of a response to a Specialty Rx r
 1. At the time that a specialty medication prescription is ordered, the Prescriber System...
 
    - transmits the prescription to the pharmacy and/or other Third Party System
-   - also collects related information and initiates a Specialty Rx Proactive Data to the Third Party System, to accompany the prescription
+   - also collects related information and initiates a Specialty Rx Query Response - Unsolicited to the Third Party System, to accompany the prescription
 
 In both workflows, Specialty Rx exchanges takes place after the specialty medication prescription has been received by the Third Party System (or received by a user of the system, e.g., by fax).
 
@@ -108,7 +108,7 @@ The flow may be synchronous or asynchronous, enabling it to support both...
 
 #### "Unsolicited" workflow containing a predefined set of request information
 
-In this scenario, a Prescriber System sends information related to a specialty medication prescription previously sent to the Third Party System. The Prescriber System collects patient information associated with the prescription and initiates a Specialty Rx Proactive Data message containing that information.
+In this scenario, a Prescriber System sends information related to a specialty medication prescription previously sent to the Third Party System. The Prescriber System collects patient information associated with the prescription and initiates a Specialty Rx Query Response - Unsolicited message containing that information.
 
 #### "Solicited" workflow requesting an ad-hoc set of information
 

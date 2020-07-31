@@ -21,6 +21,9 @@
    	  <li>
         <a href="message-submission.html">Message Submission</a>
       </li>
+   	  <li>
+        <a href="error-handling.html">Error Handling</a>
+      </li>
 	</ul>
   </li>
   <li><a href="artifacts.html">FHIR Artifacts</a></li>
