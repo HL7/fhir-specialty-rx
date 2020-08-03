@@ -340,7 +340,7 @@
           <fullUrl value="http://example.org/MyEHR/OperationOutcome/100" />
           <resource>
             <OperationOutcome>
-              <id value="exception-134505644001" />
+              <id value="100" />
               <issue>
                 <severity value="error" />
                 <code value="processing" />

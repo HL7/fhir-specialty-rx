@@ -37,14 +37,14 @@
     <definition value="Specialty Rx unsolicited query response" />
   </concept>
   <concept>
-    <code value="query-response-error" />
-    <display value="Query Response Error" />
-    <definition value="Specialty Rx query response error" />
+    <code value="error" />
+    <display value="Error" />
+    <definition value="Specialty Rx error" />
   </concept>
   <concept>
       <code value="questionnaire" />
     <display value="Questionnaire" />
-    <definition value="Specialty Rx Questionnaire" />
+    <definition value="Specialty Rx questionnaire" />
   </concept>
   <concept>
     <code value="questionnaire-response" />

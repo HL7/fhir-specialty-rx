@@ -128,8 +128,13 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>July 31, 2020</td>
 		<td>Added query error profiles and examples for fatal response error and individual search error. Renamed proactive-data profiles to query-response-unsolicited. Added error handling page</td>
   	  </tr>
+      <tr>
+		<td>Aug 2, 2020</td>
+          <td>Changed name of <i>query-response-error</i> event and related message resources and examples to <i>query.</i> Added more specifics to the Error Handling page. Linked examples into structure definition pages</td>
+  	  </tr>
       </tbody>
 </table>
+
 
 
 <br />
