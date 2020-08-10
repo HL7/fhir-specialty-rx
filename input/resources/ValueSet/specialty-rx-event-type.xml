@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-05-01T00:00:00-05:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-event-type" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-event-type" />
   <version value="1.0.0" />
   <name value="SpecialtyRxValueSetEventType" />
   <title value="Specialty Rx Value Set - Event Type" />
@@ -22,7 +22,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
     </include>
   </compose>
 </ValueSet>

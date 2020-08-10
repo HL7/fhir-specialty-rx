@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-questionnaire-response-1" />
   <meta>
-	<profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-questionnaire-response" />  
+	<profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-questionnaire-response" />  
   </meta>
   <type value="message" />
   <timestamp value="2020-07-23T00:00:00-05:00" />
@@ -12,7 +12,7 @@
       <MessageHeader>
         <id value="res1" />
         <eventCoding>
-          <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
           <code value="questionnaire-response" />
         </eventCoding>
         <source>
@@ -35,7 +35,7 @@
       <Parameters>
         <id value="61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-questionnaire-response" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-questionnaire-response" />
         </meta>
         <parameter>
           <name value="questionnaire-response" />
@@ -65,7 +65,7 @@
         <id value="patient1" />
         <meta>
           <source value="http://example.org/MyPharmacyApp" />
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
           <system value="http://example.org/patient-id" />
@@ -113,7 +113,7 @@
       <Patient>
         <id value="patientEHR" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
           <type>

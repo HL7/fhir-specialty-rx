@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-questionnaire-response" />
-  <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-questionnaire-response" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-questionnaire-response" />
   <name value="SpecialtyRxMessageDefinitionQuestionnaireResponse" />
   <title value="Specialty Rx Message Definition - Questionnaire Response" />
   <status value="active" />
@@ -18,7 +18,7 @@
   </jurisdiction>
   <purpose value="Transmit a completed QuestionnaireResponse containing information related to a prescribed specialty medication." />
   <eventCoding>
-    <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+    <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
     <code value="questionnaire-response" />
   </eventCoding>
   <category value="currency" />

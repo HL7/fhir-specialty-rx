@@ -8,7 +8,7 @@
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">This profile tailors the Patient resource for carrying the patient information needed to support specialty medication dispensing and enrollment in related programs.         </div>
   </text>
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
   <version value="0.1.00" />
   <name value="SpecialtyRxPatient" />
   <title value="Specialty Rx Patient" />

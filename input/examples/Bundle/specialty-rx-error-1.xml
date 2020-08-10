@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-error-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-error" />
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error" />
   </meta>
   <type value="message" />
   <timestamp value="2020-11-15T13:10:17-05:00" />
@@ -12,7 +12,7 @@
       <MessageHeader>
         <id value="res1" />
         <eventCoding>
-          <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
           <code value="error" />
         </eventCoding>
         <source>

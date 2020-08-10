@@ -2,7 +2,7 @@
 <RelatedPerson xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-relatedperson-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-relatedperson" />
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-relatedperson" />
   </meta>
   <active value="true" />
   <patient>

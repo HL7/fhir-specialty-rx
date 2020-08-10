@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-04-10T14:15:00.000+00:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-observation-lab" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-observation-lab" />
   <version value="0.1.00" />
   <name value="SpecialtyRxObservationLab" />
   <title value="Specialty Rx Observation - Lab" />

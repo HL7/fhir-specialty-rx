@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query-response-unsolicited-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response-unsolicited" />
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited" />
   </meta>
   <type value="message" />
   <timestamp value="2020-11-15T13:10:17-05:00" />
@@ -12,7 +12,7 @@
       <MessageHeader>
         <id value="msgheader1" />
         <eventCoding>
-          <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
           <code value="query-response-unsolicited" />
         </eventCoding>
         <source>
@@ -75,7 +75,7 @@
       <Patient>
         <id value="patientEHR" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
           <type>
@@ -130,7 +130,7 @@
       <MedicationRequest>
         <id value="prescription1" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest" />
         </meta>
         <status value="active" />
         <intent value="order" />
@@ -182,7 +182,7 @@
       <Practitioner>
         <id value="practitioner1" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner" />
         </meta>
         <identifier>
           <system value="http://hl7.org/fhir/sid/us-npi" />
@@ -260,7 +260,7 @@
       <Bundle>
         <id value="3456789" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-search-result" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
         <timestamp value="2020-11-15T13:10:17-05:00" />
@@ -416,7 +416,7 @@
       <Bundle>
         <id value="987654" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-search-result" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
         <timestamp value="2020-11-15T13:10:17-05:00" />

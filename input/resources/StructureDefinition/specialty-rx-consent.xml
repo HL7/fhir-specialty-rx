@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-04-10T20:33:00-00:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ncpdp/specialty-rx-consent" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/specialty-rx-consent" />
   <version value="0.0.1" />
   <name value="SpecialtyRxConsent" />
   <title value="Specialty Rx Consent" />

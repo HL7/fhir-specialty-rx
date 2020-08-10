@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-bundle-error" />
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-error" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error" />
   <name value="SpecialtyRxBundleError" />
   <title value="Specialty Rx Bundle - Error Message" />
   <status value="active" />
@@ -84,7 +84,7 @@
       <max value="1" />
       <type>
         <code value="MessageHeader" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-messageheader-error" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-error" />
       </type>
       <mustSupport value="true" />
     </element>

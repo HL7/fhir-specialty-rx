@@ -2,7 +2,7 @@
 <MedicationRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-medicationrequest-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest" />
   </meta>
   <status value="active" />
   <intent value="order" />

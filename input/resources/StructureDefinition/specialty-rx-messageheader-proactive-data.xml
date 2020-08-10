@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-messageheader-proactive-data" />
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-messageheader-proactive-data" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-proactive-data" />
   <name value="SpecialtyRxMessageHeaderProactiveData" />
   <title value="Specialty Rx MessageHeader - Proactive Data" />
   <status value="active" />
@@ -36,7 +36,7 @@
       <path value="MessageHeader.eventCoding.system" />
       <min value="1" />
       <max value="1" />
-      <fixedUri value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+      <fixedUri value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.eventCoding.code">
@@ -53,7 +53,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-proactive-data" />
+        <targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-proactive-data" />
         <aggregation value="bundled" />
       </type>
       <mustSupport value="true" />

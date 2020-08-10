@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-messageheader-error" />
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-messageheader-error" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-error" />
   <name value="SpecialtyRxMessageHeaderError" />
   <title value="Specialty Rx Error MessageHeader" />
   <status value="active" />
@@ -39,7 +39,7 @@
       <path value="MessageHeader.eventCoding.system" />
       <min value="1" />
       <max value="1" />
-      <fixedUri value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+      <fixedUri value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.eventCoding.code">

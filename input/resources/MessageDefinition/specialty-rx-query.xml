@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query" />
-  <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-query" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query" />
   <name value="SpecialtyRxMessageDefinitionQuery" />
   <title value="Specialty Rx Message Definition - Query" />
   <status value="active" />
@@ -18,7 +18,7 @@
   </jurisdiction>
   <purpose value="Transmit queries for data related to a prescribed specialty medication. Response consists of FHIR resources returned without human intervention" />
   <eventCoding>
-      <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
       <code value="query" />
   </eventCoding>
   <category value="currency" />
@@ -28,7 +28,7 @@
     <max value="1" />
   </focus>
   <allowedResponse>
-    <message value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-query-response" />
+    <message value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response" />
     <situation value="Returned when processing completes without encountering a system error" />
   </allowedResponse>
 </MessageDefinition>

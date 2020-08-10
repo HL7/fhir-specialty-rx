@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-proactive-data" />
-  <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-proactive-data" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-proactive-data" />
   <name value="SpecialtyRxMessageDefinitionProactiveData" />
   <title value="Specialty Rx Message Definition - Proactive Data" />
   <status value="active" />
@@ -18,7 +18,7 @@
   </jurisdiction>
   <purpose value="Unsolicited transmission of patient data related to a prescribed specialty medication. Consists of FHIR resources retrieved systematically from the patient's medical record" />
   <eventCoding>
-      <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
       <code value="proactive-data" />
   </eventCoding>
   <category value="currency" />

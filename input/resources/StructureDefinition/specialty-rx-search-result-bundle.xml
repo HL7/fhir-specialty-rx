@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-search-result-bundle" />
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-search-result-bundle" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-search-result-bundle" />
   <name value="SpecialtyRxSearchResultBundle" />
   <title value="Specialty Rx Search Result Bundle" />
   <status value="active" />

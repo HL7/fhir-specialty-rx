@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query-response-bundle" />
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-bundle" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-query-response-bundle" />
   <name value="SpecialtyRxQueryResponseBundle" />
   <title value="Specialty Rx Query Response Message Bundle" />
   <status value="active" />
@@ -84,7 +84,7 @@
       <max value="1" />
       <type>
         <code value="MessageHeader" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-messageheader" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-query-response-messageheader" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -101,7 +101,7 @@
       <max value="1" />
       <type>
         <code value="Parameters" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-query-response-parameters" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-query-response-parameters" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -122,7 +122,7 @@
       <max value="1" />
       <type>
         <code value="Patient" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -142,7 +142,7 @@
       <max value="1" />
       <type>
         <code value="Bundle" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-search-result-bundle" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-search-result-bundle" />
       </type>
       <mustSupport value="true" />
     </element>

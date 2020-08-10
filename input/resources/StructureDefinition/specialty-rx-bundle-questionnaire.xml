@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-bundle-questionnaire" />
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-questionnaire" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-questionnaire" />
   <name value="SpecialtyRxBundleQuestionnaire" />
   <title value="Specialty Rx Bundle - Questionnaire" />
   <status value="active" />
@@ -84,7 +84,7 @@
       <max value="1" />
       <type>
         <code value="MessageHeader" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-messageheader-questionnaire" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-questionnaire" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -101,7 +101,7 @@
       <max value="1" />
       <type>
         <code value="Parameters" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-questionnaire" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-questionnaire" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -118,7 +118,7 @@
       <max value="1" />
       <type>
         <code value="Questionnaire" />
-<!--        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-query" />  -->
+<!--        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query" />  -->
       </type>
       <mustSupport value="true" />
     </element>
@@ -140,7 +140,7 @@
       <max value="1" />
       <type>
         <code value="Patient" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -157,7 +157,7 @@
       <max value="1" />
       <type>
         <code value="MedicationRequest" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -174,7 +174,7 @@
       <max value="1" />
       <type>
         <code value="Organization" />
-        <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-pharmacy" />
+        <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy" />
       </type>
       <mustSupport value="true" />
     </element>

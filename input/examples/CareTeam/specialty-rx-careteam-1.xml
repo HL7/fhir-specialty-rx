@@ -2,7 +2,7 @@
 <CareTeam xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-careteam-1" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-careteam" />
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-careteam" />
   </meta>
   <status value="active" />
   <name value="Timothy Doe's care team" />

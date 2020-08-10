@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-07-20T00:00:00-05:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-query-response" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response" />
   <version value="0.1.00" />
   <name value="SpecialtyRxParametersQueryResponse" />
   <title value="Specialty Rx Parameters - Query Response" />
@@ -59,7 +59,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient"/>
 <!--
       	<aggregation value="bundled"/>
 -->
@@ -84,7 +84,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient"/>
 <!--
       	<aggregation value="bundled"/>
 -->
@@ -109,7 +109,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-search-result"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result"/>
 <!--
       	<aggregation value="bundled"/>
 -->

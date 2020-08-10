@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query-response-3-w-op-outcome" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response" />
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response" />
   </meta>
   <type value="message" />
   <timestamp value="2020-11-15T13:10:17-05:00" />
@@ -12,7 +12,7 @@
       <MessageHeader>
         <id value="res2" />
         <eventCoding>
-          <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
           <code value="query-response" />
         </eventCoding>
         <source>
@@ -68,7 +68,7 @@
         <id value="patient1" />
         <meta>
           <source value="http://example.org/MyPharmacyApp" />
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
           <system value="http://example.org/patient-id" />
@@ -116,7 +116,7 @@
       <Patient>
         <id value="patientEHR" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
           <type>
@@ -171,7 +171,7 @@
       <Bundle>
         <id value="3456789" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-search-result" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
         <timestamp value="2020-11-15T13:10:17-05:00" />
@@ -327,7 +327,7 @@
       <Bundle>
         <id value="987654" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-search-result" />
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
         <timestamp value="2020-11-15T13:10:17-05:00" />

@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-07-02T00:00:00-05:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-parameters-query" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query" />
   <version value="0.1.00" />
   <name value="SpecialtyRxParametersQuery" />
   <title value="Specialty Rx Parameters - Query" />
@@ -78,7 +78,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient"/>
 <!--
       	<aggregation value="bundled"/>
 -->
@@ -103,7 +103,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient"/>
 <!--
       	<aggregation value="bundled"/>
 -->
@@ -128,7 +128,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest"/>
 <!--
       	<aggregation value="bundled"/>
 -->
@@ -152,7 +152,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-pharmacy"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy"/>
 <!--
       	<aggregation value="bundled"/>
 -->
@@ -176,7 +176,7 @@
       <path value="Parameters.parameter.value[x]" />
       <type>
       	<code value="Reference"/>
-      	<targetProfile value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner"/>
+      	<targetProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner"/>
 <!--
       	<aggregation value="bundled"/>
 -->

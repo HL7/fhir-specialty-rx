@@ -18,7 +18,7 @@ the system SHALL include a searchset Bundle entry containing the search string a
         "id" : "987654",
         "meta" : {
           "profile" : [
-            "http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-search-result"
+            "http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result"
           ]
         },
         "type" : "searchset",

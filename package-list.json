@@ -1,7 +1,7 @@
 ﻿{
    "package-id": "hl7.fhir.us.specialty-rx",
    "title": "Specialty Medication Prescribing",
-   "canonical": "http://hl7.org/fhir/us/ncpdp",
+   "canonical": "http://hl7.org/fhir/us/specialty-rx",
    "introduction": "his implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.",
    "list": [
       {
@@ -10,16 +10,6 @@
          "path": "http://build.fhir.org/ig/HL7/specialty-rx",
          "status": "ci-build",
          "current": true
-      },
-      {
-         "version": "0.1.00",
-         "date": "2021-03-20",
-         "descmd": "STU1 Ballot",
-         "changes": "",
-         "path": "http://hl7.org/fhir/us/ncpdp/specialty-rx/2020Aug",
-         "status": "ballot",
-         "sequence": "STU1",
-         "fhirversion" : "4.0.1"
       }
    ]
 }

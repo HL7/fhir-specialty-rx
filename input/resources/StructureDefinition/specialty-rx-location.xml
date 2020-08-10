@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-03-24T02:25:52.808+00:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-location" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-location" />
   <version value="0.1.00" />
   <name value="SpecialtyRxLocation" />
   <title value="Specialty Prescription Location" />

@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-03-24T02:25:52.808+00:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-condition" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
   <version value="0.1.00" />
   <name value="SpecialtyRxCondition" />
   <title value="Specialty Prescription Condition" />
@@ -35,7 +35,7 @@
       <binding>
         <strength value="extensible" />
         <description value="Valueset to describe the actual problem experienced by the patient" />
-        <valueSet value="http://hl7.org/fhir/us/ncpdp/ValueSet/specialty-rx-condition-code" />
+        <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-condition-code" />
       </binding>
     </element>
   </differential>

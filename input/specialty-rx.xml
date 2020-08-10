@@ -12,7 +12,7 @@
             <div>This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.</div>
         </div>
     </text>
-    <url value="http://hl7.org/fhir/us/ncpdp/ImplementationGuide/specialty-rx"/>
+    <url value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx"/>
     <version value="0.1.00"/>
     <name value="SpecialtyRx"/>
     <title value="Specialty Medication Prescribing"/>
@@ -449,7 +449,7 @@
             </reference>
             <name value="Specialty Rx AllergyIntolerance - 1"/>
             <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-allergyintolerance"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-allergyintolerance"/>
       </resource>	  
 	  <resource>
 	      <reference>
@@ -458,7 +458,7 @@
             </reference>
             <name value="Specialty Rx CareTeam 1"/>
             <description value="An example CareTeam illustrating a care team  in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-careteam"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-careteam"/>
       </resource>	  
 	  <resource>
 	      <reference>
@@ -467,7 +467,7 @@
             </reference>
             <name value="Specialty Rx Condition 1"/>
             <description value="An example Condition illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-condition"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition"/>
       </resource>	  
 		<resource>
 	      <reference>
@@ -476,7 +476,7 @@
             </reference>
             <name value="Specialty Rx Coverage 1"/>
             <description value="Example of a Specialty Rx Coverage resource containing pharmacy benefit plan information."/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-coverage"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -485,7 +485,7 @@
             </reference>
             <name value="Specialty Rx Endpoint - Direct 1"/>
             <description value="An example Endpoint illustrating a practitioner's Direct Project address in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-endpoint-direct"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-endpoint-direct"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -494,7 +494,7 @@
             </reference>
             <name value="Specialty Rx Error 1"/>
             <description value="Example data error message (temporary system error)."/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-error"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -503,7 +503,7 @@
             </reference>
             <name value="Specialty Rx Location 1"/>
             <description value="An example Location illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-location"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-location"/>
       </resource>	  
       	  <resource>
 	      <reference>
@@ -512,7 +512,7 @@
             </reference>
             <name value="Specialty Rx MedicationRequest 1"/>
             <description value="An example MedicationRequest illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-medicationrequest"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -521,7 +521,7 @@
             </reference>
             <name value="Specialty Rx Observation - Lab 1"/>
             <description value="An example Observation illustrating a lab observation in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-observation-lab"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-observation-lab"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -530,7 +530,7 @@
             </reference>
             <name value="Specialty Rx Organization - Payer 1"/>
             <description value="An example Organization illustrating a payor organization in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-payer"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-payer"/>
       </resource>	  
 		<resource>
 	      <reference>
@@ -539,7 +539,7 @@
             </reference>
             <name value="Specialty Rx Organization - Pharmacy 1"/>
             <description value="Example Organization resource representing a pharmacy"/>
-			<exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-pharmacy"/>
+			<exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy"/>
       </resource>	       
 	<resource>
 	      <reference>
@@ -548,7 +548,7 @@
             </reference>
             <name value="Specialty Rx Organization - Provider 1"/>
             <description value="An example Organization illustrating a provider organization in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-organization-provider"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-provider"/>
       </resource>	  
 	  	  <resource>
 	      <reference>
@@ -557,7 +557,7 @@
             </reference>
             <name value="Specialty Rx Patient 1"/>
             <description value="An example Patient illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-patient"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient"/>
       </resource>
 	  <resource>
 	      <reference>
@@ -566,7 +566,7 @@
             </reference>
             <name value="Specialty Rx Practitioner 1"/>
             <description value="An example Practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitioner"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -575,7 +575,7 @@
             </reference>
             <name value="Specialty Rx PractitionerRole 1"/>
             <description value="An example PractitionerRole illustrating a practitioner's office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-practitionerrole"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitionerrole"/>
       </resource>	  
 		<resource>
 	      <reference>
@@ -584,7 +584,7 @@
             </reference>
             <name value="Specialty Rx Query 1"/>
             <description value="Example data query message"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -593,7 +593,7 @@
             </reference>
             <name value="Specialty Rx Query Response 1"/>
             <description value="Example data query response message (single search)."/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -602,7 +602,7 @@
             </reference>
             <name value="Specialty Rx Query Response 2"/>
             <description value="Example data query response message (multiple searches)."/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -610,7 +610,7 @@
                 <display value="specialty-rx-query-response-3-w-op-outcome"/>
             </reference>
             <name value="Specialty Rx Query Response 3 with operation outcome"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
 	<resource>
@@ -620,7 +620,7 @@
             </reference>
             <name value="Specialty Rx Query Response - Unsolicited 1"/>
             <description value="Example unsolicited query response message."/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-query-response-unsolicited"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited"/>
       </resource>	  
 		<resource>
 	      <reference>
@@ -629,7 +629,7 @@
             </reference>
             <name value="Specialty Rx Questionnaire 1"/>
             <description value="Example questionnaire message"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-questionnaire"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-questionnaire"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -638,7 +638,7 @@
             </reference>
             <name value="Specialty Rx Questionnaire Response 1"/>
             <description value="Example data questionnaire response message."/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-bundle-questionnaire-response"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-questionnaire-response"/>
       </resource>	  
 	<resource>
 	      <reference>
@@ -647,7 +647,7 @@
             </reference>
             <name value="Specialty Rx RelatedPerson 1"/>
             <description value="An example RelatedPerson illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/ncpdp/StructureDefinition/specialty-rx-relatedperson"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-relatedperson"/>
       </resource>	  
 
 <!-- ************************************************************* Pages ************************************************************ -->

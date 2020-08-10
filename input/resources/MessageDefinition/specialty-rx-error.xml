@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-error" />
-  <url value="http://hl7.org/fhir/us/ncpdp/MessageDefinition/specialty-rx-error" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-error" />
   <name value="SpecialtyRxMessageDefinitionError" />
   <title value="Specialty Rx Message Definition - Error" />
   <status value="active" />
@@ -18,7 +18,7 @@
   </jurisdiction>
   <purpose value="Describe an error that causes a premature end to processing of a specialty Rx query response message" />
   <eventCoding>
-      <system value="http://hl7.org/fhir/us/ncpdp/CodeSystem/specialty-rx-event-type" />
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
       <code value="error" />
   </eventCoding>
   <category value="currency" />
