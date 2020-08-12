@@ -28,6 +28,405 @@
     <security>
       <description value="1. For general security consideration refer to the FHIR Security and Privacy Considerations (http://build.fhir.org/secpriv-module.html). A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code." />
     </security>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="clinical-status" />
+        </extension>
+      </extension>
+      <type value="AllergyIntolerance" />
+      <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="search-type" />
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="clinical-status" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-clinical-status" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="patient" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-patient" />
+        <type value="reference" />
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="onset-date" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="category" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="clinical-status" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="code" />
+        </extension>
+      </extension>
+      <type value="Condition" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="search-type" />
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="category" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-category" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="clinical-status" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-clinical-status" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <name value="patient" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-patient" />
+        <type value="reference" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="onset-date" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-onset-date" />
+        <type value="date" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="code" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-code" />
+        <type value="token" />
+      </searchParam>
+    </resource>
+    
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+      </extension>
+      <type value="Coverage" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="search-type" />
+      </interaction>
+      <!--
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="patient" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-patient" />
+        <type value="reference" />
+      </searchParam>
+      -->
+    </resource>
+    
+
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="intent" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="intent" />
+        </extension>
+        <extension url="required">
+          <valueString value="encounter" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="intent" />
+        </extension>
+        <extension url="required">
+          <valueString value="authoredon" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="intent" />
+        </extension>
+        <extension url="required">
+          <valueString value="status" />
+        </extension>
+      </extension>
+      <type value="MedicationRequest" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="search-type" />
+      </interaction>
+      <referencePolicy value="resolves" />
+      <searchInclude value="MedicationRequest:medication" />
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="status" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-status" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="intent" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-intent" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="patient" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-patient" />
+        <type value="reference" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="encounter" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-encounter" />
+        <type value="reference" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="authoredon" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-authoredon" />
+        <type value="date" />
+      </searchParam>
+    </resource>
+    
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="category" />
+        </extension>
+        <extension url="required">
+          <valueString value="date" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="category" />
+        </extension>
+        <extension url="required">
+          <valueString value="status" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="code" />
+        </extension>
+        <extension url="required">
+          <valueString value="date" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="code" />
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <extension url="required">
+          <valueString value="patient" />
+        </extension>
+        <extension url="required">
+          <valueString value="category" />
+        </extension>
+      </extension>
+      <type value="Observation" />
+      <supportedProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="search-type" />
+      </interaction>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="status" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-status" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="category" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-category" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="code" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-code" />
+        <type value="token" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="date" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-date" />
+        <type value="date" />
+      </searchParam>
+      <searchParam>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <name value="patient" />
+        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-patient" />
+        <type value="reference" />
+      </searchParam>
+    </resource>
+
+
     <operation>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL" />
