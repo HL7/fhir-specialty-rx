@@ -132,7 +132,19 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Aug 2, 2020</td>
           <td>Changed name of <i>query-response-error</i> event and related message resources and examples to <i>query.</i> Added more specifics to the Error Handling page. Linked examples into structure definition pages</td>
   	  </tr>
-      </tbody>
+      <tr>
+		<td>Aug 18, 2020</td>
+          <td>Remove resource profiles that did not expand materially on US Core. Reference the associated US Core profiles: AllergyIntolerance, CareTeam, Location, Lab Observation</td>
+  	  </tr>
+      <tr>
+		<td>Aug 21, 2020</td>
+          <td>Add RESTful data source model, enabling data sources to participate in the exchange solely through RESTful operations (facilitated by an intermediary when needed). Updated the Workflows page and added a Data Source - RESTful CapabilityStatement</td>
+  	  </tr>
+      <tr>
+		<td>Aug 24, 2020</td>
+          <td>Added a separate page to identify US Core resources expected to be used in Specialty Rx exchanges</td>
+  	  </tr>
+   </tbody>
 </table>
 
 

@@ -4,8 +4,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/specialty-rx-allergyintolerance" key="StructureDefinition-specialty-rx-allergyintolerance" name="Specialty Rx AllergyIntolerance"/>
-<artifact id="AllergyIntolerance/specialty-rx-allergyintolerance-1" key="AllergyIntolerance-specialty-rx-allergyintolerance-1" name="Specialty Rx AllergyIntolerance - 1"/>
+<artifact deprecated="true" id="StructureDefinition/specialty-rx-allergyintolerance" key="StructureDefinition-specialty-rx-allergyintolerance" name="Specialty Rx AllergyIntolerance"/>
 <artifact id="StructureDefinition/specialty-rx-bundle-error" key="StructureDefinition-specialty-rx-bundle-error" name="Specialty Rx Bundle - Error Message"/>
 <artifact id="StructureDefinition/specialty-rx-bundle-query" key="StructureDefinition-specialty-rx-bundle-query" name="Specialty Rx Bundle - Query Message"/>
 <artifact id="StructureDefinition/specialty-rx-bundle-query-response-unsolicited" key="StructureDefinition-specialty-rx-bundle-query-response-unsolicited" name="Specialty Rx Bundle - Query Response - Unsolicited Message"/>
@@ -15,8 +14,8 @@
 <artifact id="StructureDefinition/specialty-rx-bundle-search-result" key="StructureDefinition-specialty-rx-bundle-search-result" name="Specialty Rx Bundle - Search Result"/>
 <artifact id="CapabilityStatement/specialty-rx-data-recipient" key="CapabilityStatement-specialty-rx-data-recipient" name="Specialty Rx CapabilityStatement - Data Recipient"/>
 <artifact id="CapabilityStatement/specialty-rx-data-source" key="CapabilityStatement-specialty-rx-data-source" name="Specialty Rx CapabilityStatement - Data Source"/>
-<artifact id="StructureDefinition/specialty-rx-careteam" key="StructureDefinition-specialty-rx-careteam" name="Specialty Rx CareTeam"/>
-<artifact id="CareTeam/specialty-rx-careteam-1" key="CareTeam-specialty-rx-careteam-1" name="Specialty Rx CareTeam 1"/>
+<artifact id="CapabilityStatement/specialty-rx-data-source-restful" key="CapabilityStatement-specialty-rx-data-source-restful" name="Specialty Rx CapabilityStatement - Data Source - RESTful"/>
+<artifact deprecated="true" id="StructureDefinition/specialty-rx-careteam" key="StructureDefinition-specialty-rx-careteam" name="Specialty Rx CareTeam"/>
 <artifact id="CodeSystem/specialty-rx-event-type" key="CodeSystem-specialty-rx-event-type" name="Specialty Rx CodeSystem - Event Type"/>
 <artifact id="StructureDefinition/specialty-rx-condition" key="StructureDefinition-specialty-rx-condition" name="Specialty Rx Condition"/>
 <artifact id="Condition/specialty-rx-condition-1" key="Condition-specialty-rx-condition-1" name="Specialty Rx Condition 1"/>
@@ -25,8 +24,7 @@
 <artifact id="StructureDefinition/specialty-rx-endpoint-direct" key="StructureDefinition-specialty-rx-endpoint-direct" name="Specialty Rx Endpoint - Direct"/>
 <artifact id="Endpoint/specialty-rx-endpoint-direct-1" key="Endpoint-specialty-rx-endpoint-direct-1" name="Specialty Rx Endpoint - Direct 1"/>
 <artifact id="Bundle/specialty-rx-error-1" key="Bundle-specialty-rx-error-1" name="Specialty Rx Error 1"/>
-<artifact id="StructureDefinition/specialty-rx-location" key="StructureDefinition-specialty-rx-location" name="Specialty Rx Location"/>
-<artifact id="Location/specialty-rx-location-1" key="Location-specialty-rx-location-1" name="Specialty Rx Location 1"/>
+<artifact deprecated="true" id="StructureDefinition/specialty-rx-location" key="StructureDefinition-specialty-rx-location" name="Specialty Rx Location"/>
 <artifact id="StructureDefinition/specialty-rx-medicationrequest" key="StructureDefinition-specialty-rx-medicationrequest" name="Specialty Rx Medication Request"/>
 <artifact id="MedicationRequest/specialty-rx-medicationrequest-1" key="MedicationRequest-specialty-rx-medicationrequest-1" name="Specialty Rx MedicationRequest 1"/>
 <artifact id="MessageDefinition/specialty-rx-error" key="MessageDefinition-specialty-rx-error" name="Specialty Rx MessageDefinition - Error"/>
@@ -42,8 +40,7 @@
 <artifact id="StructureDefinition/specialty-rx-messageheader-questionnaire" key="StructureDefinition-specialty-rx-messageheader-questionnaire" name="Specialty Rx MessageHeader - Questionnaire"/>
 <artifact id="StructureDefinition/specialty-rx-messageheader-questionnaire-response" key="StructureDefinition-specialty-rx-messageheader-questionnaire-response" name="Specialty Rx MessageHeader - Questionnaire Response"/>
 <artifact id="NamingSystem/specialty-rx-ncpdp-provider-id" key="NamingSystem-specialty-rx-ncpdp-provider-id" name="Specialty Rx NamingSystem - NCPDP Provider ID"/>
-<artifact id="StructureDefinition/specialty-rx-observation-lab" key="StructureDefinition-specialty-rx-observation-lab" name="Specialty Rx Observation - Lab"/>
-<artifact id="Observation/specialty-rx-observation-lab-1" key="Observation-specialty-rx-observation-lab-1" name="Specialty Rx Observation - Lab 1"/>
+<artifact deprecated="true" id="StructureDefinition/specialty-rx-observation-lab" key="StructureDefinition-specialty-rx-observation-lab" name="Specialty Rx Observation - Lab"/>
 <artifact id="StructureDefinition/specialty-rx-organization-payer" key="StructureDefinition-specialty-rx-organization-payer" name="Specialty Rx Organization - Payer"/>
 <artifact id="Organization/specialty-rx-organization-payer-1" key="Organization-specialty-rx-organization-payer-1" name="Specialty Rx Organization - Payer 1"/>
 <artifact id="StructureDefinition/specialty-rx-organization-pharmacy" key="StructureDefinition-specialty-rx-organization-pharmacy" name="Specialty Rx Organization - Pharmacy"/>
@@ -72,6 +69,10 @@
 <artifact id="RelatedPerson/specialty-rx-relatedperson-1" key="RelatedPerson-specialty-rx-relatedperson-1" name="Specialty Rx RelatedPerson 1"/>
 <artifact id="ValueSet/specialty-rx-condition-code" key="ValueSet-specialty-rx-condition-code" name="Specialty Rx ValueSet - Condition Code"/>
 <artifact id="ValueSet/specialty-rx-event-type" key="ValueSet-specialty-rx-event-type" name="Specialty Rx ValueSet - Event Type"/>
+<artifact id="Location/specialty-rx-location-1" key="Location-specialty-rx-location-1" name="US COre Location 1"/>
+<artifact id="AllergyIntolerance/specialty-rx-allergyintolerance-1" key="AllergyIntolerance-specialty-rx-allergyintolerance-1" name="US Core AllergyIntolerance - 1"/>
+<artifact id="CareTeam/specialty-rx-careteam-1" key="CareTeam-specialty-rx-careteam-1" name="US Core CareTeam 1"/>
+<artifact id="Observation/specialty-rx-observation-lab-1" key="Observation-specialty-rx-observation-lab-1" name="US Core Observation - Lab 1"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
@@ -83,6 +84,7 @@
 <page key="patient-matching" name="Patient Matching and Processing Detail"/>
 <page key="request-queries" name="Search conventions"/>
 <page key="toc" name="Table of Contents"/>
-<page key="terminology" name="Terminology"/>
+<page deprecated="true" key="terminology" name="Terminology"/>
+<page key="us-core-profiles" name="US Core Profiles"/>
 <page key="workflow" name="Workflow Scenarios"/>
 </specification>

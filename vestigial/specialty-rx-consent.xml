@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-consent" />
+  <meta>
+    <lastUpdated value="2020-04-10T20:33:00-00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/specialty-rx/specialty-rx-consent" />
+  <version value="0.0.1" />
+  <name value="SpecialtyRxConsent" />
+  <title value="Specialty Rx Consent" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-04-10T20:33:00-00:00" />
+  <publisher value="CARIN Alliance" />
+  <description value="This profile tailors the Consent resource for use in specialty medication dispensing and enrollment in related programs." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Consent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Consent">
+      <path value="Consent" />
+    </element>
+  </differential>
+</StructureDefinition>

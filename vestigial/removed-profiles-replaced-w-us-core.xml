@@ -1,0 +1,34 @@
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
+	      <display value="Specialty Rx AllergyIntolerance"/>
+	    </reference>
+	    <name value="Specialty Rx AllergyIntolerance"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-careteam"/>
+	      <display value="Specialty Rx CareTeam"/>
+	    </reference>
+	    <name value="Specialty Rx CareTeam"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-location"/>
+	      <display value="Specialty Rx Location"/>
+	    </reference>
+	    <name value="Specialty Rx Location"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-observation-lab"/>
+	      <display value="Specialty Rx Observation - Lab"/>
+	    </reference>
+	    <name value="Specialty Rx Observation - Lab"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+
+

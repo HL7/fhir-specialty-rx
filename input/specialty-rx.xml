@@ -48,15 +48,6 @@
         <version value="3.1.0"/>
     </dependsOn>
 	 <definition>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-allergyintolerance"/>
-	      <display value="Specialty Rx AllergyIntolerance"/>
-	    </reference>
-	    <name value="Specialty Rx AllergyIntolerance"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-
 	<!-- Request and response bundle  -->
 	  <resource>
 	    <reference>
@@ -114,16 +105,6 @@
 	    <name value="Specialty Rx Bundle - Search Result"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
-
-
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-careteam"/>
-	      <display value="Specialty Rx CareTeam"/>
-	    </reference>
-	    <name value="Specialty Rx CareTeam"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-condition"/>
@@ -146,14 +127,6 @@
 	      <display value="Specialty Rx Endpoint - Direct"/>
 	    </reference>
 	    <name value="Specialty Rx Endpoint - Direct"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-location"/>
-	      <display value="Specialty Rx Location"/>
-	    </reference>
-	    <name value="Specialty Rx Location"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -264,15 +237,6 @@
 	    <name value="Specialty Rx MessageHeader - Questionnaire Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-observation-lab"/>
-	      <display value="Specialty Rx Observation - Lab"/>
-	    </reference>
-	    <name value="Specialty Rx Observation - Lab"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-organization-payer"/>
@@ -423,6 +387,14 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
+	      <reference value="CapabilityStatement/specialty-rx-data-source-restful"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Source - RESTful"/>
+	    </reference>
+	    <name value="Specialty Rx CapabilityStatement - Data Source - RESTful"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
 	      <reference value="CapabilityStatement/specialty-rx-data-recipient"/>
 	      <display value="Specialty Rx CapabilityStatement - Data Recipient"/>
 	    </reference>
@@ -445,20 +417,20 @@
  	  <resource>
 	      <reference>
 	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
-                <display value="Specialty Rx AllergyIntolerance - 1"/>
+                <display value="US Core AllergyIntolerance - 1"/>
             </reference>
-            <name value="Specialty Rx AllergyIntolerance - 1"/>
-            <description value="An example AllergyIntolerance illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-allergyintolerance"/>
+            <name value="US Core AllergyIntolerance - 1"/>
+            <description value="An example AllergyIntolerance illustrating content in the US Core profile"/>
+	      <!--    <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>  -->
       </resource>	  
 	  <resource>
 	      <reference>
 	        <reference value="CareTeam/specialty-rx-careteam-1"/>
-                <display value="Specialty Rx CareTeam 1"/>
+                <display value="US Core CareTeam 1"/>
             </reference>
-            <name value="Specialty Rx CareTeam 1"/>
-            <description value="An example CareTeam illustrating a care team  in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-careteam"/>
+            <name value="US Core CareTeam 1"/>
+            <description value="An example CareTeam illustrating content  in the US Core profile"/>
+	     <!-- <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"/> -->
       </resource>	  
 	  <resource>
 	      <reference>
@@ -499,11 +471,11 @@
 	<resource>
 	      <reference>
 	        <reference value="Location/specialty-rx-location-1"/>
-                <display value="Specialty Rx Location 1"/>
+                <display value="US Core Location 1"/>
             </reference>
-            <name value="Specialty Rx Location 1"/>
-            <description value="An example Location illustrating a particular office location  in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-location"/>
+            <name value="US COre Location 1"/>
+            <description value="An example Location illustrating a particular office location using the US Core profile"/>
+	      <!-- <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>  -->
       </resource>	  
       	  <resource>
 	      <reference>
@@ -517,11 +489,11 @@
 	<resource>
 	      <reference>
 	        <reference value="Observation/specialty-rx-observation-lab-1"/>
-                <display value="Specialty Rx Observation - Lab 1"/>
+                <display value="US Core Observation - Lab 1"/>
             </reference>
-            <name value="Specialty Rx Observation - Lab 1"/>
-            <description value="An example Observation illustrating a lab observation in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-observation-lab"/>
+            <name value="US Core Observation - Lab 1"/>
+            <description value="An example Observation illustrating a lab observation using the US Core profile"/>
+	      <!-- <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/> -->
       </resource>	  
 	<resource>
 	      <reference>
@@ -610,6 +582,7 @@
                 <display value="specialty-rx-query-response-3-w-op-outcome"/>
             </reference>
             <name value="Specialty Rx Query Response 3 with operation outcome"/>
+            <description value="Example data query response message containing an error."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response"/>
 	      <exampleBoolean value="true"/>
       </resource>	  
@@ -681,8 +654,8 @@
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
-		    <nameUrl value="terminology.html"/>
-		    <title value="Terminology"/>
+		    <nameUrl value="us-core-profiles.html"/>
+		    <title value="US Core Profiles"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

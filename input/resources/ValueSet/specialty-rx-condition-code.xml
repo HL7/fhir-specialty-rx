@@ -20,31 +20,32 @@
       <display value="United States of America" />
     </coding>
   </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement" />
   <compose>
     <include>
-      <system value="http://snomed.info/sct"/>
+      <system value="http://snomed.info/sct" />
       <concept>
-        <code value="160245001"/>
+        <code value="160245001" />
       </concept>
     </include>
     <include>
-      <system value="http://snomed.info/sct"/>
+      <system value="http://snomed.info/sct" />
       <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="404684003"/>
+        <property value="concept" />
+        <op value="is-a" />
+        <value value="404684003" />
       </filter>
     </include>
     <include>
-      <system value="http://snomed.info/sct"/>
+      <system value="http://snomed.info/sct" />
       <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="243796009"/>
+        <property value="concept" />
+        <op value="is-a" />
+        <value value="243796009" />
       </filter>
     </include>
     <include>
-      <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+      <system value="http://hl7.org/fhir/sid/icd-10-cm" />
     </include>
   </compose>
 </ValueSet>
