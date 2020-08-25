@@ -5,6 +5,17 @@
   <p>
     The entire implementation guide (including the HTML files, definitions, validation information, etc.) may be downloaded [here](full-ig.zip).
   </p>
+  <a name="definitions"> </a>
+  <h3>Definitions</h3>
+  <p>
+    Below are format-specific definitions files.
+    <br/>
+	<a href="definitions.xml.zip">XML</a>
+    <br/>
+	<a href="definitions.json.zip">JSON</a>
+    <br/>
+	<a href="definitions.ttl.zip">TTL</a>
+  </p>  
   <a name="examples"> </a>
   <h3>Examples</h3>
   <p>
