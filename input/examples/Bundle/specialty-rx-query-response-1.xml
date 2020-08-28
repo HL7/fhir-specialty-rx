@@ -5,103 +5,91 @@
     <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response" />
   </meta>
   <type value="message" />
-  <timestamp value="2020-11-15T13:10:17-05:00" />
+  <timestamp value="2020-07-08T08:10:17-05:00" />
   <entry>
-    <fullUrl value="http://example.org/MyEHR/MessageHeader/msgheader1" />
+    <fullUrl value="urn:uuid:d0b62e34-db4a-4ef7-832c-52cb4c7f9289" />
     <resource>
       <MessageHeader>
-        <id value="res1" />
+        <id value="72f68739-f49a-4536-b8d4-15f57197abde" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-response" />
+        </meta>
         <eventCoding>
           <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
           <code value="query-response" />
+          <display value="Query Response" />
         </eventCoding>
         <source>
-          <name value="MyEHR" />
-          <endpoint value="http://example.org/MyEHR" />
+          <name value="Specialty Sandbox Static" />
+          <endpoint value="http://example.org/MyEHR/$process-message" />
         </source>
         <response>
-          <identifier value="req1" />
+          <identifier value="5065aa9f-bd6d-49a8-924c-5d00f5d0b997" />
           <code value="ok" />
         </response>
         <focus>
-          <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+          <reference value="urn:uuid:b5000d0c-fed9-4746-ac26-b5ce0111a2b7" />
         </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+    <fullUrl value="urn:uuid:b5000d0c-fed9-4746-ac26-b5ce0111a2b7" />
     <resource>
       <Parameters>
-        <id value="61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
-        <parameter>
-          <name value="requester-patient" />
-          <valueReference>
-            <reference value="Patient/patient1" />
-          </valueReference>
-        </parameter>
+        <id value="b5000d0c-fed9-4746-ac26-b5ce0111a2b7" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response" />
+        </meta>
         <parameter>
           <name value="responder-patient" />
           <valueReference>
-            <reference value="Patient/patientEHR" />
+            <reference value="http://example.org/MyEHR/Patient/patientEHR" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="requester-patient" />
+          <valueReference>
+            <reference value="urn:uuid:2a87e733-8fe5-4dca-a9ae-bb24c36d41aa" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="search-result" />
           <valueReference>
-            <reference value="Bundle/1234567" />
+            <reference value="urn:uuid:aecbb129-9a73-4b59-9d66-ff5cdb3f3164" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="search-result" />
+          <valueReference>
+            <reference value="urn:uuid:9ce2a97b-5cab-4986-814f-4734016e6084" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="search-result" />
+          <valueReference>
+            <reference value="urn:uuid:53a1e123-5b56-44ae-b7e8-36e0b9800f57" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="search-result" />
+          <valueReference>
+            <reference value="urn:uuid:82ae67e4-f23a-4c17-b80a-9076a37f5d6e" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="search-result" />
+          <valueReference>
+            <reference value="urn:uuid:6b28b7d5-95e1-485b-a0bc-2420a20635a8" />
+          </valueReference>
+        </parameter>
+        <parameter>
+          <name value="search-result" />
+          <valueReference>
+            <reference value="urn:uuid:89b0b6ce-4a31-4718-b38a-798efab6c9e4" />
           </valueReference>
         </parameter>
       </Parameters>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://example.org/MyPharmacyApp/Patient/patient1" />
-    <resource>
-      <Patient>
-        <id value="patient1" />
-        <meta>
-          <source value="http://example.org/MyPharmacyApp" />
-          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
-        </meta>
-        <identifier>
-          <system value="http://example.org/patient-id" />
-          <value value="1234" />
-        </identifier>
-        <active value="true" />
-        <name>
-          <family value="Doe" />
-          <given value="Timothy" />
-          <given value="V." />
-        </name>
-        <telecom>
-          <system value="phone" />
-          <value value="555-555-5555" />
-          <use value="home" />
-        </telecom>
-        <telecom>
-          <system value="email" />
-          <value value="tim.doe@example.com" />
-        </telecom>
-        <gender value="male" />
-        <birthDate value="1987-02-20" />
-        <address>
-          <line value="2224 Century Ave" />
-          <city value="Minnetonka" />
-          <state value="MN" />
-          <postalCode value="55345" />
-          <country value="US" />
-        </address>
-        <communication>
-          <language>
-            <coding>
-              <system value="urn:ietf:bcp:47" />
-              <code value="en-US" />
-              <display value="English (Region=United States)" />
-            </coding>
-          </language>
-        </communication>
-      </Patient>
     </resource>
   </entry>
   <entry>
@@ -160,25 +148,197 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://example.org/MyEHR/Bundle/1234567" />
+    <fullUrl value="urn:uuid:2a87e733-8fe5-4dca-a9ae-bb24c36d41aa" />
+    <resource>
+      <Patient>
+        <id value="2a87e733-8fe5-4dca-a9ae-bb24c36d41aa" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="PI" />
+              <display value="Patient internal identifier" />
+            </coding>
+            <text value="Patient internal identifier" />
+          </type>
+          <system value="http://example.org/MyPharmacyApp/patient-id" />
+          <value value="540002" />
+        </identifier>
+        <active value="true" />
+        <name>
+          <family value="Doe" />
+          <given value="Tim" />
+        </name>
+        <telecom>
+          <system value="phone" />
+          <value value="555-555-5555" />
+          <use value="home" />
+        </telecom>
+        <telecom>
+          <system value="email" />
+          <value value="tim.doe@example.com" />
+        </telecom>
+        <gender value="male" />
+        <birthDate value="1987-02-20" />
+        <address>
+          <line value="2224 Century Avenue" />
+          <city value="Minnetonka" />
+          <state value="MN" />
+          <postalCode value="55345" />
+          <country value="US" />
+        </address>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47" />
+              <code value="en-US" />
+              <display value="English (Region=United States)" />
+            </coding>
+          </language>
+        </communication>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:aecbb129-9a73-4b59-9d66-ff5cdb3f3164" />
     <resource>
       <Bundle>
-        <id value="1234567" />
+        <id value="aecbb129-9a73-4b59-9d66-ff5cdb3f3164" />
         <meta>
           <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
-        <timestamp value="2020-11-15T13:10:17-05:00" />
         <total value="3" />
         <link>
           <relation value="self" />
-          <url value="Condition?patient=patientEHR" />
+          <url value="AllergyIntolerance?clinical-status=active&amp;patient=patientEHR" />
+        </link>
+        <entry>
+          <fullUrl value="http://example.org/MyEHR/AllergyIntolerance/1" />
+          <resource>
+            <AllergyIntolerance>
+              <id value="1" />
+              <clinicalStatus>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+                  <code value="active" />
+                  <display value="Active" />
+                </coding>
+              </clinicalStatus>
+              <verificationStatus>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+                  <code value="confirmed" />
+                  <display value="Confirmed" />
+                </coding>
+              </verificationStatus>
+              <code>
+                <text value="Cashew" />
+              </code>
+              <patient>
+                <reference value="Patient/patientEHR" />
+              </patient>
+            </AllergyIntolerance>
+          </resource>
+          <search>
+            <mode value="match" />
+          </search>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/MyEHR/AllergyIntolerance/2" />
+          <resource>
+            <AllergyIntolerance>
+              <id value="2" />
+              <clinicalStatus>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+                  <code value="active" />
+                  <display value="Active" />
+                </coding>
+              </clinicalStatus>
+              <verificationStatus>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+                  <code value="confirmed" />
+                  <display value="Confirmed" />
+                </coding>
+              </verificationStatus>
+              <code>
+                <text value="Bees" />
+              </code>
+              <patient>
+                <reference value="Patient/patientEHR" />
+              </patient>
+            </AllergyIntolerance>
+          </resource>
+          <search>
+            <mode value="match" />
+          </search>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/MyEHR/AllergyIntolerance/3" />
+          <resource>
+            <AllergyIntolerance>
+              <id value="3" />
+              <clinicalStatus>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+                  <code value="active" />
+                  <display value="Active" />
+                </coding>
+              </clinicalStatus>
+              <verificationStatus>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+                  <code value="confirmed" />
+                  <display value="Confirmed" />
+                </coding>
+              </verificationStatus>
+              <code>
+                <text value="Penicillins" />
+              </code>
+              <patient>
+                <reference value="Patient/patientEHR" />
+              </patient>
+              <reaction>
+                <manifestation>
+                  <text value="Hives" />
+                </manifestation>
+              </reaction>
+            </AllergyIntolerance>
+          </resource>
+          <search>
+            <mode value="match" />
+          </search>
+        </entry>
+      </Bundle>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:9ce2a97b-5cab-4986-814f-4734016e6084" />
+    <resource>
+      <Bundle>
+        <id value="9ce2a97b-5cab-4986-814f-4734016e6084" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
+        </meta>
+        <type value="searchset" />
+        <total value="3" />
+        <link>
+          <relation value="self" />
+          <url value="Condition?clinical-status=active&amp;patient=patientEHR" />
         </link>
         <entry>
           <fullUrl value="http://example.org/MyEHR/Condition/1" />
           <resource>
             <Condition>
               <id value="1" />
+              <meta>
+                <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
+              </meta>
               <clinicalStatus>
                 <coding>
                   <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
@@ -225,6 +385,9 @@
           <resource>
             <Condition>
               <id value="2" />
+              <meta>
+                <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
+              </meta>
               <clinicalStatus>
                 <coding>
                   <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
@@ -271,6 +434,9 @@
           <resource>
             <Condition>
               <id value="3" />
+              <meta>
+                <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
+              </meta>
               <clinicalStatus>
                 <coding>
                   <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
@@ -307,6 +473,233 @@
                 <reference value="Patient/patientEHR" />
               </subject>
             </Condition>
+          </resource>
+          <search>
+            <mode value="match" />
+          </search>
+        </entry>
+      </Bundle>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:53a1e123-5b56-44ae-b7e8-36e0b9800f57" />
+    <resource>
+      <Bundle>
+        <id value="53a1e123-5b56-44ae-b7e8-36e0b9800f57" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
+        </meta>
+        <type value="searchset" />
+        <total value="1" />
+        <link>
+          <relation value="self" />
+          <url value="Coverage?patient=patientEHR" />
+        </link>
+        <entry>
+          <fullUrl value="http://example.org/MyEHR/Coverage/coverage-1" />
+          <resource>
+            <Coverage>
+              <id value="coverage-1" />
+              <meta>
+                <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage" />
+              </meta>
+              <status value="active" />
+              <beneficiary>
+                <reference value="Patient/patientEHR" />
+              </beneficiary>
+              <payor>
+                <identifier>
+                  <value value="Pharmacy Plans US" />
+                </identifier>
+              </payor>
+              <class>
+                <type>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+                    <code value="rxbin" />
+                  </coding>
+                </type>
+                <value value="560564" />
+              </class>
+              <class>
+                <type>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+                    <code value="rxpcn" />
+                  </coding>
+                </type>
+                <value value="HMMK" />
+              </class>
+              <class>
+                <type>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+                    <code value="rxgroup" />
+                  </coding>
+                </type>
+                <value value="SILVER0334" />
+              </class>
+              <class>
+                <type>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+                    <code value="rxid" />
+                  </coding>
+                </type>
+                <value value="JSO1345505608801" />
+              </class>
+            </Coverage>
+          </resource>
+          <search>
+            <mode value="match" />
+          </search>
+        </entry>
+      </Bundle>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:82ae67e4-f23a-4c17-b80a-9076a37f5d6e" />
+    <resource>
+      <Bundle>
+        <id value="82ae67e4-f23a-4c17-b80a-9076a37f5d6e" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
+        </meta>
+        <type value="searchset" />
+        <total value="0" />
+        <link>
+          <relation value="self" />
+          <url value="Observation?category=vital-signs&amp;patient=patientEHR" />
+        </link>
+      </Bundle>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:6b28b7d5-95e1-485b-a0bc-2420a20635a8" />
+    <resource>
+      <Bundle>
+        <id value="6b28b7d5-95e1-485b-a0bc-2420a20635a8" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
+        </meta>
+        <type value="searchset" />
+        <total value="1" />
+        <link>
+          <relation value="self" />
+          <url value="Observation?category=laboratory&amp;patient=patientEHR" />
+        </link>
+        <entry>
+          <fullUrl value="http://example.org/MyEHR/Observation/observation-1" />
+          <resource>
+            <Observation>
+              <id value="observation-1" />
+              <meta>
+                <versionId value="206588" />
+                <lastUpdated value="2019-04-18T04:10:12.426+00:00" />
+                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab" />
+              </meta>
+              <status value="final" />
+              <category>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+                  <code value="laboratory" />
+                  <display value="Laboratory" />
+                </coding>
+                <text value="Laboratory" />
+              </category>
+              <code>
+                <coding>
+                  <system value="http://loinc.org" />
+                  <code value="5811-5" />
+                  <display value="Specific gravity of Urine by Test strip" />
+                </coding>
+                <text value="SPEC GRAV" />
+              </code>
+              <subject>
+                <reference value="Patient/patientEHR" />
+                <display value="Tim Doe" />
+              </subject>
+              <effectiveDateTime value="2019-04-18" />
+              <valueQuantity>
+                <value value="1.017" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="{urine specific gravity}" />
+              </valueQuantity>
+              <referenceRange>
+                <low>
+                  <value value="1.003" />
+                  <system value="http://unitsofmeasure.org" />
+                  <code value="{urine specific gravity}" />
+                </low>
+                <high>
+                  <value value="1.035" />
+                  <system value="http://unitsofmeasure.org" />
+                  <code value="{urine specific gravity}" />
+                </high>
+              </referenceRange>
+            </Observation>
+          </resource>
+          <search>
+            <mode value="match" />
+          </search>
+        </entry>
+      </Bundle>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:89b0b6ce-4a31-4718-b38a-798efab6c9e4" />
+    <resource>
+      <Bundle>
+        <id value="89b0b6ce-4a31-4718-b38a-798efab6c9e4" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
+        </meta>
+        <type value="searchset" />
+        <total value="1" />
+        <link>
+          <relation value="self" />
+          <url value="MedicationRequest?patient=patientEHR" />
+        </link>
+        <entry>
+          <fullUrl value="http://example.org/MyEHR/MedicationRequest/prescription-1" />
+          <resource>
+            <MedicationRequest>
+              <id value="prescription-1" />
+              <status value="stopped" />
+              <intent value="order" />
+              <medicationCodeableConcept>
+                <coding>
+                  <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+                  <code value="802652" />
+                  <display value="1 ML Enbrel 50 MG/ML Prefilled Syringe" />
+                </coding>
+              </medicationCodeableConcept>
+              <subject>
+                <reference value="Patient/patientEHR" />
+              </subject>
+              <authoredOn value="2020-05-11" />
+              <requester>
+                <reference value="http://example.org/MyEHR/Practitioner/50645003" />
+              </requester>
+              <dispenseRequest>
+                <quantity>
+                  <value value="4" />
+                  <unit value="{each}" />
+                </quantity>
+                <expectedSupplyDuration>
+                  <value value="30" />
+                  <unit value="days" />
+                  <system value="http://unitsofmeasure.org" />
+                  <code value="d" />
+                </expectedSupplyDuration>
+                <performer>
+                  <reference value="http://example.org/MyEHR/Organization/pharmacy-305660" />
+                </performer>
+              </dispenseRequest>
+              <substitution>
+                <allowedBoolean value="false" />
+              </substitution>
+            </MedicationRequest>
           </resource>
           <search>
             <mode value="match" />

@@ -14,7 +14,6 @@
         <eventCoding>
           <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type" />
           <code value="query" />
-    <!--      <display value="Query" />   -->
         </eventCoding>
         <source>
           <name value="MyPharmacyApp" />
@@ -31,20 +30,32 @@
     <resource>
       <Parameters>
         <id value="61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
-		<meta>
-			<profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query" />
-		</meta>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query" />
+        </meta>
         <parameter>
           <name value="query-string" />
-          <valueString value="Condition" />
+          <valueString value="AllergyIntolerance?clinical-status=active" />
         </parameter>
         <parameter>
           <name value="query-string" />
-          <valueString value="AllergyIntolerance" />
+          <valueString value="Condition?clinical-status=active" />
         </parameter>
         <parameter>
           <name value="query-string" />
-          <valueString value="MedicationStatement" />
+          <valueString value="Coverage" />
+        </parameter>
+        <parameter>
+          <name value="query-string" />
+          <valueString value="Observation?category=vital-signs" />
+        </parameter>
+        <parameter>
+          <name value="query-string" />
+          <valueString value="Observation?category=laboratory" />
+        </parameter>
+        <parameter>
+          <name value="query-string" />
+          <valueString value="MedicationRequest" />
         </parameter>
         <parameter>
           <name value="requester-patient" />
@@ -64,14 +75,20 @@
           <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient" />
         </meta>
         <identifier>
-          <system value="http://example.org/patient-id" />
-          <value value="1234" />
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="PI" />
+              <display value="Patient internal identifier" />
+            </coding>
+          </type>
+          <system value="http://example.org/MyPharmacyApp/patient-id" />
+          <value value="540002" />
         </identifier>
         <active value="true" />
         <name>
           <family value="Doe" />
-          <given value="Timothy" />
-          <given value="V." />
+          <given value="Tim" />
         </name>
         <telecom>
           <system value="phone" />
