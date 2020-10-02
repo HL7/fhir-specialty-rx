@@ -144,6 +144,10 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Aug 24, 2020</td>
           <td>Added a separate page to identify US Core resources expected to be used in Specialty Rx exchanges</td>
   	  </tr>
+      <tr>
+		<td>Sep 1, 2020</td>
+          <td>Separated role information into its own Roles page. Focused the previous Workflows page on systematic data retrieval--reorganizing/revising it and and renaming it Systematic Query Workflows. Added a page that focuses on requests that require human intervention, titled Information Flows Requiring Human Interaction, that discusses use of the Questionnaire messages and use of SMART apps and CDS Hooks.</td>
+  	  </tr>
    </tbody>
 </table>
 

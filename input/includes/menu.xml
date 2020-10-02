@@ -7,7 +7,13 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="workflow.html">Workflow Scenarios</a>
+        <a href="roles.html">Roles</a>
+      </li>
+      <li>
+        <a href="systematic-queries.html">Systematic Query Workflows</a>
+      </li>
+      <li>
+        <a href="human-interaction.html">Information Flows Requiring Human Interaction</a>
       </li>
       <li>
         <a href="message-structure.html">Message Structures</a>

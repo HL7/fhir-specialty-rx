@@ -634,8 +634,18 @@
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
-		    <nameUrl value="workflow.html"/>
-		    <title value="Workflow Scenarios"/>
+		    <nameUrl value="roles.html"/>
+		    <title value="Roles"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
+		    <nameUrl value="systematic-queries.html"/>
+		    <title value="Systematic Query Workflows"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
+		    <nameUrl value="human-interaction.html"/>
+		    <title value="Information Flows Requiring Human Interaction"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
