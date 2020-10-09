@@ -148,6 +148,10 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Sep 1, 2020</td>
           <td>Separated role information into its own Roles page. Focused the previous Workflows page on systematic data retrieval--reorganizing/revising it and and renaming it Systematic Query Workflows. Added a page that focuses on requests that require human intervention, titled Information Flows Requiring Human Interaction, that discusses use of the Questionnaire messages and use of SMART apps and CDS Hooks.</td>
   	  </tr>
+      <tr>
+		<td>Sep 5, 2020</td>
+          <td>Added Task profile that defines content enabling a pharmacy or other external party to prompt clinic staff to launch a SMART app and answer prescription-related questions. Adjusted the page, Flows Requiring Human Intervention: removed CDS Hooks placeholder.</td>
+  	  </tr>
    </tbody>
 </table>
 

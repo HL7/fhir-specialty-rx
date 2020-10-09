@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-task" />
+  <meta>
+    <lastUpdated value="2020-10-02T00:00:00+00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task" />
+  <version value="0.1.00" />
+  <name value="SpecialtyRxTask" />
+  <title value="Specialty Rx Task" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-10-02" />
+  <publisher value="NCPDP" />
+  <description value="This profile defines Task content enabling a pharmacy or other external party to prompt clinic staff to launch a SMART app and answer prescription-related questions." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Task">
+      <path value="Task" />
+    </element>
+    <element id="Task.id">
+      <path value="Task.id" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.identifier">
+      <path value="Task.identifier" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.identifier.value">
+      <path value="Task.identifier.value" />
+      <comment value="This is a unique identifier represents a unique context related to this task. It is conveyed during launch of the referenced SMART application and used by that application to direct the user to information and functions necessary to complete this task." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.intent">
+      <path value="Task.intent" />
+      <min value="1" />
+      <fixedCode value="plan" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.code">
+      <path value="Task.code" />
+      <comment value="The requested user action" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Task types used in the Specialty Rx workflow" />
+        <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-type" />
+      </binding>
+    </element>
+    <element id="Task.description">
+      <path value="Task.description" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus">
+      <path value="Task.focus" />
+      <definition value="Related Prescription Order" />
+      <comment value="The prescription to which the task pertains. Maybe be identified through a reference to a MedicationOrder or using the prescriber system's order number (e.g., NCPDP PrescriberOrderNumber element in the NewRx that conveyed the prescription)" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus.reference">
+      <path value="Task.focus.reference" />
+      <comment value="Reference to the related MedicationOrder" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus.identifier">
+      <path value="Task.focus.identifier" />
+      <definition value="The prescription order identifier. E.g., the PrescriberOrderNumber from the NCPDP NewRx message that communicated the prescription to the pharmacy" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus.display">
+      <path value="Task.focus.display" />
+      <definition value="A human-readable description of the related prescription order" />
+      <comment value="A human-readable prescription description must be present. Must contain the medication name and should contain the date written. May contain strength, dose form, or other specifics." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.for">
+      <path value="Task.for" />
+      <definition value="Patient" />
+      <comment value="Reference to the related patient" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.authoredOn">
+      <path value="Task.authoredOn" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester">
+      <path value="Task.requester" />
+      <comment value="The organization requesting that this task be performed" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.owner">
+      <path value="Task.owner" />
+      <comment value="The practitioner that prescribed the related medication" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input">
+      <path value="Task.input" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="coding" />
+        </discriminator>
+        <description value="The Task must contain the URL for the SMART app to be launched to complete the task" />
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartUrl">
+      <path value="Task.input" />
+      <sliceName value="SMART App URL" />
+      <label value="Smart App URL" />
+      <short value="Smart App URL" />
+      <definition value="The URL of the SMART application to be used to complete this task" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartURL.coding">
+      <path value="Task.input.coding" />
+      <min value="1" />
+      <fixedCoding>
+        <code value="smart-app-url" />
+      </fixedCoding>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

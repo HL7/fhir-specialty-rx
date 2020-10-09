@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-task-type" />
+  <meta>
+    <lastUpdated value="2020-10-02T00:00:00-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
+  <name value="SpecialtyRxCodeSystemTaskType" />
+  <title value="Specialty Rx Code System - Task Type" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-10-02T00:00:00-05:00" />
+  <publisher value="NCPDP" />
+  <description value="This code system defines task types used in the Specialty Rx Task profile" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="complete-app-questionnaire" />
+    <display value="Complete Questionnaire in App" />
+    <definition value="Launch the referenced SMART app and complete the presented questionnaire" />
+  </concept>
+</CodeSystem>

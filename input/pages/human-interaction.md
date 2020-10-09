@@ -53,8 +53,3 @@ Example:
 
 <br>
 
-### SMART App Launch During the Prescribing Process - Using CDS Hooks
-
-... [to be added]
-
-<br>

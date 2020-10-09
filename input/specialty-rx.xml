@@ -334,7 +334,15 @@
 	    <name value="Specialty Rx RelatedPerson"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
-	<!--
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-task"/>
+	      <display value="Specialty Rx Task"/>
+	    </reference>
+	    <name value="Specialty Rx Task"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+	  	<!--
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-consent"/>
@@ -371,10 +379,26 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
+	      <reference value="CodeSystem/specialty-rx-task-type"/>
+	      <display value="Specialty Rx CodeSystem - Task Type"/>
+	    </reference>
+	    <name value="Specialty Rx CodeSystem - Task Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>
 	      <display value="Specialty Rx ValueSet - Event Type"/>
 	    </reference>
 	    <name value="Specialty Rx ValueSet - Event Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/specialty-rx-task-type"/>
+	      <display value="Specialty Rx ValueSet - Task Type"/>
+	    </reference>
+	    <name value="Specialty Rx ValueSet - Task Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
