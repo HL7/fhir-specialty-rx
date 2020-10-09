@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-task-smart-launch-1" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
+  </meta>
+  <identifier>
+    <value value="launch-context-id-01345005" />
+  </identifier>
+  <status value="requested" />
+  <intent value="plan" />
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
+      <code value="complete-app-questionnaire" />
+      <display value="Complete Questionnaire in App" />
+    </coding>
+  </code>
+  <description value="Launch the My Pharmacy SMART app and complete the questionnaire." />
+  <focus>
+    <identifier>
+      <value value="prescription-70222056" />
+    </identifier>
+    <display value="Humira Injector Pen - 9/23/2020" />
+  </focus>
+  <for>
+    <reference value="Practitioner/specialty-rx-practitioner-1" />
+  </for>
+  <authoredOn value="2020-09-24" />
+  <requester>
+    <reference value="Organization/specialty-rx-organization-pharmacy-1" />
+    <display value="Our Pharmacy" />
+  </requester>
+  <owner>
+    <reference value="Practitioner/specialty-rx-practitioner-1" />
+    <display value="Jane Smith MD" />
+  </owner>
+  <input>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type" />
+        <code value="smart-app-launch" />
+        <display value="SMART Application Launch URL" />
+      </coding>
+    </type>
+    <valueUrl value="https://my-pharmacy-smart-app.com" />
+  </input>
+</Task>

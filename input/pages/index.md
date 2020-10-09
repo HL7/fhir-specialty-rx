@@ -145,12 +145,16 @@ The implementation guide supports business functions related to fulfillment of s
           <td>Added a separate page to identify US Core resources expected to be used in Specialty Rx exchanges</td>
   	  </tr>
       <tr>
-		<td>Sep 1, 2020</td>
+		<td>Oct 1, 2020</td>
           <td>Separated role information into its own Roles page. Focused the previous Workflows page on systematic data retrieval--reorganizing/revising it and and renaming it Systematic Query Workflows. Added a page that focuses on requests that require human intervention, titled Information Flows Requiring Human Interaction, that discusses use of the Questionnaire messages and use of SMART apps and CDS Hooks.</td>
   	  </tr>
       <tr>
-		<td>Sep 5, 2020</td>
-          <td>Added Task profile that defines content enabling a pharmacy or other external party to prompt clinic staff to launch a SMART app and answer prescription-related questions. Adjusted the page, Flows Requiring Human Intervention: removed CDS Hooks placeholder.</td>
+		<td>Oct 7, 2020</td>
+          <td>Added Task profile that defines content enabling a pharmacy or other external party to prompt clinic staff to launch a SMART app and answer prescription-related questions. Added CodeSystem and ValueSet defining a task type meaning "complete a questionnaire using the referenced SMART application". Adjusted the page, Flows Requiring Human Intervention: removed CDS Hooks placeholder. Added clarification to the Mesage Submission page specifying that the requesting system cannot influence whether the response is returned synchronously or asynchronously; the data source system determines this for each request.</td>
+  	  </tr>
+      <tr>
+		<td>Oct 8, 2020</td>
+          <td>Added example Task that prompts clinic staff to launch a SMART app and answer prescription-related questions. </td>
   	  </tr>
    </tbody>
 </table>

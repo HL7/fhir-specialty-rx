@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+
+<style>
+a {
+    color: grey;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+.header, .header a{
+   color: #428bca;
+   font-family: Verdana, sans-serif;
+   font-size:11px;
+}
+
+body {
+   max-width:800px;
+   padding-top: 10px;
+   padding-left: 25px;
+   padding-right: 25px;
+   padding-bottom:50px;
+   /*background-color: #f5f1e3;*/
+}
+
+    #valueEmph a {
+	/*color:#428bca;  FHIR IG blue */
+        /*color: #881600 !important;*/
+	color: #428bca;
+    }
+
+    #valueEmph :before {
+        content: ' ';
+    }
+
+#indent1 {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: grey; 
+    padding: 10px;
+    margin-left: 0px;
+    margin-top:5px;
+    margin-bottom:5px;
+    outline-style: solid;
+    outline-width:4px;
+    outline-offset:0px;
+    outline-color:white;
+}
+
+span.emph0 {
+    border: solid white 2px;
+    background-color: #428bca;
+    margin-top: 2px;
+    margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+span.emph0, span.emph0 a {
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white !important;
+}
+
+
+
+span.emph1, span.emph1 a {
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    text-decoration: none;
+}
+
+span.emph1 {
+    border-left: solid grey 1px;
+    border-top: solid grey 1px;
+    border-right: solid grey 1px;
+    border-bottom: solid grey 1px;
+    background-color: white;
+    margin-top: 2px;
+    margin-right: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+span.emph2, span.emph2 a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+span.emph2 {
+    margin-top: 2px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+span.emph3, span.emph3 a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+span.emph3 {
+    margin-top: 2px;
+    border-bottom: dotted;
+    border-width: 1px;
+}
+
+span.emph4, span.emph4 a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+span.emph4 {
+    margin-top: 2px;
+}
+
+span.emph5, span.emph5 a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+span.emph5 {
+    margin-top: 2px;
+}
+
+span.emph6, span.emph6 a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+
+    span.emph2 :before, span.emph3 :before,
+    span.emph4 :before, span.emph5 :before, span.emph6 :before,
+    span.leastEmph :before {
+        content: '.';
+        white-space: pre;
+    }
+
+span.leastEmph :after {
+    content: '';
+    white-space: pre;
+}
+
+span.emph2 :after, span.emph3 :after,
+span.emph4 :after, span.emph5 :after, span.emph6 :after {
+    content: '';
+    white-space: pre;
+}
+
+span.emph1, span.emph2, span.emph3,
+span.emph4, span.emph5, span.emph6 {
+    font-style: initial;
+}
+
+span.leastEmph {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+    span.leastEmph a {
+        text-decoration: none;
+    }
+
+
+#emph a {
+    text-decoration: none;
+}
+
+#moreEmph a {
+    text-decoration: none;
+}
+
+#lessEmph a {
+    text-decoration: none;
+}
+
+#emph :before {
+    content: '[';
+}
+
+#moreEmph :before {
+    content: '[';
+}
+
+#lessEmph :before {
+    content: '[';
+}
+
+
+#emph :after {
+    content: ']';
+}
+
+#moreEmph :after {
+    content: ']';
+}
+
+#lessEmph :after {
+    content: ']';
+}
+
+#emph {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    margin: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 1px;
+    border-style: none;
+    border-color: #428bca;
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: transparent;
+    height: 18px;
+    display: inline-block;
+}
+
+#moreEmph {
+    color: white !important;
+    text-decoration: none;
+    font-weight: normal;
+    margin: 2px;
+    margin-top: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 1px;
+    border-style: none;
+    border-color: #428bca;
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: transparent;
+    height: 18px;
+    display: inline-block;
+}
+
+#lessEmph {
+    border: 1px;
+    margin: 2px;
+    border-style: none;
+    border-color: #428bca;
+    border-radius: 3px;
+    border-width: 1px;
+    background-color: white;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: normal;
+    color: grey;
+    text-decoration: none;
+    height: 18px;
+    display: inline-block;
+}
+
+#valueEmph {
+    margin-right: 15px;
+    font-weight: bold !important;
+}
+
+
+#fhirValue {
+	display:none;
+}
+
+#indent0 br {
+    display: inline;
+}
+
+#indent0 {
+    border-style: none;
+    border-width: 1px;
+    border-color: grey;
+    /*background-color: #f5f1e3;*/
+    padding: 0px;
+    margin-left: 0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    outline-style: solid;
+    outline-width:0px;
+    outline-offset:0px;
+    outline-color:white;
+}
+
+
+#indent2 {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: grey;
+    background-color:whitesmoke;;;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top:5px;
+    margin-bottom:5px;
+    outline-style: solid;
+    outline-width:4px;
+    outline-offset:0px;
+    outline-color:white;
+}
+
+#indent3 {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: grey;
+    background-color:white;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top:5px;
+    margin-bottom:5px;
+    outline-style: solid;
+    outline-width:4px;
+    outline-offset:0px;
+    outline-color:whitesmoke;
+}
+
+a.emphRepeat:before {
+    content: '';
+    padding-top: 15px !important;
+}
+
+</style>
+
+  <head>
+    <title>FHIR Visualizer</title>
+    <script src="viz.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+    <h1>Bundle</h1>
+   </div>
+
+<span style="display:inline-block"><span class="emph1"><a>id</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>specialty-rx-query-1</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>meta</a></span><span style="display:inline-block"><span class="emph2"><a>profile</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query</a></span></span><br><span style="display:inline-block"><span class="emph1"><a>type</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>message</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>timestamp</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>2020-07-08T08:10:13-05:00</a></span></span></span><div id="indent0"><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">entry[1]</a></span><span style="display:inline-block"><span class="emph2"><a>fullUrl</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>https://example.org/MyPharmacyApp/MessageHeader/reqheader1</a></span></span><br><span style="display:inline-block"><span class="emph2"><a>resource</a></span><span style="margin-left:50px; display:inline-block"></span><span class="emph0"><a>MessageHeader</a></span><br><span style="display:inline-block"><span class="emph1"><a>id</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>req1</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>eventCoding</a></span><span style="display:inline-block"><span class="emph2"><a>system</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type</a></span></span><span style="display:inline-block"><span class="emph2"><a>code</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>query</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>source</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>MyPharmacyApp</a></span></span><span style="display:inline-block"><span class="emph2"><a>endpoint</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://example.org/MyPharmacyApp</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>focus</a></span><span style="display:inline-block"><span class="emph2"><a>reference</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b</a></span></span></div><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">entry[2]</a></span><span style="display:inline-block"><span class="emph2"><a>fullUrl</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b</a></span></span><br><span style="display:inline-block"><span class="emph2"><a>resource</a></span><span style="margin-left:50px; display:inline-block"></span><span class="emph0"><a>Parameters</a></span><br><span style="display:inline-block"><span class="emph1"><a>id</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>61ebe359-bfdc-4613-8bf2-c5e300945f0b</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>meta</a></span><span style="display:inline-block"><span class="emph2"><a>profile</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query</a></span></span><div id="indent1"><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">parameter[1]</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>query-string</a></span></span><span style="display:inline-block"><span class="emph2"><a>valueString</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>AllergyIntolerance?clinical-status=active</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">parameter[2]</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>query-string</a></span></span><span style="display:inline-block"><span class="emph2"><a>valueString</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Condition?clinical-status=active</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">parameter[3]</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>query-string</a></span></span><span style="display:inline-block"><span class="emph2"><a>valueString</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Coverage</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">parameter[4]</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>query-string</a></span></span><span style="display:inline-block"><span class="emph2"><a>valueString</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Observation?category=vital-signs</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">parameter[5]</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>query-string</a></span></span><span style="display:inline-block"><span class="emph2"><a>valueString</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Observation?category=laboratory</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">parameter[6]</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>query-string</a></span></span><span style="display:inline-block"><span class="emph2"><a>valueString</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>MedicationRequest</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">parameter[7]</a></span><span style="display:inline-block"><span class="emph2"><a>name</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>requester-patient</a></span></span><span style="display:inline-block"><span class="emph2"><a>valueReference</a></span><span style="display:inline-block"><span class="emph3"><a>reference</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Patient/patient1</a></span></span></div></div><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">entry[3]</a></span><span style="display:inline-block"><span class="emph2"><a>fullUrl</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://example.org/MyPharmacyApp/Patient/patient1</a></span></span><br><span style="display:inline-block"><span class="emph2"><a>resource</a></span><span style="margin-left:50px; display:inline-block"></span><span class="emph0"><a>Patient</a></span><br><span style="display:inline-block"><span class="emph1"><a>id</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>patient1</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>meta</a></span><span style="display:inline-block"><span class="emph2"><a>profile</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient</a></span></span><br><span style="display:inline-block"><span class="emph1"><a>text</a></span><span style="display:inline-block"><span class="emph2"><a>status</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>generated</a></span></span><br><span style="display:inline-block"><span class="emph1"><a>identifier</a></span><span style="display:inline-block"><span class="emph2"><a>type</a></span></span></span><span style="display:inline-block"><span class="emph3"><a>coding</a></span><span style="display:inline-block"><span class="emph4"><a>system</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://terminology.hl7.org/CodeSystem/v2-0203</a></span></span><span style="display:inline-block"><span class="emph4"><a>code</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>PI</a></span></span></span><span style="display:inline-block"><span class="emph4"><a>display</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Patient internal identifier</a></span></span></span><br><span style="display:inline-block"><span class="emph2"><a>system</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>http://example.org/MyPharmacyApp/patient-id</a></span></span></span><span style="display:inline-block"><span class="emph2"><a>value</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>540002</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>active</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>true</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>name</a></span><span style="display:inline-block"><span class="emph2"><a>family</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Doe</a></span></span><span style="display:inline-block"><span class="emph2"><a>given</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Tim</a></span></span></span><div id="indent1"><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">telecom[1]</a></span><span style="display:inline-block"><span class="emph2"><a>system</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>phone</a></span></span><span style="display:inline-block"><span class="emph2"><a>value</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>555-555-5555</a></span></span></span><span style="display:inline-block"><span class="emph2"><a>use</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>home</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a class="emphRepeat">telecom[2]</a></span><span style="display:inline-block"><span class="emph2"><a>system</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>email</a></span></span><span style="display:inline-block"><span class="emph2"><a>value</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>tim.doe@example.com</a></span></span></span></div><span style="display:inline-block"><span class="emph1"><a>gender</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>male</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>birthDate</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>1987-02-20</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>address</a></span><span style="display:inline-block"><span class="emph2"><a>line</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>2224 Century Ave</a></span></span><span style="display:inline-block"><span class="emph2"><a>city</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>Minnetonka</a></span></span></span><span style="display:inline-block"><span class="emph2"><a>state</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>MN</a></span></span></span><span style="display:inline-block"><span class="emph2"><a>postalCode</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>55345</a></span></span></span><span style="display:inline-block"><span class="emph2"><a>country</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>US</a></span></span></span><br><span style="display:inline-block"><span class="emph1"><a>communication</a></span><span style="display:inline-block"><span class="emph2"><a>language</a></span></span></span><span style="display:inline-block"><span class="emph3"><a>coding</a></span><span style="display:inline-block"><span class="emph4"><a>system</a></span></span></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>urn:ietf:bcp:47</a></span></span><span style="display:inline-block"><span class="emph4"><a>code</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>en-US</a></span></span></span><span style="display:inline-block"><span class="emph4"><a>display</a></span><span style="display:inline-block"><span class="leastEmph" id="fhirValue"><a>@value</a></span>: &nbsp;<span id="valueEmph"><a>English (Region=United States)</a></span></span></span></div></div>
+
+</body>
+</html>

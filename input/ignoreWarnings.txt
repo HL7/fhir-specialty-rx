@@ -1,5 +1,4 @@
 == Suppressed Messages ==
 
-# No suppressed messages
-# {{message}}
-# {{message}}
+# The IG proposes adding a value (smart-app-launch) to an existing HL7 code system: http://terminology.hl7.org/CodeSystem/endpoint-connection-type
+Unknown Code http://terminology.hl7.org/CodeSystem/endpoint-connection-type#smart-app-launch in http://terminology.hl7.org/CodeSystem/endpoint-connection-type for 'http://terminology.hl7.org/CodeSystem/endpoint-connection-type#smart-app-launch'

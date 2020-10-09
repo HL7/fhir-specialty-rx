@@ -6,9 +6,9 @@ All Specialty Rx messages are submitted to their recipients using the $process-m
 
 ### Synchronous or asynchronous response
 
-Specialty Rx Query Responses are expected to be systematically produced using data in the patient's electronic health record. They may be returned synchronously or asynchronously in near real-time. 
+**Specialty Rx Query Responses** are expected to be systematically produced using data in the patient's electronic health record. They may be returned synchronously or asynchronously in near real-time. The *requesting system* cannot influence which behavior occurs; when a message is received, the *data source* determines whether it will respond synchronously or asynchronously.
 
-Specialty Rx Questionnaire Responses will typically require human intervention--to be returned asynchronously when complete. 
+**Specialty Rx Questionnaire Responses** will typically require human intervention--to be returned asynchronously when complete. 
 
 <br/>
 

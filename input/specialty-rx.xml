@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="specialty-rx"/>
     <meta>
-        <lastUpdated value="2020-03-24T02:23:04.509+00:00"/>
+        <lastUpdated value="2020-10-05T00:00:00.000+00:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,7 +13,8 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx"/>
-    <version value="0.1.00"/>
+ 	<version value="0.1.00"/> 
+    <!-- <version value="current"/> -->
     <name value="SpecialtyRx"/>
     <title value="Specialty Medication Prescribing"/>
     <status value="draft"/>
@@ -336,10 +337,10 @@
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-task"/>
-	      <display value="Specialty Rx Task"/>
+	      <reference value="StructureDefinition/specialty-rx-task-smart-launch"/>
+	      <display value="Specialty Rx Task - SMART Launch"/>
 	    </reference>
-	    <name value="Specialty Rx Task"/>
+	    <name value="Specialty Rx Task - SMART Launch"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
 	  	<!--
@@ -645,6 +646,15 @@
             <name value="Specialty Rx RelatedPerson 1"/>
             <description value="An example RelatedPerson illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-relatedperson"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Task/specialty-rx-task-smart-launch-1"/>
+                <display value="Specialty Rx Task - SMART Launch 1"/>
+            </reference>
+            <name value="Specialty Rx Task - SMART Launch 1"/>
+            <description value="Example of a Task that directs the user to launch a specified SMART app to complete a questionnaire"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch"/>
       </resource>	  
 
 <!-- ************************************************************* Pages ************************************************************ -->
