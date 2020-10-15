@@ -1,0 +1,208 @@
+
+div.fm_ex {
+    background-color: white;
+    min-width: 800px;
+    width: 800px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: solid lightgrey 1px;
+}
+
+.fm_ex .valueEmph :before {
+    content: ' ';
+}
+
+.fm_ex span.emph0 {
+    border: none;
+    background-color: #ad1f2f;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    display: inline-block;
+}
+
+.fm_ex span.emph1 {
+    display: inline-block;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    margin-right: 4px;
+    border-left: solid #ad1f2f 1px;
+    border-top: solid #ad1f2f 1px;
+    border-right: solid #ad1f2f 1px;
+    border-bottom: solid #ad1f2f 1px;
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.fm_ex span.emph2 {
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #ad1f2f;
+}
+
+.fm_ex span.emph3 {
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    border-bottom: dotted;
+    border-color: #ad1f2f;
+    border-width: 1px;
+}
+
+.fm_ex span.emph4 {
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+span.emph5 {
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+span.emph6 {
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+
+.fm_ex span.emph2 :before, .fm_ex span.emph2 :before, .fm_ex span.emph3 :before,
+.fm_ex span.emph3 :before, .fm_ex span.emph4 :before, .fm_ex span.emph5 :before,
+.fm_ex span.emph6 :before,
+.fm_ex span.leastEmph :before {
+    content: '.';
+    white-space: pre;
+}
+
+.fm_ex span.leastEmph :after {
+    content: '';
+    white-space: pre;
+}
+
+.fm_ex span.emph2 :after, .fm_ex span.emph3 :after,
+.fm_ex span.emph4 :after, .fm_ex span.emph5 :after, .fm_ex span.emph6 :after {
+    content: '';
+    white-space: pre;
+}
+
+.fm_ex span.emph1, .fm_ex span.emph2, .fm_ex span.emph3,
+.fm_ex span.emph4, .fm_ex span.emph5, .fm_ex span.emph6 {
+    font-style: initial;
+}
+
+.fm_ex span.leastEmph {
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+.fm_ex .valueEmph {
+    margin-right: 15px;
+    font-weight: bold !important;
+}
+
+.fm_ex .fhirValue {
+    display: none !important;
+}
+
+.fm_ex .indent0 br {
+    display: inline;
+}
+
+.fm_ex .indent0 {
+    display: block;
+    border-style: none;
+    border-width: 1px;
+    border-color: #ad1f2f;
+    padding: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    outline-style: solid;
+    outline-width: 0px;
+    outline-offset: 0px;
+    outline-color: white;
+}
+
+.fm_ex .indent1 {
+    display: block;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #ad1f2f;
+    padding: 10px;
+    margin-left: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline-style: solid;
+    outline-width: 4px;
+    outline-offset: 0px;
+    outline-color: white;
+}
+
+.fm_ex .indent2 {
+    display: block;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #ad1f2f;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline-style: solid;
+    outline-width: 4px;
+    outline-offset: 0px;
+    outline-color: white;
+}
+
+.fm_ex .indent3 {
+    display: block;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #ad1f2f;
+    background-color: white;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline-style: solid;
+    outline-width: 4px;
+    outline-offset: 0px;
+    outline-color: whitesmoke;
+}
+
+.fm_ex a.emphRepeat:before {
+    content: '';
+    padding-top: 15px !important;
+}
+
+.fm_ex a {
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ad1f2f;
+}
+
+.fm_ex .valueEmph a {
+    color:  black;  /*fhir maroon: #C40A20 #da0c23; #428bca; FHIR IG blue */
+}
+
+.fm_ex span.emph0 a {
+    font-weight: 600;
+    color: white !important;
+}

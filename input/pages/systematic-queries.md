@@ -2,12 +2,26 @@
 
 Much of the information needed to fulfill a specialty medication can be retrieved systematically from the prescriber's EHR: allergies, conditions, active medications, etc. This section details those exchange flows:
 
-- Solicited flow using the Specialty Rx Query Response message only
+- Solicited flow using the [Specialty Rx Query Response - Unsolicited message](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) only
 - Solicited flow using RESTful searches through (a) a direct connection between the requesting system and the data source and (b) an intermediary
-- Unsolicited flow using the Specialty Rx Query request and Specialty Rx Query Response messages only
+- Unsolicited flow using the [Specialty Rx Query request](StructureDefinition-specialty-rx-bundle-query.html) and [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) messages only
 - Unsolicited flow using RESTful searches facilitated by an intermediary.
 
 <br>
+
+### Example Use Scenarios
+
+#### "Solicited" workflow requesting patient information related to a prescription
+
+In this scenario, a Requesting System receives a specialty medication prescription and then requests related patient information needed to fulfill it. 
+
+The Requesting system either submits RESTful FHIR searches against the Data Source system, or transmits a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html) to the Data Source (or an Intermediary) containing searches for the desired information.
+
+The Data Source System responds to the RESTful FHIR searches (in the first case) or returns a [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) containing the requested information (in the second).
+
+#### "Unsolicited" workflow containing a predefined set of request information
+
+In this scenario, a Data Source System shares patient information related to a specialty medication prescription that it has sent to the Requesting System. The Data Source System or its agent collects patient information associated with the prescription and transmits it in a [Specialty Rx Query Response - Unsolicited message](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html).
 
 ### Workflow Overview - Solicited and Unsolicited
 
@@ -15,18 +29,18 @@ In all workflow scenarios, Specialty Rx exchanges takes place after the specialt
 
 #### "Solicited" Workflow
 
-1. The Requesting System initiates a Specialty Rx Query when additional information relating to a specialty prescription is needed to facilitate dispensing or other activity.
+1. The Requesting System initiates RESTful searches or a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html) when additional information is needed to facilitate fulfillment of a specialty medication prescription.
 
    - This might be triggered automatically by the Requesting System upon receiving an electronic prescription (NewRx) or 
-   - A person using the Requesting System might initiate the request manually, for example after receiving a faxed prescription
-2. The Data Source System collects the requested information and responds with a Specialty Rx Query Response.
-   - Alternatively, an intermediary retrieves the requested information using RESTful interactions with the data source.
-3. (optional) Staff or the Requesting System itself initiates retrieval of information requiring human intervention, using a Specialty Rx Questionnaire message or requesting a SMART app launch *(see Information Flows Requiring Human Interaction)*.
-4. The Data Source System enables users to respond to those questions *(see Information Flows Requiring Human Interaction)*.
+   - A person using the Requesting System might initiate the process manually, for example after receiving a faxed prescription.
+2. The Data Source System collects the requested information and responds to the RESTful searches or, if sent a Specialty Rx Query, responds with a [Specialty Rx Query Response message](StructureDefinition-specialty-rx-bundle-query-response.html).
+   - Alternatively, if the Specialty Rx Query was sent to an intermediary, it retrieves the requested information using RESTful interactions with the data source and returns the results to the Requesting System in a Specialty Rx Query Response message.
+3. (optional) Staff or the Requesting System itself initiates retrieval of information requiring human intervention, using a Specialty Rx Questionnaire message or requesting a SMART app launch *(see [Information Flows Requiring Human Interaction](human-interaction.html))*.
+4. The Data Source System enables users to respond to those questions *(see [Information Flows Requiring Human Interaction](human-interaction.html))*.
 
   *Notes:*
 
-- The response to a Specialty Rx Query is expected to typically be synchronous.
+- The response to a Specialty Rx Query is expected to typically be synchronous, but may be asynchronous, as determined with each request by the Data Source.
 - The response to a Specialty Rx Questionnaire is expected to typically be asynchronous--in order to allow staff to answer questions and/or locate attachments.
 - The process may repeat one or more times, for example if the user of the Requesting System realizes they need additional information as a follow-up to information received in a previous response.
 - The solicited workflow may occur after an unsolicited workflow.
@@ -37,7 +51,7 @@ In all workflow scenarios, Specialty Rx exchanges takes place after the specialt
 1. At the time that a specialty medication prescription is ordered, the Data Source System...
 
    - transmits the prescription to the pharmacy and/or other Requesting System
-   - also collects related information and initiates a Specialty Rx Query Response - Unsolicited to the Requesting System, to accompany the prescription
+   - also collects related information and initiates a [Specialty Rx Query Response - Unsolicited message](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html)  to the Requesting System, to accompany the prescription
 
 Alternatively, an intermediary notes the transmission of the prescription, retrieves associated patient information using RESTful interactions with the data source, and transmits it in a Specialty Rx Query Response - Unsolicited to the pharmacy and/or other Requesting System.
 
@@ -53,7 +67,7 @@ In this flow, patient information is exchanged based on a request from a pharmac
 </div>
 <br>
 
-#### Solicited - RESTful Data Source
+### Solicited - RESTful Data Source
 
 In this flow, patient information is also exchanged based on a request from a pharmacy or other party. However, in this model the data source responds to RESTful requests rather than accepting a FHIR request message and returning a message response. 
 
@@ -93,7 +107,7 @@ In this flow:
 
 <br>
 
-#### Unsolicited - Messaging Only
+### Unsolicited - Messaging Only
 
 In this flow, the prescribing system proactively sends a FHIR message containing patient information related to a prescription.
 
@@ -103,7 +117,7 @@ In this flow, the prescribing system proactively sends a FHIR message containing
 </div>
 <br>
 
-#### Unsolicited - RESTful Data Source
+### Unsolicited - RESTful Data Source
 
 In this flow, an intermediary facilitates the sending of patient information in conjunction with a new specialty medication prescription.
 
@@ -126,26 +140,11 @@ An intermediary facilitates the process as follows:
 
 ### Response Synchronicity
 
-The flow may be synchronous or asynchronous, enabling it to support both...
+All messaging flows may be synchronous or asynchronous, to support situations where...
 
-- situations where the entire response content can be generated systematically (e.g., if the responding system contains all of the requested information) 
-
-- situations where a person must create some or all of the response content (e.g., by answering open-ended questions submitted in the request)
+- the entire response content can be generated systematically (e.g., if the responding system contains all of the requested information) 
+- systematic retrieval is possible, but the request must be queued or otherwise cannot be immediately processed
+- a person must create some or all of the response content (e.g., by answering open-ended questions submitted in the request).
 
 <br>
 
-### Example Use Scenarios
-
-#### "Unsolicited" workflow containing a predefined set of request information
-
-In this scenario, a Data Source System sends information related to a specialty medication prescription previously sent to the Requesting System. The Data Source System collects patient information associated with the prescription and initiates a Specialty Rx Query Response - Unsolicited message containing that information.
-
-#### "Solicited" workflow requesting an ad-hoc set of information
-
-In this scenario, a Requesting System requests an ad-hoc set of information related to a specialty medication prescription it's received. 
-
-The Requesting system creates a Specialty Rx Query message and submits it to the Data Source System. The request bundle specifies searches for the desired information.
-
-The Data Source System collects the information specified in the request and returns a Specialty Rx Query Response to the requesting system. The response bundle contains the resources containing the requested information.
-
-<br/>

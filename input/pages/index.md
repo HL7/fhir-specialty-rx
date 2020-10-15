@@ -156,6 +156,14 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Oct 8, 2020</td>
           <td>Added example Task that prompts clinic staff to launch a SMART app and answer prescription-related questions. </td>
   	  </tr>
+	<tr>
+		<td>Oct 13, 2020</td>
+          <td>Added exchange flows and additional content to the Information Flows Requiring Human Interaction page. Refined example resource illustration format throughout and added content illustrations to all examples. Added descriptive content to the Specialty Rx Task example page. </td>
+        </tr>
+	<tr>
+		<td>Oct 15, 2020</td>
+          <td>Reorganized and revised the Systematic Query Workflows page to better cover both RESTful and messaging-based workflows</td>
+        </tr>
    </tbody>
 </table>
 

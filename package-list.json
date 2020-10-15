@@ -2,14 +2,26 @@
    "package-id": "hl7.fhir.us.specialty-rx",
    "title": "Specialty Medication Prescribing",
    "canonical": "http://hl7.org/fhir/us/specialty-rx",
-   "introduction": "his implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.",
+   "introduction": "This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.",
+   "category" : "Clinical", 
    "list": [
       {
          "version": "current",
-         "descmd": "Continuous Integration Build for FHIR STU1 (latest in version control)",
+         "desc": "Continuous Integration Build for FHIR STU1 (latest in version control)",
          "path": "http://build.fhir.org/ig/HL7/specialty-rx",
          "status": "ci-build",
          "current": true
+      },
+      {
+         "version": "0.1.00",
+         "date": "2020-11-15",
+         "desc": "STU1 Ballot",
+         "changes": "",
+         "path": "http://hl7.org/fhir/us/specialty-rx/2021Jan",
+         "status": "ballot",
+         "fhirversion" : "4.0.1",
+         "sequence": "STU1"
       }
+
    ]
 }

@@ -498,7 +498,7 @@
 	        <reference value="Location/specialty-rx-location-1"/>
                 <display value="US Core Location 1"/>
             </reference>
-            <name value="US COre Location 1"/>
+            <name value="US Core Location 1"/>
             <description value="An example Location illustrating a particular office location using the US Core profile"/>
 	      <!-- <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>  -->
       </resource>	  
