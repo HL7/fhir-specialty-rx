@@ -42,7 +42,10 @@
     </element>
     <element id="Task.identifier.value">
       <path value="Task.identifier.value" />
-      <comment value="This is a unique identifier representing the context of this task. It is to be conveyed during launch of the referenced SMART application and used by that application to direct the user to information and functions necessary to complete this task." />
+      <label value="Initiation ID" />
+      <short value="Initiation ID" />
+      <definition value="A unique identifier representing the task. It is used as context whe the referenced SMART application is launched." />
+      <comment value="A unique identifier representing the task. It is to be conveyed in the appContext parameter as the field, intiationID, during launch of the referenced SMART application and used by that application to direct the user to information and functions necessary to complete this task." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -54,7 +57,9 @@
     </element>
     <element id="Task.code">
       <path value="Task.code" />
-      <comment value="The requested user action" />
+      <label value="SMART App Task Type" />
+      <definition value="A particular SMART app task type, e.g., complete-app-questionnaire" />
+      <comment value="A code specifying the requested user action to be performed using the referenced SMART app. E.g., complete-app-questionnaire" />
       <min value="1" />
       <max value="1" />
       <binding>
@@ -72,15 +77,25 @@
     </element>
     <element id="Task.focus">
       <path value="Task.focus" />
-      <definition value="Related Prescription Order" />
-      <comment value="The prescription to which the task pertains. May be be identified through a reference to a MedicationRequest resource or using the prescription identifier set by the prescribing system" />
+      <label value="Related Prescription" />
+      <short value="Related Prescription" />
+      <definition value="Related prescription order" />
+      <comment value="The prescription to which the task pertains. Either a reference to a MedicationRequest resource or the prescription identifier set by the prescribing system must be present." />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Task.focus.reference">
       <path value="Task.focus.reference" />
-      <comment value="Reference to the related MedicationRequest resource" />
+      <label value="Prescription Reference" />
+      <short value="Prescription Reference" />
+      <definition value="Reference to the related MedicationRequest resource" />
+      <min value="0" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.focus.identifier">
@@ -89,6 +104,8 @@
       <short value="Placer Order Number" />
       <definition value="The prescription order number established by the ordering system" />
       <comment value="Referred to as the Placer Order Number in HL7 v2 and Prescriber Order Number in NCPDP SCRIPT" />
+      <min value="0" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.focus.display">
@@ -100,14 +117,30 @@
     </element>
     <element id="Task.for">
       <path value="Task.for" />
-      <definition value="Patient" />
-      <comment value="Reference to the related patient" />
+      <label value="Related Patient" />
+      <short value="Related Patient" />
+      <definition value="The patient for whom the related prescription was written" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.for.reference">
+      <path value="Task.for.reference" />
+      <label value="Patient Reference" />
+      <short value="Patient Reference" />
+      <definition value="Reference to a Patient resource" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.authoredOn">
       <path value="Task.authoredOn" />
+      <label value="Prescription Written Date" />
+      <short value="Prescription Written Date" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
@@ -116,12 +149,39 @@
       <path value="Task.requester" />
       <comment value="The organization requesting that this task be performed" />
       <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester.reference">
+      <path value="Task.requester.reference" />
+      <label value="Requester Reference" />
+      <short value="Requester Reference" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
+      <label value="Prescriber" />
+      <short value="Prescriber" />
       <comment value="The practitioner that prescribed the related medication" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.owner.reference">
+      <path value="Task.owner.reference" />
+      <label value="Prescriber Reference" />
+      <short value="Prescriber Reference" />
+      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.input">
@@ -167,6 +227,9 @@
       <short value="SMART launch URL" />
       <min value="1" />
       <max value="1" />
+      <type>
+        <code value="url" />
+      </type>
       <mustSupport value="true" />
     </element>
   </differential>

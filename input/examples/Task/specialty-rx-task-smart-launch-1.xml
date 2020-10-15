@@ -24,7 +24,7 @@
     <display value="Humira Injector Pen - 9/23/2020" />
   </focus>
   <for>
-    <reference value="Practitioner/specialty-rx-practitioner-1" />
+    <reference value="Patient/specialty-rx-patient-1" />
   </for>
   <authoredOn value="2020-09-24" />
   <requester>
