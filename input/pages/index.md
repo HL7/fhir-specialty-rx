@@ -164,6 +164,10 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Oct 15, 2020</td>
           <td>Reorganized and revised the Systematic Query Workflows page to better cover both RESTful and messaging-based workflows</td>
         </tr>
+	<tr>
+		<td>Oct 16, 2020</td>
+          <td>Clarifying edits to the human-interaction workflow guidance page. </td>
+        </tr>
    </tbody>
 </table>
 
