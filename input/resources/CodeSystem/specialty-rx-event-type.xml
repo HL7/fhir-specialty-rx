@@ -41,6 +41,7 @@
     <display value="Error" />
     <definition value="Specialty Rx error" />
   </concept>
+<!--
   <concept>
       <code value="questionnaire" />
     <display value="Questionnaire" />
@@ -51,4 +52,5 @@
     <display value="Questionnaire Response" />
     <definition value="Specialty Rx questionnaire response" />
   </concept>
+-->
 </CodeSystem>

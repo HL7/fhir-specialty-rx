@@ -166,7 +166,7 @@ The implementation guide supports business functions related to fulfillment of s
         </tr>
 	<tr>
 		<td>Oct 16, 2020</td>
-          <td>Clarifying edits to the human-interaction workflow guidance page. </td>
+          <td>Removed Questionnaire messaging resources and associated narrative. Clarifying edits to the human-interaction workflow guidance page. </td>
         </tr>
    </tbody>
 </table>

@@ -8,12 +8,7 @@ For example, the pharmacy may need to:
 - ask whether the clinic intends to order a lab test that must be performed prior to the patient starting the medication
 - ask the clinic to provide a copy of a consent form that the patient completed by hand.
 
-### Methods: SMART Application and Questionnaire
-
-This implementation guide describes two methods to support these situations: 
-
-- enabling the prescriber or staff to provide information through a SMART application launched from the EHR
-- transmission of questions and responses containing human-gathered information using the [Specialty Rx Questionnaire](StructureDefinition-specialty-rx-bundle-questionnaire.html) and [QuestionnaireResponse](StructureDefinition-specialty-rx-bundle-questionnaire-response.html) messages.
+This implementation guide describes a method to support these situations by enabling the prescriber or staff to provide information through a SMART application launched from the EHR.
 
 ### SMART Application Launch Using the Task Workflow
 
@@ -67,31 +62,16 @@ Example:
 
 <br>
 
-#### Process flow: Task to SMART launch
+#### Process flow: Task to SMART Launch
 
 <div><p>
   <img src="high-level-task-to-launch-flow.png" style="float:none">  
     </p>
 </div>
-
 <br>
 
-### Specialty Rx Questionnaire Messages
+#### Hosting of SMART Applications
 
-This guide also defines FHIR message profiles enabling:
-
-- a Requesting System to convey a set of questions or information requests to the Data Source System using a Questionnaire resource ([Specialty Rx Questionnaire message](StructureDefinition-specialty-rx-bundle-questionnaire.html))
-- a Data Source System to engage an EHR user to collect information requested by the questionnaire and  return it in a [Specialty Rx Questionnaire Response message](StructureDefinition-specialty-rx-bundle-questionnaire-response.html).
-
-This approach is suited to stakeholders whose system environments and relationships better support a messaging model--for example those that typically exchange electronic prescriptions using an intermediary.
-
-<h3>Intermediary Facilitation Between Messaging and Task Models</h3>
-
-In situations where the requesting party prefers a messaging model, an intermediary can mediate between messaging on the Requester side and a Task model on the Data Source side. 
-
-<div><p>
-  <img src="high-level-facilitated-task-flow.png" style="float:none">  
-    </p>
-</div>
+A requester such as a pharmacy may potentially partner with an intermediary or other party to host the SMART application and perform the above process on its behalf.
 
 <br>

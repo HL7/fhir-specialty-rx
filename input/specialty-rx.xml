@@ -82,6 +82,7 @@
 	    <name value="Specialty Rx Bundle - Query Response - Unsolicited Message"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
+<!--
    	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-bundle-questionnaire"/>
@@ -98,6 +99,7 @@
 	    <name value="Specialty Rx Bundle - Questionnaire Response Message"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
+-->
    	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-bundle-search-result"/>
@@ -171,6 +173,7 @@
 	    <name value="Specialty Rx MessageDefinition - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+<!--
 	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-questionnaire"/>
@@ -187,7 +190,7 @@
 	    <name value="Specialty Rx MessageDefinition - Questionnaire Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-
+-->
 
 	<!-- MessageHeader  -->
 	  <resource>
@@ -221,7 +224,8 @@
 	    </reference>
 	    <name value="Specialty Rx MessageHeader - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
-	  </resource>	  
+	  </resource>	
+<!--
 	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-messageheader-questionnaire"/>
@@ -238,6 +242,7 @@
 	    <name value="Specialty Rx MessageHeader - Questionnaire Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+-->
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-organization-payer"/>
@@ -279,6 +284,7 @@
 	    <name value="Specialty Rx Parameters - Query Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
+<!--
    	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-parameters-questionnaire"/>
@@ -295,6 +301,7 @@
 	    <name value="Specialty Rx Parameters - Questionnaire Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
+-->   	
    	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-parameters-query-response-unsolicited"/>
@@ -620,6 +627,7 @@
             <description value="Example unsolicited query response message."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited"/>
       </resource>	  
+<!--      
 		<resource>
 	      <reference>
 	        <reference value="Bundle/specialty-rx-questionnaire-1"/>
@@ -638,6 +646,7 @@
             <description value="Example data questionnaire response message."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-questionnaire-response"/>
       </resource>	  
+-->	
 	<resource>
 	      <reference>
 	        <reference value="RelatedPerson/specialty-rx-relatedperson-1"/>

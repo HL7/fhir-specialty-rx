@@ -35,16 +35,15 @@ In all workflow scenarios, Specialty Rx exchanges takes place after the specialt
    - A person using the Requesting System might initiate the process manually, for example after receiving a faxed prescription.
 2. The Data Source System collects the requested information and responds to the RESTful searches or, if sent a Specialty Rx Query, responds with a [Specialty Rx Query Response message](StructureDefinition-specialty-rx-bundle-query-response.html).
    - Alternatively, if the Specialty Rx Query was sent to an intermediary, it retrieves the requested information using RESTful interactions with the data source and returns the results to the Requesting System in a Specialty Rx Query Response message.
-3. (optional) Staff or the Requesting System itself initiates retrieval of information requiring human intervention, using a Specialty Rx Questionnaire message or requesting a SMART app launch *(see [Information Flows Requiring Human Interaction](human-interaction.html))*.
+3. (optional) Staff or the Requesting System itself initiates retrieval of information requiring human intervention, by requesting that the EHR prompt a clinic user to launch a SMART application *(see [Information Flows Requiring Human Interaction](human-interaction.html))*.
 4. The Data Source System enables users to respond to those questions *(see [Information Flows Requiring Human Interaction](human-interaction.html))*.
 
   *Notes:*
 
 - The response to a Specialty Rx Query is expected to typically be synchronous, but may be asynchronous, as determined with each request by the Data Source.
-- The response to a Specialty Rx Questionnaire is expected to typically be asynchronous--in order to allow staff to answer questions and/or locate attachments.
 - The process may repeat one or more times, for example if the user of the Requesting System realizes they need additional information as a follow-up to information received in a previous response.
 - The solicited workflow may occur after an unsolicited workflow.
-  For example, the Data Source System transmits a new specialty medication prescription to a pharmacy and also initiates an "unsolicited" Specialty Rx Query Response to the pharmacy, containing related information. Upon review of the prescription and accompanying information, pharmacy staff realizes they need additional information and initiates a Specialty Rx Query or Specialty Rx Questionnaire message back to the Data Source System. 
+  For example, the Data Source System transmits a new specialty medication prescription to a pharmacy and also initiates an "unsolicited" Specialty Rx Query Response to the pharmacy, containing related information. Upon review of the prescription and accompanying information, pharmacy staff realizes they need additional information and initiates a Specialty Rx Query message back to the Data Source System. 
 
 #### "Unsolicited" Messaging Workflow
 
