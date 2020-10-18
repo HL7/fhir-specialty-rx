@@ -1,3 +1,13 @@
+.fm_ex details {
+    padding: 0px 0px 20px 0px;
+}
+
+.fm_ex details > summary {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: -10px;
+}
 
 div.fm_ex {
     background-color: white;
@@ -143,8 +153,9 @@ span.emph6 {
     border-style: dashed;
     border-width: 1px;
     border-color: #ad1f2f;
+    border-radius: 5px;
     padding: 10px;
-    margin-left: 0px;
+    margin-left: -11px;
     margin-top: 5px;
     margin-bottom: 5px;
     outline-style: solid;

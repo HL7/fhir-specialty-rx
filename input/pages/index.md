@@ -168,6 +168,10 @@ The implementation guide supports business functions related to fulfillment of s
 		<td>Oct 16, 2020</td>
           <td>Removed Questionnaire messaging resources and associated narrative. Clarifying edits to the human-interaction workflow guidance page. </td>
         </tr>
+	<tr>
+	   <td>Oct 18, 2020</td>
+          <td>Refined example presentation - added expandable view of bundled resources </td>
+        </tr>
    </tbody>
 </table>
 
