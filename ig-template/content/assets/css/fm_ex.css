@@ -9,6 +9,20 @@
     margin-bottom: -10px;
 }
 
+
+@-moz-document url-prefix() {
+    /* firefox hides the expand arrow. So adding the +/- 'icon' only if firefox */
+    .fm_ex details summary::-webkit-details-marker { 
+        display:none; 
+    }
+    .fm_ex details > summary:before {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        content: '+/- ';
+    }
+}
+
 div.fm_ex {
     background-color: white;
     min-width: 800px;
@@ -171,7 +185,7 @@ span.emph6 {
     border-color: #ad1f2f;
     background-color: whitesmoke;
     padding: 10px;
-    margin-left: 20px;
+    margin-left: -11px;
     margin-top: 5px;
     margin-bottom: 5px;
     outline-style: solid;
@@ -187,7 +201,7 @@ span.emph6 {
     border-color: #ad1f2f;
     background-color: white;
     padding: 10px;
-    margin-left: 20px;
+    margin-left: -11px;
     margin-top: 5px;
     margin-bottom: 5px;
     outline-style: solid;
