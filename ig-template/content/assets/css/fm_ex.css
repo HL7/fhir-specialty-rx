@@ -1,3 +1,60 @@
+@media print {
+  #expandNote, .preSummary {display:none !important;}
+  body {page-break-inside: avoid;}
+}
+
+@media print, screen {
+.fm_ex #expandNote {
+    display:block;
+    font-family:verdana, sans-serif;
+    font-size:small;
+    font-style:italic;
+    color:grey;
+    padding-left:5px;
+    width:800px;
+    text-align:right;
+    text-decoration:none;
+    margin-bottom:10px;
+    border-bottom: 1px solid transparent;
+        background: 
+        linear-gradient(to right, white, white), 
+        linear-gradient(2deg, white , lightgrey); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+.fm_ex .expandLink   {
+    text-decoration:none;
+    color:grey;
+}
+.fm_ex .collapse {
+    display: none;
+}
+
+.fm_ex .collapse.in {
+    display: block;
+}
+
+.fm_ex .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.35s ease;
+    transition: height 0.35s ease;
+}
+
+.fm_ex .summary {
+    cursor: pointer;
+    margin-left:0px
+}
+.fm_ex .preSummary {
+    margin-left:-20px
+}
+.fm_ex .preSummary:before {
+    border: none;
+    outline: none;
+    content: '+/- ';
+    font-size:small;
+}
 .fm_ex details {
     padding: 0px 0px 20px 0px;
 }
@@ -11,16 +68,16 @@
 
 
 @-moz-document url-prefix() {
-    /* firefox hides the expand arrow. So adding the +/- 'icon' only if firefox */
-    .fm_ex details summary::-webkit-details-marker { 
-        display:none; 
-    }
-    .fm_ex details > summary:before {
-        border: none;
-        outline: none;
-        cursor: pointer;
-        content: '+/- ';
-    }
+/* firefox hides the expand arrow. So adding the +/- 'icon' only if firefox */
+.fm_ex details summary::-webkit-details-marker { 
+display:none; 
+}
+.fm_ex details > summary:before {
+border: none;
+outline: none;
+cursor: pointer;
+content: '+/- ';
+}
 }
 
 div.fm_ex {
@@ -32,7 +89,7 @@ div.fm_ex {
     padding-right: 25px;
     padding-bottom: 25px;
     margin-bottom: 25px;
-    border-bottom: solid lightgrey 1px;
+    /*border-bottom: solid lightgrey 1px;*/
 }
 
 .fm_ex .valueEmph :before {
@@ -230,4 +287,5 @@ span.emph6 {
 .fm_ex span.emph0 a {
     font-weight: 600;
     color: white !important;
+}
 }
