@@ -176,6 +176,10 @@ The implementation guide supports business functions related to fulfillment of s
 	   <td>Oct 26, 2020</td>
           <td>Removed Questionnaire / Questionnaire response message details from the Message Structures guidance page</td>
         </tr>
+	<tr>
+	   <td>Oct 29, 2020</td>
+          <td>Added a guidance page covering handling for missing Must Support and Required data elements. Added example Pharmacy Organization with missing required telecom element.</td>
+        </tr>
    </tbody>
 </table>
 

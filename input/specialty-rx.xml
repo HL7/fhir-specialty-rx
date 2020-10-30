@@ -545,6 +545,15 @@
             <description value="Example Organization resource representing a pharmacy"/>
 			<exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy"/>
       </resource>	       
+		<resource>
+	      <reference>
+	        <reference value="Organization/specialty-rx-organization-pharmacy-2-unknown-telecom"/>
+                <display value="Specialty Rx Organization - Pharmacy 2 - Telecom Value is Unknown"/>
+            </reference>
+            <name value="Specialty Rx Organization - Pharmacy 2 - Unknown Telecom"/>
+            <description value="Example Organization resource representing a pharmacy - where telecom is unknown"/>
+			<exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy"/>
+      </resource>	       
 	<resource>
 	      <reference>
 	        <reference value="Organization/specialty-rx-organization-provider-1"/>
@@ -704,6 +713,11 @@
 		  <page>
 		    <nameUrl value="request-queries.html"/>
 		    <title value="Search conventions"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
+		    <nameUrl value="missing-data.html"/>
+		    <title value="Missing Data"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

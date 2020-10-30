@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-organization-pharmacy-2-unknown-telecom" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="1669512345" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+  </type>
+  <name value="Our Pharmacy" />
+  <telecom>
+    <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+      <valueCode value="unknown" />
+    </extension>
+  </telecom>
+  <address>
+    <line value="220 Oak St" />
+    <city value="Minneapolis" />
+    <state value="MN" />
+    <postalCode value="55008" />
+    <country value="USA" />
+  </address>
+</Organization>
