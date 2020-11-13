@@ -1,5 +1,3 @@
-### Information Flows Requiring Human Interaction
-
 Pharmacies and other stakeholders sometimes need information that isn't available through systematic  querying of the prescriber's EHR (using the RESTful searches or Specialty Rx Query messages as described in the [Systematic Query Workflows](systematic-queries.html) section). 
 
 For example, the pharmacy may need to: 
@@ -16,13 +14,25 @@ A requesting party may host a SMART application that the prescriber or staff can
 
 - While working the prescription, staff at the pharmacy or other requesting party captures the questions they need to be answered by the prescriber clinic. 
   - The requester's application tags the set of questions with an identifier that will be used to pull up the right questions when clinic staff launches the SMART app from the EHR.
-- The requesting system exchanges a [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource with the prescriber's EHR, asking it to create a staff work queue item to launch the requester’s app and answer the questions. Included in the Task are elements that associate the request with the related prescription as well as fields containing the URL of the SMART app and the identifier needed to present the correct questions. 
+- The requesting system POSTs a [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource to the prescriber's EHR, asking it to create a staff work queue item to launch the requester’s app and answer the questions. Included in the Task are elements that associate the request with the related prescription as well as fields containing the URL of the SMART app and the identifier needed to present the correct questions. 
+- The EHR sets the Task status to `in-progress`
 - When the clinic user takes action on the work queue item, the EHR…
   - launches the requester's SMART App
   - sets a session launch context using the patient ID it received in the `.for` element of the Task resource 
-  - includes the `Task.identifier` value in the `appContext` launch parameter… which the SMART app uses to pull up the right patient/medication questions.
+  - includes the `Task.identifier` value in the `appContext` launch parameter… which the SMART app uses to pull up the right patient/medication questions
+  - sets the Task status to `completed`
+- During this period, the pharmacy system polls the Task's status until it finds that it has been set to `completed`. At this point, the pharmacy system may alert pharmacy staff and/or retrieve information from the SMART app. (This guide does not provide direction on how to accomplish this step.)
 
-#### Task Content Overview
+### Process flow: Task to SMART Launch
+
+<div><p>
+  <img src="high-level-task-to-launch-flow.png" style="float:none">  
+    </p>
+</div>
+
+<br>
+
+### Task Content Overview
 
 The [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource contains the following information needed to reference related information in the EHR and launch the SMART application:
 
@@ -48,7 +58,7 @@ The [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource con
 
 *See this example of a [populated Task](Task-specialty-rx-task-smart-launch-1.html).*
 
-#### Populating the SMART Launch *appContext* 
+### Populating the SMART Launch *appContext* 
 
 The `appContext` parameter is sent to the SMART app as part of the [OAuth 2.0](https://oauth.net/2/) access token response, alongside other [SMART launch parameters](http://hl7.org/fhir/smart-app-launch/1.0.0/scopes-and-launch-context/#launch-context-arrives-with-your-access_token) when the SMART app is launched. The `appContext`  contains an `initiationId` field populated with the value received in the `Task.identifier` value.
 
@@ -62,15 +72,7 @@ Example:
 
 <br>
 
-#### Process flow: Task to SMART Launch
-
-<div><p>
-  <img src="high-level-task-to-launch-flow.png" style="float:none">  
-    </p>
-</div>
-<br>
-
-#### Hosting of SMART Applications
+### Hosting of SMART Applications
 
 A requester such as a pharmacy may potentially partner with an intermediary or other party to host the SMART application and perform the above process on its behalf.
 

@@ -257,7 +257,6 @@
 	      <display value="Specialty Rx Organization - Pharmacy"/>
 	    </reference>
 	    <name value="Specialty Rx Organization - Pharmacy"/>
-	    <name value="Specialty Rx Organization - Pharmacy"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
   	  <resource>
@@ -433,14 +432,6 @@
 	    <name value="Specialty Rx CapabilityStatement - Data Recipient"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="NamingSystem/specialty-rx-ncpdp-provider-id"/>
-	      <display value="Specialty Rx NamingSystem - NCPDP Provider ID"/>
-	    </reference>
-	    <name value="Specialty Rx NamingSystem - NCPDP Provider ID"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	
 	  
 	  
   	  
@@ -740,7 +731,12 @@
 		    <title value="Error handling"/>
 		    <generation value="markdown"/>
 		  </page>	
-		  </page>
+		  <page>
+		    <nameUrl value="intermediary.html"/>
+		    <title value="Intermediary Facilitation"/>
+		    <generation value="markdown"/>
+		  </page>	
+        </page>
     	<parameter>
 	    <code value="copyrightyear"/>
 	    <value value="2020+"/>

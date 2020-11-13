@@ -180,10 +180,6 @@ The implementation guide supports business functions related to fulfillment of s
 	   <td>Oct 29, 2020</td>
           <td>Added a guidance page covering handling for missing Must Support and Required data elements. Added example Pharmacy Organization with missing required telecom element.</td>
         </tr>
-	<tr>
-	   <td>November 13, 2020</td>
-          <td>Reorganized the Search Conventions page to clarify the search requirements that pertain to both RESTful and message-based requests, versus the messaging-specific search guidance. Added DocumentResource to the Search Conventions page and pertinent links to US Core guidance. Reworked the Systematic Query page: removed duplicative content, clarified the basic Solicited and Unsolicited models, moved intermediary flows to a new Intermediary Facilitation page. Refined the Task / SMART launch narrative and process diagram with addional detail. </td>
-        </tr>
    </tbody>
 </table>
 
