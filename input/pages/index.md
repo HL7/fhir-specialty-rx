@@ -184,6 +184,10 @@ The implementation guide supports business functions related to fulfillment of s
 	   <td>November 13, 2020</td>
           <td>Reorganized the Search Conventions page to clarify the search requirements that pertain to both RESTful and message-based requests, versus the messaging-specific search guidance. Added DocumentResource to the Search Conventions page and pertinent links to US Core guidance. Reworked the Systematic Query page: removed duplicative content, clarified the basic Solicited and Unsolicited models, moved intermediary flows to a new Intermediary Facilitation page. Refined the Task / SMART launch narrative and process diagram with addional detail. </td>
         </tr>
+	<tr>
+	   <td>November 16, 2020</td>
+          <td>Replaced 'example' endpoint-connection-type code system with IG-scoped task input type code system</td>
+        </tr>
    </tbody>
 </table>
 

@@ -272,7 +272,7 @@ span.emph6 {
     padding-top: 15px !important;
 }
 
-.fm_ex a {
+.fm_ex  {
     text-decoration: none;
     font-family: Verdana, sans-serif;
     font-size: 13px;
@@ -280,11 +280,17 @@ span.emph6 {
     color: #ad1f2f;
 }
 
-.fm_ex .valueEmph a {
+.fm_ex .valueEmph  {
     color:  black;  /*fhir maroon: #C40A20 #da0c23; #428bca; FHIR IG blue */
+    font-weight:500 !important;
 }
 
-.fm_ex span.emph0 a {
+.fm_ex .boldValueEmph  {
+    color:  black;  /*fhir maroon: #C40A20 #da0c23; #428bca; FHIR IG blue */
+    font-weight:600 !important;
+}
+
+.fm_ex span.emph0  {
     font-weight: 600;
     color: white !important;
 }

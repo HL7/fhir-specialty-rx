@@ -394,6 +394,14 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
+	      <reference value="CodeSystem/specialty-rx-task-input-type"/>
+	      <display value="Specialty Rx CodeSystem - Task Input Type"/>
+	    </reference>
+	    <name value="Specialty Rx CodeSystem - Task Input Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>
 	      <display value="Specialty Rx ValueSet - Event Type"/>
 	    </reference>

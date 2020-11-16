@@ -214,8 +214,8 @@
       <max value="1" />
       <fixedCodeableConcept>
         <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type" />
-          <code value="smart-app-launch" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
+          <code value="smart-app-launch-url" />
           <display value="SMART Application Launch URL" />
         </coding>
       </fixedCodeableConcept>
