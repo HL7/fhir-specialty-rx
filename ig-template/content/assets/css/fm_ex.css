@@ -206,14 +206,16 @@ span.emph6 {
 
 .fm_ex .indent0 {
     display: block;
-    border-style: none;
+    border-style: dotted;
     border-width: 1px;
+    border-radius: 5px;
     border-color: #ad1f2f;
     padding: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    outline-style: solid;
+    margin-left: -18px;
+    padding: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline-style: none;
     outline-width: 0px;
     outline-offset: 0px;
     outline-color: white;

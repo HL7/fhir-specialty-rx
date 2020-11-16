@@ -23,7 +23,7 @@
   </eventCoding>
   <category value="currency" />
   <focus>
-    <code value="Parameters" />
+    <code value="OperationOutcome" />
     <min value="1" />
     <max value="1" />
   </focus>
