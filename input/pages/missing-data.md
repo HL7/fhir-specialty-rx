@@ -1,6 +1,4 @@
-### Missing Data in the Source System
-
-#### Must Support Elements
+### Must Support Elements
 
 **Reason for absence is unknown.** If the source system does not have data for a *Must Support* data element, and the reason for absence is unknown:
 
@@ -14,7 +12,7 @@
 
 - The Requester SHALL be able to process resource instances containing data elements asserting missing information.
 
-#### Required Elements
+### Required Elements
 
 If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is greater than 0), participants must follow the rules below.
 

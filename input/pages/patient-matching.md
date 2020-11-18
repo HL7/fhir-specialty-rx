@@ -12,7 +12,7 @@ Relating to both of those models, the sections below describe the requester's an
 
 <br>
 
-### Matching the patient and specifying the request (Solicited Model)
+### Matching Approaches: Pre-Match and Deferred
 
 In the *solicited model*, where a pharmacy or other party (Requesting System) requests patient information from an EHR or other responder (Data Source System), the Requesting System may either...
 
@@ -24,11 +24,13 @@ In the *solicited model*, where a pharmacy or other party (Requesting System) re
 
 <br>
 
-#### Matching Method One: Patient Pre-Match
+### Matching Method One: Patient Pre-Match
 
 Depending on the situation, the Requesting System may already have the Data Source's Patient resource (for example, if it received it in a previous FHIR exchange), or it may need to request it using the `Patient/$match` operation.
 
-##### Step 1: Obtain the responder's Patient resource using Patient $match
+<br>
+
+**Step 1: Obtain the responder's Patient resource using Patient $match**
 
 In this scenario, the Requesting System submits a patient match operation against the Data Source's server: 
 
@@ -47,7 +49,9 @@ In this scenario, the Requesting System submits a patient match operation agains
 
 - an OperationOutcome resource if the responder is unable to return a patient, containing further advice regarding patient selection.
 
-##### Step 2: Populate the patient information in the request
+<br>
+
+**Step 2: Populate the patient information in the request**
 
 When retrieving information using RESTful searches...
 - the Requesting System SHALL include a `patient` parameter in the search containing the retrieved patient ID. 
@@ -58,7 +62,9 @@ When retrieving information using a Specialty Rx Query message, the Requesting S
   - SHALLL populate this Patient resource's `.meta.source` element with the Data Source System's FHIR server URL
 - SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](request-queries.html)*
 
-##### Step 3: Data Source System processes the request
+<br>
+
+**Step 3: Data Source System processes the request**
 
 When retrieving information using RESTful searches...
 - the Data Source System processes the search according to the standard FHIR conventions, limiting response content to that pertaining to the specified patient. 
@@ -69,18 +75,22 @@ When responding to a Specialty Rx Query message...
 
 <br>
 
-#### Matching method Two: Deferred Patient Matching (Messaging Only)
+### Matching method Two: Deferred Patient Matching (Messaging Only)
 
 In this approach, which applies only to the Specialty Rx Query message, the request contains only the Requesting System's Patient resource. 
 
-##### Step 1: Populate the patient information in the Specialty Rx Query message
+<br>
+
+**Step 1: Populate the patient information in the Specialty Rx Query message**
 
 The Requesting System: 
 
 - SHALL populate the `requester-patient` parameter with a reference to the **Requesting System's Patient resource** 
 - SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](request-queries.html)*
 
-##### Step 2: Data Source processes the request message
+<br>
+
+**Step 2: Data Source processes the request message**
 
 The Data Source System performs patient matching using the request's patient identifying information before compiling the response. The system...
 
@@ -107,8 +117,6 @@ The Data Source System then populates the results as below...
   - SHALL contain an issue with severity ERROR  if the query or search parameter is not supported
   - SHALL specify a reason for the error
   - MAY fail the whole message if a query fails
-
-<br>
 
 #### Processing Received Response Messages (Solicited and Unsolicited)
 

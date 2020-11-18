@@ -1,5 +1,3 @@
-### Intermediary Facilitation
-
 Pharmacies in the US typically receive prescriptions through network intermediaries. Because of this, their systems do not maintain direct connections to individual prescriber system instances, and they further lack the information needed to determine the correct data source endpoint related to a given prescription and patient. These pharmacies are unable to submit RESTful requests directly to the data source.
 
 In this situation, an intermediary may facilitate RESTful data source interactions on behalf of the requesting party--using the routing information and connection it possesses. 
@@ -54,5 +52,4 @@ An intermediary facilitates the process as follows:
   <img src="high-level-exchange-flow-unsolicited-facilitated-rest.png" style="float:none"> 
     </p>
 </div>
-
 <br>

@@ -10,7 +10,6 @@ A Requesting System...
 - if supporting Specialty Rx messaging, receives [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) and [Specialty Rx Query Response - Unsolicited](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) messages
 - enables staff to ask additional questions or request supporting information requiring human attention by prompting an EHR user to launch and interact with a SMART application, using a [Specialty Rx SMART Launch Task](StructureDefinition-specialty-rx-task-smart-launch.html).
 
-
 #### Data Source System
 
 The responding system in the Specialty Rx workflow is the EHR system used by the prescriber of the specialty medication or associated staff.
@@ -20,8 +19,6 @@ The Data Source system typically will...
 - ***If supporting RESTful data source interactions:*** Respond to RESTful patient matching and search requests based on data stored in the patient's electronic chart
 - ***If supporting Specialty Rx messaging:*** Respond systematically when a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html) is received, returning a [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) based on data stored in the patient's electronic chart. It may also send [Specialty Rx Query Response - Unsolicited](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) messages proactively when a prescription is written
 - Enable staff to respond to additional questions or supporting information requests that require human attention by accepting a [Specialty Rx SMART Launch Task](StructureDefinition-specialty-rx-task-smart-launch.html) and then prompting an EHR user to launch and interact with the requester's SMART application.
-
-<br>
 
 #### Intermediary System
 
