@@ -1,9 +1,25 @@
 @media print {
-  #expandNote, .preSummary {display:none !important;}
-  body {page-break-inside: avoid;}
+    .fm_ex #expandNote, .fm_ex .preSummary, .fm_ex .preText {
+        display: none !important;
+    }
+
+    body {
+        page-break-inside: avoid;
+    }
 }
 
 @media print, screen {
+    .fm_ex td {
+        padding: 2px;
+        /*white-space: break-spaces;*/
+    }
+
+    .fm_ex table, .fm_ex td {
+        border-width: 1px;
+        border-style: solid; /* deciding...*/
+        border-color: grey;
+        border-collapse: collapse;
+    }
 .fm_ex #expandNote {
     display:block;
     font-family:verdana, sans-serif;
@@ -11,20 +27,18 @@
     font-style:italic;
     color:grey;
     padding-left:5px;
-    width:800px;
+        width: 1000px;
     text-align:right;
     text-decoration:none;
     margin-bottom:10px;
     border-bottom: 1px solid transparent;
-        background: 
-        linear-gradient(to right, white, white), 
-        linear-gradient(2deg, white , lightgrey); 
+        background: linear-gradient(to right, white, white), linear-gradient(2deg, white, lightgrey);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
 .fm_ex .expandLink   {
     text-decoration:none;
-    color:grey;
+        color: #ad1f2f;
 }
 .fm_ex .collapse {
     display: none;
@@ -47,13 +61,56 @@
     margin-left:0px
 }
 .fm_ex .preSummary {
-    margin-left:-20px
+	margin-left: -21px
 }
-.fm_ex .preSummary:before {
+
+.fm_ex .preText {
+	margin-left: 0x
+}
+
+.fm_ex .emph0.summary.collapsed:before,
+.fm_ex .fhirDiv.summary.collapsed:before {
+    border: solid;
+    border-width:6px;
+    border-color:white;
+    margin-left:-5px;
+    margin-right:3px;
+    padding-right:3px;
+    outline: none;
+    content: '\0025B6 ';
+    font-size: 10px;
+    color: #ad1f2f;
+    background-color:white !important;
+    white-space:pre;
+    color:black;
+}
+
+.fm_ex .summary:before,
+.fm_ex .fhirDiv.summary:before {
+    border: solid;
+    border-width:6px;
+    border-color:white;
+    margin-left:-5px;
+    margin-right:3px;
+    padding-right:2px;
+    outline: none;
+    content: '\0025BC ';
+    font-size: 10px;
+    color: #ad1f2f;
+    background-color:white !important;
+    white-space:pre;
+    color:black;
+}
+
+.fm_ex .fhirDiv.collapsed:after {
     border: none;
     outline: none;
-    content: '+/- ';
+        content: ' (hidden)';
     font-size:small;
+        font-style: italic;
+        font-weight:initial;
+        color:black !important;
+        border: none !important;
 }
 .fm_ex details {
     padding: 0px 0px 20px 0px;
@@ -67,37 +124,14 @@
 }
 
 
-@-moz-document url-prefix() {
-/* firefox hides the expand arrow. So adding the +/- 'icon' only if firefox */
-.fm_ex details summary::-webkit-details-marker { 
-display:none; 
-}
-.fm_ex details > summary:before {
-border: none;
-outline: none;
-cursor: pointer;
-content: '+/- ';
-}
-}
-
-div.fm_ex {
-    background-color: white;
-    min-width: 800px;
-    width: 800px;
-    padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    /*border-bottom: solid lightgrey 1px;*/
-}
-
-.fm_ex .valueEmph :before {
+    .fm_ex .valueEmph :before, .fm_ex .boldValueEmph :before {
     content: ' ';
 }
 
 .fm_ex span.emph0 {
-    border: none;
+    border: solid;
+    border-width: 0px;
+    border-color: #ad1f2f;
     background-color: #ad1f2f;
     margin-top: 2px;
     margin-bottom: 1px;
@@ -125,9 +159,11 @@ div.fm_ex {
     margin-right: 1px;
     margin-bottom: 1px;
     margin-top: 2px;
-    border-bottom: solid;
+    border-bottom: none;
     border-width: 1px;
     border-color: #ad1f2f;
+    margin-left: 5px;
+    font-weight:600;
 }
 
 .fm_ex span.emph3 {
@@ -135,9 +171,10 @@ div.fm_ex {
     margin-right: 1px;
     margin-bottom: 1px;
     margin-top: 2px;
-    border-bottom: dotted;
+    border-bottom: none;
     border-color: #ad1f2f;
     border-width: 1px;
+        margin-left: 5px;
 }
 
 .fm_ex span.emph4 {
@@ -145,6 +182,8 @@ div.fm_ex {
     margin-top: 2px;
     margin-right: 1px;
     margin-bottom: 1px;
+    margin-left: 5px;
+    font-style: italic !important;
 }
 
 span.emph5 {
@@ -152,21 +191,23 @@ span.emph5 {
     margin-top: 2px;
     margin-right: 1px;
     margin-bottom: 1px;
+        margin-left: 5px;
 }
 
 span.emph6 {
     display: inline-block;
     margin-right: 1px;
     margin-bottom: 1px;
+    margin-left: 5px;
+    font-style: italic !important;
 }
 
 
-.fm_ex span.emph2 :before, .fm_ex span.emph2 :before, .fm_ex span.emph3 :before,
-.fm_ex span.emph3 :before, .fm_ex span.emph4 :before, .fm_ex span.emph5 :before,
-.fm_ex span.emph6 :before,
-.fm_ex span.leastEmph :before {
-    content: '.';
-    white-space: pre;
+.fm_ex span.emph2:before, .fm_ex span.emph3:before,
+.fm_ex span.emph4:before, .fm_ex span.emph5:before,
+.fm_ex span.emph6:before, .fm_ex span.leastEmph:before {
+  content: '.';
+  white-space: pre;
 }
 
 .fm_ex span.leastEmph :after {
@@ -174,8 +215,8 @@ span.emph6 {
     white-space: pre;
 }
 
-.fm_ex span.emph2 :after, .fm_ex span.emph3 :after,
-.fm_ex span.emph4 :after, .fm_ex span.emph5 :after, .fm_ex span.emph6 :after {
+.fm_ex span.emph2:after, .fm_ex span.emph3:after,
+.fm_ex span.emph4:after, .fm_ex span.emph5:after, .fm_ex span.emph6:after {
     content: '';
     white-space: pre;
 }
@@ -191,9 +232,8 @@ span.emph6 {
     margin-bottom: 1px;
 }
 
-.fm_ex .valueEmph {
+.fm_ex .valueEmph, .fm_ex .boldValueEmph {
     margin-right: 15px;
-    font-weight: bold !important;
 }
 
 .fm_ex .fhirValue {
@@ -244,7 +284,7 @@ span.emph6 {
     border-color: #ad1f2f;
     background-color: whitesmoke;
     padding: 10px;
-    margin-left: 15px;
+    margin-left: 0px;
     margin-top: 5px;
     margin-bottom: 5px;
     outline-style: solid;
@@ -282,18 +322,51 @@ span.emph6 {
     color: #ad1f2f;
 }
 
-.fm_ex .valueEmph  {
-    color:  black;  /*fhir maroon: #C40A20 #da0c23; #428bca; FHIR IG blue */
-    font-weight:500 !important;
+.fm_ex a {
+    text-decoration: none;
 }
 
-.fm_ex .boldValueEmph  {
-    color:  black;  /*fhir maroon: #C40A20 #da0c23; #428bca; FHIR IG blue */
-    font-weight:600 !important;
+.fm_ex p, .fm_ex h1, .fm_ex h2, .fm_ex h3, .fm_ex h4 {
+    color: black;
+}
+
+.fm_ex .valueEmph, .fm_ex .valueEmph a,
+.fm_ex longHiddenContent, .longHiddenContent a,
+.fm_ex span.longHiddenContent {
+    color: black;
+}
+
+.fm_ex .boldValueEmph, .fm_ex .boldValueEmph a {
+    font-weight: 600;
+    color:  black;
+}
+
+        .fm_ex .longHiddenContent {
+            border-style: none;
+            border-color: #ad1f2f;
+            border-width: 1px;
+            padding: 10px;
+            background-color: whitesmoke;
+            display: block;
+            margin: 10px;
+            width:auto;
+        }
+
+        .fm_ex h1, .fm_ex h2, .fm_ex h3, .fm_ex h4, .fm_ex td, .fm_ex p {
+            font-size: small;
 }
 
 .fm_ex span.emph0  {
     font-weight: 600;
     color: white !important;
+}
+div.fm_ex {
+    min-width: 1000px;
+    width: 1000px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
 }

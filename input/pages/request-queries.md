@@ -1,6 +1,6 @@
 ### Required searches
 
-To ensure that the most common data requests are supported by all participants, Data Sources must be able to return information in response to the following search strings--whether responding to RESTful search requests or the Specialty Rx Query message. The required search parameters match those required for each resource by the US Core.
+To ensure that the most common data requests are supported by all participants, Data Sources SHALL be able to return information in response to the following search strings--whether responding to RESTful search requests or the Specialty Rx Query message. The required search parameters match those required for each resource by the US Core.
 
 <table class="grid">
 <thead>
@@ -41,7 +41,7 @@ To ensure that the most common data requests are supported by all participants, 
 </table>
 ### Recommended searches
 
-In addition to the required searches above, this guide recommends that implementers also support DocumentReference searches and retrieval, to enable those participating in the fulfillment of specialty medication prescriptions to access patient information recorded in patient documents.
+In addition to the required searches above, implementers SHOULD support DocumentReference searches and retrieval, to enable those participating in the fulfillment of specialty medication prescriptions to access patient information recorded in patient documents.
 
 <table class="grid">
 <thead>
@@ -62,7 +62,9 @@ In addition to the required searches above, this guide recommends that implement
 
 ### Optional searches
 
-Requesters may include searches other than those outlined above. Responders MUST return a [search-result](StructureDefinition-specialty-rx-bundle-search-result.html) for each, which should include an OperationOutcome indicating when the responder does not support the submitted search or search parameter.  
+Requesters MAY include searches other than those outlined above. 
+
+- Data Source Systems SHALL return a [search-result](StructureDefinition-specialty-rx-bundle-search-result.html) for each--even if the search is not supported--which SHALL include an OperationOutcome indicating when the responder does not support the submitted search or search parameter.  
 
 ### Further search guidance
 

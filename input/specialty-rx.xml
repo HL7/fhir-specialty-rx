@@ -706,17 +706,17 @@
 		  </page>
 		  <page>
 		    <nameUrl value="patient-matching.html"/>
-		    <title value="Patient Matching and Processing Detail"/>
+		    <title value="Patient Matching"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
 		    <nameUrl value="request-queries.html"/>
-		    <title value="Search conventions"/>
+		    <title value="Search Conventions"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
 		    <nameUrl value="missing-data.html"/>
-		    <title value="Missing Data"/>
+		    <title value="Handling Missing Data"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
@@ -742,6 +742,11 @@
 		  <page>
 		    <nameUrl value="intermediary.html"/>
 		    <title value="Intermediary Facilitation"/>
+		    <generation value="markdown"/>
+		  </page>	
+		  <page>
+		    <nameUrl value="security.html"/>
+		    <title value="Security"/>
 		    <generation value="markdown"/>
 		  </page>	
         </page>

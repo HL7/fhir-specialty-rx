@@ -188,6 +188,10 @@ The implementation guide supports business functions related to fulfillment of s
 	   <td>November 16, 2020</td>
           <td>Replaced 'example' endpoint-connection-type code system with IG-scoped task input type code system</td>
         </tr>
+	<tr>
+	   <td>November 18, 2020</td>
+          <td>Adjusted SMART App launch guidance in the Information Flows Requiring Human Interaction page and example Task page: changed the appContext population from an object ("appContext": {"initiationId":"05d06540dd00d"}) to a simple string value("appContext": "05d06540dd00d"), based on EHR feedback. Updated the Message Submission page and Systematic Query page with additional details on parameter population and async response. Added a Security page with references to core FHIR security and privacy guidance, and SMART Backend Services authorization. Further refined wording in Roles, Patient Matching and Processing Detail, Search Convention pages.</td>
+        </tr>
    </tbody>
 </table>
 

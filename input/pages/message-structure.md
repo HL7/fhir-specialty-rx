@@ -4,9 +4,9 @@ The Query message requests information from a patient's health records. It ident
 
 It is a message Bundle with: 
 
-- an event type equal to 'query'
-- a Parameters resource as the focus (see below)
-  - Search strings are specified in *query-string* parameter elements 
+- an event type equal to `query`
+- a Parameters resource as the `focus` (see below)
+  - Search strings are specified in `query-string` parameter elements 
 - a mandatory Patient resource representing the requesting party's understanding of the patient
 - an optional Patient representing the patient in the responder's system
 - optional MedicationRequest, Practitioner, Organization resources to represent the associated specialty prescription

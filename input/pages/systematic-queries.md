@@ -104,5 +104,7 @@ All messaging flows may be synchronous or asynchronous, to support situations wh
 - the Data Source typically responds synchronously, but a given request cannot be immediately processed
 - the Data source always returns results asynchronously.
 
+**Note:** The `async` and `response-url` Process Message parameters are not to be used when exchanging Specialty Rx messages.
+
 <br>
 

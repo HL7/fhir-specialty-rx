@@ -8,7 +8,7 @@ If a data source system...
 
 - encounters a non-fatal exception when executing an individual search 
 
-the system SHALL include a searchset Bundle entry containing the search string and an OperationOutcome describing the issue as a *query-result* parameter in the Query Response message. The search.mode of this entry SHALL  be set to the value, "outcome".
+the system SHALL include a searchset Bundle entry containing the search string and an OperationOutcome describing the issue as a `query-result` parameter in the Query Response message. The `search.mode` of this entry SHALL  be set to the value, `outcome`.
 
 <pre>
     {
@@ -63,11 +63,11 @@ When a data source system encounters an error that prevents it from responding t
 
 The OperationOutcome:
 
-* SHALL contain a definition of severity in the OperationOutcome.issue.severity field. 
-* SHALL contain a definition of the type of error in the OperationOutcome.issue.code element.
-* SHOULD provide additional diagnostic details of the error in OperationOutcome.diagnostics property
-* SHOULD contain details of the error in the OperationOutcome.issue.details.coding.display field.
-* SHOULD contain an OperationOutcome.issue.details.coding.code value.
+* SHALL contain a definition of severity in the `OperationOutcome.issue.severity` field. 
+* SHALL contain a definition of the type of error in the `OperationOutcome.issue.code` element.
+* SHOULD provide additional diagnostic details of the error in `OperationOutcome.diagnostics` property
+* SHOULD contain details of the error in the `OperationOutcome.issue.details.coding.display` field.
+* SHOULD contain an `OperationOutcome.issue.details.coding.code` value.
 
 [Example](Bundle-specialty-rx-error-1.html)
 

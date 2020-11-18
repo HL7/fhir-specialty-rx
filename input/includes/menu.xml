@@ -16,13 +16,13 @@
         <a href="human-interaction.html">Information Flows Requiring Human Interaction</a>
       </li>
       <li>
-        <a href="message-structure.html">Message Structures</a>
-      </li>
-      <li>
-        <a href="patient-matching.html">Processing Detail</a>
-      </li>
-      <li>
         <a href="request-queries.html">Search Conventions</a>
+      </li>
+      <li>
+        <a href="patient-matching.html">Patient Matching</a>
+      </li>
+      <li>
+        <a href="message-structure.html">Message Structures</a>
       </li>
    	  <li>
         <a href="message-submission.html">Message Submission</a>
@@ -31,10 +31,13 @@
         <a href="error-handling.html">Error Handling</a>
       </li>
    	  <li>
-        <a href="missing-data.html">Missing Data</a>
+        <a href="missing-data.html">Handling Missing Data</a>
       </li>
    	  <li>
         <a href="intermediary.html">Intermediary Facilitation</a>
+      </li>
+	  <li>
+        <a href="security.html">Security</a>
       </li>
 	</ul>
   </li>
@@ -44,7 +47,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="artifacts.html">Profiles and Examples</a>
+        <a href="artifacts.html">Profiles, Capability Statements and Examples</a>
       </li>
       <li>
         <a href="us-core-profiles.html">Applicable US Core Profiles</a>

@@ -71,7 +71,7 @@
     <element id="Task.description">
       <path value="Task.description" />
       <definition value="Human-readable description of the task to be performed by the user." />
-      <comment value="MUST include the user-recognizable name of the SMART application to launch to perform the task. MUST state the action to be performed in the app once it's been launched." />
+      <comment value="SHALL include the user-recognizable name of the SMART application to launch to perform the task. SHALL state the action to be performed in the app once it's been launched." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -80,7 +80,7 @@
       <label value="Related Prescription" />
       <short value="Related Prescription" />
       <definition value="Related prescription order" />
-      <comment value="The prescription to which the task pertains. Either a reference to a MedicationRequest resource or the prescription identifier set by the prescribing system must be present." />
+      <comment value="The prescription to which the task pertains. Either a reference to a MedicationRequest resource or the prescription identifier set by the prescribing system SHALL be present." />
       <min value="1" />
       <max value="1" />
       <type>
@@ -111,7 +111,7 @@
     <element id="Task.focus.display">
       <path value="Task.focus.display" />
       <definition value="A human-readable description of the related prescription order" />
-      <comment value="A human-readable prescription description must be present. MUST contain the medication name and should contain the date written. MAY contain strength, dose form, or other specifics." />
+      <comment value="A human-readable prescription description SHALL be present. SHALL contain the medication name and should contain the date written. MAY contain strength, dose form, or other specifics." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -191,7 +191,7 @@
           <type value="value" />
           <path value="type" />
         </discriminator>
-        <description value="The Task must contain an input containing the URL for the SMART app to be launched to complete the task" />
+        <description value="The Task SHALL contain an input containing the URL for the SMART app to be launched to complete the task" />
         <rules value="open" />
       </slicing>
       <min value="1" />
