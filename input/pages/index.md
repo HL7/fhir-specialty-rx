@@ -1,27 +1,25 @@
 ### Overview
-This FHIR implementation Guide describes the exchange of data (demographic, prescription, clinical and financial) for dispensing specialty medications by pharmacies as well as facilitating enrollment of patients in programs offered by third parties such as, but not limited to, Hub vendors and Pharmaceutical manufacturers.
+This FHIR implementation Guide describes the exchange of patient demographic, clinical and coverage data to support fulfillment of specialty medication prescriptions by pharmacies, and enrollment of patients into related support programs offered by parties such as as Hub vendors and pharmaceutical manufacturers.
 
-This guide is co-branded between HL7 and the National Council for Prescription Drug Programs (NCPDP)
+This guide is co-branded between HL7 and the National Council for Prescription Drug Programs (NCPDP).
 
 ### Background
 
-The current process for exchanging data, including prescription data regarding specialty medications, is complex and manual, taking days to weeks to begin a patient on therapy. 
+The current process for exchanging information to support specialty medication fulfillment is complex and manual, often resulting in delays of days to weeks before patients can begin their therapy. This is caused largely by the absence of an industry standard for exchanging clinical data needed to dispense specialty medications and enroll the patient into associated support and savings programs.
 
-There is no industry standard for exchanging clinical data when necessary for dispensing specialty medications by pharmacies--as well as facilitating enrollment of patient in programs offered by third parties such as Hub vendors or Pharmaceutical Manufacturers. 
+NCPDP created a task group to focus on the exchange of this data, with the goal of reducing the time to therapy for a patient who has been prescribed a specialty medication. The group identified demographic, clinical and coverage information needed to support the process, and defined data exchange workflows between the clinic, pharmacy and other fulfilling parties to efficiently deliver the data to the parties that need it.
 
-NCPDP started a task group several years ago focused on the exchange of data needed to help shorten the time to therapy for a patient who has been prescribed a specialty medication and over the past two years have been focused on identifying demographic, clinical and financial information that needs to be exchanged in order to get the patient the therapy they need. 
+This information is outside of the current NCPDP e-prescription standard that conveys specialty orders to pharmacies in the US today. After an extensive analysis of the types of information required beyond that carried in the prescription, the task group determined that developing an implementation guide using HL7 FHIR would be the best approach for enabling the exchange of this information. 
 
-This information is outside of the current e-Prescription that is sent to the pharmacy today. After an extensive analysis of the types of additional information that is required along with the prescription it was determined that developing an implementation guide using HL7 FHIR would be the best approach to support the exchange of this information. 
+### Scope of This Guide
 
-### Scope of this guide
+This implementation guide is intended be used in the United States. It reflects US pharmacy processes and conventions.
 
-This guide is intended be used in the United States. It reflects US pharmacy processes and conventions.
-
-The implementation guide supports business functions related to fulfillment of specialty medication prescriptions, such as:
+The guide supports business functions related to fulfillment of specialty medication prescriptions, including:
 
 - Request of additional information to facilitate medication dispensing and billing.
 - Specialty enrollment for programs or services.
-- Facilitation of clinical care management, education, and training
+- Facilitation of clinical care management, education, and training.
 
 ### Authors
 
@@ -42,7 +40,7 @@ The implementation guide supports business functions related to fulfillment of s
 	</tbody>
   </table>
 
-### Change log
+### Change Log
   <table class="grid" style="width:100%">
       <colgroup><col span="1" style="width:150px"><col></colgroup> 
     <tbody>
@@ -181,16 +179,16 @@ The implementation guide supports business functions related to fulfillment of s
           <td>Added a guidance page covering handling for missing Must Support and Required data elements. Added example Pharmacy Organization with missing required telecom element.</td>
         </tr>
 	<tr>
-	   <td>November 13, 2020</td>
+	   <td>Nov 13, 2020</td>
           <td>Reorganized the Search Conventions page to clarify the search requirements that pertain to both RESTful and message-based requests, versus the messaging-specific search guidance. Added DocumentResource to the Search Conventions page and pertinent links to US Core guidance. Reworked the Systematic Query page: removed duplicative content, clarified the basic Solicited and Unsolicited models, moved intermediary flows to a new Intermediary Facilitation page. Refined the Task / SMART launch narrative and process diagram with addional detail. </td>
         </tr>
 	<tr>
-	   <td>November 16, 2020</td>
+	   <td>Nov 16, 2020</td>
           <td>Replaced 'example' endpoint-connection-type code system with IG-scoped task input type code system</td>
         </tr>
 	<tr>
-	   <td>November 18, 2020</td>
-          <td>Adjusted SMART App launch guidance in the Information Flows Requiring Human Interaction page and example Task page: changed the appContext population from an object ("appContext": {"initiationId":"05d06540dd00d"}) to a simple string value("appContext": "05d06540dd00d"), based on EHR feedback. Updated the Message Submission page and Systematic Query page with additional details on parameter population and async response. Added a Security page with references to core FHIR security and privacy guidance, and SMART Backend Services authorization. Further refined wording in Roles, Patient Matching and Processing Detail, Search Convention pages.</td>
+	   <td>Nov 18, 2020</td>
+          <td>Adjusted SMART App launch guidance in the Information Flows Requiring Human Interaction page and example Task page: changed the appContext population from an object ("appContext": {"initiationId":"05d06540dd00d"}) to a simple string value("appContext": "05d06540dd00d"), based on EHR feedback. Updated the Message Submission page and Systematic Query page with additional details on parameter population and async response. Added a Security page with references to core FHIR security and privacy guidance, and SMART Backend Services authorization. Further refined wording in Home, Roles, Patient Matching and Processing Detail, Search Convention, and Error Handling pages.</td>
         </tr>
    </tbody>
 </table>

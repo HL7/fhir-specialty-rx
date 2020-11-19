@@ -70,8 +70,6 @@ Example:
 
 [SMART App Launch Implementation Guide](http://hl7.org/fhir/smart-app-launch/index.html)
 
-<br>
-
 ### Hosting of SMART Applications
 
 A requester such as a pharmacy may potentially partner with an intermediary or other party to host the SMART application and perform the above process on its behalf.

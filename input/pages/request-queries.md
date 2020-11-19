@@ -1,4 +1,4 @@
-### Required searches
+### Required Searches
 
 To ensure that the most common data requests are supported by all participants, Data Sources SHALL be able to return information in response to the following search strings--whether responding to RESTful search requests or the Specialty Rx Query message. The required search parameters match those required for each resource by the US Core.
 
@@ -39,7 +39,7 @@ To ensure that the most common data requests are supported by all participants, 
 </tr>
 </tbody>
 </table>
-### Recommended searches
+### Recommended Searches
 
 In addition to the required searches above, implementers SHOULD support DocumentReference searches and retrieval, to enable those participating in the fulfillment of specialty medication prescriptions to access patient information recorded in patient documents.
 
@@ -60,7 +60,7 @@ In addition to the required searches above, implementers SHOULD support Document
 </tbody>
 </table>
 
-### Optional searches
+### Optional Searches
 
 Requesters MAY include searches other than those outlined above. 
 

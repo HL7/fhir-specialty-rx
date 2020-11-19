@@ -28,9 +28,7 @@ In the *solicited model*, where a pharmacy or other party (Requesting System) re
 
 Depending on the situation, the Requesting System may already have the Data Source's Patient resource (for example, if it received it in a previous FHIR exchange), or it may need to request it using the `Patient/$match` operation.
 
-<br>
-
-**Step 1: Obtain the responder's Patient resource using Patient $match**
+#### Step 1: Obtain the responder's Patient resource using Patient $match
 
 In this scenario, the Requesting System submits a patient match operation against the Data Source's server: 
 
@@ -49,9 +47,7 @@ In this scenario, the Requesting System submits a patient match operation agains
 
 - an OperationOutcome resource if the responder is unable to return a patient, containing further advice regarding patient selection.
 
-<br>
-
-**Step 2: Populate the patient information in the request**
+#### Step 2: Populate the patient information in the request
 
 When retrieving information using RESTful searches...
 - the Requesting System SHALL include a `patient` parameter in the search containing the retrieved patient ID. 
@@ -62,9 +58,7 @@ When retrieving information using a Specialty Rx Query message, the Requesting S
   - SHALLL populate this Patient resource's `.meta.source` element with the Data Source System's FHIR server URL
 - SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](request-queries.html)*
 
-<br>
-
-**Step 3: Data Source System processes the request**
+#### Step 3: Data Source System processes the request
 
 When retrieving information using RESTful searches...
 - the Data Source System processes the search according to the standard FHIR conventions, limiting response content to that pertaining to the specified patient. 
@@ -79,18 +73,14 @@ When responding to a Specialty Rx Query message...
 
 In this approach, which applies only to the Specialty Rx Query message, the request contains only the Requesting System's Patient resource. 
 
-<br>
-
-**Step 1: Populate the patient information in the Specialty Rx Query message**
+#### Step 1: Populate the patient information in the Specialty Rx Query message
 
 The Requesting System: 
 
 - SHALL populate the `requester-patient` parameter with a reference to the **Requesting System's Patient resource** 
 - SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](request-queries.html)*
 
-<br>
-
-**Step 2: Data Source processes the request message**
+#### Step 2: Data Source processes the request message
 
 The Data Source System performs patient matching using the request's patient identifying information before compiling the response. The system...
 
@@ -102,7 +92,7 @@ The Data Source System performs patient matching using the request's patient ide
 <br/>
 
 ### Additional Patient Processing Steps for Specialty Rx Messages
-#### Populating Patient Information in Response Messages (Solicited and Unsolicited)
+#### Populating patient information in response messages (Solicited and Unsolicited)
 
 In the Specialty Rx Query Response and Query Response - Unsolicited messages, the Data Source System...
 
@@ -118,7 +108,7 @@ The Data Source System then populates the results as below...
   - SHALL specify a reason for the error
   - MAY fail the whole message if a query fails
 
-#### Processing Received Response Messages (Solicited and Unsolicited)
+#### Processing received response messages (Solicited and Unsolicited)
 
 When the Requesting System processes a Specialty Rx Query Response or Query Response - Unsolicited message, it...
 
@@ -127,7 +117,6 @@ When the Requesting System processes a Specialty Rx Query Response or Query Resp
   - SHOULD confirm that the `responder-patient` parameter matches the Requesting System's patient
 - *In the Unsolicited model* 
   - SHALL match the Patient referenced by the `responder-patient` parameter
-  - SHOULD match the MedicationRequest in the `prescription` parameter (including referenced prescribing Practitioner and pharmacy Organization) to the related prescription
-    - The receiving party can handle non-match situations according to their own rules, e.g., accept the message and add the patient to their system after a manual review
+  - SHOULD match the MedicationRequest in the `prescription` parameter (including referenced prescribing Practitioner and pharmacy Organization) to the related prescription. The receiving party can handle non-match situations according to their own rules, e.g., accept the message and add the patient to their system after a manual review
 
 <br>
