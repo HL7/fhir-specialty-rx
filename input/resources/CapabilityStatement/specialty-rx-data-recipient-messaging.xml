@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-data-recipient-messaging" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-recipient-messaging" />
+  <name value="SpecialtyRxDataRecipientMessaging" />
+  <title value="Specialty Rx CapabilityStatement - Data Recipient - Messaging" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-11-19T00:00:00-05:00" />
+  <publisher value="NCPDP" />
+  <description value="This CapabilityStatement describes the expected capabilities of a system that is capable of retrieving patient information using Specialty Rx Query messaging." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <kind value="requirements" />
+  <fhirVersion value="4.0.1" />
+  <format value="xml" />
+  <format value="json" />
+  <patchFormat value="application/json-patch+json" />
+  <implementationGuide value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx" />
+  <rest>
+    <mode value="server" />
+    <documentation value="Specialty Rx Data Recipient **SHALL**: &#xA;&#xA;1. Support the Unsolicited workflow defined in this Guide and respond to the $process-message operation carrying a Specialty Rx Query Response - Unsolicited. &#xA;1. Support the json source format. &#xA;1. Declare a CapabilityStatement identifying the profiles supported. &#xA;&#xA;Specialty Rx Data Recipient **SHOULD**: &#xA;&#xA;1. Support the xml source format. &#xA;1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. &#xA;&#xA;The Specialty Rx Requester MAY &#xA;&#xA;1. Support the Solicited workflow defined in this Guide, including the Specialty Rx Query, Specialty Rx Query Response, and Specialty Rx Error messages. &#xA;1. Support the Patient/$match operation." />
+    <security>
+      <description value="1. For general security considerations refer to [FHIR Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). &#xA;1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html). &#xA;1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code." />
+    </security>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <type value="OperationOutcome" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="create" />
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="read" />
+      </interaction>
+    </resource> 
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY" />
+      </extension>
+      <type value="Task" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="create" />
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="read" />
+      </interaction>
+    </resource> 
+    <operation>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <name value="process-message" />
+      <definition value="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message" />
+    </operation>
+    <operation>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY" />
+      </extension>
+      <name value="patient-match" />
+      <definition value="https://www.hl7.org/fhir/operation-patient-match.html" />
+    </operation>
+  </rest>
+  <messaging>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <mode value="receiver"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response-unsolicited"/>
+    </supportedMessage>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY" />
+      </extension>
+      <mode value="sender"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query"/>
+    </supportedMessage>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY" />
+      </extension>
+      <mode value="receiver"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response"/>
+    </supportedMessage>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY" />
+      </extension>
+      <mode value="receiver"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-error"/>
+    </supportedMessage>
+  </messaging>
+</CapabilityStatement>

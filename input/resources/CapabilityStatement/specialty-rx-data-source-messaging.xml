@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="specialty-rx-data-source-restful" />
-  <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-source-restful" />
-  <name value="SpecialtyRxDataSourceRESTful" />
-  <title value="Specialty Rx CapabilityStatement - Data Source - RESTful" />
+  <id value="specialty-rx-data-source-messaging" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-source-messaging" />
+  <name value="SpecialtyRxDataSourceMessaging" />
+  <title value="Specialty Rx CapabilityStatement - Data Source - Messaging" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-08-21T00:00:00-05:00" />
+  <date value="2020-08-24T00:00:00-05:00" />
   <publisher value="NCPDP" />
-  <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of responding to RESTful requests for patient information." />
+  <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of providing patient information using Specialty Rx Query messaging." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -24,7 +24,7 @@
   <implementationGuide value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx" />
   <rest>
     <mode value="server" />
-    <documentation value="Specialty Rx Data Source **SHALL**: &#xA;&#xA;1. Support the Solicited - RESTful Data Source workflow defined in this guide, including all required searches and search parameters. &#xA;1. Implement the RESTful behavior according to the FHIR specification. &#xA;1. Support the json source format. &#xA;1. Declare a CapabilityStatement identifying the profiles supported. &#xA;&#xA;Specialty Rx Data Source **SHOULD**: &#xA;&#xA;1. Respond to the Patient/$match operation. &#xA;1. Support the recommended searches and parameters identified in the guide. &#xA;1. Support the xml source format. &#xA;1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. &#xA;&#xA;The Specialty Rx Data Source MAY &#xA;&#xA;1. Support the Task / SMART application launch capability specified in the guide." />
+    <documentation value="Specialty Rx Data Source **SHALL**: &#xA;&#xA;1. Support the Solicited workflow defined in this guide by responding to the $process-message operation containing a Specialty Rx Query message by returning a Specialty Rx Query Response message or Specialty Rx Error message. &#xA;1. Support all required RESTful searches and search parameters. &#xA;1. Support the json source format. &#xA;1. Declare a CapabilityStatement identifying the profiles supported. &#xA;&#xA;Specialty Rx Data Source **SHOULD**: &#xA;&#xA;1. Respond to the Patient/$match operation.  &#xA;1. Support the xml source format. &#xA;1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. &#xA;&#xA;The Specialty Rx Data Source MAY &#xA;&#xA;1. Support the Unsolicited workflow defined in this guide, using the Specialty Rx Query Response - Unsolicited message. &#xA;1. Support the Task / SMART application launch capability specified in the guide." />
     <security>
       <description value="1. For general security considerations refer to [FHIR Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). &#xA;1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html). &#xA;1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code." />
     </security>
@@ -165,6 +165,7 @@
         <type value="token" />
       </searchParam>
     </resource>
+    
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL" />
@@ -458,13 +459,43 @@
         </extension>
         <code value="update" />
       </interaction>
-    </resource>
+    </resource> 
     <operation>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="SHOULD" />
+        <valueCode value="SHALL" />
       </extension>
-      <name value="patient-match" />
-      <definition value="https://www.hl7.org/fhir/operation-patient-match.html" />
+      <name value="process-message" />
+      <definition value="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message" />
     </operation>
   </rest>
+  <messaging>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <mode value="receiver"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query"/>
+    </supportedMessage>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <mode value="sender"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response"/>
+    </supportedMessage>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <mode value="sender"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-error"/>
+    </supportedMessage>
+    <supportedMessage>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY" />
+      </extension>
+      <mode value="receiver"/>
+      <definition value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response-unsolicited"/>
+    </supportedMessage>
+  </messaging>
 </CapabilityStatement>

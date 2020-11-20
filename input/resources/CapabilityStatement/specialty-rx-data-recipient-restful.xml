@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="specialty-rx-data-source-restful" />
-  <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-source-restful" />
-  <name value="SpecialtyRxDataSourceRESTful" />
-  <title value="Specialty Rx CapabilityStatement - Data Source - RESTful" />
+  <id value="specialty-rx-data-recipient-restful" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-recipient-restful" />
+  <name value="SpecialtyRxDataRecipientRestful" />
+  <title value="Specialty Rx CapabilityStatement - Data Recipient - RESTful" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-08-21T00:00:00-05:00" />
+  <date value="2020-11-19T00:00:00-05:00" />
   <publisher value="NCPDP" />
-  <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of responding to RESTful requests for patient information." />
+  <description value="This CapabilityStatement describes the expected capabilities of a system that is capable of executing RESTful operations to retrieve patient information from a RESTful FHIR server." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -24,9 +24,9 @@
   <implementationGuide value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx" />
   <rest>
     <mode value="server" />
-    <documentation value="Specialty Rx Data Source **SHALL**: &#xA;&#xA;1. Support the Solicited - RESTful Data Source workflow defined in this guide, including all required searches and search parameters. &#xA;1. Implement the RESTful behavior according to the FHIR specification. &#xA;1. Support the json source format. &#xA;1. Declare a CapabilityStatement identifying the profiles supported. &#xA;&#xA;Specialty Rx Data Source **SHOULD**: &#xA;&#xA;1. Respond to the Patient/$match operation. &#xA;1. Support the recommended searches and parameters identified in the guide. &#xA;1. Support the xml source format. &#xA;1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. &#xA;&#xA;The Specialty Rx Data Source MAY &#xA;&#xA;1. Support the Task / SMART application launch capability specified in the guide." />
+    <documentation value="Specialty Rx Data Recipient **SHALL**: &#xA;&#xA;1. Support the RESTful solicited workflow defined in this guide, including all required searches and search parameters. &#xA;1. Implement the RESTful behavior according to the FHIR specification. &#xA;1. Support the json source format. &#xA;1. Declare a CapabilityStatement identifying the profiles supported. &#xA;&#xA;Specialty Rx Data Recipient **SHOULD**: &#xA;&#xA;1. Support the Patient/$match operation. &#xA;1. Support the recommended searches and parameters identified in the guide. &#xA;1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. &#xA;&#xA;The Specialty Rx Data Recipient MAY &#xA;&#xA;1. Support the Task / SMART application launch capability specified in the guide." />
     <security>
-      <description value="1. For general security considerations refer to [FHIR Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). &#xA;1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html). &#xA;1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code." />
+      <description value="1. For general security considerations refer to [FHIR Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). &#xA;1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html)." />
     </security>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -304,7 +304,6 @@
         <type value="date" />
       </searchParam>
     </resource>
-    
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL" />
@@ -413,15 +412,7 @@
         <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-date" />
         <type value="date" />
       </searchParam>
-      <searchParam>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="MAY" />
-        </extension>
-        <name value="patient" />
-        <definition value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-patient" />
-        <type value="reference" />
-      </searchParam>
-    </resource>
+    </resource> 
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL" />
@@ -450,15 +441,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL" />
         </extension>
-        <code value="read" />
+        <code value="create" />
       </interaction>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL" />
         </extension>
-        <code value="update" />
+        <code value="read" />
       </interaction>
-    </resource>
+    </resource> 
     <operation>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHOULD" />

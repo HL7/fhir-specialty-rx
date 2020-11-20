@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-task-smart-launch-THO" />
+  <meta>
+    <lastUpdated value="2020-11-19T00:00:00+00:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch-THO" />
+  <version value="0.1.00" />
+  <name value="SpecialtyRxTaskSmartLaunchTHO" />
+  <title value="Specialty Rx Task - SMART Launch - THO" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-11-19" />
+  <publisher value="NCPDP" />
+  <description value="This profile defines Task content enabling a pharmacy or other external party to prompt clinic staff to launch a SMART app and answer prescription-related questions. (Uses THO-rooted terminology)" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Task">
+      <path value="Task" />
+    </element>
+    <element id="Task.id">
+      <path value="Task.id" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.identifier">
+      <path value="Task.identifier" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.identifier.value">
+      <path value="Task.identifier.value" />
+      <label value="Initiation ID" />
+      <short value="Initiation ID" />
+      <definition value="A unique identifier representing the task. It is used as context whe the referenced SMART application is launched." />
+      <comment value="A unique identifier representing the task. It is to be conveyed in the appContext parameter as the field, intiationID, during launch of the referenced SMART application and used by that application to direct the user to information and functions necessary to complete this task." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.intent">
+      <path value="Task.intent" />
+      <min value="1" />
+      <fixedCode value="plan" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.code">
+      <path value="Task.code" />
+      <label value="SMART App Task Type" />
+      <definition value="A particular SMART app task type, e.g., complete-app-questionnaire" />
+      <comment value="A code specifying the requested user action to be performed using the referenced SMART app. E.g., complete-app-questionnaire" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Task types used in the Specialty Rx workflow" />
+        <valueSet value="http://terminology.hl7.org/ValueSet/task-type" />
+      </binding>
+    </element>
+    <element id="Task.description">
+      <path value="Task.description" />
+      <definition value="Human-readable description of the task to be performed by the user." />
+      <comment value="SHALL include the user-recognizable name of the SMART application to launch to perform the task. SHALL state the action to be performed in the app once it's been launched." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus">
+      <path value="Task.focus" />
+      <label value="Related Prescription" />
+      <short value="Related Prescription" />
+      <definition value="Related prescription order" />
+      <comment value="The prescription to which the task pertains. Either a reference to a MedicationRequest resource or the prescription identifier set by the prescribing system SHALL be present." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus.reference">
+      <path value="Task.focus.reference" />
+      <label value="Prescription Reference" />
+      <short value="Prescription Reference" />
+      <definition value="Reference to the related MedicationRequest resource" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus.identifier">
+      <path value="Task.focus.identifier" />
+      <label value="Placer Order Number" />
+      <short value="Placer Order Number" />
+      <definition value="The prescription order number established by the ordering system" />
+      <comment value="Referred to as the Placer Order Number in HL7 v2 and Prescriber Order Number in NCPDP SCRIPT" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.focus.display">
+      <path value="Task.focus.display" />
+      <definition value="A human-readable description of the related prescription order" />
+      <comment value="A human-readable prescription description SHALL be present. SHALL contain the medication name and should contain the date written. MAY contain strength, dose form, or other specifics." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.for">
+      <path value="Task.for" />
+      <label value="Related Patient" />
+      <short value="Related Patient" />
+      <definition value="The patient for whom the related prescription was written" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.for.reference">
+      <path value="Task.for.reference" />
+      <label value="Patient Reference" />
+      <short value="Patient Reference" />
+      <definition value="Reference to a Patient resource" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.authoredOn">
+      <path value="Task.authoredOn" />
+      <label value="Prescription Written Date" />
+      <short value="Prescription Written Date" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester">
+      <path value="Task.requester" />
+      <comment value="The organization requesting that this task be performed" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester.reference">
+      <path value="Task.requester.reference" />
+      <label value="Requester Reference" />
+      <short value="Requester Reference" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.owner">
+      <path value="Task.owner" />
+      <label value="Prescriber" />
+      <short value="Prescriber" />
+      <comment value="The practitioner that prescribed the related medication" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.owner.reference">
+      <path value="Task.owner.reference" />
+      <label value="Prescriber Reference" />
+      <short value="Prescriber Reference" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input">
+      <path value="Task.input" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <description value="The Task SHALL contain an input containing the URL for the SMART app to be launched to complete the task" />
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartUrl">
+      <path value="Task.input" />
+      <sliceName value="SmartLaunchUrl" />
+      <label value="Smart App Launch URL" />
+      <short value="Smart App URL" />
+      <definition value="The launch URL of the SMART application to be used to complete this task" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartURL.type">
+      <path value="Task.input.type" />
+      <min value="1" />
+      <max value="1" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/task-input-type" />
+          <code value="smart-app-launch-url" />
+          <display value="SMART Application Launch URL" />
+        </coding>
+      </fixedCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartUrl.valueUrl">
+      <path value="Task.input.valueUrl" />
+      <label value="SMART application launch URL" />
+      <short value="SMART launch URL" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="url" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

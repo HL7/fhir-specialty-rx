@@ -190,6 +190,10 @@ The guide supports business functions related to fulfillment of specialty medica
 	   <td>Nov 18, 2020</td>
           <td>Adjusted SMART App launch guidance in the Information Flows Requiring Human Interaction page and example Task page: changed the appContext population from an object ("appContext": {"initiationId":"05d06540dd00d"}) to a simple string value("appContext": "05d06540dd00d"), based on EHR feedback. Updated the Message Submission page and Systematic Query page with additional details on parameter population and async response. Added a Security page with references to core FHIR security and privacy guidance, and SMART Backend Services authorization. Further refined wording in Home, Roles, Patient Matching and Processing Detail, Search Convention, and Error Handling pages.</td>
         </tr>
+	<tr>
+	   <td>Nov 19, 2020</td>
+          <td>Added Capability Statements page under FHIR Artifacts menu, with narrative describing implementation options. Fleshed out CapabilityStatement content. Added narrative intros to each CapabilityStatement detail page.</td>
+        </tr>
    </tbody>
 </table>
 

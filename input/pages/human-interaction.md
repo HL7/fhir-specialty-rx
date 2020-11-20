@@ -39,7 +39,7 @@ The [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource con
 - `Task.identifier` - This is a unique identifier representing the context of this task (e.g., the specific set of questions that need to be answered). It is to be conveyed during launch of the referenced SMART application in the `appContext` parameter and used by that application to direct the user to information and functions necessary to complete this task
 
 - `Task.code` - A code that characterizes the requested user action
-  - Value: `complete-app-questionnaire` (`display`: "Complete Questionnaire in App")
+  - Value: `complete-app-questionnaire` (`display`: "Complete Questionnaire in SMART App")
   
 - `Task.description` - Human-readable description of the task to be performed by the user. This description SHALL include the user-recognizable name of the SMART application to launch to perform the task, and SHALL state the action to be performed in the app once it's been launched.
   - Example: "Launch the My Pharmacy SMART App and complete the questionnaire."

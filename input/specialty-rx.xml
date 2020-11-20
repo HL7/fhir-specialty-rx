@@ -341,6 +341,7 @@
 	    <name value="Specialty Rx RelatedPerson"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
+	  
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-task-smart-launch"/>
@@ -349,6 +350,18 @@
 	    <name value="Specialty Rx Task - SMART Launch"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
+
+<!-- TEMP - TESTING THO TERMINOLOGY ************************************************************* 
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-task-smart-launch-THO"/>
+	      <display value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
+	    </reference>
+	    <name value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+  END - TESTING THO TERMINOLOGY ************************************************************* -->
+
 	  	<!--
   	  <resource>
 	    <reference>
@@ -400,6 +413,9 @@
 	    <name value="Specialty Rx CodeSystem - Task Input Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+	  
+
+
   	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>
@@ -416,14 +432,44 @@
 	    <name value="Specialty Rx ValueSet - Task Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+
+<!-- TEMP - TESTING THO TERMINOLOGY ************************************************************* 
   	  <resource>
 	    <reference>
-	      <reference value="CapabilityStatement/specialty-rx-data-source"/>
-	      <display value="Specialty Rx CapabilityStatement - Data Source"/>
+	      <reference value="CodeSystem/task-input-type"/>
+	      <display value="[VOCAB TEST] CodeSystem - Task Input Type"/>
 	    </reference>
-	    <name value="Specialty Rx CapabilityStatement - Data Source"/>
+	    <name value="[VOCAB TEST] CodeSystem - Task Input Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="CodeSystem/task-type"/>
+	      <display value="[VOCAB TEST] CodeSystem - Task Type"/>
+	    </reference>
+	    <name value="[VOCAB TEST] CodeSystem - Task Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/task-type"/>
+	      <display value="[VOCAB TEST] ValueSet - Task Type"/>
+	    </reference>
+	    <name value="[VOCAB TEST] ValueSet - Task Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/task-input-type"/>
+	      <display value="[VOCAB TEST] ValueSet - Task Input Type"/>
+	    </reference>
+	    <name value="[VOCAB TEST] ValueSet - Task Input Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+
+  END - TESTING THO TERMINOLOGY ************************************************************* -->
+
   	  <resource>
 	    <reference>
 	      <reference value="CapabilityStatement/specialty-rx-data-source-restful"/>
@@ -434,10 +480,26 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="CapabilityStatement/specialty-rx-data-recipient"/>
-	      <display value="Specialty Rx CapabilityStatement - Data Recipient"/>
+	      <reference value="CapabilityStatement/specialty-rx-data-source-messaging"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Source - Messaging"/>
 	    </reference>
-	    <name value="Specialty Rx CapabilityStatement - Data Recipient"/>
+	    <name value="Specialty Rx CapabilityStatement - Data Source - Messaging"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="CapabilityStatement/specialty-rx-data-recipient-restful"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Recipient - RESTful"/>
+	    </reference>
+	    <name value="Specialty Rx CapabilityStatement - Data Recipient - RESTful"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="CapabilityStatement/specialty-rx-data-recipient-messaging"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Recipient - Messaging"/>
+	    </reference>
+	    <name value="Specialty Rx CapabilityStatement - Data Recipient - Messaging"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  
@@ -674,6 +736,19 @@
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch"/>
       </resource>	  
 
+<!-- TEMP - TESTING THO TERMINOLOGY *************************************************************
+	<resource>
+	      <reference>
+	        <reference value="Task/specialty-rx-task-smart-launch-THO"/>
+                <display value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
+            </reference>
+            <name value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
+            <description value="Example of a Task that directs the user to launch a specified SMART app to complete a questionnaire. (Uses THO-rooted local terminology)"/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch-THO"/>
+      </resource>	  
+  END - TESTING THO TERMINOLOGY ************************************************************* -->
+
+
 <!-- ************************************************************* Pages ************************************************************ -->
       <page>
 	      <nameUrl value="toc.html"/>
@@ -747,6 +822,11 @@
 		  <page>
 		    <nameUrl value="security.html"/>
 		    <title value="Security"/>
+		    <generation value="markdown"/>
+		  </page>	
+		  <page>
+		    <nameUrl value="capability-statements.html"/>
+		    <title value="Capability Statements"/>
 		    <generation value="markdown"/>
 		  </page>	
         </page>

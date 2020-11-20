@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="specialty-rx-task-type" />
+  <id value="task-type" />
   <meta>
-    <lastUpdated value="2020-10-02T00:00:00-05:00" />
+    <lastUpdated value="2020-11-19T00:00:00-05:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
-  <name value="SpecialtyRxCodeSystemTaskType" />
-  <title value="Specialty Rx Code System - Task Type" />
+  <url value="http://terminology.hl7.org/CodeSystem/task-type" />
+  <name value="CodeSystemTaskType" />
+  <title value="Code System - Task Type" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-10-02T00:00:00-05:00" />
-  <publisher value="NCPDP" />
-  <description value="This code system defines task types used in the Specialty Rx Task profile" />
+  <date value="2020-11-19T00:00:00-05:00" />
+  <publisher value="HL7" />
+  <description value="This code system defines task types used in the Task resource" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />

@@ -47,16 +47,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="artifacts.html">Profiles, Capability Statements and Examples</a>
+        <a href="artifacts.html">Specialty Rx Profiles, Terminology and Examples</a>
       </li>
       <li>
         <a href="us-core-profiles.html">Applicable US Core Profiles</a>
       </li>
+      <li>
+        <a href="capability-statements.html">Capability Statements</a>
+      </li>
 	</ul>
   </li>
-<!--
-  <li><a href="artifacts.html">FHIR Artifacts</a></li>
--->
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
