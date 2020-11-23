@@ -110,7 +110,7 @@
     <element id="Task.description">
       <path value="Task.description" />
       <definition value="Human-readable description of the task to be performed by the user." />
-      <comment value="SHALL include the user-recognizable name of the SMART application to launch to perform the task. SHALL state the action to be performed in the app once it's been launched." />
+      <comment value="SHOULD include the user-recognizable name of the SMART application to launch to perform the task. SHALL state the action to be performed in the app once it's been launched." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -119,17 +119,15 @@
       <label value="Related Prescription" />
       <short value="Related Prescription" />
       <definition value="Related prescription order" />
-      <comment value="The prescription to which the task pertains. Either a reference to a MedicationRequest resource or the prescription identifier set by the prescribing system SHALL be present." />
-      <min value="1" />
-      <max value="1" />
+      <comment value="The prescription to which the task pertains. Either a reference to a MedicationRequest resource or the prescription identifier set by the prescribing system MAY be present." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
       </type>
       <constraint>
         <key value="srx-1" />
-        <severity value="error" />
-        <human value="Either focus.reference or focus.identifier MUST be present" />
+        <severity value="warning" />
+        <human value="If Task.focus is present, either reference or identifier SHOULD be present. If focus.identifier is present, SHOULD be the placer order ID" />
         <expression value="reference.exists() or identifier.exists()" />
       </constraint>
       <mustSupport value="true" />
@@ -164,7 +162,7 @@
     <element id="Task.focus.display">
       <path value="Task.focus.display" />
       <definition value="A human-readable description of the related prescription order" />
-      <comment value="A human-readable prescription description SHALL be present. SHALL contain the medication name and should contain the date written. MAY contain strength, dose form, or other specifics." />
+      <comment value="A human-readable prescription description SHOULD be present. SHOULD contain the medication name and MAY contain the date written. MAY contain strength, dose form, or other specifics." />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -329,13 +327,13 @@
       <path value="Task.input.type" />
       <min value="1" />
       <max value="1" />
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
           <code value="smart-app-launch-url" />
           <display value="SMART Application Launch URL" />
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Task.input:SmartUrl.valueUrl">
