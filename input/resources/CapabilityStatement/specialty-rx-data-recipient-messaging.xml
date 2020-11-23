@@ -33,6 +33,7 @@
         <valueCode value="SHALL" />
       </extension>
       <type value="OperationOutcome" />
+      <profile value="http://hl7.org/fhir/StructureDefinition/OperationOutcome" />
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL" />
@@ -51,13 +52,7 @@
         <valueCode value="MAY" />
       </extension>
       <type value="Task" />
-      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
-      <interaction>
-        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-          <valueCode value="SHALL" />
-        </extension>
-        <code value="create" />
-      </interaction>
+      <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL" />

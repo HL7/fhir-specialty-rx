@@ -5,7 +5,7 @@
     <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited" />
   </meta>
   <type value="message" />
-  <timestamp value="2020-11-15T13:10:17-05:00" />
+  <timestamp value="2020-03-11T13:10:17-05:00" />
   <entry>
     <fullUrl value="http://example.org/MyEHR/MessageHeader/msgheader1" />
     <resource>
@@ -137,8 +137,8 @@
         <medicationCodeableConcept>
           <coding>
             <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
-            <code value="205535" />
-            <display value="PROzac 10 MG Oral Capsule" />
+            <code value="1872980" />
+            <display value="Humira 40 MG in 0.4 ML Auto-Injector" />
           </coding>
         </medicationCodeableConcept>
         <subject>
@@ -149,12 +149,12 @@
           <reference value="Practitioner/practitioner1" />
         </requester>
         <dosageInstruction>
-          <text value="Take 1 tablet twice a day" />
+          <text value="Inject 2 pens on Day 1. Inject 1 pen on Day 8 and every other week thereafter" />
         </dosageInstruction>
         <dispenseRequest>
           <initialFill>
             <quantity>
-              <value value="60" />
+              <value value="4" />
               <unit value="{each}" />
             </quantity>
           </initialFill>
@@ -263,7 +263,7 @@
           <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
-        <timestamp value="2020-11-15T13:10:17-05:00" />
+        <timestamp value="2020-03-11T13:10:17-05:00" />
         <total value="3" />
         <link>
           <relation value="self" />
@@ -419,7 +419,7 @@
           <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result" />
         </meta>
         <type value="searchset" />
-        <timestamp value="2020-11-15T13:10:17-05:00" />
+        <timestamp value="2020-03-11T13:10:17-05:00" />
         <total value="3" />
         <link>
           <relation value="self" />

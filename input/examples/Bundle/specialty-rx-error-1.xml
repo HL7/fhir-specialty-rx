@@ -5,7 +5,7 @@
     <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error" />
   </meta>
   <type value="message" />
-  <timestamp value="2020-11-15T13:10:17-05:00" />
+  <timestamp value="2020-03-11T13:10:17-05:00" />
   <entry>
     <fullUrl value="http://example.org/MyEHR/MessageHeader/msgheader1" />
     <resource>

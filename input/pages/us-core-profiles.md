@@ -1,8 +1,6 @@
 ### US Core Profiles Used in this Guide
 
-Specialty medication fulfillment involves information in addition to what is reflected in the resource profiles defined in this implementation guide. 
-
-Stakeholders reviewed the following US Core profiles and found that they met the needs of the Specialty Rx process without further constraints. Implementers are expected to use these profiles when exchanging the related resources during the Specialty Rx process.
+The [Search Conventions](request-queries.html) section outlines required and recommended searches performed in this guide's query workflows. These searches conform to US Core search parameter requirements and SHALL return resources that conform to US Core resource profiles.
 
 <table class="grid" style="width:100%">
 <colgroup>
@@ -17,27 +15,30 @@ Stakeholders reviewed the following US Core profiles and found that they met the
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></td>
-<td>This profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient.</td>
+<td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance</a></td>
+<td>This profile sets minimum expectations for AllergyIntolerance resources returned in this guide's query workflows.</td>
 </tr>
 <tr>
-<td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-careteam.html">US Core CareTeam Profile</a></td>
-<td>This profile sets minimum expectations for the CareTeam resource for identifying the Care Team members associated with a patient.</td>
+<td><a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html">US Core Condition</a></td>
+<td>This profile sets minimum expectations for Condition resources returned in this guide's query workflows</td>
 </tr>
 <tr>
-<td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></td>
-<td>This profile sets minimum expectations for the Observation resource resource to record, search, and fetch laboratory test results associated with a patient.</td>
+<td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation</a></td>
+<td>This profile sets minimum expectations for Observation resources returned in this guide's query workflows.</td>
 </tr>
 <tr>
-<td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-location.html">US Core Location Profile</a></td>
-<td>This profile sets minimum expectations for the Location resource for recording, searching for and fetching a Location associated with a patient, provider or organization.</td>
+<td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html">US Core Medication Request</a></td>
+<td>This profile sets minimum expectations for MedicationRequest resources returned in this guide's query workflows.</td>
 </tr>
 </tbody>
 </table>
 
+
 <br>
 
-Further, when other resources not profiled in this implementation guide or in the list above are exchanged as part of a Specialty Rx workflow (e.g., returned in response to a Specialty Rx Query message), they are expected to conform to the associated US Core profile if one exists.
+Further, when other resources not profiled in this implementation guide or in the list above are exchanged as part of a Specialty Rx workflow (e.g., returned in response to a Specialty Rx Query message), SHOULD conform to the associated US Core profile if one exists.
+
+See [full list of US Core profiles](https://www.hl7.org/fhir/us/core/profiles.html)
 
 <br>
 

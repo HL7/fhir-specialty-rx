@@ -82,24 +82,6 @@
 	    <name value="Specialty Rx Bundle - Query Response - Unsolicited Message"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
-<!--
-   	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-bundle-questionnaire"/>
-	      <display value="Specialty Rx Bundle - Questionnaire Message"/>
-	    </reference>
-	    <name value="Specialty Rx Bundle - Questionnaire Message"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	
-	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-bundle-questionnaire-response"/>
-	      <display value="Specialty Rx Bundle - Questionnaire Response Message"/>
-	    </reference>
-	    <name value="Specialty Rx Bundle - Questionnaire Response Message"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	
--->
    	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-bundle-search-result"/>
@@ -110,14 +92,6 @@
 	  </resource>	
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-condition"/>
-	      <display value="Specialty Rx Condition"/>
-	    </reference>
-	    <name value="Specialty Rx Condition"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-coverage"/>
 	      <display value="Specialty Rx Coverage"/>
 	    </reference>
@@ -126,20 +100,13 @@
 	  </resource>	
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-endpoint-direct"/>
-	      <display value="Specialty Rx Endpoint - Direct"/>
-	    </reference>
-	    <name value="Specialty Rx Endpoint - Direct"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-medicationrequest"/>
 	      <display value="Specialty Rx Medication Request"/>
 	    </reference>
 	    <name value="Specialty Rx Medication Request"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
+
 	  		<!-- MessageDefinition  -->
   	  <resource>
 	    <reference>
@@ -173,24 +140,6 @@
 	    <name value="Specialty Rx MessageDefinition - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-<!--
-	  <resource>
-	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-questionnaire"/>
-	      <display value="Specialty Rx MessageDefinition - Questionnaire"/>
-	    </reference>
-	    <name value="Specialty Rx MessageDefinition - Questionnaire"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="MessageDefinition/specialty-rx-questionnaire-response"/>
-	      <display value="Specialty Rx MessageDefinition - Questionnaire Response"/>
-	    </reference>
-	    <name value="Specialty Rx MessageDefinition - Questionnaire Response"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
--->
 
 	<!-- MessageHeader  -->
 	  <resource>
@@ -225,46 +174,12 @@
 	    <name value="Specialty Rx MessageHeader - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
-<!--
-	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-messageheader-questionnaire"/>
-	      <display value="Specialty Rx MessageHeader - Questionnaire"/>
-	    </reference>
-	    <name value="Specialty Rx MessageHeader - Questionnaire"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-messageheader-questionnaire-response"/>
-	      <display value="Specialty Rx MessageHeader - Questionnaire Response"/>
-	    </reference>
-	    <name value="Specialty Rx MessageHeader - Questionnaire Response"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
--->
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-organization-payer"/>
-	      <display value="Specialty Rx Organization - Payer"/>
-	    </reference>
-	    <name value="Specialty Rx Organization - Payer"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
   	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-organization-pharmacy"/>
 	      <display value="Specialty Rx Organization - Pharmacy"/>
 	    </reference>
 	    <name value="Specialty Rx Organization - Pharmacy"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-organization-provider"/>
-	      <display value="Specialty Rx Organization - Provider"/>
-	    </reference>
-	    <name value="Specialty Rx Organization - Provider"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
    	  <resource>
@@ -283,24 +198,6 @@
 	    <name value="Specialty Rx Parameters - Query Response"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	
-<!--
-   	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-parameters-questionnaire"/>
-	      <display value="Specialty Rx Parameters - Questionnaire"/>
-	    </reference>
-	    <name value="Specialty Rx Parameters - Questionnaire"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	
-   	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-parameters-questionnaire-response"/>
-	      <display value="Specialty Rx Parameters - Questionnaire Response"/>
-	    </reference>
-	    <name value="Specialty Rx Parameters - Questionnaire Response"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	
--->   	
    	  <resource>
 	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-parameters-query-response-unsolicited"/>
@@ -327,68 +224,12 @@
 	  </resource>
   	  <resource>
 	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-practitionerrole"/>
-	      <display value="Specialty Rx PractitionerRole"/>
-	    </reference>
-	    <name value="Specialty Rx PractitionerRole"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-relatedperson"/>
-	      <display value="Specialty Rx RelatedPerson"/>
-	    </reference>
-	    <name value="Specialty Rx RelatedPerson"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-	  
-  	  <resource>
-	    <reference>
 	      <reference value="StructureDefinition/specialty-rx-task-smart-launch"/>
 	      <display value="Specialty Rx Task - SMART Launch"/>
 	    </reference>
 	    <name value="Specialty Rx Task - SMART Launch"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
-
-<!-- TEMP - TESTING THO TERMINOLOGY ************************************************************* 
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-task-smart-launch-THO"/>
-	      <display value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
-	    </reference>
-	    <name value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
-	    <exampleBoolean value="false"/>
-	  </resource>
-  END - TESTING THO TERMINOLOGY ************************************************************* -->
-
-	  	<!--
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-consent"/>
-	      <display value="SpecialtyRxConsent"/>
-	    </reference>
-	    <name value="SpecialtyRxConsent"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-
-  	  <resource>
-	    <reference>
-	      <reference value="StructureDefinition/specialty-rx-signature-provenance"/>
-	      <display value="SpecialtyRxSignatureProvenance"/>
-	    </reference>
-	    <name value="SpecialtyRxSignatureProvenance"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	-->
-  	  <resource>
-	    <reference>
-	      <reference value="ValueSet/specialty-rx-condition-code"/>
-	      <display value="Specialty Rx ValueSet - Condition Code"/>
-	    </reference>
-	    <name value="Specialty Rx ValueSet - Condition Code"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
   	  <resource>
 	    <reference>
 	      <reference value="CodeSystem/specialty-rx-event-type"/>
@@ -413,10 +254,16 @@
 	    <name value="Specialty Rx CodeSystem - Task Input Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-	  
-
-
   	  <resource>
+	    <reference>
+	      <reference value="CodeSystem/specialty-rx-task-identifier-type"/>
+	      <display value="Specialty Rx CodeSystem - Task Identifier Type"/>
+	    </reference>
+	    <name value="Specialty Rx CodeSystem - Task Identifier Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+	  
+	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>
 	      <display value="Specialty Rx ValueSet - Event Type"/>
@@ -432,43 +279,6 @@
 	    <name value="Specialty Rx ValueSet - Task Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-
-<!-- TEMP - TESTING THO TERMINOLOGY ************************************************************* 
-  	  <resource>
-	    <reference>
-	      <reference value="CodeSystem/task-input-type"/>
-	      <display value="[VOCAB TEST] CodeSystem - Task Input Type"/>
-	    </reference>
-	    <name value="[VOCAB TEST] CodeSystem - Task Input Type"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="CodeSystem/task-type"/>
-	      <display value="[VOCAB TEST] CodeSystem - Task Type"/>
-	    </reference>
-	    <name value="[VOCAB TEST] CodeSystem - Task Type"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-
-  	  <resource>
-	    <reference>
-	      <reference value="ValueSet/task-type"/>
-	      <display value="[VOCAB TEST] ValueSet - Task Type"/>
-	    </reference>
-	    <name value="[VOCAB TEST] ValueSet - Task Type"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="ValueSet/task-input-type"/>
-	      <display value="[VOCAB TEST] ValueSet - Task Input Type"/>
-	    </reference>
-	    <name value="[VOCAB TEST] ValueSet - Task Input Type"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-
-  END - TESTING THO TERMINOLOGY ************************************************************* -->
 
   	  <resource>
 	    <reference>
@@ -507,33 +317,6 @@
   	  
 
 <!--  ******************************************************** Examples  ******************************************************* -->
- 	  <resource>
-	      <reference>
-	        <reference value="AllergyIntolerance/specialty-rx-allergyintolerance-1"/>
-                <display value="US Core AllergyIntolerance - 1"/>
-            </reference>
-            <name value="US Core AllergyIntolerance - 1"/>
-            <description value="An example AllergyIntolerance illustrating content in the US Core profile"/>
-	      <!--    <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>  -->
-      </resource>	  
-	  <resource>
-	      <reference>
-	        <reference value="CareTeam/specialty-rx-careteam-1"/>
-                <display value="US Core CareTeam 1"/>
-            </reference>
-            <name value="US Core CareTeam 1"/>
-            <description value="An example CareTeam illustrating content  in the US Core profile"/>
-	     <!-- <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"/> -->
-      </resource>	  
-	  <resource>
-	      <reference>
-	        <reference value="Condition/specialty-rx-condition-1"/>
-                <display value="Specialty Rx Condition 1"/>
-            </reference>
-            <name value="Specialty Rx Condition 1"/>
-            <description value="An example Condition illustrating required elements in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition"/>
-      </resource>	  
 		<resource>
 	      <reference>
 	        <reference value="Coverage/specialty-rx-coverage-1"/>
@@ -545,30 +328,12 @@
       </resource>	  
 	<resource>
 	      <reference>
-	        <reference value="Endpoint/specialty-rx-endpoint-direct-1"/>
-                <display value="Specialty Rx Endpoint - Direct 1"/>
-            </reference>
-            <name value="Specialty Rx Endpoint - Direct 1"/>
-            <description value="An example Endpoint illustrating a practitioner's Direct Project address in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-endpoint-direct"/>
-      </resource>	  
-	<resource>
-	      <reference>
 	        <reference value="Bundle/specialty-rx-error-1"/>
                 <display value="Specialty Rx Error 1"/>
             </reference>
             <name value="Specialty Rx Error 1"/>
             <description value="Example data error message (temporary system error)."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="Location/specialty-rx-location-1"/>
-                <display value="US Core Location 1"/>
-            </reference>
-            <name value="US Core Location 1"/>
-            <description value="An example Location illustrating a particular office location using the US Core profile"/>
-	      <!-- <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>  -->
       </resource>	  
       	  <resource>
 	      <reference>
@@ -578,24 +343,6 @@
             <name value="Specialty Rx MedicationRequest 1"/>
             <description value="An example MedicationRequest illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="Observation/specialty-rx-observation-lab-1"/>
-                <display value="US Core Observation - Lab 1"/>
-            </reference>
-            <name value="US Core Observation - Lab 1"/>
-            <description value="An example Observation illustrating a lab observation using the US Core profile"/>
-	      <!-- <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/> -->
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="Organization/specialty-rx-organization-payer-1"/>
-                <display value="Specialty Rx Organization - Payer 1"/>
-            </reference>
-            <name value="Specialty Rx Organization - Payer 1"/>
-            <description value="An example Organization illustrating a payor organization in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-payer"/>
       </resource>	  
 		<resource>
 	      <reference>
@@ -615,15 +362,6 @@
             <description value="Example Organization resource representing a pharmacy - where telecom is unknown"/>
 			<exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy"/>
       </resource>	       
-	<resource>
-	      <reference>
-	        <reference value="Organization/specialty-rx-organization-provider-1"/>
-                <display value="Specialty Rx Organization - Provider 1"/>
-            </reference>
-            <name value="Specialty Rx Organization - Provider 1"/>
-            <description value="An example Organization illustrating a provider organization in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-provider"/>
-      </resource>	  
 	  	  <resource>
 	      <reference>
 	        <reference value="Patient/specialty-rx-patient-1"/>
@@ -641,15 +379,6 @@
             <name value="Specialty Rx Practitioner 1"/>
             <description value="An example Practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="PractitionerRole/specialty-rx-practitionerrole-1"/>
-                <display value="Specialty Rx PractitionerRole 1"/>
-            </reference>
-            <name value="Specialty Rx PractitionerRole 1"/>
-            <description value="An example PractitionerRole illustrating a practitioner's office (PractitionerRole) in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitionerrole"/>
       </resource>	  
 		<resource>
 	      <reference>
@@ -697,35 +426,6 @@
             <description value="Example unsolicited query response message."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited"/>
       </resource>	  
-<!--      
-		<resource>
-	      <reference>
-	        <reference value="Bundle/specialty-rx-questionnaire-1"/>
-                <display value="specialty-rx-questionnaire-1"/>
-            </reference>
-            <name value="Specialty Rx Questionnaire 1"/>
-            <description value="Example questionnaire message"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-questionnaire"/>
-      </resource>	  
-	<resource>
-	      <reference>
-	        <reference value="Bundle/specialty-rx-questionnaire-response-1"/>
-                <display value="specialty-rx-questionnaire-response-1"/>
-            </reference>
-            <name value="Specialty Rx Questionnaire Response 1"/>
-            <description value="Example data questionnaire response message."/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-questionnaire-response"/>
-      </resource>	  
--->	
-	<resource>
-	      <reference>
-	        <reference value="RelatedPerson/specialty-rx-relatedperson-1"/>
-                <display value="Specialty Rx RelatedPerson 1"/>
-            </reference>
-            <name value="Specialty Rx RelatedPerson 1"/>
-            <description value="An example RelatedPerson illustrating a related person (wife) in the Specialty Medication Prescribing profile"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-relatedperson"/>
-      </resource>	  
 	<resource>
 	      <reference>
 	        <reference value="Task/specialty-rx-task-smart-launch-1"/>
@@ -735,18 +435,15 @@
             <description value="Example of a Task that directs the user to launch a specified SMART app to complete a questionnaire"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch"/>
       </resource>	  
-
-<!-- TEMP - TESTING THO TERMINOLOGY *************************************************************
 	<resource>
 	      <reference>
-	        <reference value="Task/specialty-rx-task-smart-launch-THO"/>
-                <display value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
+	        <reference value="Task/specialty-rx-task-smart-launch-2-ids"/>
+                <display value="Specialty Rx Task - SMART Launch 2 with IDs"/>
             </reference>
-            <name value="[VOCAB TEST] Specialty Rx Task - SMART Launch THO"/>
-            <description value="Example of a Task that directs the user to launch a specified SMART app to complete a questionnaire. (Uses THO-rooted local terminology)"/>
-	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch-THO"/>
+            <name value="Specialty Rx Task - SMART Launch 2 with IDs"/>
+            <description value="Example of a Task that directs the user to launch a specified SMART app to complete a questionnaire. Requester, owner and focus are identifiers."/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch"/>
       </resource>	  
-  END - TESTING THO TERMINOLOGY ************************************************************* -->
 
 
 <!-- ************************************************************* Pages ************************************************************ -->

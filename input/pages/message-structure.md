@@ -72,7 +72,7 @@ The Query Response message returns the requested information from a patient's he
 
 It is a message Bundle with: 
 
-- an event type equal to 'query-response'
+- an event type equal to `query-response`
 - a Parameters resource as the focus (see below)
 - a mandatory Patient resource representing the requesting party's understanding of the patient
 - a mandatory Patient representing the patient in the responder's system
@@ -118,7 +118,7 @@ The Query Response - Unsolicited message transmits information from a patient's 
 
 It is a message Bundle with: 
 
-- an event type equal to 'query-response-unsolicited'
+- an event type equal to `query-response-unsolicited`
 - a Parameters resource as the focus (see below)
 - a mandatory Patient representing the patient in the sender's system
 - mandatory MedicationRequest, Practitioner, Organization resources to represent the associated specialty prescription

@@ -194,6 +194,10 @@ The guide supports business functions related to fulfillment of specialty medica
 	   <td>Nov 19, 2020</td>
           <td>Added Capability Statements page under FHIR Artifacts menu, with narrative describing implementation options. Fleshed out CapabilityStatement content. Added narrative intros to each CapabilityStatement detail page.</td>
         </tr>
+	<tr>
+	   <td>Nov 22, 2020</td>
+          <td>Refined Task profile: Added Task.identifier.type to require an app context ID, added identifier options for owner and requester. Adjusted Human Interaction page workflow and assoc. narrative for adjusted status updating. Refined capability statements: added read interaction, adjusted task interactions, and added Coverage search parameter. Updated medication examples with a more representative specialty. Removed profiles and examples created during IG development but not applicable to final scope.</td>
+        </tr>
    </tbody>
 </table>
 

@@ -21,12 +21,12 @@
     <identifier>
       <value value="prescription-70222056" />
     </identifier>
-    <display value="Humira Injector Pen - 9/23/2020" />
+    <display value="Humira Injector Pen - 2020-03-10" />
   </focus>
   <for>
     <reference value="Patient/specialty-rx-patient-1" />
   </for>
-  <authoredOn value="2020-09-24" />
+  <authoredOn value="2020-03-11" />
   <requester>
     <reference value="Organization/specialty-rx-organization-pharmacy-1" />
     <display value="Our Pharmacy" />

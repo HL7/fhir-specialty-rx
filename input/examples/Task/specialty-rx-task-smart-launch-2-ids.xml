@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Task xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="specialty-rx-task-smart-launch-1" />
+  <id value="specialty-rx-task-smart-launch-2-ids" />
   <meta>
     <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
   </meta>
   <identifier>
     <type>
-    	<coding>
-    		<system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-identifier-type" />
-    		<code value="app-context" />
-    		<display value="SMART App Context ID" />
-    	</coding>
+      <coding>
+        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-identifier-type" />
+        <code value="app-context" />
+        <display value="SMART App Context ID" />
+      </coding>
     </type>
     <system value="https://my-pharmacy-smart-app.com/app-context-id" />
     <value value="launch-context-id-01345005" />
@@ -26,7 +26,16 @@
   </code>
   <description value="Launch the My Pharmacy SMART app and complete the questionnaire." />
   <focus>
-    <reference value="MedicationRequest/specialty-rx-medicationrequest-1" />
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PLAC" />
+          <display value="Placer Identifier" />
+        </coding>
+      </type>
+      <value value="prescription-70222056" />
+    </identifier>
     <display value="Humira Injector Pen - 2020-03-10" />
   </focus>
   <for>
@@ -34,11 +43,17 @@
   </for>
   <authoredOn value="2020-03-11" />
   <requester>
-    <reference value="Organization/specialty-rx-organization-pharmacy-1" />
+    <identifier>
+      <system value="http://terminology.hl7.org/CodeSystem/NCPDP/ProviderIdentificationNumber" />
+      <value value="0999017" />
+    </identifier>
     <display value="Our Pharmacy" />
   </requester>
   <owner>
-    <reference value="Practitioner/specialty-rx-practitioner-1" />
+    <identifier>
+      <system value="http://hl7.org/fhir/sid/us-npi" />
+      <value value="9941339108" />
+    </identifier>
     <display value="Jane Smith MD" />
   </owner>
   <input>

@@ -5,7 +5,7 @@
     <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query" />
   </meta>
   <type value="message" />
-  <timestamp value="2020-07-08T08:10:13-05:00" />
+  <timestamp value="2020-03-11T08:10:13-05:00" />
   <entry>
     <fullUrl value="https://example.org/MyPharmacyApp/MessageHeader/reqheader1" />
     <resource>

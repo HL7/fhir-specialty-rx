@@ -37,16 +37,55 @@
     </element>
     <element id="Task.identifier">
       <path value="Task.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <comment value="MAY contain multiple task identifiers, but one MUST be an application context ID to be passed in the appContext parameter while launching the SMART app specified in this Task." />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.identifier:appContext">
+      <path value="Task.identifier" />
+      <sliceName value="appContext" />
+      <short value="SMART App Context ID" />
+      <min value="1" />
+      <max value="1" />
+      <patternIdentifier>
+        <type>
+          <coding>
+            <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-identifier-type" />
+            <code value="app-context" />
+          </coding>
+        </type>
+      </patternIdentifier>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.identifier.type">
+      <path value="Task.identifier.type" />
+      <comment value="At least one identifier must be a SMART application contenxt identifier" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.identifier.system">
+      <path value="Task.identifier.system" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="uri" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Task.identifier.value">
       <path value="Task.identifier.value" />
-      <label value="Initiation ID" />
-      <short value="Initiation ID" />
-      <definition value="A unique identifier representing the task. It is used as context whe the referenced SMART application is launched." />
-      <comment value="A unique identifier representing the task. It is to be conveyed in the appContext parameter as the field, intiationID, during launch of the referenced SMART application and used by that application to direct the user to information and functions necessary to complete this task." />
       <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Task.intent">
@@ -85,8 +124,14 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
       </type>
+      <constraint>
+        <key value="srx-1" />
+        <severity value="error" />
+        <human value="Either focus.reference or focus.identifier MUST be present" />
+        <expression value="reference.exists() or identifier.exists()" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Task.focus.reference">
@@ -106,6 +151,14 @@
       <comment value="Referred to as the Placer Order Number in HL7 v2 and Prescriber Order Number in NCPDP SCRIPT" />
       <min value="0" />
       <max value="1" />
+      <patternIdentifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="PLAC" />
+          </coding>
+        </type>
+      </patternIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Task.focus.display">
@@ -152,16 +205,63 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </type>
+      <constraint>
+        <key value="srx-2" />
+        <severity value="error" />
+        <human value="Either requester.reference or requester.identifier MUST be present" />
+        <expression value="reference.exists() or identifier.exists()" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Task.requester.reference">
       <path value="Task.requester.reference" />
-      <label value="Requester Reference" />
-      <short value="Requester Reference" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester.identifier">
+      <path value="Task.requester.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="An identifier of the party reqesting that the task be performed." />
+      <comment value="If the requester is a pharmacy, the identifier SHOULD be an NCPDP Provider Identifier, otherwise if the requester possesses an NPI, an NPI SHOULD be used." />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester.identifier:pharmacyNcpdpId">
+      <path value="Task.requester.identifier" />
+      <sliceName value="pharmacyNcpdpId" />
+      <short value="The pharmacy's NCPDP Provider ID" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+      <patternIdentifier>
+        <system value="http://terminology.hl7.org/CodeSystem/NCPDP/ProviderIdentificationNumber" />
+      </patternIdentifier>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester.identifier:NPI">
+      <path value="Task.requester.identifier" />
+      <sliceName value="NPI" />
+      <short value="National Provider Identifier (NPI)" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+      <patternIdentifier>
+        <system value="http://hl7.org/fhir/sid/us-npi" />
+      </patternIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Task.owner">
@@ -170,18 +270,35 @@
       <short value="Prescriber" />
       <comment value="The practitioner that prescribed the related medication" />
       <min value="1" />
+      <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
       </type>
+      <constraint>
+        <key value="srx-3" />
+        <severity value="error" />
+        <human value="Either owner.reference or owner.identifier MUST be present" />
+        <expression value="reference.exists() or identifier.exists()" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Task.owner.reference">
       <path value="Task.owner.reference" />
       <label value="Prescriber Reference" />
       <short value="Prescriber Reference" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.owner.identifier">
+      <path value="Task.owner.identifier" />
+      <definition value="The prescriber's individual NPI" />
+      <min value="0" />
+      <max value="1" />
+      <patternIdentifier>
+        <system value="http://hl7.org/fhir/sid/us-npi" />
+      </patternIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Task.input">

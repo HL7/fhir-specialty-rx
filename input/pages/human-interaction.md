@@ -1,6 +1,6 @@
-Pharmacies and other stakeholders sometimes need information that isn't available through systematic  querying of the prescriber's EHR (using the RESTful searches or Specialty Rx Query messages as described in the [Systematic Query Workflows](systematic-queries.html) section). 
+Pharmacies and other stakeholders (referred to as "requester" below) sometimes need information that isn't available through systematic  querying of the prescriber's EHR (using the RESTful searches or Specialty Rx Query messages as described in the [Systematic Query Workflows](systematic-queries.html) section). 
 
-For example, the pharmacy may need to: 
+For example, the requester may need to: 
 
 - ask the clinic to clarify the prescription's dosing instructions
 - ask whether the clinic intends to order a lab test that must be performed prior to the patient starting the medication
@@ -10,18 +10,20 @@ This implementation guide describes a method to support these situations by enab
 
 ### SMART Application Launch Using the Task Workflow
 
-A requesting party may host a SMART application that the prescriber or staff can launch from the EHR to view and respond to questions. Below is a scenario illustrating this approach for (a) communicating the need for information and (b) enabling a person to launch the application and complete the task.
+A requester may host a SMART application that the prescriber or staff can launch from the EHR to view and respond to questions. Below is a scenario illustrating this approach for (a) communicating the need for information and (b) enabling a person to launch the application and complete the task.
 
-- While working the prescription, staff at the pharmacy or other requesting party captures the questions they need to be answered by the prescriber clinic. 
+- While working the prescription, staff at the requester organization captures the questions they need to be answered by the prescriber clinic. 
 - The requester's application (Requesting System) associates this set of questions with an identifier that will be used to pull the questions up when clinic staff launches the SMART app from the EHR.
 - The Requesting System POSTs a [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource to the prescriber's EHR, asking it to create a staff work queue item to launch the requester’s app and answer the questions. Included in the Task are elements that associate the request with the related prescription as well as fields containing the URL of the SMART app and the identifier needed to present the correct questions. 
-- The EHR sets the Task status to `in-progress`
+- The EHR places an item based on the Task in a user work queue, and sets the Task status to `ready`
 - When the clinic user takes action on the work queue item, the EHR…
   - launches the requester's SMART App
   - sets a session launch context using the Patient ID it received in the `.for` element of the Task resource 
   - includes the `Task.identifier` value in the `appContext` launch parameter… which the SMART app uses to pull up the right patient/medication questions
-  - sets the Task `status` to `completed`
-- During this period, the pharmacy system polls the Task's `status` until it finds that it has been set to `completed`. At this point, the pharmacy system may alert pharmacy staff and/or retrieve information from the SMART app. (This guide does not provide direction on how to accomplish this step.)
+  - sets the Task `status` to `in-progress`
+- During this period, the Requesting System may poll the Task's `status` to monitor its progress 
+- Once the questions have been completed in the SMART app, the Requesting System updates the Task's status to `completed`
+- The Requesting System may also alert staff at the requester organization and/or further process the information from the SMART app at this time.  (This guide does not provide direction on how to accomplish this step)
 
 ### Process flow: Task to SMART Launch
 
@@ -29,7 +31,6 @@ A requesting party may host a SMART application that the prescriber or staff can
   <img src="high-level-task-to-launch-flow.png" style="float:none">  
     </p>
 </div>
-
 <br>
 
 ### Task Content
@@ -72,6 +73,6 @@ Example:
 
 ### Hosting of SMART Applications
 
-A requester such as a pharmacy may potentially partner with an intermediary or other party to host the SMART application and perform the above process on its behalf.
+A requester may potentially partner with an intermediary or other party to host the SMART application and perform the above process on its behalf.
 
 <br>

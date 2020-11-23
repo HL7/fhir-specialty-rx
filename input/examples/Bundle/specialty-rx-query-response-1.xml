@@ -5,7 +5,7 @@
     <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response" />
   </meta>
   <type value="message" />
-  <timestamp value="2020-07-08T08:10:17-05:00" />
+  <timestamp value="2020-03-11T08:10:17-05:00" />
   <entry>
     <fullUrl value="urn:uuid:d0b62e34-db4a-4ef7-832c-52cb4c7f9289" />
     <resource>
@@ -337,7 +337,7 @@
             <Condition>
               <id value="1" />
               <meta>
-                <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
+                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
               </meta>
               <clinicalStatus>
                 <coding>
@@ -386,7 +386,7 @@
             <Condition>
               <id value="2" />
               <meta>
-                <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
+                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
               </meta>
               <clinicalStatus>
                 <coding>
@@ -435,7 +435,7 @@
             <Condition>
               <id value="3" />
               <meta>
-                <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-condition" />
+                <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition" />
               </meta>
               <clinicalStatus>
                 <coding>
