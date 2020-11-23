@@ -2,3 +2,6 @@
 
 # The CapabilityStatements use the capabilitystatement-search-parameter-combination extension to specify required search parameters. Population matches that in US Core, but receiving a "no known slice" warning
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+# There are certain messaging-related resources (MessageHeaders, Parameters, Search Bundles that are components of messages) that don't have their own examples, but are illustrated in the full message examples
+The Implementation Guide contains no explicitly linked examples for this profile

@@ -7,7 +7,7 @@
   <status value="active" />
   <experimental value="false" />
   <date value="2020-11-19T00:00:00-05:00" />
-  <publisher value="NCPDP" />
+  <publisher value="HL7 International - Pharmacy" />
   <description value="This CapabilityStatement describes the expected capabilities of a system that is capable of executing RESTful operations to retrieve patient information from a RESTful FHIR server." />
   <jurisdiction>
     <coding>

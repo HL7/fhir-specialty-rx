@@ -18,7 +18,7 @@
     <name value="SpecialtyRx"/>
     <title value="Specialty Medication Prescribing"/>
     <status value="draft"/>
-    <publisher value="NCPDP"/>
+     <publisher value="HL7 International - Pharmacy" />
     <contact>
         <name value="HL7 International - Pharmacy"/>
         <telecom>

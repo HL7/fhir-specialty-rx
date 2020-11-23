@@ -7,7 +7,7 @@
   <status value="active" />
   <experimental value="false" />
   <date value="2020-07-31T00:00:00-05:00" />
-  <publisher value="NCPDP" />
+  <publisher value="HL7 International - Pharmacy" />
   <description value="This profile constrains a Bundle resource for use as an error message in response to a Specialty Rx Query--with an OperationOutcome resource as the bundle's message focus." />
   <jurisdiction>
     <coding>

@@ -7,7 +7,7 @@
   <status value="active" />
   <experimental value="false" />
   <date value="2020-07-28T00:00:00-00:00" />
-  <publisher value="NCPDP" />
+  <publisher value="HL7 International - Pharmacy" />
   <description value="This profile constrains a MessageHeader resource for use in a Specialty Rx unsolicited query response bundle. A Parameters resource is the focus." />
   <jurisdiction>
     <coding>

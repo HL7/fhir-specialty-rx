@@ -11,7 +11,7 @@
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-20" />
-  <publisher value="NCPDP" />
+  <publisher value="HL7 International - Pharmacy" />
   <description value="This profile tailors the Organization resource to represent a provider organization (clinic, health system, etc.) in the Specialty Medication Prescribing process." />
   <jurisdiction>
     <coding>

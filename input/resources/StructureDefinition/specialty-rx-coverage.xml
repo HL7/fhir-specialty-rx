@@ -11,7 +11,7 @@
   <status value="active" />
   <experimental value="false" />
   <date value="2020-06-15T00:00:00-05:00" />
-  <publisher value="NCPDP" />
+  <publisher value="HL7 International - Pharmacy" />
   <description value="This profile constrains the Coverage resource for carrying insurance coverage information in the specialty medication prescribing process" />
   <jurisdiction>
     <coding>

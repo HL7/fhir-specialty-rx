@@ -11,7 +11,7 @@
   <status value="active" />
   <experimental value="false" />
   <date value="2020-10-02" />
-  <publisher value="NCPDP" />
+  <publisher value="HL7 International - Pharmacy" />
   <description value="This profile defines Task content enabling a pharmacy or other external party to prompt clinic staff to launch a SMART app and answer prescription-related questions." />
   <jurisdiction>
     <coding>
