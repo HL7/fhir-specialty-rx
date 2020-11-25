@@ -6,7 +6,7 @@ In the Specialty Rx workflow, the Requesting System is one used by a stakeholder
 
 A Requesting System...
 
-- enables staff to request patient information from the prescriber's electronic health record (EHR) system using [RESTful searches](request-queries.html) or a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html))
+- enables staff to request patient information from the prescriber's electronic health record (EHR) system using [RESTful searches](searches.html) or a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html))
 - if supporting Specialty Rx messaging, receives [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) and [Specialty Rx Query Response - Unsolicited](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) messages
 - enables staff to ask additional questions or request supporting information requiring human attention by prompting an EHR user to launch and interact with a SMART application, using a [Specialty Rx SMART Launch Task](StructureDefinition-specialty-rx-task-smart-launch.html).
 
@@ -27,7 +27,7 @@ An Intermediary System facilitates the exchange of information between other par
 - In the messaging-based exchanges, an intermediary may use its knowledge of network participants and connection information to route prescriptions and other data exchanges between sources and receiving parties.
 - In the intermediary-facilitated RESTful exchanges described above, the intermediary performs additional actions to enable data sources that only support RESTful interactions to interact with messaging-based partners.
 
-<br>
+<p></p>
 
 ###  Human Roles
 

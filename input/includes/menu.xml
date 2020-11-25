@@ -16,7 +16,7 @@
         <a href="human-interaction.html">Information Flows Requiring Human Interaction</a>
       </li>
       <li>
-        <a href="request-queries.html">Search Conventions</a>
+        <a href="searches.html">Search Conventions</a>
       </li>
       <li>
         <a href="patient-matching.html">Patient Matching</a>
@@ -31,7 +31,7 @@
         <a href="error-handling.html">Error Handling</a>
       </li>
    	  <li>
-        <a href="missing-data.html">Handling Missing Data</a>
+        <a href="conformance.html">Conformance Expectations</a>
       </li>
    	  <li>
         <a href="intermediary.html">Intermediary Facilitation</a>

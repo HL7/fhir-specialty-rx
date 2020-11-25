@@ -55,7 +55,7 @@ the system SHALL include a searchset Bundle entry containing the search string a
 
 [Full Query Response example containing a failed search](Bundle-specialty-rx-query-response-3-w-op-outcome.html)
 
-<br/>
+<p></p>
 
 ### Error preventing the return of a Query Response
 

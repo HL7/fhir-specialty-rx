@@ -1,0 +1,1 @@
+The Must Support elements in this profile enable the Requesting System to associate results in a Specialty Rx Query Response message to the associated Specialty Rx Query. The profile reflects typical population of a searchset bundle, ensuring the presence of information the Requesting System needs to process the search results.

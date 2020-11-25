@@ -1,0 +1,1 @@
+This profile is used in the Specialty Rx Query and Specialty Rx Query Response - Unsolicited messages, providing pharmacy details that the recipient can use when locating the related prescription. It ensures that all identifying information is present, including the pharmacy location's unique identifier, address and contact information.

@@ -1,0 +1,1 @@
+This profile is used in the Specialty Rx Query, Specialty Rx Query Response, and Specialty Rx Query Response - Unsolicited messages, providing information the recipient can use to identify the patient for whom information is being exchanged. It ensures that important identifying information is present, including full name, date of birth, address and contact information.

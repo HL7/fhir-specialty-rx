@@ -19,4 +19,123 @@ The Specialty Rx Data Source MAY
 1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html). 
 1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code.
 
-<br/>
+### Resources
+
+<table class="grid">
+	<tbody>
+		<tr>
+			<th>
+				<b></b>
+			</th>
+			<th>
+				<b>Resource Type</b>
+			</th>
+			<th>
+				<b>Profile</b>
+			</th>
+			<th>
+				<b title="GET a resource (read interaction)">Read</b>
+			</th>
+			<th>
+				<b title="GET all set of resources of the type (search interaction)">Search</b>
+			</th>
+			<th>
+				<b title="PUT a new resource version (update interaction)">Update</b>
+			</th>
+			<th>
+				<b title="POST a new resource (create interaction)">Create</b>
+			</th>
+		</tr>
+		<tr>
+			<td>SHALL</td>
+            <td>AllergyIntolerance</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance">http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance</a>
+			</td>
+			<td>y</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SHALL</td>
+			<td>Condition</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition">http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition</a>
+			</td>
+			<td>y</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SHALL</td>
+			<td>Coverage</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage</a>
+			</td>
+			<td>y</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SHOULD</td>
+			<td>DocumentReference</td>
+			<td>
+				<a href="http://hlhttp://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference">http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference</a>
+			</td>
+			<td>y</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SHALL</td>
+			<td>MedicationRequest</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest</a>
+			</td>
+			<td>y</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SHALL</td>
+			<td>Observation</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab</a>
+			</td>
+			<td>y</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SHALL</td>
+			<td>OperationOutcome</td>
+			<td>
+				<a href="http://hl7.org/fhir/StructureDefinition/OperationOutcome">http://hl7.org/fhir/StructureDefinition/OperationOutcome</a>
+			</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+			<td>y</td>
+		</tr>
+		<tr>
+			<td>MAY</td>
+			<td>Task</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch</a>
+			</td>
+			<td>y</td>
+			<td></td>
+			<td>y</td>
+			<td>y</td>
+		</tr>
+	</tbody>
+</table>
+
+<br />
+

@@ -12,7 +12,7 @@ This section...
 
 In addition, an intermediary may facilitate exchange between RESTful and messaging-based participants, which is described further in the [Intermediary Facilitation](intermediary.html) section of the guide.
 
-<br>
+<p></p>
 
 ### Solicited Workflow Overview
 
@@ -29,7 +29,7 @@ The "Solicited Workflow" is one in which a pharmacy or other Requesting system "
 - The process may repeat one or more times, for example if the user of the Requesting System realizes they need additional information as a follow-up to information received in a previous response.
 - The solicited workflow may occur after an unsolicited workflow. For example, the Data Source System transmits a new specialty medication prescription to a pharmacy and also initiates an "unsolicited" Specialty Rx Query Response to the pharmacy, containing related information. Upon review of the prescription and accompanying information, pharmacy staff realizes they need additional information and initiates a Specialty Rx Query message back to the Data Source System. 
 
-<br>
+<p></p>
 
 ### Unsolicited Workflow Overview
 
@@ -39,7 +39,7 @@ In the "Unsolicited Workflow", a Data Source system proactively transmits patien
 2. The Data Source collects related patient information and transmits it separately from the prescription to the Requesting System, to support fulfillment of the prescription
 3. Alternatively, an intermediary notes the transmission of the prescription that occurred in Step 1, retrieves associated patient information using RESTful interactions with the data source, and transmits it to the pharmacy or other party
 
-<br>
+<p></p>
 
 ### Exchange Flows
 
@@ -57,26 +57,23 @@ In this model, the requesting system is responsible for...
 
 - performing RESTful searches directly against the data source.
 
-  <br>
-
 <div><p>
   <img src="high-level-exchange-flow-solicited-rest.png" style="float:none">  
     </p>
 </div>
-<br>
+
+<p></p>
 
 #### 2. Solicited - Messaging
 
 In this flow, patient information is exchanged based on a request from a pharmacy or other party. The request is transmitted in a [Specialty Rx Query request](StructureDefinition-specialty-rx-bundle-query.html) message to the data source who collects the requested information, collects it into a [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) message and returns it to the requester.
-
-<br>
 
 <div><p>
   <img src="high-level-exchange-flow-solicited.png" style="float:none">  
     </p>
 </div>
 
-<br>
+<p></p>
 
 #### 3.Unsolicited - RESTful Data Source
 
@@ -84,7 +81,7 @@ This guide defines an unsolicited data "push" model that uses FHIR messaging (be
 
 However, the data source may leverage an intermediary to enable patient information to be collected and sent to a pharmacy or other party in FHIR message form, with the data source interacting solely through standard RESTful requests. The [Intermediary Facilitation](intermediary.html) section describes this approach. 
 
-<br>
+<p></p>
 
 #### 4. Unsolicited - Messaging
 
@@ -94,7 +91,8 @@ In this flow, the prescribing system proactively sends a   [Specialty Rx Query R
   <img src="high-level-exchange-flow-unsolicited.png" style="float:none">  
     </p>
 </div>
-<br>
+
+<p></p>
 
 ### Messaging Synchronicity
 

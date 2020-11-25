@@ -8,6 +8,8 @@ For example, the requester may need to:
 
 This implementation guide describes a method to support these situations by enabling the prescriber or staff to provide information through a SMART application launched from the EHR.
 
+<p></p>
+
 ### SMART Application Launch Using the Task Workflow
 
 A requester may host a SMART application that the prescriber or staff can launch from the EHR to view and respond to questions. Below is a scenario illustrating this approach for (a) communicating the need for information and (b) enabling a person to launch the application and complete the task.
@@ -15,15 +17,17 @@ A requester may host a SMART application that the prescriber or staff can launch
 - While working the prescription, staff at the requester organization captures the questions they need to be answered by the prescriber clinic. 
 - The requester's application (Requesting System) associates this set of questions with an identifier that will be used to pull the questions up when clinic staff launches the SMART app from the EHR.
 - The Requesting System POSTs a [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource to the prescriber's EHR, asking it to create a staff work queue item to launch the requester’s app and answer the questions. Included in the Task are elements that associate the request with the related prescription as well as fields containing the URL of the SMART app and the identifier needed to present the correct questions. 
-- The EHR places an item based on the Task in a user work queue, and sets the Task status to `ready`
+- The EHR places an item based on the Task in a user work queue, and sets the Task status to `ready`. The EHR returns a `201 CREATED` response
 - When the clinic user takes action on the work queue item, the EHR…
   - launches the requester's SMART App
   - sets a session launch context using the Patient ID it received in the `.for` element of the Task resource 
   - includes the `Task.identifier` value in the `appContext` launch parameter… which the SMART app uses to pull up the right patient/medication questions
   - sets the Task `status` to `in-progress`
-- During this period, the Requesting System may poll the Task's `status` to monitor its progress 
-- Once the questions have been completed in the SMART app, the Requesting System updates the Task's status to `completed`
+- During this period, the Requesting System may poll the Task's `status` to monitor its progress. E.g., `GET [base]/Task/1135804`
+- Once the questions have been completed in the SMART app, the Requesting System updates the Task's status to `completed`. The EHR updates the status and returns a `200 OK` response
 - The Requesting System may also alert staff at the requester organization and/or further process the information from the SMART app at this time.  (This guide does not provide direction on how to accomplish this step)
+
+<p></p>
 
 ### Process flow: Task to SMART Launch
 
@@ -31,7 +35,9 @@ A requester may host a SMART application that the prescriber or staff can launch
   <img src="high-level-task-to-launch-flow.png" style="float:none">  
     </p>
 </div>
-<br>
+Note: If an event occurs within the Data Source system that prevents the Task from being performed, it SHOULD indicate that the request will not completed by updating Task.status to `failed` and, optionally, indicating why in `Task.statusReason`.
+
+<p></p>
 
 ### Task Content
 
@@ -58,6 +64,7 @@ The [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource con
 - `Task.input` - The location of the SMART app to be launched. `Task.input.type` contains the code, `smart-app-launch` and `Task.input.valueUrl` contains the actual endpoint URL to launch the SMART app.
 
 *See this example of a [populated Task](Task-specialty-rx-task-smart-launch-1.html).*
+<p></p>
 
 ### Populating the SMART Launch *appContext* 
 
@@ -70,6 +77,8 @@ Example:
 ```
 
 [SMART App Launch Implementation Guide](http://hl7.org/fhir/smart-app-launch/index.html)
+
+<p></p>
 
 ### Hosting of SMART Applications
 

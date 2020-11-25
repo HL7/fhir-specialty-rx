@@ -27,7 +27,7 @@ It is a message Bundle with:
 <td>query-string</td>
 <td>1..*</td>
 <td>string</td>
-<td>Search string. See <a href="request-queries.html">Search Conventions</a></td>
+<td>Search string. See <a href="searches.html">Search Conventions</a></td>
 </tr>
 <tr>
 <td>requester-patient</td>
@@ -63,8 +63,7 @@ It is a message Bundle with:
 </table>
 
 
-
-<br />	
+<p></p>
 
 ### Query Response Message
 
@@ -106,11 +105,12 @@ It is a message Bundle with:
 <td>search-result</td>
 <td>1..*</td>
 <td>Bundle</td>
-<td>Searchset bundle containing the results from a single search contained in the request<br />*Profile: <a href="StructureDefinition-specialty-rx-bundle-search-result.html">specialty-rx-bundle-search-result</a></td>
+<td>Searchset bundle containing the results from a single search contained in the request<br /><em>Profile: <a href="StructureDefinition-specialty-rx-bundle-search-result.html">specialty-rx-bundle-search-result</a></em></td>
 </tr>
 </tbody>
 </table>
-<br />
+
+<p></p>
 
 ### Query Response - Unsolicited Message
 
@@ -164,10 +164,11 @@ It is a message Bundle with:
 <td>search-result</td>
 <td>1..*</td>
 <td>Bundle</td>
-<td>Searchset bundle containing the results from a single search of patient data<br />*Profile: <a href="StructureDefinition-specialty-rx-bundle-search-result.html">specialty-rx-bundle-search-result</a></td>
+<td>Searchset bundle containing the results from a single search of patient data<br /><em>Profile: <a href="StructureDefinition-specialty-rx-bundle-search-result.html">specialty-rx-bundle-search-result</a></em></td>
 </tr>
 </tbody>
 </table>
+
 
 <br>
 

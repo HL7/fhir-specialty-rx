@@ -6,7 +6,7 @@ Likewise, an EHR that conforms with the Specialty Rx RESTful Data Source profile
 
 This section describes these exchanges. 
 
-<br>
+<p></p>
 
 ### Intermediary-Facilitated Solicited Workflow
 
@@ -24,14 +24,14 @@ In this flow:
 - the intermediary performs RESTful patient matching and data requests against the data source, and packages the results into a response FHIR message
 - the intermediary returns the FHIR response message to the requester.
 
-<br>
+<p></p>
 
 <div><p>
   <img src="high-level-exchange-flow-solicited-facilitated-rest.png" style="float:none"> 
     </p>
 </div>
 
-<br>
+<p></p>
 
 ### Intermediary-Facilitated Unsolicited Workflow
 
@@ -46,7 +46,7 @@ An intermediary facilitates the process as follows:
 - the intermediary performs RESTful patient matching and data requests against the data source, and packages the results into a unsolicited FHIR message
 - the intermediary transmits the FHIR message to the pharmacy or other party.
 
-<br>
+<p></p>
 
 <div><p>
   <img src="high-level-exchange-flow-unsolicited-facilitated-rest.png" style="float:none"> 

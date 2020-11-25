@@ -482,13 +482,13 @@
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
-		    <nameUrl value="request-queries.html"/>
+		    <nameUrl value="searches.html"/>
 		    <title value="Search Conventions"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
-		    <nameUrl value="missing-data.html"/>
-		    <title value="Handling Missing Data"/>
+		    <nameUrl value="conformance.html"/>
+		    <title value="Conformance Expectations"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

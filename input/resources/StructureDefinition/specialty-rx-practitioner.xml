@@ -60,14 +60,14 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Practitioner.telecom:HomePhone">
+    <element id="Practitioner.telecom:Phone">
       <path value="Practitioner.telecom" />
-      <sliceName value="HomePhone" />
+      <sliceName value="Phone" />
       <min value="1" />
       <max value="*" />
       <mustSupport value="true" />
     </element>
-    <element id="Practitioner.telecom.system:HomePhone">
+    <element id="Practitioner.telecom.system:Phone">
       <path value="Practitioner.telecom.system" />
       <min value="1" />
       <fixedCode value="phone" />

@@ -4,7 +4,7 @@ Specialty Rx messages are POSTed to their recipients using the $process-message 
 
 Details from the base FHIR specification are [here](https://www.hl7.org/fhir/operation-messageheader-process-message.html).
 
-<br>
+<p></p>
 
 ### $process-message Parameters
 The $process-message operation SHALL contain a single `content` parameter consisting of a FHIR message (a Bundle containing a MessageHeader resource).  
@@ -15,7 +15,7 @@ The $process-message operation SHALL contain a single `content` parameter consis
 
 - The `async` and `response-url` Process Message parameters are not to be used when exchanging Specialty Rx messages.
 
-<br>
+<p></p>
 
 ### Synchronous or Asynchronous Response
 
@@ -23,7 +23,7 @@ Specialty Rx Query Responses are expected to be systematically produced using da
 
 - When responding asynchronously, the Data Source System first acknowledges the request message with a `200 OK` with no body, or returns an HTTP error if the message cannot be processed
 
-<br/>
+<p></p>
 
 ### Error Response
 

@@ -15,11 +15,13 @@ This information is outside of the current NCPDP e-prescription standard that co
 
 This implementation guide is intended be used in the United States. It reflects US pharmacy processes and conventions.
 
-The guide supports business functions related to fulfillment of specialty medication prescriptions, including:
+The guide supports business functions supporting fulfillment of specialty medication prescriptions, including:
 
 - Request of additional information to facilitate medication dispensing and billing.
 - Specialty enrollment for programs or services.
 - Facilitation of clinical care management, education, and training.
+
+The guide does not address transmission of the original prescription from the prescriber to dispensing pharmacy.
 
 ### Authors
 

@@ -363,7 +363,7 @@ span.emph6 {
 div.fm_ex {
     min-width: 1000px;
     width: 1000px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 15px;
     padding-right: 25px;
     padding-bottom: 25px;

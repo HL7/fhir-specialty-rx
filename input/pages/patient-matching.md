@@ -10,9 +10,9 @@ Relating to both of those models, the sections below describe the requester's an
 - producing the data   *(solicited and unsolicited models)*
 - consuming the data   *(solicited and unsolicited models)*
 
-<br>
+<p></p>
 
-### Matching Approaches: Pre-Match and Deferred
+### Matching Approaches
 
 In the *solicited model*, where a pharmacy or other party (Requesting System) requests patient information from an EHR or other responder (Data Source System), the Requesting System may either...
 
@@ -22,7 +22,7 @@ In the *solicited model*, where a pharmacy or other party (Requesting System) re
 
 - **Defer Patient Matching** when using the [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html), and include only the Requesting System's Patient resource in the request. In this method, patient matching is performed by the Data Source System as a pre-step to creating its response.
 
-<br>
+<p></p>
 
 ### Matching Method One: Patient Pre-Match
 
@@ -56,7 +56,7 @@ When retrieving information using a Specialty Rx Query message, the Requesting S
 - SHALL populate the `requester-patient` parameter with a reference to the **Requesting System's Patient resource** 
 - SHALL populate the `responder-patient` parameter with the **Data Source's Patient resource**
   - SHALLL populate this Patient resource's `.meta.source` element with the Data Source System's FHIR server URL
-- SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](request-queries.html)*
+- SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](searches.html)*
 
 #### Step 3: Data Source System processes the request
 
@@ -67,7 +67,7 @@ When responding to a Specialty Rx Query message...
 - Before compiling the response, the Data Source System SHALL verify the patient match referenced in the request's `responder-patient` element.
   - If the match cannot be verified, the Data Source System SHALL return an OperationOutcome describing the error.
 
-<br>
+<p></p>
 
 ### Matching method Two: Deferred Patient Matching (Messaging Only)
 
@@ -78,7 +78,7 @@ In this approach, which applies only to the Specialty Rx Query message, the requ
 The Requesting System: 
 
 - SHALL populate the `requester-patient` parameter with a reference to the **Requesting System's Patient resource** 
-- SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](request-queries.html)*
+- SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](searches.html)*
 
 #### Step 2: Data Source processes the request message
 
@@ -89,24 +89,14 @@ The Data Source System performs patient matching using the request's patient ide
 - SHALL append a patient parameter containing the responder's patient ID to each search string supplied in a `query-string` parameter in the request.
   - For example, change the submitted query-string `"Condition"` to `"Condition?patient=[EHRPatient123]"`.
 
-<br/>
+<p></p>
 
 ### Additional Patient Processing Steps for Specialty Rx Messages
 #### Populating patient information in response messages (Solicited and Unsolicited)
 
-In the Specialty Rx Query Response and Query Response - Unsolicited messages, the Data Source System...
+- In the Specialty Rx Query Response and Query Response - Unsolicited messages, the Data Source System SHALL populate the `responder-patient` element with a reference to the **responder's Patient resource**
+- In the Specialty Rx Query message, the Data Source System SHALL echo the **requester's Patient resource** in the `requester-patient` parameter and SHALL populate this Patient resource's `.meta.source` element with the Requesting System's FHIR server URL
 
-- *In both message types,* SHALL populate the `responder-patient` element with a reference to the **responder's Patient resource**
-- *In the Specialty Rx Query message,* SHALL echo the **requester's Patient resource** in the `requester-patient` parameter and SHALL populate this Patient resource's `.meta.source` element with the Requesting System's FHIR server URL
-
-The Data Source System then populates the results as below...
-
-- Results for each search are populated in a searchset Bundle referenced by a `search-result` parameter.
-- *In the Solicited model,* if a search is not successful, an OperationOutcome SHALL be included in the searchset Bundle and...
-  - SHALL contain an issue with severity ERROR if query failed
-  - SHALL contain an issue with severity ERROR  if the query or search parameter is not supported
-  - SHALL specify a reason for the error
-  - MAY fail the whole message if a query fails
 
 #### Processing received response messages (Solicited and Unsolicited)
 
