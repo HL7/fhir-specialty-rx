@@ -166,7 +166,7 @@ AllergyIntolerance, Condition, Coverage, DocumentReference, MedicationRequest, O
 			<td>Receiver</td>
             <td>Specialty Rx Query</td>
 			<td>
-				<a href=MessageDefinition-specialty-rx-query.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query</a>
+				<a href="MessageDefinition-specialty-rx-query.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query</a>				
 			</td>
 			<td>
             <a href="StructureDefinition-specialty-rx-bundle-query.html">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query</a>                

@@ -36,7 +36,7 @@ To ensure that the most common data requests are supported by all participants, 
 <tr>
 <td>MedicationRequest</td>
 <td>status<br/>intent<br/>encounter<br/>authoredon<br/>patient<br/>_include</td>
-<td><pre>MedicationRequest?patient=123&amp;status=active &amp;_include=MedicationRequest:Medication</pre>Returns all active patient MedicationRequests and the associated Medications</td>
+<td><pre>MedicationRequest?patient=123&amp;status=active&amp;_include=MedicationRequest:Medication</pre>Returns all active patient MedicationRequests and the associated Medications</td>
 </tr>
 </tbody>
 </table>

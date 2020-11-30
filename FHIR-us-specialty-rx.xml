@@ -89,7 +89,7 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="capability-statements" name="Capability Statements"/>
-<page key="conformance" name="Conformance Expectations"/>
+<page key="missing-data" name="Conformance Expectations"/>
 <page key="downloads" name="Downloads"/>
 <page key="error-handling" name="Error handling"/>
 <page key="index" name="IG Home Page"/>
@@ -99,8 +99,7 @@
 <page key="message-submission" name="Message submission"/>
 <page key="patient-matching" name="Patient Matching"/>
 <page key="roles" name="Roles"/>
-<page key="searches" name="Search Conventions"/>
-<page deprecated="true" key="request-queries" name="Search conventions"/>
+<page key="request-queries" name="Search Conventions"/>
 <page key="security" name="Security"/>
 <page key="systematic-queries" name="Systematic Query Workflows"/>
 <page key="toc" name="Table of Contents"/>
