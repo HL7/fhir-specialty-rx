@@ -1,3 +1,32 @@
+### Use Cases
+
+The exchanges described in this implementation guide all support the goal of supplying information to those involved in fulfilling a patient's specialty medication prescription. The guide supports three basic use cases:
+
+* As a party fulfilling the prescription, I need to retrieve patient clinical or coverage information from their medical records. 
+  * *[Solicited Flow](systematic-queries.html#solicited-workflow-overview) section of [Systematic Query Workflows](systematic-queries.html)*
+* As a party fulfilling the prescription, I need to ask a question of the prescriber or their staff. 
+  * *[Information Flows Requiring Human Interaction](human-interaction.html)*
+* As the prescriber of the prescription, I want to proactively supply clinical or coverage information from the patient's medical records to a party fulfilling the prescription. 
+  * *[Unsolicited Flow](systematic-queries.html#unsolicited-workflow-overview) section of [Systematic Query Workflows](systematic-queries.html)*
+
+<p></p>
+
+###  Human Roles
+
+#### Requester Staff
+
+Staff at the pharmacy, specialty Hub or other party involved in fulfilling the prescription. These people identify information needs that result in information exchanges, and use the provided information
+
+#### Prescriber
+
+The prescriber provides responses to information requests that require human interaction, such as clarifications to aspects of a prescription.
+
+#### Prescriber Agent
+
+The prescriber agent can provide responses to on behalf of the prescriber. Example: clinic staff.
+
+<p></p>
+
 ###  System Roles
 
 #### Requesting System
@@ -26,22 +55,6 @@ An Intermediary System facilitates the exchange of information between other par
 
 - In the messaging-based exchanges, an intermediary may use its knowledge of network participants and connection information to route prescriptions and other data exchanges between sources and receiving parties.
 - In the intermediary-facilitated RESTful exchanges described above, the intermediary performs additional actions to enable data sources that only support RESTful interactions to interact with messaging-based partners.
-
-<p></p>
-
-###  Human Roles
-
-#### Prescriber
-
-The prescriber typically provides responses to information requests that require human interaction, such as clarifications to aspects of a prescription, using a Data Source System.
-
-#### Prescriber Agent
-
-The prescriber agent can provide responses to on behalf of the prescriber
-
-#### Requester Staff
-
-Pharmacy staff or others involved in fulfilling the prescription review information received from the data source and identify information needs that are submitted to the data source by their Requesting System.
 
 <br>
 

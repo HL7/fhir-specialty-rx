@@ -8,7 +8,7 @@ This section...
 - outlines RESTful and messaging-based approaches for satisfying those two basic workflows
 - discusses synchronous versus asynchronous response expectations.
 
-**Note that this guide does not require a given implementer to support both RESTful and messaging approaches.** Instead, each may implement one or both depending on their needs and the needs of their partners. Detailed implementation profiles are described in the Capability Statement section of the guide.
+**Note that this guide does not require a given implementer to support both RESTful and messaging approaches.** Instead, each may implement one or both depending on their needs and the needs of their partners. Detailed implementation profiles are described in the [Capability Statements](capability-statements.html) section of the guide.
 
 In addition, an intermediary may facilitate exchange between RESTful and messaging-based participants, which is described further in the [Intermediary Facilitation](intermediary.html) section of the guide.
 
@@ -24,10 +24,7 @@ The "Solicited Workflow" is one in which a pharmacy or other Requesting system "
 4. (optional) Staff at the requesting party (or the Requesting System itself) initiates retrieval of additional information requiring human intervention at the Data Source. 
    - The IG provides a method by which the Requesting System can ask the EHR to prompt a clinic user to provide additional information by launching a SMART application *(see [Information Flows Requiring Human Interaction](human-interaction.html))*.
 
-  *Notes:*
-
-- The process may repeat one or more times, for example if the user of the Requesting System realizes they need additional information as a follow-up to information received in a previous response.
-- The solicited workflow may occur after an unsolicited workflow. For example, the Data Source System transmits a new specialty medication prescription to a pharmacy and also initiates an "unsolicited" Specialty Rx Query Response to the pharmacy, containing related information. Upon review of the prescription and accompanying information, pharmacy staff realizes they need additional information and initiates a Specialty Rx Query message back to the Data Source System. 
+This process may repeat one or more times, for example if the user of the Requesting System realizes they need additional information as a follow-up to information received in a previous response. Further, the solicited workflow may occur after an unsolicited workflow (described below).
 
 <p></p>
 

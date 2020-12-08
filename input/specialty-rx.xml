@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="specialty-rx"/>
     <meta>
-        <lastUpdated value="2020-10-05T00:00:00.000+00:00"/>
+        <lastUpdated value="2020-12-07T00:00:00.000+00:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -16,7 +16,7 @@
  	<version value="0.1.00"/> 
     <!-- <version value="current"/> -->
     <name value="SpecialtyRx"/>
-    <title value="Specialty Medication Prescribing"/>
+    <title value="Specialty Medication Enrollment"/>
     <status value="draft"/>
      <publisher value="HL7 International - Pharmacy" />
     <contact>
@@ -341,7 +341,7 @@
                 <display value="Specialty Rx MedicationRequest 1"/>
             </reference>
             <name value="Specialty Rx MedicationRequest 1"/>
-            <description value="An example MedicationRequest illustrating required elements in the Specialty Medication Prescribing profile"/>
+            <description value="An example MedicationRequest illustrating elements required in the Specialty Medication Enrollment profile. This profile is used in Specialty Rx messages to identify the prescription prompting the information exchange."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest"/>
       </resource>	  
 		<resource>
@@ -368,7 +368,7 @@
                 <display value="Specialty Rx Patient 1"/>
             </reference>
             <name value="Specialty Rx Patient 1"/>
-            <description value="An example Patient illustrating required elements in the Specialty Medication Prescribing profile"/>
+            <description value="An example Patient illustrating required elements in the Specialty Medication Enrollment profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient"/>
       </resource>
 	  <resource>
@@ -377,7 +377,7 @@
                 <display value="Specialty Rx Practitioner 1"/>
             </reference>
             <name value="Specialty Rx Practitioner 1"/>
-            <description value="An example Practitioner illustrating required elements in the Specialty Medication Prescribing profile"/>
+            <description value="An example Practitioner illustrating required elements in the Specialty Medication Enrollment profile"/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner"/>
       </resource>	  
 		<resource>
@@ -458,7 +458,7 @@
 		  </page>
 		  <page>
 		    <nameUrl value="roles.html"/>
-		    <title value="Roles"/>
+		    <title value="Use Cases and Roles"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
@@ -535,5 +535,10 @@
 	    <code value="releaselabel"/>
 	    <value value="CI Build"/>
 	  </parameter>
+      <parameter>
+	      <code value="path-expansion-params"/>
+	      <value value="input/terminology-settings.json"/>
+	      <value value="terminology-settings.json"/>
+      </parameter>
 	</definition>
 </ImplementationGuide>

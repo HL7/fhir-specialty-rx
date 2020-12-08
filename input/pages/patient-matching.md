@@ -26,7 +26,7 @@ In the *solicited model*, where a pharmacy or other party (Requesting System) re
 
 ### Matching Method One: Patient Pre-Match
 
-Depending on the situation, the Requesting System may already have the Data Source's Patient resource (for example, if it received it in a previous FHIR exchange), or it may need to request it using the `Patient/$match` operation.
+Depending on the situation, the Requesting System may already have the Data Source's Patient resource (for example, if it received it in a previous FHIR exchange), or it may be in a position to request it using the `Patient/$match` operation.
 
 #### Step 1: Obtain the responder's Patient resource using Patient $match
 
@@ -71,7 +71,7 @@ When responding to a Specialty Rx Query message...
 
 ### Matching method Two: Deferred Patient Matching (Messaging Only)
 
-In this approach, which applies only to the Specialty Rx Query message, the request contains only the Requesting System's Patient resource. 
+In this approach, which applies only to the Specialty Rx Query message, the request contains only the Requesting System's Patient resource. The Data Source's Patient ID is not referenced in the request.
 
 #### Step 1: Populate the patient information in the Specialty Rx Query message
 
@@ -87,7 +87,7 @@ The Data Source System performs patient matching using the request's patient ide
 - SHALL locate a match to the responder patient referenced in the request's `requester-patient` parameter.
   - If the Data Source System cannot determine a single, confident match, it SHALL return an OperationOutcome describing the error.
 - SHALL append a patient parameter containing the responder's patient ID to each search string supplied in a `query-string` parameter in the request.
-  - For example, change the submitted query-string `"Condition"` to `"Condition?patient=[EHRPatient123]"`.
+  - For example, change the submitted query-string `"Condition"` to `"Condition?patient=EHRPatient123"`.
 
 <p></p>
 

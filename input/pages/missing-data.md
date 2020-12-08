@@ -51,7 +51,6 @@ If the source system does not have data for a *required* data element (in other 
 - ***Required* binding strength** 
 
     - Use the appropriate “unknown” concept code from the value set, if available. 
-
     - In cases where the Data Source does not know the correct code, and the value set lacks an appropriate "unknown" code, it SHALL respond to a query for the resource with an OperationOutcome accompanied by a 404 HTTP error code. 
     
     For example, the following status elements do not contain an “unknown” concept code--and so, the element cannot be populated as unknown:

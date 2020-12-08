@@ -7,7 +7,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="roles.html">Roles</a>
+        <a href="roles.html">Use Cases and Roles</a>
       </li>
       <li>
         <a href="systematic-queries.html">Systematic Query Workflows</a>

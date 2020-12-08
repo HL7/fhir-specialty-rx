@@ -6,13 +6,13 @@ For example, the requester may need to:
 - ask whether the clinic intends to order a lab test that must be performed prior to the patient starting the medication
 - ask the clinic to provide a copy of a consent form that the patient completed by hand.
 
-This implementation guide describes a method to support these situations by enabling the prescriber or staff to provide information through a SMART application launched from the EHR.
+This implementation guide describes a method to support these situations by enabling the prescriber or staff to provide information through a SMART application launched from the EHR--prompted by a request from the pharmacy or other requester.
 
 <p></p>
 
 ### SMART Application Launch Using the Task Workflow
 
-A requester may host a SMART application that the prescriber or staff can launch from the EHR to view and respond to questions. Below is a scenario illustrating this approach for (a) communicating the need for information and (b) enabling a person to launch the application and complete the task.
+A requester may host a SMART application that the prescriber or staff can launch from the EHR to view and respond to questions. Below is a scenario illustrating this approach for (a) communicating the need for information to the EHR and (b) enabling an EHR user to launch the application and complete the task.
 
 - While working the prescription, staff at the requester organization captures the questions they need to be answered by the prescriber clinic. 
 - The requester's application (Requesting System) associates this set of questions with an identifier that will be used to pull the questions up when clinic staff launches the SMART app from the EHR.

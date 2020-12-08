@@ -1,6 +1,6 @@
 ﻿{
    "package-id": "hl7.fhir.us.specialty-rx",
-   "title": "Specialty Medication Prescribing",
+   "title": "Specialty Medication Enrollment",
    "canonical": "http://hl7.org/fhir/us/specialty-rx",
    "introduction": "This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.",
    "category" : "Clinical", 
