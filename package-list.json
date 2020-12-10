@@ -13,8 +13,8 @@
          "current": true
       },
       {
-         "version": "0.1.00",
-         "date": "2020-11-15",
+         "version": "0.1.0",
+         "date": "2020-12-09",
          "desc": "STU1 Ballot",
          "changes": "",
          "path": "http://hl7.org/fhir/us/specialty-rx/2021Jan",
