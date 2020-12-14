@@ -3,7 +3,7 @@
    "title": "Specialty Medication Enrollment",
    "canonical": "http://hl7.org/fhir/us/specialty-rx",
    "introduction": "This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others.",
-   "category" : "Clinical", 
+   "category" : "EHR Access", 
    "list": [
       {
          "version": "current",
