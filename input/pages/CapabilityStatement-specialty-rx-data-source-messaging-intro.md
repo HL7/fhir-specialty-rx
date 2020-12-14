@@ -21,7 +21,11 @@ The Specialty Rx Data Source MAY
 
 ### Resources
 
-AllergyIntolerance, Condition, Coverage, DocumentReference, MedicationRequest, Observation actions are executed in the context of message processing. Task interactions are RESTful. OperationOutcome interactions are within both messaging and RESTful actions.
+- AllergyIntolerance, Condition, Coverage, DocumentReference, MedicationRequest and Observation actions are executed in the context of message processing. 
+
+- Task interactions are RESTful. 
+
+- OperationOutcome interactions are within both messaging and RESTful actions.
 
 <table class="grid">
 	<tbody>

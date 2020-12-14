@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-coverage" />
   <meta>
-    <lastUpdated value="2020-06-15T00:00:00-05:00" />
+    <lastUpdated value="2020-12-11T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage" />
   <version value="0.0.1" />
@@ -10,7 +10,7 @@
   <title value="Specialty Rx Coverage" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-06-15T00:00:00-05:00" />
+  <date value="2020-12-11T00:00:00-05:00" />
   <publisher value="HL7 International - Pharmacy" />
   <description value="This profile constrains the Coverage resource for carrying insurance coverage information in the specialty medication enrollment process" />
   <jurisdiction>
@@ -30,32 +30,18 @@
     <element id="Coverage">
       <path value="Coverage" />
     </element>
+	<element id="Coverage.identifier">
+      <path value="Coverage.identifier"/>
+      <short value="Member identifier"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Coverage.subscriberId">
       <path value="Coverage.subscriberId" />
-      <label value="Health Plan Cardholder ID" />
-      <short value="Health Plan Cardholder ID" />
-      <comment value="Either *PBM Member ID* (.class.type = 'rxid') or *Subscriber ID* must be populated" />
+      <short value="Health Plan Subscriber ID" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
-      <label value="Payer ID" />
-      <short value="Payer ID" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.payor.identifier">
-      <path value="Coverage.payor.identifier" />
-      <label value="Payer ID" />
-      <short value="Payer ID" />
-      <definition value="Payer ID as defined in the participants' environment. E.g., an identifier defined in an eligibility service to represent the payer." />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.payor.identifier.value">
-      <path value="Coverage.payor.identifier.value" />
-      <label value="Payer ID Value" />
-      <short value="Payer ID Value" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.class">
@@ -66,13 +52,11 @@
           <type value="value" />
           <path value="type" />
         </discriminator>
-        <description value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
         <ordered value="false" />
         <rules value="open" />
       </slicing>
       <short value="Pharmacy coverage identifiers" />
-      <definition value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
-      <comment value="Populate with identifiers retrieved from an insurance card, an eligibility service or other source agreed between trading partners" />
+      <definition value="Identifiers related to a patient's pharmacy coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
       <min value="0" />
       <max value="*" />
       <mustSupport value="true" />
@@ -90,7 +74,6 @@
       <sliceName value="bin" />
       <label value="IIN (BIN) number" />
       <short value="IIN (BIN) number" />
-      <comment value="Populate as agreed between trading partners" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -110,7 +93,6 @@
       <sliceName value="pcn" />
       <label value="Processor Control Number (PCN)" />
       <short value="Processor Control Number (PCN)" />
-      <comment value="Populate as agreed between trading partners" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -131,7 +113,6 @@
       <label value="Pharmacy Benefit Group ID" />
       <short value="Pharmacy Benefit Group ID" />
       <definition value="The patient's Group ID associated with their pharmacy benefit" />
-      <comment value="Populate as agreed between trading partners" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -152,7 +133,6 @@
       <label value="PBM Member ID" />
       <short value="PBM Member ID" />
       <definition value="The patient's pharmacy benefit member ID (which may differ from their overall health insurance ID)" />
-      <comment value="Populate as agreed between trading partners" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

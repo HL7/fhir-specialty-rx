@@ -25,10 +25,6 @@
     </coding>
   </code>
   <description value="Launch the My Pharmacy SMART app and complete the questionnaire." />
-  <focus>
-    <reference value="MedicationRequest/specialty-rx-medicationrequest-1" />
-    <display value="Humira Injector Pen - 2020-03-10" />
-  </focus>
   <for>
     <reference value="Patient/specialty-rx-patient-1" />
   </for>
@@ -41,6 +37,10 @@
     <reference value="Practitioner/specialty-rx-practitioner-1" />
     <display value="Jane Smith MD" />
   </owner>
+  <reasonReference>
+    <reference value="MedicationRequest/specialty-rx-medicationrequest-1" />
+    <display value="Humira Injector Pen - 2020-03-10" />
+  </reasonReference>
   <input>
     <type>
       <coding>

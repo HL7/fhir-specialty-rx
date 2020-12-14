@@ -25,19 +25,6 @@
     </coding>
   </code>
   <description value="Launch the My Pharmacy SMART app and complete the questionnaire." />
-  <focus>
-    <identifier>
-      <type>
-        <coding>
-          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-          <code value="PLAC" />
-          <display value="Placer Identifier" />
-        </coding>
-      </type>
-      <value value="prescription-70222056" />
-    </identifier>
-    <display value="Humira Injector Pen - 2020-03-10" />
-  </focus>
   <for>
     <reference value="Patient/specialty-rx-patient-1" />
   </for>
@@ -56,6 +43,19 @@
     </identifier>
     <display value="Jane Smith MD" />
   </owner>
+  <reasonReference>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PLAC" />
+          <display value="Placer Identifier" />
+        </coding>
+      </type>
+      <value value="prescription-70222056" />
+    </identifier>
+    <display value="Humira Injector Pen - 2020-03-10" />
+  </reasonReference>
   <input>
     <type>
       <coding>
