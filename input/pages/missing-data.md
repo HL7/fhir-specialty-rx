@@ -22,7 +22,7 @@ Profiles in this guide specify certain elements as "Must Support". These SHALL b
 
 **Unknown Reason.** If the source system does not have data for a *Must Support* data element, and the reason for absence is unknown:
 
-- The Data Source responding to to a query SHALL NOT include the element in the resource. 
+- The Data Source responding to a query SHALL NOT include the element in the resource. 
 
 - The Requester SHALL interpret missing data elements within resource instances as data not present in the Data Source system.
 
@@ -45,7 +45,7 @@ If the source system does not have data for a *required* data element (in other 
 - ***Example, preferred, or extensible* binding strengths**
   
   - If the source systems has text but no coded data, only the text element is used.
-  - If there is neither text or coded data, use the appropriate “unknown” concept code from the value set if available
+  - If there is neither text nor coded data, use the appropriate “unknown” concept code from the value set if available
   - If the value set does not have the appropriate “unknown” concept code, use “unknown” from the  [DataAbsentReason Code System](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html)
   
 - ***Required* binding strength** 

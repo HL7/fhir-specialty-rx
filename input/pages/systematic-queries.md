@@ -34,25 +34,25 @@ In the "Unsolicited Workflow", a Data Source system proactively transmits patien
 
 1. The Data Source System transmits a specialty medication prescription to the pharmacy and/or other Requesting System. (In the US, this transmission typically uses the NCPDP SCRIPT standard)
 2. The Data Source collects related patient information and transmits it separately from the prescription to the Requesting System, to support fulfillment of the prescription
-3. Alternatively, an intermediary notes the transmission of the prescription that occurred in Step 1, retrieves associated patient information using RESTful interactions with the data source, and transmits it to the pharmacy or other party
+3. Alternatively, an intermediary notes the transmission of the prescription that occurred in Step 1, retrieves associated patient information using RESTful interactions with the Data Source, and transmits it to the pharmacy or other party
 
 <p></p>
 
 ### Exchange Flows
 
-#### 1. Solicited - RESTful Data Source
+#### Solicited - RESTful Data Source
 
-In this flow, patient information is exchanged based on a request from a pharmacy or other party to a data source responds to RESTful requests. 
+In this flow, patient information is exchanged based on a request from a pharmacy or other party to a Data Source which responds to RESTful requests. 
 
-The Requesting System employs standard FHIR RESTful searches to retrieve patient information from the Data Source. In this model, the requester must be able to locate and connect directly with the data source, for example when the two are part of the same umbrella organization.
+The Requesting System employs standard FHIR RESTful searches to retrieve patient information from the Data Source. In this model, the requester must be able to locate and connect directly with the Data Source, for example when the two are part of the same umbrella organization.
 
 In this model, the requesting system is responsible for...
 
-- determining the data source holding information about the patient for whom the the prescription of interest was written
+- determining the Data Source holding information about the patient for whom the prescription of interest was written
 
-- locating the system endpoint information needed to connect with that data source
+- locating the system endpoint information needed to connect with that Data Source
 
-- performing RESTful searches directly against the data source.
+- performing RESTful searches directly against the Data Source.
 
 <div><p>
   <img src="high-level-exchange-flow-solicited-rest.png" style="float:none">  
@@ -61,9 +61,9 @@ In this model, the requesting system is responsible for...
 
 <p></p>
 
-#### 2. Solicited - Messaging
+#### Solicited - Messaging
 
-In this flow, patient information is exchanged based on a request from a pharmacy or other party. The request is transmitted in a [Specialty Rx Query request](StructureDefinition-specialty-rx-bundle-query.html) message to the data source who collects the requested information, collects it into a [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) message and returns it to the requester.
+In this flow, patient information is exchanged based on a request from a pharmacy or other party. The request is transmitted in a [Specialty Rx Query request](StructureDefinition-specialty-rx-bundle-query.html) message to the Data Source who collects the requested information, collects it into a [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) message and returns it to the requester.
 
 <div><p>
   <img src="high-level-exchange-flow-solicited.png" style="float:none">  
@@ -72,15 +72,15 @@ In this flow, patient information is exchanged based on a request from a pharmac
 
 <p></p>
 
-#### 3.Unsolicited - RESTful Data Source
+#### Unsolicited - RESTful Data Source
 
 This guide defines an unsolicited data "push" model that uses FHIR messaging (below). This approach aligns with the current environment in which it is expected that all prescribing systems are able to exchange with all pharmacies in the US, the bulk of prescriptions are transmitted through exchange networks, and direct connections between EHRs and pharmacies are uncommon.
 
-However, the data source may leverage an intermediary to enable patient information to be collected and sent to a pharmacy or other party in FHIR message form, with the data source interacting solely through standard RESTful requests. The [Intermediary Facilitation](intermediary.html) section describes this approach. 
+However, the Data Source may leverage an intermediary to enable patient information to be collected and sent to a pharmacy or other party in FHIR message form, with the Data Source interacting solely through standard RESTful requests. The [Intermediary Facilitation](intermediary.html) section describes this approach. 
 
 <p></p>
 
-#### 4. Unsolicited - Messaging
+#### Unsolicited - Messaging
 
 In this flow, the prescribing system proactively sends a   [Specialty Rx Query Response - Unsolicited message](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) containing patient information related to a prescription.
 

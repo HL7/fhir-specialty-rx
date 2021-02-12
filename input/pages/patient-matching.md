@@ -1,9 +1,9 @@
 The Specialty Rx process supports two exchange patterns, which are described in [Systematic Query Workflows](systematic-queries.html):
 
-- Solicited Model: A pharmacy or other party requests patient information from an EHR or other data source
-- Unsolicited Model: A data source pushes patient data to a recipient proactively when a medication is prescribed--without having received a request
+- Solicited Model: A pharmacy or other party requests patient information from an EHR or other Data Source
+- Unsolicited Model: A Data Source pushes patient data to a recipient proactively when a medication is prescribed--without having received a request
 
-Relating to both of those models, the sections below describe the requester's and data source's steps and responsibilities for: 
+Relating to both of those models, the sections below describe the requester's and Data Source's steps and responsibilities for: 
 
 - identifying / matching the patient   *(solicited model)*
 - specifying the desired data   *(solicited model)*
@@ -55,7 +55,7 @@ When retrieving information using RESTful searches...
 When retrieving information using a Specialty Rx Query message, the Requesting System...
 - SHALL populate the `requester-patient` parameter with a reference to the **Requesting System's Patient resource** 
 - SHALL populate the `responder-patient` parameter with the **Data Source's Patient resource**
-  - SHALLL populate this Patient resource's `.meta.source` element with the Data Source System's FHIR server URL
+  - SHALL populate this `responder-patient` Patient resource's `.meta.source` element with the Data Source System's FHIR server URL
 - SHALL omit patient references from the query statement(s) contained in the request's `query-string` parameter. *See [Search Conventions](searches.html)*
 
 #### Step 3: Data Source System processes the request

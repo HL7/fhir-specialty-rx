@@ -4,38 +4,86 @@ To ensure that the most common data requests are supported by all participants, 
 
 *Note: When specifying searches in the Specialty Rx Query message, the patient parameter is omitted (see [below](http://build.fhir.org/ig/HL7/fhir-specialty-rx/branches/master/searches.html#searches-in-the-specialty-rx-query-message))*
 
+<span style="background-color:yellow">For review... the first version of this table specifies all parameters and conformance levels. <br/> Also note that the patient search parameter--used alone--is MAY for observation and MedicationRequest</span>
+
 <table class="grid">
 <thead>
 <tr>
 <th>Resource</th>
-<th style="width:150px">Parameters</th>
+<th style="min-width:250px">Parameters</th>
 <th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Condition</td>
-<td>category<br/>clinical-status<br/>onset-date<br/>code<br/>patient</td>
+    <td>AllergyIntolerance</td>
+<td>SHALL:<br/>&nbsp;&nbsp;patient<br/>SHOULD:<br/>&nbsp;&nbsp;patient + clinical-status<br/>MAY:<br/>&nbsp;&nbsp;clinical-status</td>
+    <td><pre>AllergyIntolerance?patient=123&amp;clinical-status=active</pre>Returns all active patient allergies and intolerances
+    </td>
+</tr>
+<tr>
+    <td>Condition</td>
+<td>SHALL:<br/>&nbsp;&nbsp;patient<br/>SHOULD:<br/>&nbsp;&nbsp;patient + category<br/>&nbsp;&nbsp;patient + clinical-status<br/>&nbsp;&nbsp;patient + onset-date<br/>&nbsp;&nbsp;patient + code<br/>MAY:<br/>&nbsp;&nbsp;category<br/>&nbsp;&nbsp;clinical-status<br/>&nbsp;&nbsp;onset-date<br/>&nbsp;&nbsp;code</td>
 <td><pre>Condition?patient=123</pre>Returns all patient conditions</td>
 </tr>
 <tr>
-<td>AllergyIntolerance</td>
-<td>clinical-status<br/>patient</td>
-    <td><pre>AllergyIntolerance?patient=123&amp;clinical-status=active</pre>Returns all active patient allergies and intolerances
-    </td></tr>
-<tr>
-<td>Observation</td>
-<td>status<br/>category <br/>code<br/>date<br/>patient</td>
+    <td>Observation</td>
+<td>SHALL:<br/>&nbsp;&nbsp;patient + category<br/>&nbsp;&nbsp;patient + category + date<br/>&nbsp;&nbsp;patient + code<br/>SHOULD:<br/>&nbsp;&nbsp;patient + category + status<br/>&nbsp;&nbsp;patient + code + date<br/>MAY:<br/>&nbsp;&nbsp;category<br/>&nbsp;&nbsp;code<br/>&nbsp;&nbsp;date<br/>&nbsp;&nbsp;<span style="background-color:yellow">patient</span><br/>&nbsp;&nbsp;status<br/></td>
     <td><pre>Observation?patient=123&amp;category=vital-signs&amp;date=ge2020-01-01</pre>Returns all patient vital signs recorded in the specified date period</td>
 </tr>
 <tr>
-<td>Coverage</td>
-<td>patient</td>
+<td>Coverage<br/><i>Not in US Core</i></td>
+<td>SHALL:<br/>&nbsp;&nbsp;patient</td>
+<td><pre>Coverage?patient=123</pre>Returns all patient insurance coverages</td>
+</tr>
+<tr>
+    <td>MedicationRequest</td>
+    <td>MAY:<br/> &nbsp;&nbsp;authoredon<br/>&nbsp;&nbsp;encounter<br/>&nbsp;&nbsp;intent<br/>&nbsp;&nbsp;<span style="background-color:yellow">patient</span><br/>&nbsp;&nbsp;status<br/>&nbsp;&nbsp;_include</td>
+<td><pre>MedicationRequest?patient=123&amp;status=active&amp;_include=MedicationRequest:Medication</pre>Returns all active patient MedicationRequests and the associated Medications</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<p></p>
+
+<span style="background-color:yellow">For review... this version of links to the specific resource type's US Core page's search parameters section</span>
+
+<table class="grid">
+<thead>
+<tr>
+<th>Resource</th>
+<th style="min-width:150px">Parameters</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AllergyIntolerance</td>
+    <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters">see US Core</a></td>
+    <td><pre>AllergyIntolerance?patient=123&amp;clinical-status=active</pre>Returns all active patient allergies and intolerances
+    </td>
+</tr>
+<tr>
+<td>Condition</td>
+    <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html#mandatory-search-parameters">see US Core</a></td>
+<td><pre>Condition?patient=123</pre>Returns all patient conditions</td>
+</tr>
+<tr>
+<td>Observation</td>
+    <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html#mandatory-search-parameters">see US Core</a></td>
+    <td><pre>Observation?patient=123&amp;category=vital-signs&amp;date=ge2020-01-01</pre>Returns all patient vital signs recorded in the specified date period</td>
+</tr>
+<tr>
+<td>Coverage<br/><i>Not in US Core</i></td>
+<td>SHALL: patient</td>
 <td><pre>Coverage?patient=123</pre>Returns all patient insurance coverages</td>
 </tr>
 <tr>
 <td>MedicationRequest</td>
-<td>status<br/>intent<br/>encounter<br/>authoredon<br/>patient<br/>_include</td>
+    <td>SHALL: patient<br/>(in addition to requirements defined in <a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html#mandatory-search-parameters">US Core</a>)</td>
 <td><pre>MedicationRequest?patient=123&amp;status=active&amp;_include=MedicationRequest:Medication</pre>Returns all active patient MedicationRequests and the associated Medications</td>
 </tr>
 </tbody>
@@ -51,19 +99,42 @@ In addition to the required searches above, implementers SHOULD support Document
 <thead>
 <tr>
 <th>Resource</th>
+<th style="width:250px">Parameters</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>DocumentReference</td>
+<td>SHALL:<br/>&nbsp;&nbsp;patient<br/>&nbsp;&nbsp;_id<br/>&nbsp;&nbsp;patient + category<br/>&nbsp;&nbsp;patient + category + date<br/>&nbsp;&nbsp;patient + type<br/>SHOULD:<br/>&nbsp;&nbsp;patient + status<br/>&nbsp;&nbsp;patient + type + period<br/>MAY:<br/>&nbsp;&nbsp;category<br/>&nbsp;&nbsp;date<br/>&nbsp;&nbsp;type<br/>&nbsp;&nbsp;period</td>
+<td><pre>DocumentReference?patient=123 &amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note</pre>Returns all patient clinical notes</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<span style="background-color:yellow">or</span>
+
+<table class="grid">
+<thead>
+<tr>
+<th>Resource</th>
 <th style="width:150px">Parameters</th>
 <th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>DocumentReference</td>
-<td>category<br/>date<br/>type<br/>patient<br/>_id</td>
+    <td>DocumentReference</td>
+    <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html#mandatory-search-parameters">see US Core</a></td>
 <td><pre>DocumentReference?patient=123 &amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note</pre>Returns all patient clinical notes</td>
 </tr>
 </tbody>
 </table>
 <p></p>
+
+
+
 ### Optional Searches
 
 Requesters MAY include searches other than those outlined above. 
@@ -75,18 +146,11 @@ Requesters MAY include searches other than those outlined above.
 
 #### US Core
 
-This guide leverages search guidance given in the US Core FHIR Implementation Guide. Below are particular sections in that IG that detail certain search aspects:
+This guide leverages search guidance given in the US Core FHIR Implementation Guide and the base FHIR specification. 
 
-- [Search syntax](https://www.hl7.org/fhir/us/core/general-guidance.html#search-syntax)
-- [AllergyIntolerance search parameters](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters)
-- [Condition search parameters](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html#mandatory-search-parameters)
-- [DocumentReference search parameters](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html#mandatory-search-parameters)
-- [Lab Observation search parameters](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html#mandatory-search-parameters)
-- [MedicationRequest search parameters](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html#mandatory-search-parameters)
+- [US Core Search syntax](https://www.hl7.org/fhir/us/core/general-guidance.html#search-syntax)
 
-#### Base FHIR
-
-- [FHIR Search](http://hl7.org/fhir/R4/search.html)
+- [FHIR Search guidance](http://hl7.org/fhir/R4/search.html)
 
 <p></p>
 ### Search conventions in the Specialty Rx Query Message
@@ -99,7 +163,7 @@ Specialty Rx messaging enables requesters to submit requests without performing 
 
 To support this scenario, the Specialty Rx Query message omits the patient parameter from submitted search strings, with the expectation that the responder will append it after locating the desired patient in its system. 
 
-For example, a search for a given patient's vital signs that that would ordinarily be stated as:
+For example, a search for a given patient's vital signs that would ordinarily be stated as:
 
 `Observation?patient=[patient id]&category=vital-signs`
 
@@ -133,6 +197,10 @@ Bundle
 #### Patient references within search results
 
 All searches performed within a request/response exchange flow relate to a single patient, who is represented in the *responder-patient* parameter in the Query Response message bundle. Patient references contained in resources in searchset bundles SHOULD be resolvable to the *responder-patient* entry in the outer, Query Response message bundle.
+
+<h4 style="background-color:yellow">Returning Provenance information within search results</h4>
+
+Data Sources SHALL be capable of supporting the ``_revinclude=Provenance:target` parameter, returning [US Core Provenance](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html) resource(s) that reference returned resources.
 
 <br />
 

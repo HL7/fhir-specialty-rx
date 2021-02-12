@@ -1,5 +1,5 @@
 ### Overview
-This FHIR implementation Guide describes the exchange of patient demographic, clinical and coverage data to support fulfillment of specialty medication prescriptions by pharmacies, and enrollment of patients into related support programs offered by parties such as as Hub vendors and pharmaceutical manufacturers.
+This FHIR implementation Guide describes the exchange of patient demographic, clinical and coverage data to support fulfillment of specialty medication prescriptions by pharmacies, and enrollment of patients into related support programs offered by parties such as Hub vendors and pharmaceutical manufacturers.
 
 This guide is co-branded between HL7 and the National Council for Prescription Drug Programs (NCPDP).
 
@@ -9,7 +9,7 @@ The current process for exchanging information to support specialty medication f
 
 NCPDP created a task group to focus on the exchange of this data, with the goal of reducing the time to therapy for a patient who has been prescribed a specialty medication. The group identified demographic, clinical and coverage information needed to support the process, and defined data exchange workflows between the clinic, pharmacy and other fulfilling parties to efficiently deliver the data to the parties that need it.
 
-This information is outside of the current NCPDP e-prescription standard that conveys specialty orders to pharmacies in the US today. After an extensive analysis of the types of information required beyond that carried in the prescription, the task group determined that developing an implementation guide using HL7 FHIR would be the best approach for enabling the exchange of this information. 
+This information is outside of the scope of the NCPDP e-prescription standard that conveys specialty orders to pharmacies in the US today. After an extensive analysis of the types of information required beyond that carried in the prescription, the task group determined that developing an implementation guide using HL7 FHIR would be the best approach for meeting this need. Exchange of that information is the focus of this guide. 
 
 ### Scope of This Guide
 
@@ -19,7 +19,9 @@ This guide addresses the exchange of information to support specialty medication
 - specialty enrollment for programs or services
 - facilitation of clinical care management, education, and training.
 
-The guide does not address transmission of the original prescription from the prescriber to dispensing pharmacy, which is typically accomplished in the US using the NCPDP SCRIPT standard.
+The guide does not address transmission of the original prescription from the prescriber to dispensing pharmacy, which is typically accomplished in the US using the NewRx message defined in the NCPDP SCRIPT standard. 
+
+Further, the exchanges described in the guide are not intended to be used to request a change to a received prescription or to propose a particular clarification; these functions are supported by the NCPDP SCRIPT RxChangeRequest and RxChangeResponse messages.
 
 This implementation guide is intended be used in the United States. It reflects US pharmacy processes and conventions.
 
@@ -71,6 +73,22 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 	  </tr>
 	</tbody>
   </table>
+
+### Change Log
+
+  <table class="grid">
+    <tbody>
+	  <tr>
+		<td>Date</td>
+		<td>Change</td>
+  	  </tr>
+	  <tr>
+		<td>Feb 11, 2021</td>
+		<td>Corrected approved typo fixes, proposed adjustments for FHIR-30595, 30597, 30627 and 30628. Revision in-process on Search Conventions page</td>
+  	  </tr>
+   </tbody>
+  </table>
+
 <br />
 
 

@@ -1,8 +1,8 @@
-Pharmacies and other stakeholders (referred to as "requester" below) sometimes need information that isn't available through systematic  querying of the prescriber's EHR (using the RESTful searches or Specialty Rx Query messages as described in the [Systematic Query Workflows](systematic-queries.html) section). 
+Pharmacies and other stakeholders (referred to as "requester" below) sometimes need information that isn't available through systematic querying of the prescriber's EHR (using the RESTful searches or Specialty Rx Query messages as described in the [Systematic Query Workflows](systematic-queries.html) section). 
 
 For example, the requester may need to: 
 
-- ask the clinic to clarify the prescription's dosing instructions
+- ask if there’s a follow-up patient visit scheduled
 - ask whether the clinic intends to order a lab test that must be performed prior to the patient starting the medication
 - ask the clinic to provide a copy of a consent form that the patient completed by hand.
 

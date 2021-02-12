@@ -121,10 +121,13 @@ It is a message Bundle with:
 - an event type equal to `query-response-unsolicited`
 - a Parameters resource as the focus (see below)
 - a mandatory Patient representing the patient in the sender's system
-- mandatory MedicationRequest, Practitioner, Organization resources to represent the associated specialty prescription
+- mandatory MedicationRequest, Practitioner, Organization resources to enable the recipient to match the Query Response - Unsolicited message with the related specialty prescription
 - Searchset bundle(s) containing patient data captured as search results
 
-*See [Processing Detail](patient-matching.html) for patient matching and other processing expectations.*
+*Notes:*
+
+- *This message is not intended to serve as authorization to dispense the referenced MedicationRequest. Electronic prescriptions are typically transmitted in the US using the NewRx message defined in the NCPDP SCRIPT standard.*
+- *See [Processing Detail](patient-matching.html) for patient matching and other processing expectations.*
 
 <table class="grid">
 <thead>
@@ -140,7 +143,7 @@ It is a message Bundle with:
 <td>source-patient</td>
 <td>1..1</td>
 <td>Patient</td>
-<td>Patient resource representing the data source&#39;s understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
+<td>Patient resource representing the Data Source&#39;s understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
 </tr>
 <tr>
 <td>medication-request</td>

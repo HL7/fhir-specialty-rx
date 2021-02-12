@@ -8,7 +8,7 @@
   <experimental value="false" />
   <date value="2020-06-26T00:00:00-00:00" />
   <publisher value="HL7 International - Pharmacy" />
-  <description value="Message reporting an error that causes a premature end to processing of a specialty Rx query response message. References the error event" />
+  <description value="Message reporting an error that causes premature processing termination of a specialty Rx query response message. References the error event" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />

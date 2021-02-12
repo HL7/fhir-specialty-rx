@@ -1,6 +1,6 @@
 ### Failure or non-execution of an individual search within a Query
 
-If a data source system...
+If a Data Source system...
 
 - is unable to execute an individual search included in a Query message
 
@@ -59,7 +59,7 @@ the system SHALL include a searchset Bundle entry containing the search string a
 
 ### Error preventing the return of a Query Response
 
-When a data source system encounters an error that prevents it from responding to a Query message with a Query Response, it  SHALL respond by returning a Error message containing an OperationOutcome resource that describes the nature of the failure.
+When a Data Source system encounters an error that prevents it from responding to a Query message with a Query Response, it  SHALL respond by returning a Error message containing an OperationOutcome resource that describes the nature of the failure.
 
 The OperationOutcome:
 
