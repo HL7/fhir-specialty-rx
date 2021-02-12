@@ -1,6 +1,12 @@
 ### Required Searches
 
-To ensure that the most common data requests are supported by all participants, Data Sources SHALL be able to return information in response to the following search strings--whether responding to RESTful search requests or the Specialty Rx Query message. The required search parameters match those required for each resource by the US Core.
+To ensure that the most common data requests are supported by all participants, Data Sources SHALL be able to return information in response to the following search strings--whether responding to RESTful search requests or the Specialty Rx Query message. 
+
+<span style="background-color:yellow">This IG SHALL follow the US Core Search guidance referenced here. </span>The required search parameters match those required for each resource by US Core <span style="background-color:yellow"> but with the following additional requirement specific to this IG:</span>. 
+
+-  <span style="background-color:yellow">Data Sources SHALL support use of the `patient` parameter for Observation, MedicationRequest and Coverage resources</span>
+
+
 
 *Note: When specifying searches in the Specialty Rx Query message, the patient parameter is omitted (see [below](http://build.fhir.org/ig/HL7/fhir-specialty-rx/branches/master/searches.html#searches-in-the-specialty-rx-query-message))*
 
