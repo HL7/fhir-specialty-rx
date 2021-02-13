@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-search-response-2-w-revinclude" />
+  <meta>
+    <lastUpdated value="2020-07-09T18:49:01.235+00:00" />
+  </meta>
+  <type value="searchset" />
+  <total value="1" />
+  <link>
+    <relation value="self" />
+    <url value="http://hapi.fhir.org/baseR4/AllergyIntolerance?patient=specialty-rx-patient-1&amp;_revinclude=Provenance:target" />
+  </link>
+  <entry>
+    <fullUrl value="http://hapi.fhir.org/baseR4/AllergyIntolerance/7961399" />
+    <resource>
+      <AllergyIntolerance>
+        <id value="7961399" />
+        <meta>
+          <versionId value="1" />
+          <lastUpdated value="2019-07-09T15:26:23.217+00:00" />
+          <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance" />
+        </meta>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+            <code value="active" />
+            <display value="Active" />
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+            <code value="confirmed" />
+            <display value="Confirmed" />
+          </coding>
+        </verificationStatus>
+        <category value="medication" />
+        <criticality value="high" />
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="762952008" />
+            <display value="Peanuts" />
+          </coding>
+          <text value="Peanuts" />
+        </code>
+        <patient>
+          <reference value="Patient/specialty-rx-patient-1" />
+        </patient>
+        <onsetDateTime value="2017-09" />
+        <reaction>
+          <manifestation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor" />
+              <code value="UNK" />
+              <display value="Unknown" />
+            </coding>
+          </manifestation>
+          <onset value="2017-09" />
+        </reaction>
+      </AllergyIntolerance>
+    </resource>
+    <search>
+      <mode value="match" />
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi.fhir.org/baseR4/Provenance/7961499" />
+    <resource>
+      <Provenance>
+        <id value="7961499" />
+        <meta>
+          <versionId value="1" />
+          <lastUpdated value="2019-07-09T15:26:23.217+00:00" />
+          <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance" />
+        </meta>
+        <target>
+          <reference value="AllergyIntolerance/7961399" />
+        </target>
+        <recorded value="2017-09-01T15:26:23.217+00:00" />
+        <agent>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+              <code value="author" />
+              <display value="Author" />
+            </coding>
+          </type>
+          <who>
+            <reference value="Practitioner/specialty-rx-practitioner-1" />
+          </who>
+        </agent>
+      </Provenance>
+    </resource>
+    <search>
+      <mode value="include" />
+    </search>
+  </entry>
+</Bundle>

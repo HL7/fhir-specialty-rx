@@ -6,6 +6,8 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="Bundle/specialty-rx-search-response-1-w-include" key="Bundle-specialty-rx-search-response-1-w-include" name="Search Response 1 with _included Medication Resource"/>
+<artifact id="Bundle/specialty-rx-search-response-2-w-revinclude" key="Bundle-specialty-rx-search-response-2-w-revinclude" name="Search Response 2 with _revincluded Provenance Resource"/>
 <artifact deprecated="true" id="StructureDefinition/specialty-rx-allergyintolerance" key="StructureDefinition-specialty-rx-allergyintolerance" name="Specialty Rx AllergyIntolerance"/>
 <artifact deprecated="true" id="AllergyIntolerance/specialty-rx-allergyintolerance-1" key="AllergyIntolerance-specialty-rx-allergyintolerance-1" name="Specialty Rx AllergyIntolerance - 1"/>
 <artifact id="StructureDefinition/specialty-rx-bundle-error" key="StructureDefinition-specialty-rx-bundle-error" name="Specialty Rx Bundle - Error Message"/>

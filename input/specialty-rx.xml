@@ -419,6 +419,24 @@
       </resource>	  
 	<resource>
 	      <reference>
+	        <reference value="Bundle/specialty-rx-search-response-1-w-include"/>
+                <display value="specialty-rx-search-response-1-w-include"/>
+            </reference>
+            <name value="Search Response 1 with _included Medication Resource"/>
+            <description value="Example searchset bundle containing an included Medication resource ."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Bundle/specialty-rx-search-response-2-w-revinclude"/>
+                <display value="specialty-rx-search-response-2-w-revinclude"/>
+            </reference>
+            <name value="Search Response 2 with _revincluded Provenance Resource"/>
+            <description value="Example searchset bundle containing a _revinclude Provenance resource ."/>
+	      <exampleBoolean value="true"/>
+      </resource>	  
+	<resource>
+	      <reference>
 	        <reference value="Bundle/specialty-rx-query-response-unsolicited-1"/>
                 <display value="specialty-rx-query-response-unsolicited-1"/>
             </reference>
