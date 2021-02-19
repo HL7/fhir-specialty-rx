@@ -6,13 +6,13 @@ Data Source and Data Consumer systems SHALL follow US Core search requirements a
 
 To ensure that the most common data requests are supported by all participants, Data Sources SHALL be able to return information in response to searches on the resources below--whether responding to RESTful search requests or the Specialty Rx Query message. 
 
-*Note: When specifying searches in the Specialty Rx Query message, the patient parameter is omitted (see [below](http://build.fhir.org/ig/HL7/fhir-specialty-rx/branches/master/searches.html#searches-in-the-specialty-rx-query-message))*
-
+*Note: When specifying searches in the Specialty Rx Query message, the patient parameter is omitted (see [below](#search-conventions-in-the-specialty-rx-query-message))*
+														        
 <table class="grid">
 <thead>
 <tr>
 <th>Resource</th>
-<th style="min-width:150px">Parameters</th>
+<th style="min-width:200px">Parameters</th>
 <th>Example</th>
 </tr>
 </thead>
@@ -35,16 +35,17 @@ To ensure that the most common data requests are supported by all participants, 
 </tr>
 <tr>
 <td>Coverage</td>
-    <td>SHALL: patient<br/><span style="font-size:smallest; font-style:italic">(Not profiled in US Core)</span></td>
+    <td>SHALL: patient<br/>SHOULD: beneficiary<br/><span style="font-size:smallest; font-style:italic">(Not profiled in US Core)</span></td>
 <td><pre>Coverage?patient=123</pre>Returns all patient insurance coverages</td>
 </tr>
 <tr>
 <td>MedicationRequest</td>
     <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html#mandatory-search-parameters">Per US Core</a></td>
-<td><pre>MedicationRequest?patient=123&amp;status=active&amp;_include=MedicationRequest:Medication</pre>Returns all active patient MedicationRequests and the associated Medications</td>
+<td><pre>MedicationRequest?patient=123&amp;intent=order&amp;status=active&amp;_include=MedicationRequest:Medication</pre>Returns all active patient MedicationRequest orders and the associated Medications</td>
 </tr>
 </tbody>
 </table>
+
 
 <p></p>
 
@@ -56,7 +57,7 @@ In addition to the required searches above, implementers SHOULD support Document
 <thead>
 <tr>
 <th>Resource</th>
-<th style="width:150px">Parameters</th>
+<th style="width:200px">Parameters</th>
 <th>Example</th>
 </tr>
 </thead>
@@ -74,14 +75,14 @@ In addition to the required searches above, implementers SHOULD support Document
 
 ### Optional Searches
 
-Requesters MAY include searches other than those outlined above. 
+Data Consumers MAY include searches other than those outlined above. 
 
-- Data Source Systems SHALL return a [search-result](StructureDefinition-specialty-rx-bundle-search-result.html) for each--even if the search is not supported--which SHALL include an OperationOutcome indicating when the responder does not support the submitted search or search parameter.  
+- Data Source systems SHALL return a [search-result](StructureDefinition-specialty-rx-bundle-search-result.html) for each--even if the search is not supported--which SHALL include an OperationOutcome indicating when the Data Source does not support the submitted search or search parameter.  
 
 <p></p>
 ### Returning related resources within search results
 
-Data Sources SHALL be capable of supporting the `_revinclude=Provenance:target` parameter as defined in US Core, returning [US Core Provenance](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html) resource(s) that reference returned resources. In addition, Data Sources SHALL support mandatory `_include` parameters defined in US Core.
+Data Sources SHALL be capable of supporting the `_revinclude=Provenance:target` parameter as defined in US Core, returning [US Core Provenance](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-provenance.html) resource(s) that reference returned resources, as specified [here in US Core](https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html). In addition, Data Sources SHALL support mandatory `_include` parameters defined in US Core.
 
 Each related resource SHALL be included as an entry in the response's searchset bundle with a `search.mode` value of `include`. Below are examples:
 
@@ -105,9 +106,9 @@ The Specialty Rx Query message requests specific information from a given patien
 
 #### Specifying a query string
 
-Specialty Rx messaging enables requesters to submit requests without performing a patient match ahead of time. This accommodates a common situation where the requester hasn't participated in previous FHIR exchanges about this patient with the responder and doesn't possess the responder's Patient resource ID. This also addresses challenges that may arise if the requester interacts with the responder via an intermediary--for example if the requester lacks details about the responder's endpoint or is otherwise unable to submit patient match requests directly to the responder.
+Specialty Rx messaging enables Data Consumer systems to submit requests without performing a patient match ahead of time. This accommodates a common situation where the Data Consumer hasn't participated in previous FHIR exchanges about this patient with the Data Source and doesn't possess the Data Source's Patient resource ID. This also addresses challenges that may arise if the Data Consumer interacts with the Data Source via an intermediary--for example if the Data Consumer lacks details about the Data Source's endpoint or is otherwise unable to submit patient match requests directly to the Data Source.
 
-To support this scenario, the Specialty Rx Query message omits the patient parameter from submitted search strings, with the expectation that the responder will append it after locating the desired patient in its system. 
+To support this scenario, the Specialty Rx Query message omits the patient parameter from submitted search strings, with the expectation that the Data Source will append it after locating the desired patient in its system.  
 
 For example, a search for a given patient's vital signs that would ordinarily be stated as:
 
@@ -119,19 +120,19 @@ For example, a search for a given patient's vital signs that would ordinarily be
 
 #### Identifying the desired patient
 
-The requester identifies the desired patient by including one or both the following in the Specialty Rx Query message:
+The Data Consumer identifies the desired patient by including one or both the following in the Specialty Rx Query message:
 
-- a Patient resource representing the patient in the requester's system (mandatory)
-- a Patient resource from the responder's system (if available)
+- a Patient resource representing the patient in the Data Consumer system (mandatory)
+- a Patient resource from the Data Source system (if available)
 
-The responder locates the desired patient and completes the query string as follows, based on the submitted patient information:
+The Data Source locates the desired patient and completes the query string as follows, based on the submitted patient information:
 
-- If the **request includes only the requester's Patient**, the responder performs a matching process and locates the associated patient in its own system. It appends its Patient ID to each submitted search string.
-- If the **request includes both the requester's Patient and responder's Patient**, the responder confirms the match and then appends its Patient ID to each submitted search string. 
+- If the **request includes only the Data Consumer's Patient**, the Data Source performs a matching process and locates the associated patient in its own system. It appends its Patient ID to each submitted search string.
+- If the **request includes both the Data Consumer's Patient and Data Source's Patient**, the Data Source confirms the match and then appends its Patient ID to each submitted search string. 
 
 #### Returning the executed search string in the response message
 
-In the Specialty Rx Query Response, the responder returns the full search string that was ultimately executed--including patient parameter--in the .link element of each returned searchset Bundle.
+In the Specialty Rx Query Response, the Data Source returns the full search string that was ultimately executed--including patient parameter--in the .link element of each returned searchset Bundle.
 
 <pre>
 Bundle

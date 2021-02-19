@@ -9,7 +9,7 @@ The current process for exchanging information to support specialty medication f
 
 NCPDP created a task group to focus on the exchange of this data, with the goal of reducing the time to therapy for a patient who has been prescribed a specialty medication. The group identified demographic, clinical and coverage information needed to support the process, and defined data exchange workflows between the clinic, pharmacy and other fulfilling parties to efficiently deliver the data to the parties that need it.
 
-This information is outside of the scope of the NCPDP e-prescription standard that conveys specialty orders to pharmacies in the US today. After an extensive analysis of the types of information required beyond that carried in the prescription, the task group determined that developing an implementation guide using HL7 FHIR would be the best approach for meeting this need. Exchange of that information is the focus of this guide. 
+This information is outside of the scope of the NCPDP e-prescription standard that conveys specialty orders to pharmacies in the US today. After an extensive analysis of the types of information required beyond what is carried in the prescription, the task group determined that developing an implementation guide using HL7 FHIR would be the best approach for meeting this need. Exchange of that information is the focus of this guide. 
 
 ### Scope of This Guide
 
@@ -85,6 +85,14 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 	  <tr>
 		<td>Feb 11, 2021</td>
 		<td>Corrected approved typo fixes, proposed adjustments for FHIR-30595, 30597, 30627 and 30628. Revision in-process on Search Conventions page</td>
+  	  </tr>
+	  <tr>
+		<td>Feb 15, 2021</td>
+		<td>Completed proposed changes to Search page and CapabilityStatements to address comments FHIR-30484, FHIR-30485, FHIR-30486, and FHIR-30608. Replaced parameter examples with links to related US Core specification, added guidance and examples for _revinclude and _include parameter usage, adjusted search example to match US Core required parameter combination for MedicationRequest, added _revinclude requirements to capability statements and added a 'SHALL follow US Core search guidance' statement and link to the Search Conventions page to all CapabilityStatement pages and 'SHALL follow US Core search' to all CapabilityStatement rest documentations sections. <br/>Changed Data Recipient to Data Consumer in Capability Statement narratives, CapabilityStatement names and Search Conventions page content in response to comment FHIR-30610 (additional IG changes for 30610 are yet to be made)</td>
+  	  </tr>
+	  <tr>
+		<td>Feb 19, 2021</td>
+		<td>Applied the remaining “data requester”/”data recipient” to “consumer” wording changes to narrative pages (MessageDefinition-specialty-rx-query intro, StructureDefinition-specialty-rx-bundle-query intro, StructureDefinition-specialty-rx-bundle-search-result intro, Task-specialty-rx-task-smart-launch-2-ids intro, Flows Requiring Human Interaction, Intermediary Facilitation, Message Structure, Conformance Expectations, Patient Matching, Use Cases and Roles, Systematic Queries, Capability Statements, Message Submission). Changed the names of the pharmacy capability statements to Data Consumer and adjusted the narrative pages to match. Added _revinclude/Provenance entries to the capability statements to match US Core. Added a statement to the capability statements and narrative pages saying that implementing systems SHALL follow US Core search requirements and guidance when performing searches associated with this guide. Added a link to the Search Conventions section on the capability statement narrative pages. Corrected links on the Search Convention and Security pages. Adjusted statements in Message Submission and Systematic Queries related to synchronous/asynchronous processing to refer to the definition in the $process-message operation (removed prohibition on use of the async parameter)</td>
   	  </tr>
    </tbody>
   </table>

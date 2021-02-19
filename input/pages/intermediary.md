@@ -1,6 +1,6 @@
 Pharmacies in the US typically receive prescriptions through network intermediaries. Because of this, their systems do not maintain direct connections to individual prescriber system instances, and they further lack the information needed to determine the correct Data Source endpoint related to a given prescription and patient. These pharmacies are unable to submit RESTful requests directly to the Data Source.
 
-In this situation, an intermediary may facilitate RESTful Data Source interactions on behalf of the requesting party--using the routing information and connection it possesses. 
+In this situation, an intermediary may facilitate RESTful Data Source interactions on behalf of a Data Consumer system--using the routing information and connection it possesses. 
 
 Likewise, an EHR that conforms with the Specialty Rx RESTful Data Source profile may leverage an intermediary so that it can fulfill query requests from messaging-based pharmacies and transmit "unsolicited" information related to prescriptions it sends to these pharmacies.
 
@@ -10,7 +10,7 @@ This section describes these exchanges.
 
 ### Intermediary-Facilitated Solicited Workflow
 
-This exchange model accommodates requesters that... 
+This exchange model accommodates Data Consumer systems that... 
 
 - have implemented only the Specialty Rx messages, or
 - are unable to locate and/or connect directly with the Data Source associated with the prescription
@@ -19,10 +19,10 @@ This exchange model accommodates requesters that...
 
 In this flow: 
 
-- the requester submits a FHIR request message to the intermediary
+- the Data Consumer system submits a FHIR request message to the intermediary
 - the intermediary locates the correct Data Source and connection specifics based on information in the request message
 - the intermediary performs RESTful patient matching and data requests against the Data Source, and packages the results into a response FHIR message
-- the intermediary returns the FHIR response message to the requester.
+- the intermediary returns the FHIR response message to the Data Consumer .
 
 <p></p>
 

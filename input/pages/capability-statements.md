@@ -10,10 +10,10 @@ A Data Source System SHALL conform to at least one of the following Capability S
 - [Specialty Rx Data Source - RESTful](CapabilityStatement-specialty-rx-data-source-restful.html)
 - [Specialty Rx Data Source - Messaging](CapabilityStatement-specialty-rx-data-source-messaging.html)
 
-<h3>Requesting System Capability Statements</h3>
-A Requesting System SHALL conform to at least one of the following Capability Statements, and MAY conform to both:
-- [Specialty Rx Requesting System - RESTful](CapabilityStatement-specialty-rx-data-recipient-restful.html)
-- [Specialty Rx Requesting System - Messaging](CapabilityStatement-specialty-rx-data-recipient-messaging.html)
+<h3>Data Consumer System Capability Statements</h3>
+A Data Consumer system SHALL conform to at least one of the following Capability Statements, and MAY conform to both:
+- [Specialty Rx Data Consumer System - RESTful](CapabilityStatement-specialty-rx-data-consumer-restful.html)
+- [Specialty Rx Data Consumer System - Messaging](CapabilityStatement-specialty-rx-data-consumer-messaging.html)
 
 
 

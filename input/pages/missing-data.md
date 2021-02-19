@@ -2,17 +2,17 @@
 
 Profiles in this guide specify certain elements as "Must Support". These SHALL be interpreted as follows:
 
-- Data Source Systems SHALL be capable of populating each Must Support data element when sharing the resource in an exchange defined in this guide. It must be capable of both *possessing the data* for the element and *exchanging* it.
+- Data Source systems SHALL be capable of populating each Must Support data element when sharing the resource in an exchange defined in this guide. It must be capable of both *possessing the data* for the element and *exchanging* it.
 
-- Requesting Systems SHALL be capable of processing received instances containing the Must Support data elements without generating an error or causing the application to fail.
+- Data Consumer systems SHALL be capable of processing received instances containing the Must Support data elements without generating an error or causing the application to fail.
 
 - If the Must Support element is specified as required (minimum cardinality of 1 or higher), the element SHALL be present in the instance and SHALL have a value unless the profile is defined in U.S. Core or based on it \*, in which case a `dataAbsentReason` extension may be sent in place of the value.
 
   *\* Profiles defined in this guide that are based on US Core are [Specialty Rx Patient](StructureDefinition-specialty-rx-patient.html), [Specialty Rx Medication Request](StructureDefinition-specialty-rx-medicationrequest.html),  [Specialty Rx Organization Pharmacy](StructureDefinition-specialty-rx-organization-pharmacy.html) and [Specialty Rx Practitioner](StructureDefinition-specialty-rx-practitioner.html). These are used solely in the Specialty Rx messages.*
 
-- Requesting Systems SHALL interpret missing elements in received resources as data that is either not present in the Data Source System or not shareable with the Requesting System for privacy or other reasons.
+- Data Consumer systems SHALL interpret missing elements in received resources as data that is either not present in the Data Source system or not shareable with the Data Consumer system for privacy or other reasons.
 
-- Requesting Systems SHALL be able to process resource instances containing data elements containing `dataAbsentReason` extensions in place of values where allowed as described here.
+- Data Consumer systems SHALL be able to process resource instances containing data elements containing `dataAbsentReason` extensions in place of values where allowed as described here.
 
 <p></p>
 
@@ -20,17 +20,17 @@ Profiles in this guide specify certain elements as "Must Support". These SHALL b
 
 #### In Must Support Elements
 
-**Unknown Reason.** If the source system does not have data for a *Must Support* data element, and the reason for absence is unknown:
+**Unknown Reason.** If the Data Source system does not have data for a *Must Support* data element, and the reason for absence is unknown:
 
-- The Data Source responding to a query SHALL NOT include the element in the resource. 
+- The Data Source system responding to a query SHALL NOT include the element in the resource. 
 
-- The Requester SHALL interpret missing data elements within resource instances as data not present in the Data Source system.
+- The Data Consumer system SHALL interpret missing data elements within resource instances as data not present in the Data Source system.
 
 **Known Reason.** In situations where information on a particular data element is missing and the Data Source knows the precise reason for the absence of data: 
 
-- The Data Source SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension. *(See next section)*
+- The Data Source system SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension. *(See next section)*
 
-- The Requester SHALL be able to process resource instances containing data elements asserting missing information.
+- The Data Consumer system SHALL be able to process resource instances containing data elements asserting missing information.
 
 #### In Required Elements
 

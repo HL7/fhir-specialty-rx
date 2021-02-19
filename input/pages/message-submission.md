@@ -19,9 +19,9 @@ The $process-message operation SHALL contain a single `content` parameter consis
 
 ### Synchronous or Asynchronous Response
 
-Specialty Rx Query Responses are expected to be systematically produced using data in the patient's electronic health record. They may be returned synchronously or asynchronously in near real-time. The Requesting System cannot influence which behavior occurs; when a message is received, the Data Source System determines whether it will respond synchronously or asynchronously.
+Specialty Rx Query Responses are expected to be systematically produced using data in the patient's electronic health record. They may be returned synchronously or asynchronously in near real-time. 
 
-- When responding asynchronously, the Data Source System first acknowledges the request message with a `200 OK` with no body, or returns an HTTP error if the message cannot be processed
+- When responding asynchronously, the Data Source system first acknowledges the request message with a `200 OK` with no body, or returns an HTTP error if the message cannot be processed
 
 <p></p>
 

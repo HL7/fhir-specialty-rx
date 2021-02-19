@@ -298,18 +298,18 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="CapabilityStatement/specialty-rx-data-recipient-restful"/>
-	      <display value="Specialty Rx CapabilityStatement - Data Recipient - RESTful"/>
+	      <reference value="CapabilityStatement/specialty-rx-data-consumer-restful"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Consumer - RESTful"/>
 	    </reference>
-	    <name value="Specialty Rx CapabilityStatement - Data Recipient - RESTful"/>
+	    <name value="Specialty Rx CapabilityStatement - Data Consumer - RESTful"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
 	    <reference>
-	      <reference value="CapabilityStatement/specialty-rx-data-recipient-messaging"/>
-	      <display value="Specialty Rx CapabilityStatement - Data Recipient - Messaging"/>
+	      <reference value="CapabilityStatement/specialty-rx-data-consumer-messaging"/>
+	      <display value="Specialty Rx CapabilityStatement - Data Consumer - Messaging"/>
 	    </reference>
-	    <name value="Specialty Rx CapabilityStatement - Data Recipient - Messaging"/>
+	    <name value="Specialty Rx CapabilityStatement - Data Consumer - Messaging"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 	  

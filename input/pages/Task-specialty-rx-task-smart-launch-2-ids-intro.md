@@ -1,4 +1,4 @@
-In this example, the Task.reasonReference (prescription), Task.requester (the requesting pharmacy), Task.owner (the prescriber) are represented using identifiers.
+In this example, the Task.reasonReference (prescription), Task.requester (the pharmacy submitting the task), Task.owner (the prescriber) are represented using identifiers.
 
 <p></p>
 

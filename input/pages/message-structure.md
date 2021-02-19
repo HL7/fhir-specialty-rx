@@ -7,7 +7,7 @@ It is a message Bundle with:
 - an event type equal to `query`
 - a Parameters resource as the `focus` (see below)
   - Search strings are specified in `query-string` parameter elements 
-- a mandatory Patient resource representing the requesting party's understanding of the patient
+- a mandatory Patient resource representing the Data Consumer system's understanding of the patient
 - an optional Patient representing the patient in the responder's system
 - optional MedicationRequest, Practitioner, Organization resources to represent the associated specialty prescription
 
@@ -33,13 +33,13 @@ It is a message Bundle with:
 <td>requester-patient</td>
 <td>1..1</td>
 <td>Patient</td>
-<td>Patient resource representing the requesting party&#39;s understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
+<td>Patient resource representing the Data Consumer&#39;s understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
 </tr>
 <tr>
 <td>responder-patient</td>
 <td>0..1</td>
 <td>Patient</td>
-<td>Patient resource representing the responding party&#39;s understanding of the patient, if available<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
+<td>Patient resource representing the Data Source&#39;s understanding of the patient, if available<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
 </tr>
 <tr>
 <td>medication-request</td>
@@ -121,7 +121,7 @@ It is a message Bundle with:
 - an event type equal to `query-response-unsolicited`
 - a Parameters resource as the focus (see below)
 - a mandatory Patient representing the patient in the sender's system
-- mandatory MedicationRequest, Practitioner, Organization resources to enable the recipient to match the Query Response - Unsolicited message with the related specialty prescription
+- mandatory MedicationRequest, Practitioner, Organization resources to enable the recipient to find the specialty prescription that the Query Response - Unsolicited message relates to
 - Searchset bundle(s) containing patient data captured as search results
 
 *Notes:*

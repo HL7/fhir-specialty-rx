@@ -1,23 +1,21 @@
 <h3>FHIR RESTful Capabilities</h3>
-Specialty Rx Data Source **SHALL**: 
-1. Support the Solicited - RESTful Data Source workflow defined in this guide, including all required searches and search parameters. 
+Specialty Rx Data Consumer **SHALL**: 
+1. Support the RESTful solicited workflow defined in this guide, including all required searches and search parameters. 
 1. Implement the RESTful behavior according to the FHIR specification. 
 1. Support the JSON source format. 
-1. Declare a CapabilityStatement identifying the profiles supported. 
+1. Declare a CapabilityStatement identifying the profiles supported.
 
-Specialty Rx Data Source **SHOULD**: 
-1. Respond to the Patient/$match operation. 
+Specialty Rx Data Consumer **SHOULD**: 
+1. Support the Patient/$match operation. 
 1. Support the recommended searches and parameters identified in the guide. 
-1. Support the XML source format. 
-1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. 
+1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance.
 
-The Specialty Rx Data Source MAY 
+The Specialty Rx Data Consumer MAY 
 1. Support the Task / SMART application launch capability specified in the guide.
 
 <h3>Security</h3>
 1. For general security considerations refer to [FHIR Security and Privacy Considerations](https://www.hl7.org/fhir/secpriv-module.html). 
 1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html). 
-1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code.
 
 ### Resources
 
@@ -47,7 +45,7 @@ The Specialty Rx Data Source MAY
 			</th>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
             <td>AllergyIntolerance</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance">http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance</a>
@@ -58,7 +56,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>Condition</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition">http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition</a>
@@ -69,7 +67,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>Coverage</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage</a>
@@ -91,7 +89,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>MedicationRequest</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest</a>
@@ -102,7 +100,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>Observation</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab</a>
@@ -138,7 +136,7 @@ The Specialty Rx Data Source MAY
 </table>
 <h3>Search</h3>
 
-Data Source systems SHALL follow US Core search requirements and guidance when performing searches associated with this guide. See the [Search Conventions](searches.html) section.
+Data Consumer systems SHALL follow US Core search requirements and guidance when performing searches associated with this guide. See the [Search Conventions](searches.html) section.
 
 <br />
 

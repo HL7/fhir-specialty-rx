@@ -1,29 +1,27 @@
 <h3>FHIR RESTful Capabilities</h3>
-Specialty Rx Data Source **SHALL**: 
-1. Support the Solicited workflow defined in this guide by responding to the $process-message operation containing a Specialty Rx Query message by returning a Specialty Rx Query Response message or Specialty Rx Error message. 
-1. Support all required RESTful searches and search parameters. 
+Specialty Rx Data Consumer **SHALL**: 
+1. Support the Unsolicited workflow defined in this Guide and respond to the $process-message operation carrying a Specialty Rx Query Response - Unsolicited. 
 1. Support the JSON source format. 
 1. Declare a CapabilityStatement identifying the profiles supported.
 
-Specialty Rx Data Source **SHOULD**: 
-1. Respond to the Patient/$match operation.  
+Specialty Rx Data Consumer **SHOULD**: 
 1. Support the XML source format. 
-1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance.
+1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. 
 
-The Specialty Rx Data Source MAY 
-1. Support the Unsolicited workflow defined in this guide, using the Specialty Rx Query Response - Unsolicited message. 
-1. Support the Task / SMART application launch capability specified in the guide.
+The Specialty Rx Data Consumer MAY 
+1. Support the Solicited workflow defined in this Guide, including the Specialty Rx Query, Specialty Rx Query Response, and Specialty Rx Error messages. 
+1. Support the Patient/$match operation.
 
 <h3>Security</h3>
 1. For general security considerations refer to [FHIR Security and Privacy Considerations](https://www.hl7.org/fhir/secpriv-module.html). 
 1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html). 
-1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code.
+1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response co
 
 ### Resources
 
 - AllergyIntolerance, Condition, Coverage, DocumentReference, MedicationRequest and Observation actions referenced below are executed in the context of message processing. 
 
-- Task interactions referenced below are RESTful. 
+- Task interactions reference below are RESTful. 
 
 - OperationOutcome interactions referenced below are within both messaging and RESTful actions.
 
@@ -53,7 +51,7 @@ The Specialty Rx Data Source MAY
 			</th>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
             <td>AllergyIntolerance</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance">http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance</a>
@@ -64,7 +62,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>Condition</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition">http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition</a>
@@ -75,7 +73,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>Coverage</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage</a>
@@ -97,7 +95,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>MedicationRequest</td>
 			<td>
 				Search results: <br /><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest</a>
@@ -109,7 +107,7 @@ The Specialty Rx Data Source MAY
 			<td></td>
 		</tr>
 		<tr>
-			<td>SHALL</td>
+			<td>SHOULD</td>
 			<td>Observation</td>
 			<td>
 				<a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab</a>
@@ -145,7 +143,8 @@ The Specialty Rx Data Source MAY
 </table>
 <h3>Search</h3>
 
-Data Source systems SHALL follow US Core search requirements and guidance when performing searches associated with this guide. See the [Search Conventions](searches.html) section.
+Data Consumer systems SHALL follow US Core search requirements and guidance when performing searches associated with this guide. See the [Search Conventions](searches.html) section.
+
 
 ### Messaging
 
@@ -171,23 +170,12 @@ Data Source systems SHALL follow US Core search requirements and guidance when p
 		<tr>
 			<td>SHALL</td>
 			<td>Receiver</td>
-            <td>Specialty Rx Query</td>
+            <td>Specialty Rx Query Response - Unsolicited</td>
 			<td>
-				<a href="MessageDefinition-specialty-rx-query.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query</a>				
+				<a href="MessageDefinition-specialty-rx-query-response-unsolicited.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response-unsolicited</a>
 			</td>
 			<td>
-            <a href="StructureDefinition-specialty-rx-bundle-query.html">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query</a>                
-            </td>
-		</tr>
-		<tr>
-			<td>SHALL</td>
-			<td>Sender</td>
-            <td>Specialty Rx Query Response</td>
-			<td>
-				<a href="MessageDefinition-specialty-rx-query-response.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response</a>
-			</td>
-			<td>
-            <a href="StructureDefinition-specialty-rx-bundle-query-response.html">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response</a>                
+            <a href="StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited</a>                
             </td>
 		</tr>
 		<tr>
@@ -204,15 +192,26 @@ Data Source systems SHALL follow US Core search requirements and guidance when p
 		<tr>
 			<td>MAY</td>
 			<td>Sender</td>
-            <td>Specialty Rx Query Response - Unsolicited</td>
+            <td>Specialty Rx Query</td>
 			<td>
-				<a href="MessageDefinition-specialty-rx-query-response-unsolicited.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response-unsolicited</a>
+				<a href="MessageDefinition-specialty-rx-query.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query</a>
 			</td>
 			<td>
-            <a href="StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited</a>                
+            <a href="StructureDefinition-specialty-rx-bundle-query.html">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query</a>                
+            </td>
+		</tr>
+		<tr>
+			<td>MAY</td>
+			<td>Receiver</td>
+            <td>Specialty Rx Query Response</td>
+			<td>
+				<a href="MessageDefinition-specialty-rx-query-response.html">http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response</a>
+			</td>
+			<td>
+            <a href="StructureDefinition-specialty-rx-bundle-query-response.html">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response</a>                
             </td>
 		</tr>
 	</tbody>
 </table>
-
 <br />
+
