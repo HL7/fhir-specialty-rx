@@ -3,8 +3,8 @@ Pharmacies and other stakeholders (referred to as "information requester" below)
 For example, the information requester may need to: 
 
 - ask if there’s a follow-up patient visit scheduled
-- ask whether the clinic intends to order a lab test that must be performed prior to the patient starting the medication
-- ask the clinic to provide a copy of a consent form that the patient completed by hand.
+- ask whether the prescriber intends to order a lab test that must be performed prior to the patient starting the medication
+- ask the prescriber to provide a copy of a consent form that the patient completed by hand.
 
 This implementation guide describes a method to support these situations by enabling the prescriber or staff to provide information through a SMART application launched from the EHR--prompted by a request from a Data Consumer system used by the pharmacy or other information requester.
 
@@ -14,11 +14,11 @@ This implementation guide describes a method to support these situations by enab
 
 An information requester may host a SMART application that the prescriber or staff can launch from the EHR to view and respond to questions. Below is a scenario illustrating this approach for (a) communicating the need for information to the EHR and (b) enabling an EHR user to launch the application and complete the task.
 
-- While working the prescription, staff at the information requester organization captures the questions they need to be answered by the prescriber clinic. 
+- While working the prescription, staff at the information requester organization captures the questions they need to be answered by the prescriber. 
 - The information requester's application (Data Consumer system) associates this set of questions with an identifier that will be used to pull the questions up when clinic staff launches the SMART app from the EHR.
 - The Data Consumer system POSTs a [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource to the prescriber's EHR, asking it to create a staff work queue item to launch the information requester’s app and answer the questions. Included in the Task are elements that associate the request with the related prescription as well as fields containing the URL of the SMART app and the identifier needed to present the correct questions. 
 - The EHR places an item based on the Task in a user work queue, and sets the Task status to `ready`. The EHR returns a `201 CREATED` response
-- When the clinic user takes action on the work queue item, the EHR…
+- When the clinic staff takes action on the work queue item, the EHR…
   - launches the information requester's SMART App
   - sets a session launch context using the Patient ID it received in the `.for` element of the Task resource 
   - includes the `Task.identifier` value in the `appContext` launch parameter… which the SMART app uses to pull up the right patient/medication questions
