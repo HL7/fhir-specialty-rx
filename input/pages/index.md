@@ -98,6 +98,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Feb 26, 2021</td>
 		<td>Addressed ballot comments related to: prescriber/clinic/staff wording on the Flows Requiring Human Interaction page; changing use of Backend Services Authorization to SHOULD on the Security page and capability statements. </td>
   	  </tr>
+	  <tr>
+		<td>Mar 1, 2021</td>
+		<td>Addressed ballot comments related to the Task-to-SMART lauch process: FHIR-30604, FHIR-30605, FHIR-30606, FHIR-30607</td>
+  	  </tr>
    </tbody>
   </table>
 
