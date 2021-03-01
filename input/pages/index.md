@@ -94,6 +94,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Feb 19, 2021</td>
 		<td>Applied the remaining “data requester”/”data recipient” to “consumer” wording changes to narrative pages (MessageDefinition-specialty-rx-query intro, StructureDefinition-specialty-rx-bundle-query intro, StructureDefinition-specialty-rx-bundle-search-result intro, Task-specialty-rx-task-smart-launch-2-ids intro, Flows Requiring Human Interaction, Intermediary Facilitation, Message Structure, Conformance Expectations, Patient Matching, Use Cases and Roles, Systematic Queries, Capability Statements, Message Submission). Changed the names of the pharmacy capability statements to Data Consumer and adjusted the narrative pages to match. Added _revinclude/Provenance entries to the capability statements to match US Core. Added a statement to the capability statements and narrative pages saying that implementing systems SHALL follow US Core search requirements and guidance when performing searches associated with this guide. Added a link to the Search Conventions section on the capability statement narrative pages. Corrected links on the Search Convention and Security pages. Adjusted statements in Message Submission and Systematic Queries related to synchronous/asynchronous processing to refer to the definition in the $process-message operation (removed prohibition on use of the async parameter)</td>
   	  </tr>
+	  <tr>
+		<td>Feb 26, 2021</td>
+		<td>Addressed ballot comments related to: prescriber/clinic/staff wording on the Flows Requiring Human Interaction page; changing use of Backend Services Authorization to SHOULD on the Security page and capability statements. </td>
+  	  </tr>
    </tbody>
   </table>
 

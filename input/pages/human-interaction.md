@@ -19,9 +19,31 @@ An information requester may host a SMART application that the prescriber or sta
 - The Data Consumer system POSTs a [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource to the prescriber's EHR, asking it to create a staff work queue item to launch the information requester’s app and answer the questions. Included in the Task are elements that associate the request with the related prescription as well as fields containing the URL of the SMART app and the identifier needed to present the correct questions. 
 - The EHR places an item based on the Task in a user work queue, and sets the Task status to `ready`. The EHR returns a `201 CREATED` response
 - When the clinic staff takes action on the work queue item, the EHR…
-  - launches the information requester's SMART App
-  - sets a session launch context using the Patient ID it received in the `.for` element of the Task resource 
-  - includes the `Task.identifier` value in the `appContext` launch parameter… which the SMART app uses to pull up the right patient/medication questions
+  - launches the information requester's SMART App, sending a `launch` context parameter reflecting:
+
+    - the `.id` of the Patient it received in the `.for` element of the Task resource--which references the Data Source system's Patient resource
+    - the `Task.identifier` value--which the SMART app will use to present the right questions for the patient and medication. This value is later returned to the app in the access token response from the EHR authorization server
+
+    For example, the EHR redirects to:
+
+    ```
+    https://my-pharmacy-smart-app.com?
+       launch=123&
+       iss=htttp://my-ehr.com/fhir
+    ```
+
+  - responds to the app's authorization request in the launch sequence with an OAuth 2.0 access token response that includes the Patient.id and appContext values. For example:
+
+    ```
+    {
+      access_token:"secret-token-xyz",
+      expires-in:"3600",
+      patient:"specialty-rx-patient-1",
+      appContext:"launch-context-id-01345005",
+      ...
+    }
+    ```
+
   - sets the Task `status` to `in-progress`
 - During this period, the Data Consumer system may poll the Task's `status` to monitor its progress. E.g., `GET [base]/Task/1135804`
 - Once the questions have been completed in the SMART app, the Data Consumer system updates the Task's status to `completed`. The EHR updates the status and returns a `200 OK` response
@@ -73,7 +95,7 @@ The `appContext` parameter is sent to the SMART app as part of the [OAuth 2.0](h
 Example:
 
 ```
-"appContext": "05d06540dd00d"
+"appContext": "launch-context-id-01345005"
 ```
 
 [SMART App Launch Implementation Guide](http://hl7.org/fhir/smart-app-launch/index.html)
