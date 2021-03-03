@@ -6,11 +6,11 @@
   </meta>
   <identifier>
     <type>
-    	<coding>
-    		<system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-identifier-type" />
-    		<code value="app-context" />
-    		<display value="SMART App Context ID" />
-    	</coding>
+      <coding>
+        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-identifier-type" />
+        <code value="app-context" />
+        <display value="SMART App Context ID" />
+      </coding>
     </type>
     <system value="https://my-pharmacy-smart-app.com/app-context-id" />
     <value value="launch-context-id-01345005" />
@@ -45,10 +45,12 @@
     <type>
       <coding>
         <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
-        <code value="smart-app-launch-url" />
-        <display value="SMART Application Launch URL" />
+        <code value="smart-app-client-id" />
+        <display value="SMART Application Client ID" />
       </coding>
     </type>
-    <valueUrl value="https://my-pharmacy-smart-app.com" />
+    <valueIdentifier>
+      <value value="smart-app-1033450" />
+    </valueIdentifier>
   </input>
 </Task>

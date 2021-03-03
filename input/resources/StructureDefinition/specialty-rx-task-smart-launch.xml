@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-task-smart-launch" />
   <meta>
-    <lastUpdated value="2020-12-12T00:00:00+00:00" />
+    <lastUpdated value="2021-03-02T00:00:00+00:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
   <version value="0.1.00" />
@@ -10,7 +10,7 @@
   <title value="Specialty Rx Task - SMART Launch" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-12-12T00:00:00-05:00" />
+  <date value="2021-03-02T00:00:00-05:00" />
   <publisher value="HL7 International - Pharmacy" />
   <description value="This profile defines Task content enabling a pharmacy or other external party to prompt clinic staff to launch a SMART app and answer prescription-related questions." />
   <jurisdiction>
@@ -114,9 +114,9 @@
     </element>
     <element id="Task.for">
       <path value="Task.for" />
-      <label value="Related Patient" />
-      <short value="Related Patient" />
-      <definition value="The patient for whom the related prescription was written" />
+      <label value="Related Patient in the Data Source system" />
+      <short value="Related Patient in Data Source" />
+      <definition value="The patient for whom the related prescription was written, as represented in the Data Source system" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -289,11 +289,43 @@
           <type value="pattern" />
           <path value="type" />
         </discriminator>
-        <description value="The Task SHALL contain an input containing the URL for the SMART app to be launched to complete the task" />
+        <description value="The Task SHALL contain an input containing the Client ID of the SMART app to be launched to complete the task. It MAY contain an additional input containing the URL of the SMART app to be launched." />
         <rules value="open" />
       </slicing>
       <min value="1" />
       <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartClientId">
+      <path value="Task.input" />
+      <sliceName value="SmartClientId" />
+      <label value="SMART Application Client ID" />
+      <short value="SMART App Client ID" />
+      <definition value="The Client ID of the SMART application to be used to complete this task" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartClientId.type">
+      <path value="Task.input.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
+          <code value="smart-app-client-id" />
+          <display value="SMART Application Client ID" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.input:SmartClientId.valueIdentifier">
+      <path value="Task.input.valueIdentifier" />
+      <label value="SMART Application Client ID" />
+      <short value="SMART App Client ID" />
+      <min value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
       <mustSupport value="true" />
     </element>
     <element id="Task.input:SmartUrl">
@@ -302,7 +334,7 @@
       <label value="Smart Application Launch URL" />
       <short value="Smart App Launch URL" />
       <definition value="The launch URL of the SMART application to be used to complete this task" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

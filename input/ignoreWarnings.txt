@@ -65,3 +65,7 @@ Validate resource against profile http://hl7.org/fhir/StructureDefinition/Messag
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Medication
+Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance - listed in meta
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Provenance
+Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance - listed in meta

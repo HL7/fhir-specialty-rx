@@ -26,4 +26,9 @@
     <display value="SMART Application Launch URL" />
     <definition value="Launch URL for a SMART app to be used in fulfilling this Task" />
   </concept>
+  <concept>
+    <code value="smart-app-client-id" />
+    <display value="SMART Application Client ID" />
+    <definition value="Client ID for a SMART app to be used in fulfilling this Task" />
+  </concept>
 </CodeSystem>

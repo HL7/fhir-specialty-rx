@@ -60,6 +60,18 @@
     <type>
       <coding>
         <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
+        <code value="smart-app-client-id" />
+        <display value="SMART Application Client ID" />
+      </coding>
+    </type>
+    <valueIdentifier>
+      <value value="smart-app-1033450" />
+    </valueIdentifier>
+  </input>
+  <input>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
         <code value="smart-app-launch-url" />
         <display value="SMART Application Launch URL" />
       </coding>

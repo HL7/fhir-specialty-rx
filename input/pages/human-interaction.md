@@ -66,24 +66,19 @@ Note: If an event occurs within the Data Source system that prevents the Task fr
 The [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource contains the following information needed to reference related information in the EHR and launch the SMART application:
 
 - `Task.identifier` - This is a unique identifier representing the context of this task within the SMART application (e.g., the specific set of questions that need to be answered). It is to be conveyed during launch of the referenced SMART application in the `appContext` parameter and used by that application to direct the user to information and functions necessary to complete this task
-
 - `Task.code` - A code that characterizes the requested user action
   - Value: `complete-app-questionnaire` (`display`: "Complete Questionnaire in SMART App")
-  
 - `Task.description` - Human-readable description of the task to be performed by the user. This description SHALL include the user-recognizable name of the SMART application to launch to perform the task, and SHALL state the action to be performed in the app once it's been launched.
   - Example: "Launch the My Pharmacy SMART App and complete the questionnaire."
-  
 - `Task.for` - A reference to the patient 
-
 - `Task.requester` - The organization submitting the Task
-
 - `Task.owner` - The prescriber
-
 - `Task.reasonReference` - The prescription to which the task pertains. A human-readable description is included in `Task.display`, and specific identification is conveyed through either...
   - `Task.reasonReference.reference` - A reference to a MedicationRequest resource, or
   - `Task.reasonReference.identifier` - The prescription identifier set by the prescribing system. (Referred to as the Placer Order Number in HL7 v2 and Prescriber Order Number in NCPDP SCRIPT)
-  
-- `Task.input` - The location of the SMART app to be launched. `Task.input.type` contains the code, `smart-app-launch` and `Task.input.valueUrl` contains the actual endpoint URL to launch the SMART app.
+- `Task.input` - Identifies the SMART app to be launched. 
+  - Mandatory: SMART app client ID.`Task.input.type` contains the code, `smart-app-client-id` and `Task.input.valueIdentifier` contains the SMART app's client ID.
+  - Optional: SMART app launch URL. `Task.input.type` contains the code, `smart-app-launch-url` and `Task.input.valueUrl` contains the actual endpoint URL to launch the SMART app.
 
 *See this example of a [populated Task](Task-specialty-rx-task-smart-launch-1.html).*
 <p></p>

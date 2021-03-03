@@ -515,11 +515,6 @@
 	        <generation value="markdown"/>
 		  </page>
 		  <page>
-		    <nameUrl value="downloads.html"/>
-		    <title value="Downloads"/>
-		    <generation value="html"/>
-		  </page>
-		  <page>
 		    <nameUrl value="message-submission.html"/>
 		    <title value="Message submission"/>
 		    <generation value="markdown"/>
@@ -544,10 +539,15 @@
 		    <title value="Capability Statements"/>
 		    <generation value="markdown"/>
 		  </page>	
+		  <page>
+		    <nameUrl value="downloads.html"/>
+		    <title value="Downloads"/>
+		    <generation value="html"/>
+		  </page>
         </page>
     	<parameter>
 	    <code value="copyrightyear"/>
-	    <value value="2020+"/>
+	    <value value="2021+"/>
 	  </parameter>
 	  <parameter>
 	    <code value="releaselabel"/>
