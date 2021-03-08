@@ -1,4 +1,4 @@
-### Query Request Message
+### Query Message
 
 The Query message requests information from a patient's health records. It identifies the patient and specifies searches to be performed on the responding system's server.
 
@@ -33,13 +33,13 @@ It is a message Bundle with:
 <td>requester-patient</td>
 <td>1..1</td>
 <td>Patient</td>
-<td>Patient resource representing the Data Consumer&#39;s understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
+<td>Patient resource representing the requesting party&#39;s (Data Consumer&#39;s) understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
 </tr>
 <tr>
 <td>responder-patient</td>
 <td>0..1</td>
 <td>Patient</td>
-<td>Patient resource representing the Data Source&#39;s understanding of the patient, if available<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
+<td>Patient resource representing the responding party&#39;s (Data Source&#39;s) understanding of the patient. SHALL be populated when the Data Consumer system has performed a patient match against the Data Source prior to transmitting the Query Message<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
 </tr>
 <tr>
 <td>medication-request</td>
@@ -61,6 +61,7 @@ It is a message Bundle with:
 </tr>
 </tbody>
 </table>
+
 
 
 <p></p>
@@ -93,13 +94,14 @@ It is a message Bundle with:
 <td>requester-patient</td>
 <td>1..1</td>
 <td>Patient</td>
-<td>Patient resource representing the requesting party&#39;s understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
+<td>Patient resource representing the requesting party&#39;s (Data Consumer&#39;s) understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
 </tr>
 <tr>
 <td>responder-patient</td>
 <td>1..1</td>
 <td>Patient</td>
-<td>Patient resource representing the responding party&#39;s understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
+<td>
+    Patient resource representing the responding party&#39;s (Data Source&#39;s) understanding of the patient<br /><em>Profile: <a href="StructureDefinition-specialty-rx-patient.html">specialty-rx-patient</a></em></td>
 </tr>
 <tr>
 <td>search-result</td>
@@ -109,6 +111,7 @@ It is a message Bundle with:
 </tr>
 </tbody>
 </table>
+
 
 <p></p>
 

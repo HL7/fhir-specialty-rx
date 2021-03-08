@@ -49,7 +49,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="5" />
+      <min value="7" />
       <max value="*" />
       <mustSupport value="true" />
     </element>
