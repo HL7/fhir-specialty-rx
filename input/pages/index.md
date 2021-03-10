@@ -110,6 +110,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Mar 9, 2021</td>
 		<td>Applied additional comment resolutions</td>
   	  </tr>
+	  <tr>
+		<td>Mar 10, 2021</td>
+		<td>Applied comment resolution for FHIR-30427 - change wording in profile intro for specialty-rx-bundle-search-results, removing unnecessary / confusing first sentence. </td>
+  	  </tr>
    </tbody>
   </table>
 

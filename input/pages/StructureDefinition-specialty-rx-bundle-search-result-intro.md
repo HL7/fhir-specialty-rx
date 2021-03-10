@@ -1,1 +1,1 @@
-The Must Support elements in this profile enable the Data Consumer system to associate results in a Specialty Rx Query Response message to the associated Specialty Rx Query. The profile reflects typical population of a searchset bundle, ensuring the presence of information the Data Source system needs to process the search results.
+The profile reflects typical population of a searchset bundle, ensuring the presence of information the Data Consumer system needs to process the search results.
