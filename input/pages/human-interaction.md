@@ -2,7 +2,6 @@ Pharmacies and other stakeholders (referred to as "information requester" below)
 
 For example, the information requester may need to: 
 
-- ask if there’s a follow-up patient visit scheduled
 - ask whether the prescriber intends to order a lab test that must be performed prior to the patient starting the medication
 - ask the prescriber to provide a copy of a consent form that the patient completed by hand.
 

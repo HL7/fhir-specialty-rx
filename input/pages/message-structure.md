@@ -9,7 +9,7 @@ It is a message Bundle with:
   - Search strings are specified in `query-string` parameter elements 
 - a mandatory Patient resource representing the Data Consumer system's understanding of the patient
 - an optional Patient representing the patient in the responder's system
-- optional MedicationRequest, Practitioner, Organization resources to represent the associated specialty prescription
+- optional MedicationRequest, Practitioner, Organization resources to enable the recipient to find the specialty prescription that the Query Request message relates to
 
 *See [Processing Detail](patient-matching.html) for patient matching and other processing expectations.*
 

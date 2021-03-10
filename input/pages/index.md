@@ -106,6 +106,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Mar 2, 2021</td>
 		<td>Applied resolution to FHIR-30606 (change the primary SMART App identifier in the IG's Task profile, specialty-rx-task-smart-launch, to SMART APP Client ID and make the existing SMART App URL optional. Add a new value to the code system, specialty-rx-task-input-type to represent the added Client ID option. Apply additional wording to the Task profile and exmample to clarify that the Task.for element specifically reflects the Data Source's patient</td>
   	  </tr>
+	  <tr>
+		<td>Mar 9, 2021</td>
+		<td>Applied additional comment resolutions</td>
+  	  </tr>
    </tbody>
   </table>
 
