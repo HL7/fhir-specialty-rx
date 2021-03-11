@@ -124,8 +124,8 @@ Because this identifier is not accompanied by a system URI in the NewRx, impleme
 
 - `Patient.identifier.type.coding.system` = "http://terminology.hl7.org/CodeSystem/v2-0203"
 - `Patient.identifier.type.coding.code` = "MR"
-- `Patient.identifier.type.coding.code.display` = â€œMedical record numberâ€?
-- `Patient.identifier.type.text` = â€œMRN from prescriptionâ€?
+- `Patient.identifier.type.coding.code.display` = "Medical record number"
+- `Patient.identifier.type.text` = "MRN from prescription"
 - `Patient.identifier.value` = [the value received in MedicalRecordIdentificationNumberEHR ]
 - `Patient.identifier.system` = [data-absent-reason extension with value "unknown"]
 
