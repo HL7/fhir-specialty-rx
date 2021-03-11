@@ -114,6 +114,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Mar 10, 2021</td>
 		<td>Applied comment resolution for FHIR-30427 - change wording in profile intro for specialty-rx-bundle-search-results, removing unnecessary / confusing first sentence. Adjusted the specialty-rx-bundle-search-result profile narrative to describe population of the Bundle.link elements according to FHIR search response guidelines.</td>
   	  </tr>
+	  <tr>
+		<td>Mar 11, 2021</td>
+		<td>Applied comment resolution for FHIR-30612 - adding clarification to the patient matching page on the identifiers present in the NCPDP new prescription message and using the prescribing system MRN in matching. Update related examples</td>
+  	  </tr>
    </tbody>
   </table>
 

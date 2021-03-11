@@ -1,4 +1,4 @@
-The Specialty Rx process supports two exchange patterns, which are described in [Systematic Query Workflows](systematic-queries.html):
+﻿The Specialty Rx process supports two exchange patterns, which are described in [Systematic Query Workflows](systematic-queries.html):
 
 - Solicited Model: A pharmacy or other party requests patient information from an EHR or other Data Source
 - Unsolicited Model: A Data Source pushes patient data to a recipient proactively when a medication is prescribed--without having received a request
@@ -12,7 +12,7 @@ Relating to both of those models, the sections below describe the Data Consumer 
 
 <p></p>
 
-### Matching Approaches
+### Matching Approaches in the Solicited Model
 
 In the *solicited model*, where a pharmacy or other party (Data Consumer system) requests patient information from an EHR or other responder (Data Source system), the Data Consumer system may either...
 
@@ -71,7 +71,7 @@ When responding to a Specialty Rx Query message...
 
 ### Matching method Two: Deferred Patient Matching (Messaging Only)
 
-In this approach, which applies only to the Specialty Rx Query message, the request contains only the Data Consumer system's Patient resource. The Data Source's Patient ID is not referenced in the request.
+In this approach, which applies only to the Specialty Rx Query message, the request contains only the Data Consumer system's Patient resource. The Data Source's Patient resource ID is not referenced in the request.
 
 #### Step 1: Populate the patient information in the Specialty Rx Query message
 
@@ -92,10 +92,11 @@ The Data Source system performs patient matching using the request's patient ide
 <p></p>
 
 ### Additional Patient Processing Steps for Specialty Rx Messages
+
 #### Populating patient information in response messages (Solicited and Unsolicited)
 
 - In the Specialty Rx Query Response and Query Response - Unsolicited messages, the Data Source system SHALL populate the `responder-patient` element with a reference to the **Data Sources's Patient resource**
-- In the Specialty Rx Query message, the Data Source system SHALL echo the **Data Consumer's Patient resource** in the `requester-patient` parameter and SHALL populate this Patient resource's `.meta.source` element with the Data Consumer system's FHIR server URL
+- In the Specialty Rx Query Response message, the Data Source system SHALL echo the **Data Consumer's Patient resource** in the `requester-patient` parameter and SHALL populate this Patient resource's `.meta.source` element with the Data Consumer system's FHIR server URL
 
 
 #### Processing received response messages (Solicited and Unsolicited)
@@ -109,4 +110,51 @@ When the Data Consumer system processes a Specialty Rx Query Response or Query R
   - SHALL match the Patient referenced by the `responder-patient` parameter
   - SHOULD match the MedicationRequest in the `prescription` parameter (including referenced prescribing Practitioner and pharmacy Organization) to the related prescription. The receiving party can handle non-match situations according to their own rules, e.g., accept the message and add the patient to their system after a manual review
 
-<br>
+<p></p>
+
+### Using the NewRx Medical Record Number in Deferred Matching
+
+The NCPDP NewRx message typically used to transmit new prescriptions in the US does not support inclusion of the patient's FHIR Patient resource ID. 
+
+However, it offers optional patient identifier elements including MedicalRecordIdentificationNumberEHR, which is used to convey the patient's medical record number at the ordering practice.
+
+When received in a NewRx prescription message, Data Consumer systems MAY include the MedicalRecordIdentificationNumberEHR with other patient information transmitted in the `requester-patient` parameter of the Query message. 
+
+Because this identifier is not accompanied by a system URI in the NewRx, implementers SHOULD populate the value in the Patient resource as follows:
+
+- `Patient.identifier.type.coding.system` = "http://terminology.hl7.org/CodeSystem/v2-0203"
+- `Patient.identifier.type.coding.code` = "MR"
+- `Patient.identifier.type.coding.code.display` = â€œMedical record numberâ€?
+- `Patient.identifier.type.text` = â€œMRN from prescriptionâ€?
+- `Patient.identifier.value` = [the value received in MedicalRecordIdentificationNumberEHR ]
+- `Patient.identifier.system` = [data-absent-reason extension with value "unknown"]
+
+For example:
+
+```
+"identifier": [
+  {
+    "type": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "code": "MR",
+          "display": "Medical record number",
+        }
+      ],
+      "text": "MRN from prescription"
+    },
+    "_system": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    },
+    "value": "30455"
+  }
+]
+```
+
+<br/>

@@ -85,6 +85,22 @@
           <system value="http://example.org/MyPharmacyApp/patient-id" />
           <value value="540002" />
         </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="MR" />
+              <display value="Medical record number" />        
+            </coding>
+            <text value="MRN from prescription" />                  
+          </type>
+          <system>
+                <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+		    	    <valueCode value="unknown"/>
+    			</extension>
+          </system>
+          <value value="30455" />
+        </identifier>
         <active value="true" />
         <name>
           <family value="Doe" />

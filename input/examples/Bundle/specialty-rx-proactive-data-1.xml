@@ -81,10 +81,10 @@
           <type>
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-              <code value="PI" />
-              <display value="Patient internal identifier" />
+              <code value="MR" />
+              <display value="Medical record number" />
             </coding>
-            <text value="Patient internal identifier" />
+            <text value="Medical record number" />
           </type>
           <system value="http://example.org/MyEHR" />
           <value value="30455" />
