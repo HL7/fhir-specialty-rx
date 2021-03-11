@@ -112,7 +112,7 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
   	  </tr>
 	  <tr>
 		<td>Mar 10, 2021</td>
-		<td>Applied comment resolution for FHIR-30427 - change wording in profile intro for specialty-rx-bundle-search-results, removing unnecessary / confusing first sentence. </td>
+		<td>Applied comment resolution for FHIR-30427 - change wording in profile intro for specialty-rx-bundle-search-results, removing unnecessary / confusing first sentence. Adjusted the specialty-rx-bundle-search-result profile narrative to describe population of the Bundle.link elements according to FHIR search response guidelines.</td>
   	  </tr>
    </tbody>
   </table>
