@@ -118,6 +118,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Mar 11, 2021</td>
 		<td>Applied comment resolution for FHIR-30612 - adding clarification to the patient matching page on the identifiers present in the NCPDP new prescription message and using the prescribing system MRN in matching. Update related examples</td>
   	  </tr>
+	  <tr>
+		<td>Mar 15, 2021</td>
+		<td>On the Search Conventions page, clarified the note following the first paragraph in the Required Searches section.</td>
+  	  </tr>
    </tbody>
   </table>
 

@@ -6,8 +6,9 @@ Data Source and Data Consumer systems SHALL follow US Core search requirements a
 
 To ensure that the most common data requests are supported by all participants, Data Sources SHALL be able to return information in response to searches on the resources below--whether responding to RESTful search requests or the Specialty Rx Query message. 
 
-*Note: When specifying searches in the Specialty Rx Query message, the patient parameter is omitted (see [below](#search-conventions-in-the-specialty-rx-query-message))*
+*Note: Examples in the tables below reflect searches submitted using REST GET interactions. However, when specifying searches in the Specialty Rx Query message, the patient parameter is omitted (see [below](#search-conventions-in-the-specialty-rx-query-message))*
 														        
+
 <table class="grid">
 <thead>
 <tr>
