@@ -122,6 +122,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Mar 15, 2021</td>
 		<td>On the Search Conventions page, clarified the note following the first paragraph in the Required Searches section.</td>
   	  </tr>
+	  <tr>
+		<td>Mar 18, 2021</td>
+		<td>Added package download to the Downloads page.</td>
+  	  </tr>
    </tbody>
   </table>
 
