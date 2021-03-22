@@ -6,8 +6,12 @@ Data Source and Data Consumer systems SHALL follow US Core search requirements a
 
 To ensure that the most common data requests are supported by all participants, Data Sources SHALL be able to return information in response to searches on the resources below--whether responding to RESTful search requests or the Specialty Rx Query message. 
 
-*Note: Examples in the tables below reflect searches submitted using REST GET interactions. However, when specifying searches in the Specialty Rx Query message, the patient parameter is omitted (see [below](#search-conventions-in-the-specialty-rx-query-message))*
-														        
+*Notes:* 
+
+- *Examples in the tables below reflect searches submitted using REST GET and POST interactions. However, when specifying searches in the Specialty Rx Query message, the URL base and patient parameter are omitted (see [below](#search-conventions-in-the-specialty-rx-query-message))*
+- *Submitting searches using HTTP GET and POST is described [here](https://www.hl7.org/fhir/http.html#search) in the FHIR specification*
+
+<p></p>
 
 <table class="grid">
 <thead>
@@ -21,31 +25,47 @@ To ensure that the most common data requests are supported by all participants, 
 <tr>
 <td>AllergyIntolerance</td>
     <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters">Per US Core</a></td>
-    <td><pre>AllergyIntolerance?patient=123&amp;clinical-status=active</pre>Returns all active patient allergies and intolerances
+    <td><pre>GET [base]/AllergyIntolerance?patient=123&amp;clinical-status=active</pre>or<pre>POST [base]/AllergyIntolerance/_search
+<i>Content-Type: application/x-www-form-urlencoded:</i>
+patient=123&clinical-status=active
+</pre>Returns all active patient allergies and intolerances
     </td>
 </tr>
 <tr>
 <td>Condition</td>
     <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html#mandatory-search-parameters">Per US Core</a></td>
-<td><pre>Condition?patient=123</pre>Returns all patient conditions</td>
+<td><pre>GET [base]/Condition?patient=123</pre>or<pre>POST [base]/Condition/_search
+<i>Content-Type: application/x-www-form-urlencoded:</i> 
+patient=123</pre>
+Returns all patient conditions</td>
 </tr>
 <tr>
 <td>Observation</td>
     <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html#mandatory-search-parameters">Per US Core</a></td>
-    <td><pre>Observation?patient=123&amp;category=vital-signs&amp;date=ge2020-01-01</pre>Returns all patient vital signs recorded in the specified date period</td>
+    <td><pre>GET [base]/Observation?patient=123&amp;category=vital-signs&amp;date=ge2020-01-01</pre>or<pre>POST [base]/Observation/_search
+<i>Content-Type: application/x-www-form-urlencoded:</i> 
+patient=123&category=vital-signs&date=ge2020-01-01</pre>
+Returns all patient vital signs recorded in the specified date period</td>
 </tr>
 <tr>
 <td>Coverage</td>
     <td>SHALL: patient<br/>SHOULD: beneficiary<br/><span style="font-size:smallest; font-style:italic">(Not profiled in US Core)</span></td>
-<td><pre>Coverage?patient=123</pre>Returns all patient insurance coverages</td>
+<td><pre>GET [base]/Coverage?patient=123</pre>or<pre>POST [base]/Coverage/_search
+<i>Content-Type: application/x-www-form-urlencoded:</i> 
+patient=123</pre>
+Returns all patient insurance coverages</td>
 </tr>
 <tr>
 <td>MedicationRequest</td>
     <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html#mandatory-search-parameters">Per US Core</a></td>
-<td><pre>MedicationRequest?patient=123&amp;intent=order&amp;status=active&amp;_include=MedicationRequest:Medication</pre>Returns all active patient MedicationRequest orders and the associated Medications</td>
+<td><pre>GET [base]/MedicationRequest?patient=123&amp;intent=order&amp;status=active&amp;_include=MedicationRequest:Medication</pre>or<pre>POST [base]/MedicationRequest/_search
+<i>Content-Type: application/x-www-form-urlencoded:</i> 
+patient=123&amp;intent=order&amp;status=active&amp;_include=MedicationRequest:Medication</pre>
+Returns all active patient MedicationRequest orders and the associated Medications</td>
 </tr>
 </tbody>
 </table>
+
 
 
 <p></p>
@@ -66,7 +86,10 @@ In addition to the required searches above, implementers SHOULD support Document
 <tr>
     <td>DocumentReference</td>
     <td><a href="https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html#mandatory-search-parameters">See US Core</a></td>
-<td><pre>DocumentReference?patient=123 &amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note</pre>Returns all patient clinical notes</td>
+<td><pre>GET [base]/DocumentReference?patient=123 &amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note</pre>or<pre>POST [base]/DocumentReference/_search
+<i>Content-Type: application/x-www-form-urlencoded:</i> 
+patient=123&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note</pre>
+Returns all patient clinical notes</td>
 </tr>
 </tbody>
 </table>

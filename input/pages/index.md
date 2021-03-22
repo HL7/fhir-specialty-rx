@@ -126,6 +126,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td>Mar 18, 2021</td>
 		<td>Added package download to the Downloads page.</td>
   	  </tr>
+	  <tr>
+		<td>Mar 22, 2021</td>
+		<td>Added POST examples to the Search Conventions page.</td>
+  	  </tr>
    </tbody>
   </table>
 
