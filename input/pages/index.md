@@ -74,64 +74,6 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 	</tbody>
   </table>
 
-### Change Log
-
-  <table class="grid">
-    <tbody>
-	  <tr>
-		<td>Date</td>
-		<td>Change</td>
-  	  </tr>
-	  <tr>
-		<td>Feb 11, 2021</td>
-		<td>Corrected approved typo fixes, proposed adjustments for FHIR-30595, 30597, 30627 and 30628. Revision in-process on Search Conventions page</td>
-  	  </tr>
-	  <tr>
-		<td>Feb 15, 2021</td>
-		<td>Completed proposed changes to Search page and CapabilityStatements to address comments FHIR-30484, FHIR-30485, FHIR-30486, and FHIR-30608. Replaced parameter examples with links to related US Core specification, added guidance and examples for _revinclude and _include parameter usage, adjusted search example to match US Core required parameter combination for MedicationRequest, added _revinclude requirements to capability statements and added a 'SHALL follow US Core search guidance' statement and link to the Search Conventions page to all CapabilityStatement pages and 'SHALL follow US Core search' to all CapabilityStatement rest documentations sections. <br/>Changed Data Recipient to Data Consumer in Capability Statement narratives, CapabilityStatement names and Search Conventions page content in response to comment FHIR-30610 (additional IG changes for 30610 are yet to be made)</td>
-  	  </tr>
-	  <tr>
-		<td>Feb 19, 2021</td>
-		<td>Applied the remaining “data requester”/”data recipient” to “consumer” wording changes to narrative pages (MessageDefinition-specialty-rx-query intro, StructureDefinition-specialty-rx-bundle-query intro, StructureDefinition-specialty-rx-bundle-search-result intro, Task-specialty-rx-task-smart-launch-2-ids intro, Flows Requiring Human Interaction, Intermediary Facilitation, Message Structure, Conformance Expectations, Patient Matching, Use Cases and Roles, Systematic Queries, Capability Statements, Message Submission). Changed the names of the pharmacy capability statements to Data Consumer and adjusted the narrative pages to match. Added _revinclude/Provenance entries to the capability statements to match US Core. Added a statement to the capability statements and narrative pages saying that implementing systems SHALL follow US Core search requirements and guidance when performing searches associated with this guide. Added a link to the Search Conventions section on the capability statement narrative pages. Corrected links on the Search Convention and Security pages. Adjusted statements in Message Submission and Systematic Queries related to synchronous/asynchronous processing to refer to the definition in the $process-message operation (removed prohibition on use of the async parameter)</td>
-  	  </tr>
-	  <tr>
-		<td>Feb 26, 2021</td>
-		<td>Addressed ballot comments related to: prescriber/clinic/staff wording on the Flows Requiring Human Interaction page; changing use of Backend Services Authorization to SHOULD on the Security page and capability statements. </td>
-  	  </tr>
-	  <tr>
-		<td>Mar 1, 2021</td>
-		<td>Addressed ballot comments related to the Task-to-SMART lauch process: FHIR-30604, FHIR-30605, FHIR-30606, FHIR-30607</td>
-  	  </tr>
-	  <tr>
-		<td>Mar 2, 2021</td>
-		<td>Applied resolution to FHIR-30606 (change the primary SMART App identifier in the IG's Task profile, specialty-rx-task-smart-launch, to SMART APP Client ID and make the existing SMART App URL optional. Add a new value to the code system, specialty-rx-task-input-type to represent the added Client ID option. Apply additional wording to the Task profile and exmample to clarify that the Task.for element specifically reflects the Data Source's patient</td>
-  	  </tr>
-	  <tr>
-		<td>Mar 9, 2021</td>
-		<td>Applied additional comment resolutions</td>
-  	  </tr>
-	  <tr>
-		<td>Mar 10, 2021</td>
-		<td>Applied comment resolution for FHIR-30427 - change wording in profile intro for specialty-rx-bundle-search-results, removing unnecessary / confusing first sentence. Adjusted the specialty-rx-bundle-search-result profile narrative to describe population of the Bundle.link elements according to FHIR search response guidelines.</td>
-  	  </tr>
-	  <tr>
-		<td>Mar 11, 2021</td>
-		<td>Applied comment resolution for FHIR-30612 - adding clarification to the patient matching page on the identifiers present in the NCPDP new prescription message and using the prescribing system MRN in matching. Update related examples</td>
-  	  </tr>
-	  <tr>
-		<td>Mar 15, 2021</td>
-		<td>On the Search Conventions page, clarified the note following the first paragraph in the Required Searches section.</td>
-  	  </tr>
-	  <tr>
-		<td>Mar 18, 2021</td>
-		<td>Added package download to the Downloads page.</td>
-  	  </tr>
-	  <tr>
-		<td>Mar 22, 2021</td>
-		<td>Added POST examples to the Search Conventions page.</td>
-  	  </tr>
-   </tbody>
-  </table>
 
 <br />
 
