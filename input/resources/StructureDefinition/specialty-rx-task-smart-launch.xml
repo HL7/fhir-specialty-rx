@@ -104,6 +104,7 @@
         <description value="Task types used in the Specialty Rx workflow" />
         <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-type" />
       </binding>
+      <mustSupport value="true" />
     </element>
     <element id="Task.description">
       <path value="Task.description" />
@@ -181,6 +182,11 @@
       </patternIdentifier>
       <mustSupport value="true" />
     </element>
+    <element id="Task.requester.identifier:pharmacyNcpdpId.value">
+      <path value="Task.requester.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Task.requester.identifier:NPI">
       <path value="Task.requester.identifier" />
       <sliceName value="NPI" />
@@ -193,6 +199,11 @@
       <patternIdentifier>
         <system value="http://hl7.org/fhir/sid/us-npi" />
       </patternIdentifier>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.requester.identifier:NPI.value">
+      <path value="Task.requester.identifier.value" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.owner">
@@ -229,6 +240,11 @@
       <patternIdentifier>
         <system value="http://hl7.org/fhir/sid/us-npi" />
       </patternIdentifier>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.owner.identifier.value">
+      <path value="Task.owner.identifier.value" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.reasonReference">
@@ -274,6 +290,11 @@
           </coding>
         </type>
       </patternIdentifier>
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.reasonReference.identifier.value">
+      <path value="Task.reasonReference.identifier.value" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Task.reasonReference.display">
