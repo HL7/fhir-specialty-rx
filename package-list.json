@@ -8,7 +8,7 @@
       {
          "version": "current",
          "desc": "Continuous Integration Build for FHIR STU1 (latest in version control)",
-         "path": "http://build.fhir.org/ig/HL7/specialty-rx",
+         "path": "http://build.fhir.org/ig/HL7/fhir-specialty-rx",
          "status": "ci-build",
          "current": true
       },
