@@ -2,6 +2,7 @@
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-query-response" />
   <url value="http://hl7.org/fhir/us/specialty-rx/MessageDefinition/specialty-rx-query-response" />
+  <version value="1.0.0" />
   <name value="SpecialtyRxMessageDefinitionQueryResponse" />
   <title value="Specialty Rx Message Definition - Query Response" />
   <status value="active" />

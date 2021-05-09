@@ -2,6 +2,7 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-data-source-restful" />
   <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-source-restful" />
+  <version value="1.0.0" />
   <name value="SpecialtyRxDataSourceRESTful" />
   <title value="Specialty Rx CapabilityStatement - Data Source - RESTful" />
   <status value="active" />

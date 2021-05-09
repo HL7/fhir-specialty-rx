@@ -5,7 +5,7 @@
     <lastUpdated value="2021-03-02T00:00:00+00:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
-  <version value="0.1.00" />
+  <version value="1.0.0" />
   <name value="SpecialtyRxTaskSmartLaunch" />
   <title value="Specialty Rx Task - SMART Launch" />
   <status value="active" />

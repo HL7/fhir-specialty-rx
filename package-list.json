@@ -13,6 +13,16 @@
          "current": true
       },
       {
+         "version": "1.0.0",
+         "date": "2021-05-01",
+         "desc": "Specialty Medication Enrollment Implementation Guide STU1",
+         "changes": "",
+         "path": "http://hl7.org/fhir/us/specialty-rx/STU1",
+         "status": "trial-use",
+         "sequence": "STU1",
+         "fhirversion" : "4.0.1"
+      },
+      {
          "version": "0.1.0",
          "date": "2020-12-09",
          "desc": "STU1 Ballot",

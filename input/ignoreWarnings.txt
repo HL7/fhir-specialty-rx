@@ -69,3 +69,6 @@ Validate resource against profile http://hl7.org/fhir/StructureDefinition/Medica
 Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance - listed in meta
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/Provenance
 Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance - listed in meta
+
+# This example intentionally includes an error in the search string, in order to illustrate an OperationOutcome response
+No types could be determined from the search string, so the types can't be checked

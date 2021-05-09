@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-bundle-query-response" />
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response" />
+  <version value="1.0.0" />
   <name value="SpecialtyRxBundleQueryResponse" />
   <title value="Specialty Rx Bundle - Query Response Message" />
   <status value="active" />

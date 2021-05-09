@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="specialty-rx"/>
     <meta>
-        <lastUpdated value="2020-12-12T00:00:00.000+00:00"/>
+        <lastUpdated value="2021-05-01T00:00:00.000+00:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,11 +13,11 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx"/>
- 	<version value="0.1.0"/> 
-    <!-- <version value="current"/> -->
+ 	<version value="1.0.0"/>
+    <!-- <version value="current"/>   -->
     <name value="SpecialtyRx"/>
     <title value="Specialty Medication Enrollment"/>
-    <status value="draft"/>
+    <status value="active"/>
      <publisher value="HL7 International - Pharmacy" />
     <contact>
         <name value="HL7 International - Pharmacy"/>
@@ -31,6 +31,10 @@
       <telecom>
         <system value="email" />
         <value value="frank.mckinney@pocp.com" />
+      </telecom>
+      <telecom>
+        <system value="email" />
+        <value value="fm@frankmckinney.com" />
       </telecom>
     </contact>
     <description value="This implementation guide describes the exchange of information needed to dispense specialty medications and enroll patients in associated programs offered by pharmaceutical manufacturers and others." />
@@ -49,6 +53,7 @@
         <version value="3.1.0"/>
     </dependsOn>
 	 <definition>
+<!-- ************************************************************* Structure Definitions ************************************************************ -->
 	<!-- Request and response bundle  -->
 	  <resource>
 	    <reference>
@@ -106,8 +111,7 @@
 	    <name value="Specialty Rx Medication Request"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
-
-	  		<!-- MessageDefinition  -->
+	<!-- MessageDefinition  -->
   	  <resource>
 	    <reference>
 	      <reference value="MessageDefinition/specialty-rx-error"/>
@@ -140,7 +144,6 @@
 	    <name value="Specialty Rx MessageDefinition - Query Response - Unsolicited"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-
 	<!-- MessageHeader  -->
 	  <resource>
 	    <reference>
@@ -230,6 +233,7 @@
 	    <name value="Specialty Rx Task - SMART Launch"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
+<!-- ************************************************************* Terminology ************************************************************ -->
   	  <resource>
 	    <reference>
 	      <reference value="CodeSystem/specialty-rx-event-type"/>
@@ -261,8 +265,7 @@
 	    </reference>
 	    <name value="Specialty Rx CodeSystem - Task Identifier Type"/>
 	    <exampleBoolean value="false"/>
-	  </resource>	  
-	  
+	  </resource>	    
 	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>
@@ -279,7 +282,7 @@
 	    <name value="Specialty Rx ValueSet - Task Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-
+<!-- ************************************************************* Capability Statements ************************************************************ -->
   	  <resource>
 	    <reference>
 	      <reference value="CapabilityStatement/specialty-rx-data-source-restful"/>
@@ -311,11 +314,7 @@
 	    </reference>
 	    <name value="Specialty Rx CapabilityStatement - Data Consumer - Messaging"/>
 	    <exampleBoolean value="false"/>
-	  </resource>	  
-	  
-	  
-  	  
-
+	  </resource>	  	  
 <!--  ******************************************************** Examples  ******************************************************* -->
 		<resource>
 	      <reference>
@@ -462,8 +461,6 @@
             <description value="Example of a Task that directs the user to launch a specified SMART app to complete a questionnaire. Requester, owner and focus are identifiers."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch"/>
       </resource>	  
-
-
 <!-- ************************************************************* Pages ************************************************************ -->
       <page>
 	      <nameUrl value="toc.html"/>
@@ -551,7 +548,7 @@
 	  </parameter>
 	  <parameter>
 	    <code value="releaselabel"/>
-	    <value value="STU1 Ballot"/>
+	    <value value="CI Build"/>
 	  </parameter>
       <parameter>
 	      <code value="path-expansion-params"/>

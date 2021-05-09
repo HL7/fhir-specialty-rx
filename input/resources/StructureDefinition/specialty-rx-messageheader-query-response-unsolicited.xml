@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-messageheader-query-response-unsolicited" />
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-response-unsolicited" />
+  <version value="1.0.0" />
   <name value="SpecialtyRxMessageHeaderQueryResponseUnsolicited" />
   <title value="Specialty Rx MessageHeader - Query Response - Unsolicited" />
   <status value="active" />

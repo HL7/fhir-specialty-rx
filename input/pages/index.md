@@ -57,15 +57,13 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 
 ### Authors
 
-  <table class="grid">
+<table class="grid">
     <tbody>
 	  <tr>
-		<td>HL7 Pharmacy Workgroup</td>
-		<td></td>
+		<td colspan="2">HL7 Pharmacy Workgroup</td>
   	  </tr>
 	  <tr>
-		<td>NCPDP Workgroup 18</td>
-		<td>Specialty Requirements for ePrescribing Taskgroup</td>
+		<td colspan="2">NCPDP Workgroup 18 - Specialty Requirements for ePrescribing Taskgroup</td>
   	  </tr>
 	  <tr>
 		<td>Frank McKinney</td>
