@@ -91,7 +91,7 @@
         <code value="Identifier" />
       </type>
       <patternIdentifier>
-        <system value="http://terminology.hl7.org/CodeSystem/NCPDP/ProviderIdentificationNumber" />
+        <system value="http://terminology.hl7.org/CodeSystem/NCPDPProviderIdentificationNumber" />
       </patternIdentifier>
       <mustSupport value="true" />
     </element>

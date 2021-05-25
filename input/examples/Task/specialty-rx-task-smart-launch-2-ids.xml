@@ -31,7 +31,7 @@
   <authoredOn value="2020-03-11" />
   <requester>
     <identifier>
-      <system value="http://terminology.hl7.org/CodeSystem/NCPDP/ProviderIdentificationNumber" />
+      <system value="http://terminology.hl7.org/CodeSystem/NCPDPProviderIdentificationNumber" />
       <value value="0999017" />
     </identifier>
     <display value="Our Pharmacy" />
