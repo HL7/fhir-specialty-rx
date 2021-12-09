@@ -293,5 +293,9 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Task.output">
+      <path value="Task.output" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>
