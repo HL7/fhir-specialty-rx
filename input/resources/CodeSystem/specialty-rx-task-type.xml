@@ -27,4 +27,9 @@
     <display value="Complete Questionnaire in SMART App" />
     <definition value="Launch the referenced SMART app and complete the presented questionnaire" />
   </concept>
+  <concept>
+    <code value="obtain-consent" />
+    <display value="Obtain Patient Consent for Product Fulfillment" />
+    <definition value="Obtain patient consent support specialty product fulfillment using the referenced consent form" />
+  </concept>
 </CodeSystem>

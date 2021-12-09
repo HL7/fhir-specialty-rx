@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="specialty-rx"/>
     <meta>
-        <lastUpdated value="2021-05-01T00:00:00.000+00:00"/>
+        <lastUpdated value="2021-12-08T00:00:00.000+00:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,7 +13,7 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx"/>
- 	<version value="1.0.0"/>
+ 	<version value="1.1.0"/>
     <!-- <version value="current"/>   -->
     <name value="SpecialtyRx"/>
     <title value="Specialty Medication Enrollment"/>
@@ -233,6 +233,32 @@
 	    <name value="Specialty Rx Task - SMART Launch"/>
 	    <exampleBoolean value="false"/>
 	  </resource>
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-consent"/>
+	      <display value="Specialty Rx Consent"/>
+	    </reference>
+	    <name value="Specialty Rx Consent"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-consent-requested"/>
+	      <display value="Specialty Rx Consent Requested"/>
+	    </reference>
+	    <name value="Specialty Rx Consent Requested"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
+
+  	  <resource>
+	    <reference>
+	      <reference value="StructureDefinition/specialty-rx-task-consent-request"/>
+	      <display value="Specialty Rx Task - Consent Request"/>
+	    </reference>
+	    <name value="Specialty Rx Task - Consent Request"/>
+	    <exampleBoolean value="false"/>
+	  </resource>
 <!-- ************************************************************* Terminology ************************************************************ -->
   	  <resource>
 	    <reference>
@@ -280,6 +306,14 @@
 	      <display value="Specialty Rx ValueSet - Task Type"/>
 	    </reference>
 	    <name value="Specialty Rx ValueSet - Task Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/specialty-rx-consent-status"/>
+	      <display value="Specialty Rx ValueSet - Consent Status"/>
+	    </reference>
+	    <name value="Specialty Rx ValueSet - Consent Status"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
 <!-- ************************************************************* Capability Statements ************************************************************ -->
@@ -461,6 +495,33 @@
             <description value="Example of a Task that directs the user to launch a specified SMART app to complete a questionnaire. Requester, owner and focus are identifiers."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch"/>
       </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Consent/specialty-rx-consent-1"/>
+                <display value="Specialty Rx Task - Consent 1"/>
+            </reference>
+            <name value="Specialty Rx Task - Consent 1"/>
+            <description value="Example of a completed consent containing a PDF of the signed consent form."/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Consent/specialty-rx-consent-requested-1"/>
+                <display value="Specialty Rx Consent Requested 1"/>
+            </reference>
+            <name value="Specialty Rx Consent Requested 1"/>
+            <description value="Example of a proposed consent containing a PDF of the empty product-specific consent form to be completed by the patient."/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent-requested"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Task/specialty-rx-task-consent-request-1"/>
+                <display value="Specialty Rx Task - Consent Request 1"/>
+            </reference>
+            <name value="Specialty Rx Task - Consent Request 1"/>
+            <description value="Example of a task requesting that the practice obtain consent from the patient using the referenced consent form."/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request"/>
+      </resource>	  
 <!-- ************************************************************* Pages ************************************************************ -->
       <page>
 	      <nameUrl value="toc.html"/>
@@ -484,6 +545,11 @@
 		  <page>
 		    <nameUrl value="human-interaction.html"/>
 		    <title value="Information Flows Requiring Human Interaction"/>
+	        <generation value="markdown"/>
+		  </page>
+		  <page>
+		    <nameUrl value="consent-workflow.html"/>
+		    <title value="Patient Consent Workflows"/>
 	        <generation value="markdown"/>
 		  </page>
 		  <page>

@@ -32,4 +32,9 @@
     <display value="SMART Application Client ID" />
     <definition value="Client ID for a SMART app to be used in fulfilling this Task" />
   </concept>
+  <concept>
+    <code value="consent-form-reference" />
+    <display value="Consent Form Reference" />
+    <definition value="Reference to a consent resource containing the requested consent form" />
+  </concept>
 </CodeSystem>

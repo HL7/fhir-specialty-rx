@@ -72,3 +72,6 @@ Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinitio
 
 # This example intentionally includes an error in the search string, in order to illustrate an OperationOutcome response
 No types could be determined from the search string, so the types can't be checked
+
+# The base Consent StructureDefinition appears to include an error in the element.example value of Consent.identifier
+if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)

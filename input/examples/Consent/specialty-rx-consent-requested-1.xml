@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Consent xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-consent-requested-1" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent-requested" />
+  </meta>
+  <identifier>
+    <system value="http://www.example.org/ids" />
+    <value value="standard-consent-form-for-product-a" />
+  </identifier>
+  <status value="proposed" />
+  <scope>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentscope" />
+      <code value="patient-privacy" />
+    </coding>
+  </scope>
+  <category>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="59284-0" />
+      <display value="Consent Document" />
+    </coding>
+  </category>
+  <patient>
+    <reference value="Patient/specialty-rx-patient-1" />
+    <display value="Timothy Doe" />
+  </patient>
+  <dateTime value="2021-12-01T16:34:28.000-05:00" />
+  <sourceAttachment>
+    <contentType value="application/pdf" />
+    <data value="QW4gZW1wdHkgY29uc2VudCBmb3JtIGZvciB0aGUgcHJlc2NyaWJlZCBzcGVjaWFsdHkgcHJvZHVjdCwgaW4gYSBQREY=" />
+  </sourceAttachment>
+  <policyRule>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+      <code value="OPTIN" />
+      <display value="opt-in" />
+    </coding>
+  </policyRule>
+</Consent>

@@ -5,7 +5,7 @@
     <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error" />
   </meta>
   <type value="message" />
-  <timestamp value="2020-03-11T13:10:17-05:00" />
+  <timestamp value="2020-12-08T23:06:17-05:00" />
   <entry>
     <fullUrl value="http://example.org/MyEHR/MessageHeader/msgheader1" />
     <resource>
@@ -24,13 +24,13 @@
           <code value="transient-error" />
         </response>
         <focus>
-          <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0z" />
+          <reference value="urn:uuid:cbeff8fb-bc06-432e-bdff-6db167d6214e" />
         </focus>
       </MessageHeader>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0z" />
+    <fullUrl value="urn:uuid:cbeff8fb-bc06-432e-bdff-6db167d6214e" />
     <resource>
       <OperationOutcome>
         <id value="exception-13450456830" />

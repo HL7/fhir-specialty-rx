@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Task xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-task-consent-request-2-completed" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request" />
+  </meta>
+  <status value="completed" />
+  <intent value="plan" />
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
+      <code value="obtain-consent" />
+      <display value="Obtain Patient Consent for Product Fulfillment" />
+    </coding>
+  </code>
+  <description value="Have the patient complete the attached consent form and capture a PDF of the signed form in a Consent" />
+  <for>
+    <reference value="Patient/specialty-rx-patient-1" />
+  </for>
+  <authoredOn value="2021-12-08" />
+  <requester>
+    <identifier>
+      <system value="http://terminology.hl7.org/CodeSystem/NCPDPProviderIdentificationNumber" />
+      <value value="0999017" />
+    </identifier>
+    <display value="Our Pharmacy" />
+  </requester>
+  <owner>
+    <identifier>
+      <system value="http://hl7.org/fhir/sid/us-npi" />
+      <value value="9941339108" />
+    </identifier>
+    <display value="Jane Smith MD" />
+  </owner>
+  <reasonReference>
+    <identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="PLAC" />
+          <display value="Placer Identifier" />
+        </coding>
+      </type>
+      <value value="prescription-70222056" />
+    </identifier>
+    <display value="Humira Injector Pen - 2020-03-10" />
+  </reasonReference>
+  <input>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
+        <code value="consent-form-reference" />
+        <display value="Consent Form Reference" />
+      </coding>
+    </type>
+    <valueReference>
+      <reference value="Consent/specialty-rx-consent-requested-1" />
+      <type value="Consent" />
+      <display value="Consent form to be completed" />
+    </valueReference>
+  </input>
+  <output>
+    <type>
+      <text value="Completed and signed consent" />
+    </type>
+    <valueReference>
+      <reference value="Consent/specialty-rx-consent-1" />
+      <type value="Consent" />
+    </valueReference>
+  </output>
+</Task>
