@@ -25,7 +25,7 @@ This profile defines use of the Task resource to...
   - A reference to a Consent resource containing the consent form that is appropriate for the prescribed product
   - **Task.input.type**: "consent-form-reference"
   - **Task.input.valueReference**: *reference to the blank consent form*
-- **Task.output (populated when the Task status is set to "completed"**
+- **Task.output (populated when the Task status is set to "completed")**
   - A reference to a Consent resource containing a consent form that has been completed by the patient
   - **Task.output.type**: "completed-consent-reference"
   - **Task.output.valueReference**: *reference to the completed consent form*

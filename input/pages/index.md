@@ -1,3 +1,29 @@
+### *New Consent-Releated Content in Draft STU2 Version*  
+
+This draft STU2 version of the IG includes new content to support requesting and sharing patient consents related to fulfillment of the prescribed specialty product. This content is in-process and subject to change based on stakeholders' input.
+
+#### *Additions in this draft STU2 version*
+- [Patient Consent Workflows](consent-workflow.html) gives an overview of consent scenarios supported by the guide.
+- [Requested Consent profile conveying the appropriate blank consent form](StructureDefinition-specialty-rx-consent-requested.html)
+- [Consent profile for provided patient consents](StructureDefinition-specialty-rx-consent.html)
+- [Task profile used to request consent.](StructureDefinition-specialty-rx-task-consent-request.html). This profile is used in an exchange process based on the FHIR workflow management option [POST of Task to fulfiller's system](https://www.hl7.org/fhir/workflow-management.html#optiong).
+- Terminology:
+	- New value in the [specialty-rx-task-type](ValueSet-specialty-rx-task-type.html)
+	- New value in the specialty-rx-task-type [code system](CodeSystem-specialty-rx-task-type.html) and [value set](ValueSet-specialty-rx-task-type.html)
+	- New value in the specialty-rx-task-input-type [code system](CodeSystem-specialty-rx-task-input-type.html) and [value set](ValueSet-specialty-rx-task-input-type.html)
+	- New specialty-rx-task-output-type [code system](CodeSystem-specialty-rx-task-output-type.html) and [value set](ValueSet-specialty-rx-task-output-type.html)
+- New examples: 
+	- [Requested Consent resource (containing a blank consent form)](Consent-specialty-rx-consent-requested-1.html)
+	- [Completed Consent resource](Consent-specialty-rx-consent-1.html)
+	- [Task illustrating a consent request](Task-specialty-rx-task-consent-request-1.html)
+	- [Completed Task after consent is obtained](Task-specialty-rx-task-consent-request-2-completed.html)
+
+<p></p>
+<p></p>
+<hr>
+<p></p>
+<p></p>
+
 ### Overview
 This FHIR implementation Guide describes the exchange of patient demographic, clinical and coverage data to support fulfillment of specialty medication prescriptions by pharmacies, and enrollment of patients into related support programs offered by parties such as Hub vendors and pharmaceutical manufacturers.
 
@@ -32,6 +58,7 @@ The guide is organized into the following sections:
 - [Use Cases and Roles](roles.html) gives an overview of the guide's goals and participants.
 - [Systematic Query Workflows](systematic-queries.html) describes the exchanges that retrieve information systematically from the patient's records.
 - [Information Flows Requiring Human Interaction](human-interaction.html) describes a process enabling the prescriber or staff to provide information through a SMART application launched from the EHR.
+- [Patient Consent Workflows](consent-workflow.html) gives an overview of consent scenarios supported by the guide.
 - [Search Conventions](searches.html) defines required and recommended searches and conventions for specifying searches in Specialty Rx messages.
 - [Patient Matching](patient-matching.html) describes methods for identifying the patient for whom information is being exchanged.
 - [Message Structures](message-structure.html) and [Message Submission](message-submission.html) give details related to the Specialty Rx messaging options.
@@ -72,21 +99,24 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 	</tbody>
   </table>
 
+### Change Log
 
+<table class="grid">
+    <tbody>
+        <tr>
+                <td>Date</td>
+                <td>Change</td>
+        </tr>
+        <tr>
+                <td>Dec 9, 2021</td>
+                <td>Initial consent-related updates. Added consent workflow page and profiles for requested consent, completed consent and consent request Task. Initial examples for added profiles.</td>
+      	</tr>
+        <tr>
+                <td>December 20, 2021</td>
+                <td>Refined the consent request Task profile (input, output, code elements). Refined the SMART launch Task profile (code and input elements). Added narrative / guidance to the consent request Task and SMART launch Task profile pages. Added specialty-rx-output-type code system and value set for use in the consent request Task profile. Updated the examples. Added an overview of new consent-related content in the Home page.</td>
+        </tr>
+    </tbody> 
+</table>
 <br />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
