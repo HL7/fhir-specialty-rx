@@ -286,6 +286,14 @@
 	  </resource>	  
   	  <resource>
 	    <reference>
+	      <reference value="CodeSystem/specialty-rx-task-output-type"/>
+	      <display value="Specialty Rx CodeSystem - Task Output Type"/>
+	    </reference>
+	    <name value="Specialty Rx CodeSystem - Task Output Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
 	      <reference value="CodeSystem/specialty-rx-task-identifier-type"/>
 	      <display value="Specialty Rx CodeSystem - Task Identifier Type"/>
 	    </reference>
@@ -309,6 +317,22 @@
 	    <exampleBoolean value="false"/>
 	  </resource>	  
   	  <resource>
+	    <reference>
+	      <reference value="ValueSet/specialty-rx-task-input-type"/>
+	      <display value="Specialty Rx ValueSet - Task Input Type"/>
+	    </reference>
+	    <name value="Specialty Rx ValueSet - Task Input Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	  
+  	  <resource>
+	    <reference>
+	      <reference value="ValueSet/specialty-rx-task-output-type"/>
+	      <display value="Specialty Rx ValueSet - Task Output Type"/>
+	    </reference>
+	    <name value="Specialty Rx ValueSet - Task Output Type"/>
+	    <exampleBoolean value="false"/>
+	  </resource>	 
+	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-consent-status"/>
 	      <display value="Specialty Rx ValueSet - Consent Status"/>

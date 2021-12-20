@@ -10,7 +10,7 @@
     <coding>
       <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
       <code value="obtain-consent" />
-      <display value="Obtain Patient Consent for Product Fulfillment" />
+      <display value="Obtain Consent for Product Fulfillment" />
     </coding>
   </code>
   <description value="Have the patient complete the attached consent form and capture a PDF of the signed form in a Consent" />

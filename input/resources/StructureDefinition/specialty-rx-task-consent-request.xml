@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-task-consent-request" />
   <meta>
-    <lastUpdated value="2021-12-08T00:00:00-05:00" />
+    <lastUpdated value="2021-12-20T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request" />
   <version value="1.0.0" />
@@ -10,7 +10,7 @@
   <title value="Specialty Rx Task - Consent Request" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2021-12-08T00:00:00-05:00" />
+  <date value="2021-12-20T00:00:00-05:00" />
   <publisher value="HL7 International - Pharmacy" />
   <description value="This profile defines use of the Task resource to request that patient consent associated with prescribed product be obtained and made available to the requesting system." />
   <jurisdiction>
@@ -47,14 +47,18 @@
       <definition value="Obtain Consent task code" />
       <comment value="Code indicating the intent of the Task (obtain patient consent for fulfillment of specialty product)" />
       <min value="1" />
-      <fixedCodeableConcept>
+      <patternCodeableConcept>
         <coding>
           <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
           <code value="obtain-consent" />
-          <display value="Obtain Patient Consent for Product Fulfillment" />
         </coding>
-      </fixedCodeableConcept>
+      </patternCodeableConcept>
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="This value set contains task types used in the Specialty Rx Task profiles" />
+        <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-type" />
+      </binding>
     </element>
     <element id="Task.for">
       <path value="Task.for" />
@@ -276,10 +280,13 @@
         <coding>
           <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
           <code value="consent-form-reference" />
-          <display value="Consent Form Reference" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-input-type" />
+      </binding>
     </element>
     <element id="Task.input:ConsentFormReference.valueReference">
       <path value="Task.input.valueReference" />
@@ -295,7 +302,44 @@
     </element>
     <element id="Task.output">
       <path value="Task.output" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="type" />
+        </discriminator>
+        <description value="A Task that has been completed with the patient providing their consent SHALL contain a reference in Task.output to a Consent resource that conforms to the specialty-rx-consent profile." />
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+      <max value="*" />
       <mustSupport value="true" />
+    </element>
+    <element id="Task.output:CompletedConsent">
+      <path value="Task.output" />
+      <sliceName value="CompletedConsent" />
+      <label value="Completed Consent Resource" />
+      <short value="Completed Consent" />
+      <definition value="Consent resource that conforms to the specialty-rx-consent profile and contains the completed consent form" />
+      <comment value="This slice SHALL be populated if the Task completes with the patient providing their consent using the supplied consent form" />
+      <min value="0" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Task.output:CompletedConsent.type">
+      <path value="Task.output.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-output-type" />
+          <code value="completed-consent-reference" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="This value set defines Task outputs used in the Specialty Rx Task profiles" />
+        <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-output-type" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

@@ -96,15 +96,22 @@
     <element id="Task.code">
       <path value="Task.code" />
       <label value="SMART App Task Type" />
-      <definition value="A particular SMART app task type, e.g., complete-app-questionnaire" />
-      <comment value="A code specifying the requested user action to be performed using the referenced SMART app. E.g., complete-app-questionnaire" />
+      <definition value="The SMART app task type: complete-app-questionnaire" />
+      <comment value="Code specifying the requested user action to be performed using the referenced SMART app: complete-app-questionnaire" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
+          <code value="complete-app-questionnaire" />
+          <display value="Complete Questionnaire in SMART App" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
       <binding>
-        <strength value="extensible" />
+        <strength value="required" />
         <description value="Task types used in the Specialty Rx workflow" />
         <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-type" />
       </binding>
-      <mustSupport value="true" />
     </element>
     <element id="Task.description">
       <path value="Task.description" />
@@ -338,6 +345,11 @@
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="This value set contains Task.input types used in the Specialty Rx Task profiles" />
+        <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-input-type" />
+      </binding>
     </element>
     <element id="Task.input:SmartClientId.valueIdentifier">
       <path value="Task.input.valueIdentifier" />
@@ -370,6 +382,11 @@
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="This value set contains Task.input types used in the Specialty Rx Task profiles" />
+        <valueSet value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-input-type" />
+      </binding>
     </element>
     <element id="Task.input:SmartUrl.valueUrl">
       <path value="Task.input.valueUrl" />
