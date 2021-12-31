@@ -67,7 +67,7 @@ In this process:
 Notes: 
 * [Specialty Rx Task - Consent Request profile](StructureDefinition-specialty-rx-task-consent-request.html)
 * Example of a [consent request Task--upon submission to the Data Source (request)](Task-specialty-rx-task-consent-request-1.html)
-* Example of a [consent request Task--upon submission to the Data Source (request)](Task-specialty-rx-task-consent-request-1.html)
+* Example of a [consent request Task--after patient has completed the consent form (response)](Task-specialty-rx-task-consent-request-2-completed.html)
 * This method is based on the FHIR workflow management option [POST of Task to fulfiller's system](https://www.hl7.org/fhir/workflow-management.html#optiong).
 
 <p></p>

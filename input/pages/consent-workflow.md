@@ -93,24 +93,5 @@ When using this method to obtain patient consent, the [Task](StructureDefinition
 ### Process flow: Unsolicited Message
 When the prescribing practice has internal processes in place to obtain patient consent up-front during the ordering process, it can record the result as a [Specialty Rx Consent](StructureDefinition-specialty-rx-consent.html) resource and include it with other pertinent patient information in an unsolicited FHIR message to fulfilling parties at the same time that it transmits the order. This process is described in the [Systematic Query Workflows section](systematic-queries.html#unsolicited-workflow-overview).
  
-<p></p>
-
-### Populating the SMART Launch *appContext* 
-
-The `appContext` parameter is sent to the SMART app as part of the [OAuth 2.0](https://oauth.net/2/) access token response, alongside other [SMART launch parameters](http://hl7.org/fhir/smart-app-launch/1.0.0/scopes-and-launch-context/#launch-context-arrives-with-your-access_token) when the SMART app is launched. The `appContext`  contains the value received in the `Task.identifier` value.
-
-Example:
-
-```
-"appContext": "launch-context-id-01345005"
-```
-
-[SMART App Launch Implementation Guide](http://hl7.org/fhir/smart-app-launch/index.html)
-
-<p></p>
-
-### Hosting of SMART Applications
-
-An information requester may potentially partner with an intermediary or other party to host the SMART application and perform the above process on its behalf.
 
 <br>

@@ -115,6 +115,10 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
                 <td>December 20, 2021</td>
                 <td>Refined the consent request Task profile (input, output, code elements). Refined the SMART launch Task profile (code and input elements). Added narrative / guidance to the consent request Task and SMART launch Task profile pages. Added specialty-rx-output-type code system and value set for use in the consent request Task profile. Updated the examples. Added an overview of new consent-related content in the Home page.</td>
         </tr>
+        <tr>
+        	<td>December 31, 2021</td>
+                <td>Removed content at the bottom of the Consent Workflows page that duplicated information on the Information Flows Requiring Human Interaction page.</td>
+        </tr>
     </tbody> 
 </table>
 <br />
