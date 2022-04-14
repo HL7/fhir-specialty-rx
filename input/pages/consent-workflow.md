@@ -4,12 +4,13 @@ intro text
 
 
 ### Background: Specialty Product Consents, Roles and Process
-Patient consents supporting fulfillment of a specialty medication or other specialty product typically:
+Consents and authorizations supporting fulfillment of a specialty medication or other specialty product typically:
 * are separate from consents obtained by the clinic or health system at which the specialty product order is being ordered
-* are between the patient and a specialty pharmacy, manufacturer or patient support organization ("specialty HUB") for services and interactions not covered by general treatment and healthcare operations consent rules
+* may be between the patient and a specialty pharmacy, manufacturer or patient support organization ("specialty HUB") for services and interactions not covered by general treatment and healthcare operations consent rules
 * include multiple aspects including release of clinical information, sharing of financial information, permission to be contacted by text message or other means, participation in research, etc.
 * are obtained using "enrollment" consent forms that are specific to the brand product being ordered, containing mutliple provisions using wording that is unique to the product or manufacturer
-* are obtained from the patient with the assistance of staff at the clinic where the product is ordered, who locate the appropriate form to be signed by the patient and transmit it to the manufacturer, pharmacy or specialty HUB).
+* are typically obtained from the patient with the assistance of staff at the clinic where the product is ordered, who locate the appropriate form to be signed by the patient and transmit it to the manufacturer, pharmacy or specialty HUB)
+* may include authorizations or certifications from the prescriber related to the patient's conditions, previous care and proposed therapy.
 
 Depending on a provider's specialty, completion of product consents may be a frequent step in patient care or a less common activity. Practices that prescribe a large number of specialty products may have processes in place to flag when enrollment consent forms must be completed and which particular form is appropriate to the prescription. But for those practices that prescribe fewer specialty products, knowing when consent is required and locating the correct form can be challenging and a cause of delays in getting the product to the patient.
 
@@ -32,7 +33,7 @@ The guide also seeks to enable improvement of current processes through support 
 <p></p>
 
 ### Exchange Workflow Options: Proactive Message, Task and SMART App 
-The guide defines three methods for requesting and exchanging patient consents associated with prescribed specialty products:
+The guide defines three methods for requesting and exchanging consents associated with prescribed specialty products:
 
 1. **Task-based Consent request.** The pharmacy or other Data Consumer posts a Task to the prescriber system (Data Source) requesting that consent be obtained from the patient and made available in a Consent resource. The Data Consumer polls the Data Source and retrieves the Consent resource once it is available. 
 2. **Task-initiated SMART App Launch.** The pharmacy or other Data Consumer system uses the [Specialty Rx SMART Launch Task](StructureDefinition-specialty-rx-task-smart-launch.html) process to prompt staff at the prescriber clinic to use a SMART app to obtain and return the appropriate consent form for the prescribed product.
@@ -86,12 +87,12 @@ This method prompts staff at the prescriber clinic to:
 * download and have the patient complete the product-specific consents
 * and then upload the completed form to the SMART app.
 
-When using this method to obtain patient consent, the [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource is populated as described in [this section](human-interaction.html#task-content).
+When using this method to obtain consents, the [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource is populated as described in [this section](human-interaction.html#task-content).
 
 <p></p>
 
 ### Process flow: Unsolicited Message
-When the prescribing practice has internal processes in place to obtain patient consent up-front during the ordering process, it can record the result as a [Specialty Rx Consent](StructureDefinition-specialty-rx-consent.html) resource and include it with other pertinent patient information in an unsolicited FHIR message to fulfilling parties at the same time that it transmits the order. This process is described in the [Systematic Query Workflows section](systematic-queries.html#unsolicited-workflow-overview).
+When the prescribing practice has internal processes in place to obtain consents up-front during the ordering process, it can record the result as a [Specialty Rx Consent](StructureDefinition-specialty-rx-consent.html) resource and include it with other pertinent patient information in an unsolicited FHIR message to fulfilling parties at the same time that it transmits the order. This process is described in the [Systematic Query Workflows section](systematic-queries.html#unsolicited-workflow-overview).
  
 
 <br>

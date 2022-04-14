@@ -8,7 +8,7 @@
   <experimental value="false" />
   <date value="2021-12-08T00:00:00-05:00" />
   <publisher value="NCPDP" />
-  <description value="This profile constrains a Consent resource to convey a request for patient consents associated with fulfillment of a specialty medication or other product. This Consent includes an attachment containing the enrollment consent form applicable to the prescribed product" />
+  <description value="This profile constrains a Consent resource to convey a request for consents and authorizations associated with fulfillment of a specialty medication or other product. This Consent includes an attachment containing the enrollment consent form applicable to the prescribed product" />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />

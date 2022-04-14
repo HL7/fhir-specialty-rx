@@ -12,7 +12,7 @@
   <experimental value="false" />
   <date value="2021-12-20T00:00:00-05:00" />
   <publisher value="HL7 International - Pharmacy" />
-  <description value="This profile defines use of the Task resource to request that patient consent associated with prescribed product be obtained and made available to the requesting system." />
+  <description value="This profile defines use of the Task resource to request that consent or authorization associated with prescribed product be obtained and made available to the requesting system." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -45,7 +45,7 @@
       <path value="Task.code" />
       <label value="SMART App Task Type" />
       <definition value="Obtain Consent task code" />
-      <comment value="Code indicating the intent of the Task (obtain patient consent for fulfillment of specialty product)" />
+      <comment value="Code indicating the intent of the Task (obtain consent or authorization for fulfillment of specialty product)" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>

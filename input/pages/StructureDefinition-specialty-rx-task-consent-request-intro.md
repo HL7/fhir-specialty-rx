@@ -1,6 +1,6 @@
 This profile defines use of the Task resource to...
 
-- request that patient consent be obtained to support fulfillment of a prescribed specialty product 
+- request that consent be obtained to support fulfillment of a prescribed specialty product 
 - provide the appropriate consent form for the prescribed product
 
 <p></p>
@@ -26,7 +26,7 @@ This profile defines use of the Task resource to...
   - **Task.input.type**: "consent-form-reference"
   - **Task.input.valueReference**: *reference to the blank consent form*
 - **Task.output (populated when the Task status is set to "completed")**
-  - A reference to a Consent resource containing a consent form that has been completed by the patient
+  - A reference to a Consent resource containing a consent form that has been completed
   - **Task.output.type**: "completed-consent-reference"
   - **Task.output.valueReference**: *reference to the completed consent form*
 

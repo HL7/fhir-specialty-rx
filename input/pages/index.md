@@ -1,11 +1,11 @@
 ### *New Consent-Releated Content in Draft STU2 Version*  
 
-This draft STU2 version of the IG includes new content to support requesting and sharing patient consents related to fulfillment of the prescribed specialty product. This content is in-process and subject to change based on stakeholders' input.
+This draft STU2 version of the IG includes new content to support requesting and sharing consents related to fulfillment of the prescribed specialty product. This content is in-process and subject to change based on stakeholders' input.
 
 #### *Additions in this draft STU2 version*
-- [Patient Consent Workflows](consent-workflow.html) gives an overview of consent scenarios supported by the guide.
-- [Requested Consent profile conveying the appropriate blank consent form](StructureDefinition-specialty-rx-consent-requested.html)
-- [Consent profile for provided patient consents](StructureDefinition-specialty-rx-consent.html)
+- [Consent workflows](consent-workflow.html) gives an overview of consent scenarios supported by the guide.
+- [Requested consent profile conveying the appropriate blank consent form](StructureDefinition-specialty-rx-consent-requested.html)
+- [Consent profile for completed specialty consents](StructureDefinition-specialty-rx-consent.html)
 - [Task profile used to request consent.](StructureDefinition-specialty-rx-task-consent-request.html). This profile is used in an exchange process based on the FHIR workflow management option [POST of Task to fulfiller's system](https://www.hl7.org/fhir/workflow-management.html#optiong).
 - Terminology:
 	- New value in the [specialty-rx-task-type](ValueSet-specialty-rx-task-type.html)
@@ -58,7 +58,7 @@ The guide is organized into the following sections:
 - [Use Cases and Roles](roles.html) gives an overview of the guide's goals and participants.
 - [Systematic Query Workflows](systematic-queries.html) describes the exchanges that retrieve information systematically from the patient's records.
 - [Information Flows Requiring Human Interaction](human-interaction.html) describes a process enabling the prescriber or staff to provide information through a SMART application launched from the EHR.
-- [Patient Consent Workflows](consent-workflow.html) gives an overview of consent scenarios supported by the guide.
+- [Consent Workflows](consent-workflow.html) gives an overview of consent scenarios supported by the guide.
 - [Search Conventions](searches.html) defines required and recommended searches and conventions for specifying searches in Specialty Rx messages.
 - [Patient Matching](patient-matching.html) describes methods for identifying the patient for whom information is being exchanged.
 - [Message Structures](message-structure.html) and [Message Submission](message-submission.html) give details related to the Specialty Rx messaging options.

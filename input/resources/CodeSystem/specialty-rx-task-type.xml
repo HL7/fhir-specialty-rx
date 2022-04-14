@@ -30,6 +30,6 @@
   <concept>
     <code value="obtain-consent" />
     <display value="Obtain Consent for Product Fulfillment" />
-    <definition value="Obtain patient consent support specialty product fulfillment using the referenced consent form" />
+    <definition value="Obtain consent to support specialty product fulfillment using the referenced consent form" />
   </concept>
 </CodeSystem>

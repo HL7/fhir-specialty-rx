@@ -25,6 +25,6 @@
   <concept>
     <code value="completed-consent-reference" />
     <display value="Completed Consent Reference" />
-    <definition value="Reference to a consent resource containing the completed patient consent" />
+    <definition value="Reference to a consent resource containing the completed consent" />
   </concept>
 </CodeSystem>
