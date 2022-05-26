@@ -555,6 +555,27 @@
             <description value="Example of a completed consent task containing the finished consent form."/>
 	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request"/>
       </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Task/specialty-rx-task-consent-request-contained"/>
+                <display value="Specialty Rx Task - Consent Request Contained"/>
+            </reference>
+            <name value="Specialty Rx Task - Consent Request Contained"/>
+            <description value="Example of a consent request task with a contained Consent resource holding the emmpty consent form."/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request"/>
+      </resource>	  
+	<resource>
+	      <reference>
+	        <reference value="Organization/us-core-organization-clinic-1"/>
+                <display value="US Core Organization - Clinic 1 - Acme Clinic"/>
+            </reference>
+            <name value="US Core Organization - Clinic 1 - Acme Clinic"/>
+            <description value="Example US Core organization."/>
+	      <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+      </resource>	  
+      
+      
+      
 <!-- ************************************************************* Pages ************************************************************ -->
       <page>
 	      <nameUrl value="toc.html"/>

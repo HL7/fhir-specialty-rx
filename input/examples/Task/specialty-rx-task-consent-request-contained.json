@@ -1,0 +1,141 @@
+{
+  "resourceType": "Task",
+  "id": "specialty-rx-task-consent-request-contained",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request"
+    ]
+  },
+  "status": "requested",
+  "intent": "plan",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type",
+        "code": "obtain-consent",
+        "display": "Obtain Consent for Product Fulfillment"
+      }
+    ],
+    "text": "Obtain Consent for Product Fulfillment"
+  },
+  "description": "Have patient, Amy Shaw, complete the attached consent form",
+  "for": {
+    "reference": "Patient/specialty-rx-patient-1",
+    "identifier": {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "display": "Medical Record Number"
+          }
+        ],
+        "text": "Medical Record Number"
+      },
+      "system": "https://specialty-fhir.azurewebsites.net/responder/dynamic/fhir",
+      "value": "P100001"
+    },
+    "display": "Amy Shaw"
+  },
+  "authoredOn": "2022-05-05",
+  "requester": {
+    "identifier": {
+      "use": "official",
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "5026456111"
+    },
+    "display": "Bryant Avenue Pharmacy"
+  },
+  "owner": {
+    "reference": "Practitioner/specialty-rx-practitioner-1",
+    "identifier": {
+      "use": "official",
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "1111111111"
+    },
+    "display": "Melissa Jenkins, MD"
+  },
+  "input": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type",
+            "code": "consent-form-reference",
+            "display": "Consent Form Reference"
+          }
+        ],
+        "text": "Consent Form Reference"
+      },
+      "valueReference": {
+        "reference": "#consent-request",
+        "type": "Consent",
+        "display": "Xamproxitelopeldoleodl Patient Consent Form"
+      }
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "Consent",
+      "id": "consent-request",
+      "meta": {
+        "profile": [
+          "http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent-requested"
+        ]
+      },
+      "status": "proposed",
+      "scope": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+            "code": "patient-privacy"
+          }
+        ]
+      },
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59284-0",
+              "display": "Consent Document"
+            }
+          ]
+        }
+      ],
+      "patient": {
+        "reference": "Patient/specialty-rx-patient-1",
+        "display": "Amy Shaw"
+      },
+      "dateTime": "2022-05-05T09:35:39.415-05:00",
+      "performer": [
+        {
+          "reference": "Patient/specialty-rx-patient-1",
+          "display": "Amy Shaw"
+        }
+      ],
+      "organization": [
+        {
+          "reference": "Organization/us-core-organization-clinic-1",
+          "display": "Acme Clinic"
+        }
+      ],
+      "sourceAttachment": {
+        "contentType": "application/pdf",
+        "data": "JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIuIDc5Mi5dCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKNCAwIG9iago8PAovTGVuZ3RoIDY2Ngo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCkJUCi9GMTAgMTYgVGYKMTguMzk5OTk5OTk5OTk5OTk4NiBUTAowIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA3NDkuNDgwMzE0OTYwNjI5OTI1NyBUZAooWGFtcHJveGl0ZWxvcGVsZG9sZW9kbCBQYXRpZW50IENvbnNlbnQpIFRqCkVUCkJUCi9GOSAxMiBUZgoxMy43OTk5OTk5OTk5OTk5OTg5IFRMCjAgZwo0Mi41MTk2ODUwMzkzNzAwODE0IDcwOS43OTUyNzU1OTA1NTEyMjc3IFRkCihJIGdpdmUgbXkgY29uc2VudCBmb3IuLi4pIFRqCkVUCkJUCi9GOSAxMiBUZgoxMy43OTk5OTk5OTk5OTk5OTg5IFRMCjAgZwo0Mi41MTk2ODUwMzkzNzAwODE0IDYzMC40MjUxOTY4NTAzOTM3MTc4IFRkCihfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18gICAgICAgICAgICAgICAgIF9fX19fX19fX19fX19fX19fX19fX19fKSBUagpFVApCVAovRjkgMTIgVGYKMTMuNzk5OTk5OTk5OTk5OTk4OSBUTAowIGcKNDIuNTE5Njg1MDM5MzcwMDgxNCA2MTAuNTgyNjc3MTY1MzU0MzExOSBUZAooU2lnbmF0dXJlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIERhdGUpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKMSAwIG9iago8PC9UeXBlIC9QYWdlcwovS2lkcyBbMyAwIFIgXQovQ291bnQgMQo+PgplbmRvYmoKNSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKNyAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1PYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZE9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKOSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXIKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyLU9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTIgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9Db3VyaWVyLUJvbGRPYmxpcXVlCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjEzIDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtUm9tYW4KL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTQgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Cb2xkCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtSXRhbGljCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE2IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvVGltZXMtQm9sZEl0YWxpYwovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNyAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1phcGZEaW5nYmF0cwovU3VidHlwZSAvVHlwZTEKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1N5bWJvbAovU3VidHlwZSAvVHlwZTEKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgNSAwIFIKL0YyIDYgMCBSCi9GMyA3IDAgUgovRjQgOCAwIFIKL0Y1IDkgMCBSCi9GNiAxMCAwIFIKL0Y3IDExIDAgUgovRjggMTIgMCBSCi9GOSAxMyAwIFIKL0YxMCAxNCAwIFIKL0YxMSAxNSAwIFIKL0YxMiAxNiAwIFIKL0YxMyAxNyAwIFIKL0YxNCAxOCAwIFIKPj4KL1hPYmplY3QgPDwKPj4KPj4KZW5kb2JqCjE5IDAgb2JqCjw8Ci9Qcm9kdWNlciAoanNQREYgMi4wLjApCi9DcmVhdGlvbkRhdGUgKEQ6MjAyMjA0MTMyMTQwMTEtMDUnMDAnKQo+PgplbmRvYmoKMjAgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDEgMCBSCi9PcGVuQWN0aW9uIFszIDAgUiAvRml0SCBudWxsXQovUGFnZUxheW91dCAvT25lQ29sdW1uCj4+CmVuZG9iagp4cmVmCjAgMjEKMDAwMDAwMDAwMCA2NTUzNSBmCjAwMDAwMDA4MzcgMDAwMDAgbgowMDAwMDAyNjU0IDAwMDAwIG4KMDAwMDAwMDAxNSAwMDAwMCBuCjAwMDAwMDAxMjAgMDAwMDAgbgowMDAwMDAwODk0IDAwMDAwIG4KMDAwMDAwMTAxOSAwMDAwMCBuCjAwMDAwMDExNDkgMDAwMDAgbgowMDAwMDAxMjgyIDAwMDAwIG4KMDAwMDAwMTQxOSAwMDAwMCBuCjAwMDAwMDE1NDIgMDAwMDAgbgowMDAwMDAxNjcxIDAwMDAwIG4KMDAwMDAwMTgwMyAwMDAwMCBuCjAwMDAwMDE5MzkgMDAwMDAgbgowMDAwMDAyMDY3IDAwMDAwIG4KMDAwMDAwMjE5NCAwMDAwMCBuCjAwMDAwMDIzMjMgMDAwMDAgbgowMDAwMDAyNDU2IDAwMDAwIG4KMDAwMDAwMjU1OCAwMDAwMCBuCjAwMDAwMDI5MDIgMDAwMDAgbgowMDAwMDAyOTg4IDAwMDAwIG4KdHJhaWxlcgo8PAovU2l6ZSAyMQovUm9vdCAyMCAwIFIKL0luZm8gMTkgMCBSCi9JRCBbIDw3NEUxQTg1MzI1N0VFMDA2Q0VDOTY1REZGNThCNTI5Rj4gPDc0RTFBODUzMjU3RUUwMDZDRUM5NjVERkY1OEI1MjlGPiBdCj4+CnN0YXJ0eHJlZgozMDkyCiUlRU9G",
+        "creation": "2021-12-01T16:35:00.000-05:00",
+        "title": "Xamproxitelopeldoleodl Patient Consent Form"
+      },
+      "policyRule": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+            "code": "OPTIN",
+            "display": "opt-in"
+          }
+        ]
+      }
+    }
+  ]
+}
