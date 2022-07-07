@@ -1,8 +1,8 @@
 <blockquote class="note-to-balloters">
 <p>
-This STU2 version of the IG includes new content to support requesting and sharing consents that are frequently needed when fulfilling specialty product prescriptions. 
+This version of the IG includes new content to support requesting and sharing consents that are frequently needed when fulfilling specialty product prescriptions. 
 <br/><br/>
-<i>Additions in the STU2 version</i><br/>
+<i>Additions in version 1.1.0 (STU2 ballot)</i><br/>
 <ul>
 <li><a href="consent-workflow.html">Consent workflows</a> gives an overview of consent scenarios supported by the guide.</li>
 <li><a href="StructureDefinition-specialty-rx-consent-requested.html">Requested consent profile conveying the appropriate blank consent form</a></li>
@@ -10,7 +10,6 @@ This STU2 version of the IG includes new content to support requesting and shari
 <li><a href="StructureDefinition-specialty-rx-task-consent-request.html">Task profile used to request consent.</a>. This profile is used in an exchange process based on the FHIR workflow management option <a href="https://www.hl7.org/fhir/workflow-management.html#optiong">POST of Task to fulfiller&#39;s system</a>.</li>
 <li>Terminology:
 <ul>
-<li>New value in the <a href="ValueSet-specialty-rx-task-type.html">specialty-rx-task-type</a></li>
 <li>New value in the specialty-rx-task-type <a href="CodeSystem-specialty-rx-task-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-type.html">value set</a></li>
 <li>New value in the specialty-rx-task-input-type <a href="CodeSystem-specialty-rx-task-input-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-input-type.html">value set</a></li>
 <li>New specialty-rx-task-output-type <a href="CodeSystem-specialty-rx-task-output-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-output-type.html">value set</a></li>

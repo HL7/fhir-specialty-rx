@@ -30,9 +30,6 @@
       <description value="1. Specialty Rx Data Source **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code. &#xA;1. Specialty Rx Data Source **SHOULD** authorize exchanges using OAuth 2.0 access management in accordance with the SMART Backend Services Authorization Guide. &#xA;1. For general security considerations refer to [FHIR Security and Privacy Considerations](https://www.hl7.org/fhir/secpriv-module.html). &#xA;1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html)." />
     </security>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="SHALL" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD" />
@@ -78,9 +75,6 @@
       </searchParam>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="SHALL" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD" />
@@ -216,9 +210,6 @@
       </searchParam>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="SHALL" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL" />
@@ -332,9 +323,6 @@
     </resource>
     
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="SHALL" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL" />
@@ -457,9 +445,6 @@
       </searchParam>
     </resource>
 	<resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="SHALL"/>
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD"/>
@@ -596,9 +581,6 @@
       </searchParam>
     </resource>
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="SHALL" />
-      </extension>
       <type value="OperationOutcome" />
       <profile value="http://hl7.org/fhir/StructureDefinition/OperationOutcome" />
       <interaction>
@@ -615,9 +597,6 @@
       </interaction>
     </resource> 
     <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-        <valueCode value="MAY" />
-      </extension>
       <type value="Task" />
       <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
       <interaction>
