@@ -33,37 +33,37 @@
         <parameter>
           <name value="source-patient" />
           <valueReference>
-            <reference value="Patient/patientEHR" />
+            <reference value="http://example.org/MyEHR/Patient/patientEHR" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="prescription" />
           <valueReference>
-            <reference value="MedicationRequest/prescription1" />
+            <reference value="http://example.org/MyEHR/MedicationRequest/prescription1" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="pharmacy" />
           <valueReference>
-            <reference value="Organization/pharmacy1" />
+            <reference value="http://example.org/MyEHR/Organization/pharmacy1" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="prescriber" />
           <valueReference>
-            <reference value="Practitioner/practitioner1" />
+            <reference value="http://example.org/MyEHR/Practitioner/practitioner1" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="search-result" />
           <valueReference>
-            <reference value="Bundle/3456789" />
+            <reference value="http://example.org/MyEHR/Bundle/3456789" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="search-result" />
           <valueReference>
-            <reference value="Bundle/987654" />
+            <reference value="http://example.org/MyEHR/Bundle/987654" />
           </valueReference>
         </parameter>
       </Parameters>
@@ -125,7 +125,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.org/MyEHR/MedicationRequest/prescription1" />
+    <fullUrl value="http://example.org/MyEHR/MedicationRequest/prescription1" />
     <resource>
       <MedicationRequest>
         <id value="prescription1" />
@@ -177,7 +177,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.org/MyEHR/Practitioner/practitioner1" />
+    <fullUrl value="http://example.org/MyEHR/Practitioner/practitioner1" />
     <resource>
       <Practitioner>
         <id value="practitioner1" />
@@ -219,7 +219,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="https://example.org/MyEHR/Organization/pharmacy1" />
+    <fullUrl value="http://example.org/MyEHR/Organization/pharmacy1" />
     <resource>
       <Organization>
         <id value="pharmacy1" />

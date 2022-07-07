@@ -31,14 +31,14 @@ An information requester may host a SMART application that the prescriber or sta
        iss=htttp://my-ehr.com/fhir
     ```
 
-  - responds to the app's authorization request in the launch sequence with an OAuth 2.0 access token response that includes the Patient.id and appContext values. For example:
+  - responds to the app's authorization request in the launch sequence with an OAuth 2.0 access token response that includes the `patient` and `__appContext` values. For example:
 
     ```
     {
       access_token:"secret-token-xyz",
       expires-in:"3600",
       patient:"specialty-rx-patient-1",
-      appContext:"launch-context-id-01345005",
+      __appContext:"launch-context-id-01345005",
       ...
     }
     ```
@@ -64,7 +64,7 @@ Note: If an event occurs within the Data Source system that prevents the Task fr
 
 The [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource contains the following information needed to reference related information in the EHR and launch the SMART application:
 
-- `Task.identifier` - This is a unique identifier representing the context of this task within the SMART application (e.g., the specific set of questions that need to be answered). It is to be conveyed during launch of the referenced SMART application in the `appContext` parameter and used by that application to direct the user to information and functions necessary to complete this task
+- `Task.identifier` - This is a unique identifier representing the context of this task within the SMART application (e.g., the specific set of questions that need to be answered). It is to be conveyed during launch of the referenced SMART application in the `__appContext` parameter and used by that application to direct the user to information and functions necessary to complete this task
 - `Task.code` - A code that characterizes the requested user action
   - Value: `complete-app-questionnaire` (`display`: "Complete Questionnaire in SMART App")
 - `Task.description` - Human-readable description of the task to be performed by the user. This description SHALL include the user-recognizable name of the SMART application to launch to perform the task, and SHALL state the action to be performed in the app once it's been launched.
@@ -82,14 +82,14 @@ The [Task](StructureDefinition-specialty-rx-task-smart-launch.html) resource con
 *See this example of a [populated Task](Task-specialty-rx-task-smart-launch-1.html).*
 <p></p>
 
-### Populating the SMART Launch *appContext* 
+### Populating the SMART Launch *__appContext* 
 
-The `appContext` parameter is sent to the SMART app as part of the [OAuth 2.0](https://oauth.net/2/) access token response, alongside other [SMART launch parameters](http://hl7.org/fhir/smart-app-launch/1.0.0/scopes-and-launch-context/#launch-context-arrives-with-your-access_token) when the SMART app is launched. The `appContext`  contains the value received in the `Task.identifier` value.
+The `__appContext` parameter is sent to the SMART app as part of the [OAuth 2.0](https://oauth.net/2/) access token response, alongside other [SMART launch parameters](http://hl7.org/fhir/smart-app-launch/1.0.0/scopes-and-launch-context/#launch-context-arrives-with-your-access_token) when the SMART app is launched. The `__appContext`  contains the value received in the `Task.identifier` value.
 
 Example:
 
 ```
-"appContext": "launch-context-id-01345005"
+"__appContext": "launch-context-id-01345005"
 ```
 
 [SMART App Launch Implementation Guide](http://hl7.org/fhir/smart-app-launch/index.html)

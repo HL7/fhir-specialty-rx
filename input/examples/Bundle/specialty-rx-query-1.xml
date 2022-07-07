@@ -60,14 +60,14 @@
         <parameter>
           <name value="requester-patient" />
           <valueReference>
-            <reference value="Patient/patient1" />
+            <reference value="http://example.org/MyEHR/Patient/patient1" />
           </valueReference>
         </parameter>
       </Parameters>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://example.org/MyPharmacyApp/Patient/patient1" />
+    <fullUrl value="http://example.org/MyEHR/Patient/patient1" />
     <resource>
       <Patient>
         <id value="patient1" />

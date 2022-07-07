@@ -132,7 +132,7 @@
       <path value="Bundle.entry" />
       <sliceName value="medicationrequest" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:medicationrequest.resource">
@@ -149,7 +149,7 @@
       <path value="Bundle.entry" />
       <sliceName value="pharmacy" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:pharmacy.resource">
@@ -166,7 +166,7 @@
       <path value="Bundle.entry" />
       <sliceName value="practitioner" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <mustSupport value="true" />
     </element>
     <element id="Bundle.entry:practitioner.resource">

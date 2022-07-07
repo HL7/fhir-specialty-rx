@@ -7,7 +7,7 @@
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest" />
   <version value="1.0.0" />
   <name value="SpecialtyRxPrescription" />
-  <title value="Specialty Prescription Prescription" />
+  <title value="Specialty Prescription" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-03-20" />
@@ -42,7 +42,6 @@
     </element>
     <element id="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">
       <path value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
   </differential>

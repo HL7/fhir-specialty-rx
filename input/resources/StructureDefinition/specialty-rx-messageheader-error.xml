@@ -52,7 +52,6 @@
     </element>
     <element id="MessageHeader.focus:operationoutcome">
       <path value="MessageHeader.focus" />
-      <sliceName value="operationoutcome" />
       <min value="1" />
       <max value="1" />
       <type>

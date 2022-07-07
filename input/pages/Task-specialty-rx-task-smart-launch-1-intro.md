@@ -5,7 +5,7 @@ This example illustrates the Task content that (a) links the request to the pati
 Key elements are...
 
 - **Task.identifier**: *launch-context-id-01345005*
-- Represents the application context that the SMART app should launch into (in this example, the specific set of questions to be answered). It is conveyed during launch of the referenced SMART app in the `appContext` parameter
+- Represents the application context that the SMART app should launch into (in this example, the specific set of questions to be answered). It is conveyed during launch of the referenced SMART app in the `__appContext` parameter
 - **Task.code**: *complete-app-questionnaire*
   - Characterizes the requested user action (and directs the EHR to make the specified SMART application available for the user to launch)
 - **Task.description**: *Launch the My Pharmacy SMART app and complete the questionnaire*
@@ -20,12 +20,12 @@ Key elements are...
 
 #### Using Task elements when launching the SMART application
 
-The Task.identifier value (representing application context associated with the Task) is shared during SMART app launch within the `appContext` parameter of the OAuth 2.0 access token response. It is conveyed in the `appContext` parameter.
+The Task.identifier value (representing application context associated with the Task) is shared during SMART app launch within the `__appContext` parameter of the OAuth 2.0 access token response. It is conveyed in the `__appContext` parameter.
 
-In this example, the appContext parameter will be populated as...
+In this example, the `__appContext` parameter will be populated as...
 
 ```
-"appContext": "launch-context-id-01345005"
+"__appContext": "launch-context-id-01345005"
 ```
 
 <p></p>

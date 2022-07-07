@@ -1,26 +1,32 @@
-### *New Consent-Releated Content in Draft STU2 Version*  
+<blockquote class="note-to-balloters">
+<p>
+This STU2 version of the IG includes new content to support requesting and sharing consents that are frequently needed when fulfilling specialty product prescriptions. 
+<br/><br/>
+<i>Additions in the STU2 version</i><br/>
+<ul>
+<li><a href="consent-workflow.html">Consent workflows</a> gives an overview of consent scenarios supported by the guide.</li>
+<li><a href="StructureDefinition-specialty-rx-consent-requested.html">Requested consent profile conveying the appropriate blank consent form</a></li>
+<li><a href="StructureDefinition-specialty-rx-consent.html">Consent profile for completed specialty consents</a></li>
+<li><a href="StructureDefinition-specialty-rx-task-consent-request.html">Task profile used to request consent.</a>. This profile is used in an exchange process based on the FHIR workflow management option <a href="https://www.hl7.org/fhir/workflow-management.html#optiong">POST of Task to fulfiller&#39;s system</a>.</li>
+<li>Terminology:
+<ul>
+<li>New value in the <a href="ValueSet-specialty-rx-task-type.html">specialty-rx-task-type</a></li>
+<li>New value in the specialty-rx-task-type <a href="CodeSystem-specialty-rx-task-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-type.html">value set</a></li>
+<li>New value in the specialty-rx-task-input-type <a href="CodeSystem-specialty-rx-task-input-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-input-type.html">value set</a></li>
+<li>New specialty-rx-task-output-type <a href="CodeSystem-specialty-rx-task-output-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-output-type.html">value set</a></li>
+</ul>
+</li>
+<li>New examples: </li>
+<ul>
+<li><a href="Consent-specialty-rx-consent-requested-1.html">Requested Consent resource (containing a blank consent form)</a></li>
+<li><a href="Consent-specialty-rx-consent-1.html">Completed Consent resource</a></li>
+<li><a href="Task-specialty-rx-task-consent-request-1.html">Task illustrating a consent request</a></li>
+<li><a href="Task-specialty-rx-task-consent-request-2-completed.html">Completed Task after consent is obtained</a></li>
+</ul>
+</ul>
+</p>
+</blockquote>
 
-This draft STU2 version of the IG includes new content to support requesting and sharing consents related to fulfillment of the prescribed specialty product. This content is in-process and subject to change based on stakeholders' input.
-
-#### *Additions in this draft STU2 version*
-- [Consent workflows](consent-workflow.html) gives an overview of consent scenarios supported by the guide.
-- [Requested consent profile conveying the appropriate blank consent form](StructureDefinition-specialty-rx-consent-requested.html)
-- [Consent profile for completed specialty consents](StructureDefinition-specialty-rx-consent.html)
-- [Task profile used to request consent.](StructureDefinition-specialty-rx-task-consent-request.html). This profile is used in an exchange process based on the FHIR workflow management option [POST of Task to fulfiller's system](https://www.hl7.org/fhir/workflow-management.html#optiong).
-- Terminology:
-	- New value in the [specialty-rx-task-type](ValueSet-specialty-rx-task-type.html)
-	- New value in the specialty-rx-task-type [code system](CodeSystem-specialty-rx-task-type.html) and [value set](ValueSet-specialty-rx-task-type.html)
-	- New value in the specialty-rx-task-input-type [code system](CodeSystem-specialty-rx-task-input-type.html) and [value set](ValueSet-specialty-rx-task-input-type.html)
-	- New specialty-rx-task-output-type [code system](CodeSystem-specialty-rx-task-output-type.html) and [value set](ValueSet-specialty-rx-task-output-type.html)
-- New examples: 
-	- [Requested Consent resource (containing a blank consent form)](Consent-specialty-rx-consent-requested-1.html)
-	- [Completed Consent resource](Consent-specialty-rx-consent-1.html)
-	- [Task illustrating a consent request](Task-specialty-rx-task-consent-request-1.html)
-	- [Completed Task after consent is obtained](Task-specialty-rx-task-consent-request-2-completed.html)
-
-<p></p>
-<p></p>
-<hr>
 <p></p>
 <p></p>
 
@@ -99,28 +105,5 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 	</tbody>
   </table>
 
-### Change Log
-
-<table class="grid">
-    <tbody>
-        <tr>
-                <td>Date</td>
-                <td>Change</td>
-        </tr>
-        <tr>
-                <td>Dec 9, 2021</td>
-                <td>Initial consent-related updates. Added consent workflow page and profiles for requested consent, completed consent and consent request Task. Initial examples for added profiles.</td>
-      	</tr>
-        <tr>
-                <td>December 20, 2021</td>
-                <td>Refined the consent request Task profile (input, output, code elements). Refined the SMART launch Task profile (code and input elements). Added narrative / guidance to the consent request Task and SMART launch Task profile pages. Added specialty-rx-output-type code system and value set for use in the consent request Task profile. Updated the examples. Added an overview of new consent-related content in the Home page.</td>
-        </tr>
-        <tr>
-        	<td>December 31, 2021</td>
-                <td>Removed content at the bottom of the Consent Workflows page that duplicated information on the Information Flows Requiring Human Interaction page.</td>
-        </tr>
-    </tbody> 
-</table>
-<br />
 
 

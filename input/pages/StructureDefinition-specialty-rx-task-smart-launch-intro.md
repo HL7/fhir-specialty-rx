@@ -11,7 +11,7 @@ This profile ensures that the Task conveys the information that the EHR needs to
 #### Important elements in this profile
 
 - **Task.identifier**
-  - Represents the application context that the SMART app should launch into. It is conveyed during launch of the referenced SMART app in the `appContext` parameter
+  - Represents the application context that the SMART app should launch into. It is conveyed during launch of the referenced SMART app in the `__appContext` parameter
 - **Task.code**
   - Characterizes the requested user action (and directs the EHR to make the specified SMART application available for the user to launch)
 - **Task.description**
@@ -33,5 +33,5 @@ This profile ensures that the Task conveys the information that the EHR needs to
 
 #### Using Task elements when launching the SMART application
 
-The Task.identifier value (representing application context associated with the Task) is shared during SMART app launch within the `appContext` parameter of the OAuth 2.0 access token response. It is conveyed in the `appContext` parameter.
+The Task.identifier value (representing application context associated with the Task) is shared during SMART app launch within the `__appContext` parameter of the OAuth 2.0 access token response. It is conveyed in the `__appContext` parameter.
 <p></p>

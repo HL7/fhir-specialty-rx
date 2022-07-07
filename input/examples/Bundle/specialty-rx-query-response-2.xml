@@ -37,25 +37,25 @@
         <parameter>
           <name value="requester-patient" />
           <valueReference>
-            <reference value="Patient/patient1" />
+            <reference value="http://example.org/MyPharmacyApp/Patient/patient1" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="responder-patient" />
           <valueReference>
-            <reference value="Patient/patientEHR" />
+            <reference value="http://example.org/MyEHR/Patient/patientEHR" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="search-result" />
           <valueReference>
-            <reference value="Bundle/3456789" />
+            <reference value="http://example.org/MyEHR/Bundle/3456789" />
           </valueReference>
         </parameter>
         <parameter>
           <name value="search-result" />
           <valueReference>
-            <reference value="Bundle/987654" />
+            <reference value="http://example.org/MyEHR/Bundle/987654" />
           </valueReference>
         </parameter>
       </Parameters>
