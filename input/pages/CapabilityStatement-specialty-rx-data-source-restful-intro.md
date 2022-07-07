@@ -4,6 +4,7 @@ Specialty Rx Data Source **SHALL**:
 1. Implement the RESTful behavior according to the FHIR specification. 
 1. Support the JSON source format. 
 1. Declare a CapabilityStatement identifying the profiles supported. 
+1. Follow US Core search requirements and guidance when performing searches associated with this IG.
 
 Specialty Rx Data Source **SHOULD**: 
 1. Respond to the Patient/$match operation. 

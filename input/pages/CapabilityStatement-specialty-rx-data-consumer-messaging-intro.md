@@ -3,6 +3,7 @@ Specialty Rx Data Consumer **SHALL**:
 1. Support the Unsolicited workflow defined in this Guide and respond to the $process-message operation carrying a Specialty Rx Query Response - Unsolicited. 
 1. Support the JSON source format. 
 1. Declare a CapabilityStatement identifying the profiles supported.
+1. Follow US Core search requirements and guidance when performing searches associated with this IG.
 
 Specialty Rx Data Consumer **SHOULD**: 
 1. Support the XML source format. 
