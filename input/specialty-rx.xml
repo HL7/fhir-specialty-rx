@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="specialty-rx"/>
     <meta>
-        <lastUpdated value="2021-12-08T00:00:00.000+00:00"/>
+        <lastUpdated value="2022-07-12T00:00:00.000+00:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -52,7 +52,8 @@
         <packageId value="hl7.fhir.us.core"/>
         <version value="3.1.0"/>
     </dependsOn>
-	 <definition>
+
+	<definition>
 <!-- ************************************************************* Structure Definitions ************************************************************ -->
 	<!-- Request and response bundle  -->
 	  <resource>

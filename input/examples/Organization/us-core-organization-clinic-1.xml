@@ -8,10 +8,6 @@
     <system value="http://hl7.org.fhir/sid/us-npi" />
     <value value="1407071236" />
   </identifier>
-  <identifier>
-    <system value="http://example.org/fhir/sid/us-tin" />
-    <value value="121111111" />
-  </identifier>
   <active value="true" />
   <type>
     <coding>

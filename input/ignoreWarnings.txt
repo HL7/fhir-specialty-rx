@@ -3,11 +3,11 @@
 # The CapabilityStatements use the capabilitystatement-search-parameter-combination extension to specify required search parameters. Population matches that in US Core
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 
+# This Organization example illustrates a US Core organization resource. Population of NPI matches that in US Core
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+
 # Messaging resources (MessageHeaders, Parameters, Search Bundles that are components of messages) don't have their own examples, but instead are illustrated in the full message examples
 The Implementation Guide contains no explicitly linked examples for this profile
-
-# Warnings due to validator's inability to validate RxNorm codes from us-core-medication-codes. These have been manually validated
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes because the value set or code system is not known to the validator]
 
 # All IG-defined examples are validated against correct profile
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error
@@ -15,36 +15,19 @@ Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureD
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query - listed in meta
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response - listed in meta
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-response
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-response - listed in meta
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-
-response - listed in meta
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response - listed in meta
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-response-unsolicited
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response-unsolicited
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient - listed in meta
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response
-
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result - listed in meta
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage - listed in meta
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-medicationrequest - listed in meta
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner
 Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch
 
+
 # All US Core resources are validated against correct profile
-Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition - listed in meta
-Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
 Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
-Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner - listed in meta
 
 # All Standard FHIR resources are validated against correct profile
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/OperationOutcome
@@ -66,12 +49,10 @@ Validate resource against profile http://hl7.org/fhir/StructureDefinition/Struct
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/Medication
-Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance - listed in meta
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/Provenance
-Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance - listed in meta
 
 # This example intentionally includes an error in the search string, in order to illustrate an OperationOutcome response
 No types could be determined from the search string, so the types can't be checked
 
 # The base Consent StructureDefinition appears to include an error in the element.example value of Consent.identifier
-if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
+if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme)
