@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-consent-requested" />
+  <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent-requested" />
+  <name value="SpecialtyRxConsentRequested" />
+  <title value="Specialty Rx ConsentRequested" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2021-12-08T00:00:00-05:00" />
+  <publisher value="NCPDP" />
+  <description value="This profile constrains a Consent resource to convey a request for consents and authorizations associated with fulfillment of a specialty medication or other product. This Consent includes an attachment containing the enrollment consent form applicable to the prescribed product" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Consent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Consent">
+      <path value="Consent" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Consent.status">
+      <path value="Consent.status" />
+      <fixedCode value="proposed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.patient">
+      <path value="Consent.patient" />
+      <label value="Related patient in the Data Source system" />
+      <short value="Related patient" />
+      <definition value="The patient for whom the related prescription was written, as represented in the Data Source system" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.sourceAttachment">
+      <path value="Consent.source[x].sourceAttachment" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="contentType" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="A file capturing the signed consent form" />
+      <min value="1" />
+      <type>
+        <code value="Attachment" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.sourceAttachment:PDF">
+      <path value="Consent.source[x].sourceAttachment" />
+      <sliceName value="consentPdf" />
+      <short value="The signed consent in PDF format" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Attachment" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.sourceAttachment:PDF.contentType">
+      <path value="Consent.source[x].sourceAttachment.contentType" />
+      <min value="1" />
+      <fixedCode value="application/pdf"/>
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.sourceAttachment:PDF.data">
+      <path value="Consent.source[x].sourceAttachment.data" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.policyRule">
+      <path value="Consent.policyRule" />
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+          <code value="OPTIN" />
+          <display value="opt-in" />
+        </coding>
+      </fixedCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
