@@ -54,5 +54,5 @@ Validate resource against profile http://hl7.org/fhir/StructureDefinition/Proven
 # This example intentionally includes an error in the search string, in order to illustrate an OperationOutcome response
 No types could be determined from the search string, so the types can't be checked
 
-# The base Consent StructureDefinition appears to include an error in the element.example value of Consent.identifier
+# The base R4 Consent StructureDefinition contains an error in the element.example value of Consent.identifier. Confirmed with CBCP WG that it can be ignored
 if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme)

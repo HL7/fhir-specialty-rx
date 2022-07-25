@@ -12,11 +12,14 @@ Specialty Rx Data Consumer **SHOULD**:
 The Specialty Rx Data Consumer MAY 
 1. Support the Solicited workflow defined in this Guide, including the Specialty Rx Query, Specialty Rx Query Response, and Specialty Rx Error messages. 
 1. Support the Patient/$match operation.
+1. Support the Task / SMART application launch capability specified in the guide.
+1. Support the Task / Consent Request capability specified in the guide.
 
 <h3>Security</h3>
+
 1. For general security considerations refer to [FHIR Security and Privacy Considerations](https://www.hl7.org/fhir/secpriv-module.html). 
 1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html). 
-1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response co
+1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code.
 
 ### Resources
 
@@ -139,6 +142,39 @@ The Specialty Rx Data Consumer MAY
 			<td></td>
 			<td>y</td>
 			<td>y</td>
+		</tr>
+		        <tr>
+			<td>MAY</td>
+			<td>Task</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request</a>
+			</td>
+			<td>y</td>
+			<td></td>
+			<td>y</td>
+			<td>y</td>
+		</tr>
+		<tr>
+			<td>MAY</td>
+			<td>Consent</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent</a>
+			</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MAY</td>
+			<td>Consent</td>
+			<td>
+				<a href="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent-requested">http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent-requested</a>
+			</td>
+			<td>y</td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>

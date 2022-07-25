@@ -2,12 +2,12 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-data-source-messaging" />
   <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-source-messaging" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="SpecialtyRxDataSourceMessaging" />
   <title value="Specialty Rx CapabilityStatement - Data Source - Messaging" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-08-24T00:00:00-05:00" />
+  <date value="2022-07-01T00:00:00-05:00" />
   <publisher value="HL7 International - Pharmacy" />
   <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of providing patient information using Specialty Rx Query messaging." />
   <jurisdiction>
@@ -25,7 +25,7 @@
   <implementationGuide value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx" />
   <rest>
     <mode value="server" />
-    <documentation value="Specialty Rx Data Source **SHALL**: &#xA;&#xA;1. Support the Solicited workflow defined in this guide by responding to the $process-message operation containing a Specialty Rx Query message by returning a Specialty Rx Query Response message or Specialty Rx Error message. &#xA;1. Support all required RESTful searches and search parameters. &#xA;1. Support the JSON source format. &#xA;1. Declare a CapabilityStatement identifying the profiles supported. &#xA;1. Follow US Core search requirements and guidance when performing searches associated with this IG. &#xA;&#xA;Specialty Rx Data Source **SHOULD**: &#xA;&#xA;1. Respond to the Patient/$match operation.  &#xA;1. Support the XML source format. &#xA;1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. &#xA;&#xA;The Specialty Rx Data Source MAY &#xA;&#xA;1. Support the Unsolicited workflow defined in this guide, using the Specialty Rx Query Response - Unsolicited message. &#xA;1. Support the Task / SMART application launch capability specified in the guide." />
+    <documentation value="Specialty Rx Data Source **SHALL**: &#xA;&#xA;1. Support the Solicited workflow defined in this guide by responding to the $process-message operation containing a Specialty Rx Query message by returning a Specialty Rx Query Response message or Specialty Rx Error message. &#xA;1. Support all required RESTful searches and search parameters. &#xA;1. Support the JSON source format. &#xA;1. Declare a CapabilityStatement identifying the profiles supported. &#xA;1. Follow US Core search requirements and guidance when performing searches associated with this IG. &#xA;&#xA;Specialty Rx Data Source **SHOULD**: &#xA;&#xA;1. Respond to the Patient/$match operation.  &#xA;1. Support the XML source format. &#xA;1. Identify the Specialty Rx profiles supported as part of the FHIR `meta.profile` attribute for each applicable instance. &#xA;&#xA;The Specialty Rx Data Source MAY &#xA;&#xA;1. Support the Unsolicited workflow defined in this guide, using the Specialty Rx Query Response - Unsolicited message. &#xA;1. Support the Task / SMART application launch capability specified in the guide. &#xA; 1. Support the Task / Consent Request capability specified in the guide." />
     <security>
       <description value="1. Specialty Rx Data Source **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code. &#xA;1. Specialty Rx Data Source **SHOULD** authorize exchanges using OAuth 2.0 access management in accordance with the SMART Backend Services Authorization Guide. &#xA;1. For general security considerations refer to [FHIR Security and Privacy Considerations](https://www.hl7.org/fhir/secpriv-module.html). &#xA;1. For additional security guidance, refer to the [core FHIR Security guidance page](https://www.hl7.org/fhir/security.html)." />
     </security>
@@ -590,7 +590,8 @@
     </resource> 
     <resource>
       <type value="Task" />
-      <profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-consent-request" />
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHALL" />
@@ -610,6 +611,30 @@
         <code value="read" />
       </interaction>
     </resource> 
+    <resource>
+      <type value="Consent" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent" />
+      <supportedProfile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-consent-requested" />
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <code value="create" />
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY" />
+        </extension>
+        <code value="update" />
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL" />
+        </extension>
+        <code value="read" />
+      </interaction>
+    </resource>     
+
     <operation>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL" />
