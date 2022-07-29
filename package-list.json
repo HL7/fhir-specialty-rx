@@ -16,7 +16,7 @@
          "version": "1.1.0-ballot",
          "date": "2022-07-25",
          "desc": "Specialty Medication Enrollment Implementation Guide STU2 Ballot",
-         "changes": "Adds the exchange of consent information",
+         "changes": "",
          "path": "http://hl7.org/fhir/us/specialty-rx/STU2",
          "status": "trial-use",
          "sequence": "STU2",
