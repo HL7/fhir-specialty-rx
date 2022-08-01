@@ -2,7 +2,7 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-data-source-messaging" />
   <url value="http://hl7.org/fhir/us/specialty-rx/CapabilityStatement/specialty-rx-data-source-messaging" />
-  <version value="1.1.0" />
+  <version value="2.0.0" />
   <name value="SpecialtyRxDataSourceMessaging" />
   <title value="Specialty Rx CapabilityStatement - Data Source - Messaging" />
   <status value="active" />

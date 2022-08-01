@@ -2,7 +2,7 @@
 <p>
 This version of the IG includes new content to support requesting and sharing consents that are frequently needed when fulfilling specialty product prescriptions. 
 <br/><br/>
-<i>Additions in version 1.1.0 (STU2 ballot)</i><br/>
+<i>Additions in version 2.0.0 (STU2 ballot)</i><br/>
 <ul>
 <li><a href="consent-workflow.html">Consent workflows</a> gives an overview of consent scenarios supported by the guide.</li>
 <li><a href="StructureDefinition-specialty-rx-consent-requested.html">Requested consent profile conveying the appropriate blank consent form</a></li>
