@@ -13,12 +13,12 @@
          "current": true
       },
       {
-         "version": "1.1.0-ballot",
+         "version": "2.0.0-ballot",
          "date": "2022-07-25",
          "desc": "Specialty Medication Enrollment Implementation Guide STU2 Ballot",
          "changes": "",
-         "path": "http://hl7.org/fhir/us/specialty-rx/STU2",
-         "status": "trial-use",
+         "path": "http://hl7.org/fhir/us/specialty-rx/2022Sep",
+         "status": "ballot",
          "sequence": "STU2",
          "fhirversion" : "4.0.1"
       },
@@ -38,7 +38,7 @@
          "desc": "STU1 Ballot",
          "changes": "",
          "path": "http://hl7.org/fhir/us/specialty-rx/2021Jan",
-         "status": "ballot",
+         "status": "trial-use",
          "fhirversion" : "4.0.1",
          "sequence": "STU1"
       }
