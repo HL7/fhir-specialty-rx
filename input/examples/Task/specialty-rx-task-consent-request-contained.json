@@ -11,7 +11,7 @@
   "code": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type",
+        "system": "http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic",
         "code": "obtain-consent",
         "display": "Obtain Consent for Product Fulfillment"
       }
@@ -61,7 +61,7 @@
       "type": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type",
+            "system": "http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic",
             "code": "consent-form-reference",
             "display": "Consent Form Reference"
           }

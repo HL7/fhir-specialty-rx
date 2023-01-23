@@ -49,7 +49,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
           <code value="obtain-consent" />
         </coding>
       </patternCodeableConcept>
@@ -278,7 +278,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
           <code value="consent-form-reference" />
         </coding>
       </patternCodeableConcept>
@@ -330,7 +330,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-output-type" />
+          <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
           <code value="completed-consent-reference" />
         </coding>
       </patternCodeableConcept>

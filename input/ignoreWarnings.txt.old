@@ -1,0 +1,64 @@
+== Suppressed Messages ==
+
+# The CapabilityStatements use the capabilitystatement-search-parameter-combination extension to specify required search parameters. Population matches that in US Core
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+# This Organization example illustrates a US Core organization resource. Population of NPI matches that in US Core
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+
+# Messaging resources (MessageHeaders, Parameters, Search Bundles that are components of messages) don't have their own examples, but instead are illustrated in the full message examples
+The Implementation Guide contains no explicitly linked examples for this profile
+
+# All IG-defined examples are validated against correct profile
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-error
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-error
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-response
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-query-response-unsolicited
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-messageheader-query-response-unsolicited
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response-unsolicited
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-patient
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-organization-pharmacy
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-practitioner
+Validate resource against profile http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-task-smart-launch
+
+
+# All US Core resources are validated against correct profile
+Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+
+# The US Core Coverage profile is in version 6.0.0 which was recently balloted and has not yet been published
+US FHIR Usage rules require that all profiles on Coverage derive from the core US profile. Comparison with US Core Coverage Profile
+
+# All Standard FHIR resources are validated against correct profile
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/OperationOutcome
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/MessageHeader
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Parameters
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/AllergyIntolerance
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Bundle
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Condition
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Coverage
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/MessageDefinition
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Medication
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Provenance
+
+# This example intentionally includes an error in the search string, in order to illustrate an OperationOutcome response
+No types could be determined from the search string, so the types can't be checked
+
+# The base R4 Consent StructureDefinition contains an error in the element.example value of Consent.identifier. Confirmed with CBCP WG that it can be ignored
+if identifier.system is 'urn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme)
+
+# The fixed value constratin referenced by the warning is in the base R4 Consent and not modified by this IG (StructureDefinition element #35 - policyRule)
+For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance

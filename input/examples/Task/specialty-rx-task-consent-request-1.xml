@@ -8,7 +8,7 @@
   <intent value="plan" />
   <code>
     <coding>
-      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
       <code value="obtain-consent" />
       <display value="Obtain Consent for Product Fulfillment" />
     </coding>
@@ -48,7 +48,7 @@
   <input>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
+        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
         <code value="consent-form-reference" />
         <display value="Consent Form Reference" />
       </coding>

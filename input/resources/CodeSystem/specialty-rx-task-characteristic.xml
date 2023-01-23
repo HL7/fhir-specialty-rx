@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="specialty-rx-task-characteristic" />
+  <meta>
+    <lastUpdated value="2023-01-22T00:00:00-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
+  <version value="1.0.0" />
+  <name value="SpecialtyRxCodeSystemTaskCharacteristic" />
+  <title value="Specialty Rx Code System - Task Characteristic" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2022-01-22T00:00:00-05:00" />
+  <publisher value="HL7 International - Pharmacy" />
+  <description value="This code system defines task types, task input types, task output types and task identifier types used in the Specialty Rx Task profiles" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false" />
+  <hierarchyMeaning value="is-a" />
+  <content value="complete" />
+  <property>
+    <code value="notSelectable" />
+    <uri value="http://hl7.org/fhir/concept-properties#notSelectable" />
+    <description value="Indicates that the code is abstract - only intended to be used as a selector for other concepts" />
+    <type value="boolean" />
+  </property>
+  <property>
+    <code value="taskAspect" />
+    <uri value="http://hl7.org/fhir/concept-properties#parent" />
+    <description value="The aspect of a Task resource that a concept defines" />
+    <type value="code" />
+  </property>
+  <concept>
+    <code value="task-type" />
+    <display value="Task Type" />
+    <definition value="Task types defined in the Specialty Rx Task profiles" />
+    <property>
+      <code value="notSelectable" />
+      <valueBoolean value="true" />
+    </property>
+    <concept>
+      <code value="complete-app-questionnaire" />
+      <display value="Complete Questionnaire in SMART App" />
+      <definition value="Launch the referenced SMART app and complete the presented questionnaire" />
+      <property>
+        <code value="taskAspect" />
+        <valueCode value="task-type" />
+      </property>
+    </concept>
+    <concept>
+      <code value="obtain-consent" />
+      <display value="Obtain Consent for Product Fulfillment" />
+      <definition value="Obtain consent to support specialty product fulfillment using the referenced consent form" />
+      <property>
+        <code value="taskAspect" />
+        <valueCode value="task-type" />
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="task-input-type" />
+    <display value="Task Input Type" />
+    <definition value="Task inputs used in the Specialty Rx Task profiles" />
+    <property>
+      <code value="notSelectable" />
+      <valueBoolean value="true" />
+    </property>
+    <concept>
+      <code value="smart-app-launch-url" />
+      <display value="SMART Application Launch URL" />
+      <definition value="Launch URL for a SMART app to be used in fulfilling this Task" />
+      <property>
+        <code value="taskAspect" />
+        <valueCode value="task-input-type" />
+      </property>
+    </concept>
+    <concept>
+      <code value="smart-app-client-id" />
+      <display value="SMART Application Client ID" />
+      <definition value="Client ID for a SMART app to be used in fulfilling this Task" />
+      <property>
+        <code value="taskAspect" />
+        <valueCode value="task-input-type" />
+      </property>
+    </concept>
+    <concept>
+      <code value="consent-form-reference" />
+      <display value="Consent Form Reference" />
+      <definition value="Reference to a consent resource containing the requested consent form" />
+      <property>
+        <code value="taskAspect" />
+        <valueCode value="task-input-type" />
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="task-output-type" />
+    <display value="Task Output Types" />
+    <definition value="Task outputs used in the Specialty Rx Task profiles" />
+    <property>
+      <code value="notSelectable" />
+      <valueBoolean value="true" />
+    </property>
+    <concept>
+      <code value="completed-consent-reference" />
+      <display value="Completed Consent Reference" />
+      <definition value="Reference to a consent resource containing the completed consent" />
+      <property>
+        <code value="taskAspect" />
+        <valueCode value="task-output-type" />
+      </property>
+    </concept>
+  </concept>
+  <concept>
+    <code value="task-identifier-type" />
+    <display value="Task Identifier Types" />
+    <definition value="Identifier types used in the Specialty Rx Task profiles" />
+    <property>
+      <code value="notSelectable" />
+      <valueBoolean value="true" />
+    </property>
+    <concept>
+      <code value="app-context" />
+      <display value="SMART App Context ID" />
+      <definition value="An identifier representing a specific application context to be used in the launch of a SMART application" />
+      <property>
+        <code value="taskAspect" />
+        <valueCode value="task-identifier-type" />
+      </property>
+    </concept>
+  </concept>
+</CodeSystem>

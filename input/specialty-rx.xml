@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="specialty-rx"/>
     <meta>
-        <lastUpdated value="2022-07-12T00:00:00.000+00:00"/>
+        <lastUpdated value="2023-01-22T00:00:00.000+00:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,7 +13,7 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx"/>
- 	<version value="2.0.0-ballot"/>
+ 	<version value="2.0.0-cibuild"/>
     <name value="SpecialtyRx"/>
     <title value="Specialty Medication Enrollment"/>
     <status value="active"/>
@@ -49,7 +49,7 @@
     <dependsOn>
         <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
         <packageId value="hl7.fhir.us.core"/>
-        <version value="3.1.0"/>
+        <version value="3.1.1"/>
     </dependsOn>
 
 	<definition>
@@ -268,38 +268,15 @@
 	    <name value="Specialty Rx CodeSystem - Event Type"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
+
   	  <resource>
 	    <reference>
-	      <reference value="CodeSystem/specialty-rx-task-type"/>
-	      <display value="Specialty Rx CodeSystem - Task Type"/>
+	      <reference value="CodeSystem/specialty-rx-task-characteristic"/>
+	      <display value="Specialty Rx CodeSystem - Task Characteristic"/>
 	    </reference>
-	    <name value="Specialty Rx CodeSystem - Task Type"/>
+	    <name value="Specialty Rx CodeSystem - Task Characteristic"/>
 	    <exampleBoolean value="false"/>
 	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="CodeSystem/specialty-rx-task-input-type"/>
-	      <display value="Specialty Rx CodeSystem - Task Input Type"/>
-	    </reference>
-	    <name value="Specialty Rx CodeSystem - Task Input Type"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="CodeSystem/specialty-rx-task-output-type"/>
-	      <display value="Specialty Rx CodeSystem - Task Output Type"/>
-	    </reference>
-	    <name value="Specialty Rx CodeSystem - Task Output Type"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	  
-  	  <resource>
-	    <reference>
-	      <reference value="CodeSystem/specialty-rx-task-identifier-type"/>
-	      <display value="Specialty Rx CodeSystem - Task Identifier Type"/>
-	    </reference>
-	    <name value="Specialty Rx CodeSystem - Task Identifier Type"/>
-	    <exampleBoolean value="false"/>
-	  </resource>	    
 	  <resource>
 	    <reference>
 	      <reference value="ValueSet/specialty-rx-event-type"/>

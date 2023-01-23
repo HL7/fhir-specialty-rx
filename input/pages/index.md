@@ -1,40 +1,13 @@
-<blockquote class="note-to-balloters">
-<p>
-This version of the IG includes new content to support requesting and sharing consents that are frequently needed when fulfilling specialty product prescriptions. 
-<br/><br/>
-<i>Additions in version 2.0.0 (STU2 ballot)</i><br/>
-<ul>
-<li><a href="consent-workflow.html">Consent workflows</a> gives an overview of consent scenarios supported by the guide.</li>
-<li><a href="StructureDefinition-specialty-rx-consent-requested.html">Requested consent profile conveying the appropriate blank consent form</a></li>
-<li><a href="StructureDefinition-specialty-rx-consent.html">Consent profile for completed specialty consents</a></li>
-<li><a href="StructureDefinition-specialty-rx-task-consent-request.html">Task profile used to request consent.</a>. This profile is used in an exchange process based on the FHIR workflow management option <a href="https://www.hl7.org/fhir/workflow-management.html#optiong">POST of Task to fulfiller&#39;s system</a>.</li>
-<li>Terminology:
-<ul>
-<li>New value in the specialty-rx-task-type <a href="CodeSystem-specialty-rx-task-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-type.html">value set</a></li>
-<li>New value in the specialty-rx-task-input-type <a href="CodeSystem-specialty-rx-task-input-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-input-type.html">value set</a></li>
-<li>New specialty-rx-task-output-type <a href="CodeSystem-specialty-rx-task-output-type.html">code system</a> and <a href="ValueSet-specialty-rx-task-output-type.html">value set</a></li>
-</ul>
-</li>
-<li>New examples: </li>
-<ul>
-<li><a href="Consent-specialty-rx-consent-requested-1.html">Requested Consent resource (containing a blank consent form)</a></li>
-<li><a href="Consent-specialty-rx-consent-1.html">Completed Consent resource</a></li>
-<li><a href="Task-specialty-rx-task-consent-request-1.html">Task illustrating a consent request</a></li>
-<li><a href="Task-specialty-rx-task-consent-request-2-completed.html">Completed Task after consent is obtained</a></li>
-</ul>
-</ul>
-</p>
-</blockquote>
-
-<p></p>
-<p></p>
-
 ### Overview
-This FHIR implementation Guide describes the exchange of patient demographic, clinical and coverage data to support fulfillment of specialty medication prescriptions by pharmacies, and enrollment of patients into related support programs offered by parties such as Hub vendors and pharmaceutical manufacturers.
+This FHIR implementation Guide describes the exchange of patient demographic, clinical, consent and coverage data to support fulfillment of specialty medication prescriptions by pharmacies, and enrollment of patients into related support programs offered by parties such as Hub vendors and pharmaceutical manufacturers.
 
 This guide is the result of collaboration between HL7 and the National Council for Prescription Drug Programs (NCPDP).
 
 ### Background
+
+Specialty medications are generally defined as those of high cost or requiring special handling. The use of these medications may be constrained based on indication for use, risks to patient health vs. potential benefits, cost, etc. 
+
+There can be different settings for administration as well as limitations on where they can be dispensed.  Additional steps in the prescribing and dispensing process may exist, including the need to share consent information. Consent may be needed to authorize contact by patient support programs, sharing of patient clinical and other information to support steps to obtain insurance coverage or other financial support, etc.
 
 The current process for exchanging information to support specialty medication fulfillment is complex and manual, often resulting in delays of days to weeks before patients can begin their therapy. This is caused largely by the absence of an industry standard for exchanging clinical data needed to dispense specialty medications and enroll the patient into associated support and savings programs.
 
@@ -47,7 +20,7 @@ This information is outside of the scope of the NCPDP e-prescription standard th
 This guide addresses the exchange of information to support specialty medication fulfillment functions, including:
 
 - medication dispensing and billing
-- specialty enrollment for programs or services
+- specialty enrollment for programs or services, including the gathering of consent
 - facilitation of clinical care management, education, and training.
 
 The guide does not address transmission of the original prescription from the prescriber to dispensing pharmacy, which is typically accomplished in the US using the NewRx message defined in the NCPDP SCRIPT standard. 

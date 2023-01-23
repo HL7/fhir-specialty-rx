@@ -7,7 +7,7 @@
   <identifier>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-identifier-type" />
+        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
         <code value="app-context" />
         <display value="SMART App Context ID" />
       </coding>
@@ -19,7 +19,7 @@
   <intent value="plan" />
   <code>
     <coding>
-      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-type" />
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
       <code value="complete-app-questionnaire" />
       <display value="Complete Questionnaire in SMART App" />
     </coding>
@@ -44,7 +44,7 @@
   <input>
     <type>
       <coding>
-        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-input-type" />
+        <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
         <code value="smart-app-client-id" />
         <display value="SMART Application Client ID" />
       </coding>

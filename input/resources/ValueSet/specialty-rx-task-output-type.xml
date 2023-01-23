@@ -2,17 +2,17 @@
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-task-output-type" />
   <meta>
-    <lastUpdated value="2021-12-20T00:00:00-05:00" />
+    <lastUpdated value="2023-01-22T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/specialty-rx/ValueSet/specialty-rx-task-output-type" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="SpecialtyRxValueSetTaskOutputType" />
   <title value="Specialty Rx Value Set - Task Output Type" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2021-12-20T00:00:00-05:00" />
+  <date value="2023-01-22T00:00:00-05:00" />
   <publisher value="HL7 International - Pharmacy" />
-  <description value="This value set contains Task.output types used in the Specialty Rx Task profiles." />
+  <description value="This value set contains task output types used in the Specialty Rx Task profiles." />
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166" />
@@ -22,7 +22,12 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-output-type" />
+      <system value="http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-task-characteristic" />
+      <filter>
+        <property value="taskAspect" />
+        <op value="=" />
+        <value value="task-output-type" />
+      </filter>
     </include>
   </compose>
 </ValueSet>

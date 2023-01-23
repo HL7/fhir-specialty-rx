@@ -16,7 +16,7 @@ Relating to both of those models, the sections below describe the Data Consumer 
 
 In the *solicited model*, where a pharmacy or other party (Data Consumer system) requests patient information from an EHR or other responder (Data Source system), the Data Consumer system may either...
 
-- **Pre-Match the Patient** and include the Data Source's Patient resource ID in RESTful searches or [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html).
+- **Pre-Match the Patient** and include the Data Source's Patient resource ID  (Patient.id) in RESTful searches or [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html).
 
   or
 
@@ -34,10 +34,11 @@ In this scenario, the Data Consumer system submits a patient match operation aga
 
 `URL: [base]/Patient/$match`
 
-*Input parameters.*  In the Specialty Rx process, this request SHALL contain two parameters:
+*Input parameters.*  In the Specialty Rx process, this request SHALL contain three parameters:
 
-- Patient resource representing the Data Consumer system's patient record
+- The `resource` parameter containing a Patient resource representing the Data Consumer system's patient record
 - The `onlyCertainMatches` parameter with the value set to `true`. This prevents the Data Source from returning multiple possible Patient matches.
+- The `count` parameter with the value set to 1
 
 *Output parameter.*  The `$match` operation returns a Bundle containing...
 
@@ -50,7 +51,7 @@ In this scenario, the Data Consumer system submits a patient match operation aga
 #### Step 2: Populate the patient information in the request
 
 When retrieving information using RESTful searches...
-- the Data Consumer system SHALL include a `patient` parameter in the search containing the retrieved patient ID. 
+- the Data Consumer system SHALL include a `patient` parameter in the search containing the retrieved patient ID  (Patient.id). 
 
 When retrieving information using a Specialty Rx Query message, the Data Consumer system...
 - SHALL populate the `requester-patient` parameter with a reference to the **Data Consumer system's Patient resource** 
@@ -86,7 +87,7 @@ The Data Source system performs patient matching using the request's patient ide
 
 - SHALL locate a match to the responder patient referenced in the request's `requester-patient` parameter.
   - If the Data Source system cannot determine a single, confident match, it SHALL return an OperationOutcome describing the error.
-- SHALL append a patient parameter containing the responder's patient ID to each search string supplied in a `query-string` parameter in the request.
+- SHALL append a patient parameter containing the responder's patient ID (Patient.id) to each search string supplied in a `query-string` parameter in the request.
   - For example, change the submitted query-string `"Condition"` to `"Condition?patient=EHRPatient123"`.
 
 <p></p>
