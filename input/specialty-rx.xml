@@ -3,7 +3,7 @@
     xmlns="http://hl7.org/fhir">
     <id value="specialty-rx"/>
     <meta>
-        <lastUpdated value="2023-01-22T00:00:00.000+00:00"/>
+        <lastUpdated value="2023-03-20T00:00:00.000+00:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,7 +13,7 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx"/>
- 	<version value="2.0.0-cibuild"/>
+ 	<version value="2.0.0"/>
     <name value="SpecialtyRx"/>
     <title value="Specialty Medication Enrollment"/>
     <status value="active"/>
@@ -637,6 +637,11 @@
 		    <nameUrl value="downloads.html"/>
 		    <title value="Downloads"/>
 		    <generation value="html"/>
+		  </page>
+		  <page>
+		    <nameUrl value="changes.html"/>
+		    <title value="Change Log"/>
+		    <generation value="markdown"/>
 		  </page>
         </page>
     	<parameter>

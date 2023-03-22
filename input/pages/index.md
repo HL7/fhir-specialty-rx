@@ -71,6 +71,9 @@ For those new to FHIR, the material below describes basic FHIR principles and gi
 		<td colspan="2">NCPDP Workgroup 18 - Specialty Requirements for ePrescribing Taskgroup</td>
   	  </tr>
 	  <tr>
+		<td colspan="2">NCPDP Workgroup 10 - Patient Consent Taskgroup</td>
+  	  </tr>
+	  <tr>
 		<td>Frank McKinney</td>
 		<td><a href="mailto:frank.mckinney@pocp.com">frank.mckinney@pocp.com</a></td>
 	  </tr>

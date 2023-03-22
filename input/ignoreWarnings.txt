@@ -9,7 +9,7 @@ US FHIR Usage rules require that all profiles on Coverage derive from the core U
 # The fixed value constraint referenced by the warning is in the base R4 Consent and not modified by this IG (StructureDefinition element #35 - policyRule)
 For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
 
-# The CapabilityStatements use the capabilitystatement-search-parameter-combination extension to specify required search parameters. Population matches that in US Core
+# Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to express search parameter capabilities: see FHIR-12419
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
 
 # This Organization example illustrates a US Core organization resource. Population of NPI matches that in US Core

@@ -1,0 +1,11 @@
+ {
+    "package-id": "hl7.fhir.us.specialty-rx",
+    "version": "2.0.0",
+    "path": "http://hl7.org/fhir/us/specialty-rx/STU2",
+    "mode": "milestone",
+    "status": "trial-use",
+    "sequence": "STU2",
+    "desc": "This STU2 version of Specialty Medication Enrollment FHIR IG adds content to support requesting and sharing of patient consents and other authorizations that are often needed during fulfillment of specialty products. This publication is the result of the September 2022 HL7 balloting process and resolution of submitted comments, which have been agreed to and voted on by the members of the sponsoring HL7 Pharmacy Work Group",
+    "changes":"changes.html",
+    "first":false
+}
