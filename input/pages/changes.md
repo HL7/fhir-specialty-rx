@@ -1,7 +1,7 @@
 ### Changes and Updates in STU2
 The current official published version of the Specialty Medication Enrollment IG for FHIR R4 is 2.0.0 (STU2). 
 
-This version of the IG adds support for the requesting and sharing of patient consents and other authorizations associated that may be needed to fulfill a specialty product prescription. 
+This version of the IG adds support for requesting and sharing patient consents and other authorizations that may be needed to fulfill a specialty product prescription. 
 
 Included in this version is the following new content...
 <br/>
