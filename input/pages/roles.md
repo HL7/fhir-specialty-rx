@@ -4,9 +4,14 @@ The exchanges described in this implementation guide all support the goal of sup
 
 * As a party fulfilling the prescription, I need to retrieve patient clinical or coverage information from their medical records. 
   * *[Solicited Flow](systematic-queries.html#solicited-workflow-overview) section of [Systematic Query Workflows](systematic-queries.html)*
+  
 * As a party fulfilling the prescription, I need to ask a question of the prescriber or their staff. 
   * *[Information Flows Requiring Human Interaction](human-interaction.html)*
-* As the prescriber of the prescription, I want to proactively supply clinical or coverage information from the patient's medical records to a party fulfilling the prescription. 
+
+* As a party fulfilling the prescription, I need to request patient consent or other authorizations.
+  * *[Consent Workflows](consent-workflow.html)*
+
+* As the prescriber of the prescription, I want to proactively supply clinical, coverage or consent information from the patient's medical records to a party fulfilling the prescription. 
   * *[Unsolicited Flow](systematic-queries.html#unsolicited-workflow-overview) section of [Systematic Query Workflows](systematic-queries.html)*
 
 <p></p>
@@ -37,7 +42,8 @@ A Data Consumer System...
 
 - enables staff to request patient information from the prescriber's electronic health record (EHR) system using [RESTful searches](searches.html) or a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html)
 - if supporting Specialty Rx messaging, receives [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) and [Specialty Rx Query Response - Unsolicited](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) messages
-- enables staff to ask additional questions or request supporting information requiring human attention by prompting an EHR user to launch and interact with a SMART application, using a [Specialty Rx SMART Launch Task](StructureDefinition-specialty-rx-task-smart-launch.html).
+- enables staff to ask additional questions or request supporting information requiring human attention by prompting an EHR user to launch and interact with a SMART application, using a [Specialty Rx SMART Launch Task](StructureDefinition-specialty-rx-task-smart-launch.html)
+- enables staff to request patient consent or other authorizations using a [Specialty Rx Consent Request Task](StructureDefinition-specialty-rx-task-consent-request.html).
 
 #### Data Source System
 
@@ -45,9 +51,10 @@ The responding system in the Specialty Rx workflow is the EHR system used by the
 
 The Data Source system typically will...
 
-- ***If supporting RESTful Data Source interactions:*** Respond to RESTful patient matching and search requests based on data stored in the patient's electronic chart
-- ***If supporting Specialty Rx messaging:*** Respond systematically when a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html) is received, returning a [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) based on data stored in the patient's electronic chart. It may also send [Specialty Rx Query Response - Unsolicited](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) messages proactively when a prescription is written
+- *(If supporting RESTful Data Source interactions):* Respond to RESTful patient matching and search requests based on data stored in the patient's electronic chart
+- *(If supporting Specialty Rx messaging):* Respond systematically when a [Specialty Rx Query message](StructureDefinition-specialty-rx-bundle-query.html) is received, returning a [Specialty Rx Query Response](StructureDefinition-specialty-rx-bundle-query-response.html) based on data stored in the patient's electronic chart. It may also send [Specialty Rx Query Response - Unsolicited](StructureDefinition-specialty-rx-bundle-query-response-unsolicited.html) messages proactively when a prescription is written
 - Enable staff to respond to additional questions or supporting information requests that require human attention by accepting a [Specialty Rx SMART Launch Task](StructureDefinition-specialty-rx-task-smart-launch.html) and then prompting an EHR user to launch and interact with the requesting party's SMART application.
+- Enable staff to respond to a request for patient consent or other authorizations by accepting a [Specialty Rx Consent Request Task](StructureDefinition-specialty-rx-task-consent-request.html) and then enabling an EHR user to obtain authorization and update the task.
 
 #### Intermediary System
 

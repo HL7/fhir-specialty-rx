@@ -1,10 +1,5 @@
-intro text
-
-<p></p>
-
-
-### Background: Specialty Product Consents, Roles and Process
-Consents and authorizations supporting fulfillment of a specialty medication or other specialty product typically:
+### Background: Specialty Product Consent Process
+Typically, consents and authorizations needed during specialty product fulfillment...
 * are separate from consents obtained by the clinic or health system at which the specialty product order is being ordered
 * may be between the patient and a specialty pharmacy, manufacturer or patient support organization ("specialty HUB") for services and interactions not covered by general treatment and healthcare operations consent rules
 * include multiple aspects including release of clinical information, sharing of financial information, permission to be contacted by text message or other means, participation in research, etc.

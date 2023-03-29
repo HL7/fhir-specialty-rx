@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 
-# Messaging resources (MessageHeaders, Parameters, Search Bundles that are components of messages) don't have their own examples, but instead are illustrated in the full message examples. Relates to the following profiles: specialty-rx-bundle-search-result.xml (in examples specialty-rx-query-response-unsolicited-1 and -2), specialty-rx-messageheader-error.xml (in example specialty-rx-error-1), specialty-rx-messageheader-query.xml (in example specialty-rx-query-1), specialty-rx-messageheader-query-response.xml (in examples specialty-rx-query-response-1 -2 and  -3-w-op-outcome), specialty-rx-messageheader-query-response-unsolicited.xml (in example query-response-unsolicited-1), specialty-rx-parameters-query.xml (in example specialty-rx-query-1), specialty-rx-parameters-query-response.xml (in examples specialty-rx-query-response-1, -2 and  -3-w-op-outcome), specialty-rx-parameters-query-response-unsolicited.xml (in example query-response-unsolicited-1)
+# Messaging resources (MessageHeaders, Parameters, Search Bundles that are components of messages) don't have their own examples, but instead are illustrated in the full message examples
 The Implementation Guide contains no explicitly linked examples for this profile
 
 # The US Core Coverage profile is in version 6.0.0 which was recently balloted and has not yet been published
@@ -18,5 +18,5 @@ This element does not match any known slice defined in the profile http://hl7.or
 # This example intentionally includes an error in the search string, in order to illustrate an OperationOutcome response
 No types could be determined from the search string, so the types can''t be checked
 
-# The base R4 Consent StructureDefinition contains an error in the element.example value of Consent.identifier (Consent.identifier element, example.valueIdentifier.system = "urn:ietf:rfc:3986"). Confirmed with CBCP WG that it can be ignored
+# The base R4 Consent StructureDefinition contains an error in the element.example value of Consent.identifier. Confirmed with CBCP WG that it can be ignored
 if identifier.system is 'rn:ietf:rfc:3986', then the identifier.value must be a full URI (e.g. start with a scheme)
