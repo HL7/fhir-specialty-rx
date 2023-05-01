@@ -2,15 +2,15 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="specialty-rx-coverage" />
   <meta>
-    <lastUpdated value="2020-12-11T00:00:00-05:00" />
+    <lastUpdated value="2023-04-30T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-coverage" />
-  <version value="1.0.0" />
+  <version value="2.0.0" />
   <name value="SpecialtyRxCoverage" />
   <title value="Specialty Rx Coverage" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2020-12-11T00:00:00-05:00" />
+  <date value="2023-04-30T00:00:00-05:00" />
   <publisher value="HL7 International - Pharmacy" />
   <description value="This profile constrains the Coverage resource for carrying insurance coverage information in the specialty medication enrollment process" />
   <jurisdiction>
@@ -30,10 +30,36 @@
     <element id="Coverage">
       <path value="Coverage" />
     </element>
-	<element id="Coverage.identifier">
-      <path value="Coverage.identifier"/>
-      <short value="Member identifier"/>
-      <mustSupport value="true"/>
+    <element id="Coverage.identifier">
+      <path value="Coverage.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="type" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="Member ID and other identifiers" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:memberid">
+      <path value="Coverage.identifier" />
+      <sliceName value="memberid" />
+      <short value="Member ID" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:memberid.type">
+      <path value="Coverage.identifier.type" />
+      <short value="Member Number identifier type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <code value="MB" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Coverage.subscriberId">
       <path value="Coverage.subscriberId" />

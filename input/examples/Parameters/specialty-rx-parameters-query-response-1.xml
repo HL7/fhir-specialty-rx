@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Parameters xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value="specialty-rx-parameters-query-response-1"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response"/>
+	</meta>
+	<parameter>
+		<name value="responder-patient"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/Patient/patientEHR"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="requester-patient"/>
+		<valueReference>
+			<reference value="urn:uuid:2a87e733-8fe5-4dca-a9ae-bb24c36d41aa"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="urn:uuid:aecbb129-9a73-4b59-9d66-ff5cdb3f3164"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="urn:uuid:9ce2a97b-5cab-4986-814f-4734016e6084"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="urn:uuid:53a1e123-5b56-44ae-b7e8-36e0b9800f57"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="urn:uuid:82ae67e4-f23a-4c17-b80a-9076a37f5d6e"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="urn:uuid:6b28b7d5-95e1-485b-a0bc-2420a20635a8"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="urn:uuid:89b0b6ce-4a31-4718-b38a-798efab6c9e4"/>
+		</valueReference>
+	</parameter>
+</Parameters>

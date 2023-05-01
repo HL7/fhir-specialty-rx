@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Parameters xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value="specialty-rx-parameters-query-1"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query"/>
+	</meta>
+	<parameter>
+		<name value="query-string"/>
+		<valueString value="AllergyIntolerance?clinical-status=active"/>
+	</parameter>
+	<parameter>
+		<name value="query-string"/>
+		<valueString value="Condition?clinical-status=active"/>
+	</parameter>
+	<parameter>
+		<name value="query-string"/>
+		<valueString value="Coverage"/>
+	</parameter>
+	<parameter>
+		<name value="query-string"/>
+		<valueString value="Observation?category=vital-signs"/>
+	</parameter>
+	<parameter>
+		<name value="query-string"/>
+		<valueString value="Observation?category=laboratory"/>
+	</parameter>
+	<parameter>
+		<name value="query-string"/>
+		<valueString value="MedicationRequest"/>
+	</parameter>
+	<parameter>
+		<name value="requester-patient"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/Patient/patient1"/>
+		</valueReference>
+	</parameter>
+</Parameters>

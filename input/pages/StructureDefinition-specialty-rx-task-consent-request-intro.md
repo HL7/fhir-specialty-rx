@@ -1,11 +1,11 @@
-This profile defines use of the Task resource to...
+The profile...
 
-- request that consent be obtained to support fulfillment of a prescribed specialty product 
-- provide the appropriate consent form for the prescribed product
+- requests consent or authorizations to support fulfillment of a prescribed specialty product 
+- provides the appropriate consent form for the prescribed product
 
 <p></p>
 
-#### Important elements in this profile
+**Important elements in this profile:**
 
 - **Task.status**: "requested"
 - **Task.code**: "obtain-consent"

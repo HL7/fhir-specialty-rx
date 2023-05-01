@@ -1,1 +1,0 @@
-This profile defines the content of the Specialty Rx Query Response message bundle, which is used by a Data Source system to respond to a Specialty Rx Query message.

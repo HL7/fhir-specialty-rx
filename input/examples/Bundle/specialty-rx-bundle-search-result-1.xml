@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value="specialty-rx-bundle-search-result-1"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-bundle-search-result"/>
+	</meta>
+	<type value="searchset"/>
+	<timestamp value="2020-03-11T13:10:17-05:00"/>
+	<total value="3"/>
+	<link>
+		<relation value="self"/>
+		<url value="Condition?patient=specialty-rx-patient-1"/>
+	</link>
+	<entry>
+		<fullUrl value="http://example.org/MyEHR/Condition/1"/>
+		<resource>
+			<Condition>
+				<id value="1"/>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+						<code value="active"/>
+						<display value="Active"/>
+					</coding>
+					<text value="Active"/>
+				</clinicalStatus>
+				<verificationStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+						<code value="confirmed"/>
+						<display value="Confirmed"/>
+					</coding>
+					<text value="Confirmed"/>
+				</verificationStatus>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+						<code value="problem-list-item"/>
+						<display value="Problem List Item"/>
+					</coding>
+					<text value="Problem"/>
+				</category>
+				<code>
+                <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="13644009"/>
+                  <display value="Hypercholesterolemia (disorder)"/>
+                </coding>
+                <text value="Hypercholesterolemia (disorder)"/>
+              </code>
+				<subject>
+					<reference value="Patient/specialty-rx-patient-1"/>
+				</subject>
+			</Condition>
+		</resource>
+		<search>
+			<mode value="match"/>
+		</search>
+	</entry>
+	<entry>
+		<fullUrl value="http://example.org/MyEHR/Condition/2"/>
+		<resource>
+			<Condition>
+				<id value="2"/>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+						<code value="active"/>
+						<display value="Active"/>
+					</coding>
+					<text value="Active"/>
+				</clinicalStatus>
+				<verificationStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+						<code value="confirmed"/>
+						<display value="Confirmed"/>
+					</coding>
+					<text value="Confirmed"/>
+				</verificationStatus>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+						<code value="problem-list-item"/>
+						<display value="Problem List Item"/>
+					</coding>
+					<text value="Problem"/>
+				</category>
+				<code>
+                <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="84172003"/>
+                  <display value="Spondylitis (disorder)"/>
+                </coding>
+                <text value="Spondylitis (disorder)"/>
+              </code>
+				<subject>
+					<reference value="Patient/specialty-rx-patient-1"/>
+				</subject>
+			</Condition>
+		</resource>
+		<search>
+			<mode value="match"/>
+		</search>
+	</entry>
+	<entry>
+		<fullUrl value="http://example.org/MyEHR/Condition/3"/>
+		<resource>
+			<Condition>
+				<id value="3"/>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+						<code value="active"/>
+						<display value="Active"/>
+					</coding>
+					<text value="Active"/>
+				</clinicalStatus>
+				<verificationStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+						<code value="confirmed"/>
+						<display value="Confirmed"/>
+					</coding>
+					<text value="Confirmed"/>
+				</verificationStatus>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+						<code value="problem-list-item"/>
+						<display value="Problem List Item"/>
+					</coding>
+					<text value="Problem"/>
+				</category>
+				<code>
+                <coding>
+                  <system value="http://snomed.info/sct"/>
+                  <code value="427603009"/>
+                  <display value="Intermittent asthma (disorder)"/>
+                </coding>
+                <text value="Intermittent asthma (disorder)"/>
+              </code>
+				<subject>
+					<reference value="Patient/specialty-rx-patient-1"/>
+				</subject>
+			</Condition>
+		</resource>
+		<search>
+			<mode value="match"/>
+		</search>
+	</entry>
+</Bundle>

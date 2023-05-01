@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Parameters xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value="specialty-rx-parameters-query-response-unsolicited-1"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/specialty-rx/StructureDefinition/specialty-rx-parameters-query-response-unsolicited"/>
+	</meta>
+	<parameter>
+		<name value="source-patient"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/Patient/patientEHR"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="prescription"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/MedicationRequest/prescription1"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="pharmacy"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/Organization/pharmacy1"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="prescriber"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/Practitioner/practitioner1"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/Bundle/3456789"/>
+		</valueReference>
+	</parameter>
+	<parameter>
+		<name value="search-result"/>
+		<valueReference>
+			<reference value="http://example.org/MyEHR/Bundle/987654"/>
+		</valueReference>
+	</parameter>
+</Parameters>
