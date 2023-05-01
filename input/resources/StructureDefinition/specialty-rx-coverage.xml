@@ -45,7 +45,7 @@
     <element id="Coverage.identifier:memberid">
       <path value="Coverage.identifier" />
       <sliceName value="memberid" />
-      <short value="Member ID" />
+      <short value="Member ID assigned by health plan" />
       <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
@@ -63,7 +63,7 @@
     </element>
     <element id="Coverage.subscriberId">
       <path value="Coverage.subscriberId" />
-      <short value="Health Plan Subscriber ID" />
+      <short value="ID assigned to the subscriber by the health plan" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.payor">
