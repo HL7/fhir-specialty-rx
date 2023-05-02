@@ -156,8 +156,8 @@
     <element id="Coverage.class:pbm-member-id">
       <path value="Coverage.class" />
       <sliceName value="pbm-member-id" />
-      <label value="PBM Member ID" />
-      <short value="PBM Member ID" />
+      <label value="Member ID assigned by the pharmacy benefit manager (PBM)" />
+      <short value="Member ID assigned by the pharmacy benefit manager (PBM)" />
       <definition value="The patient's pharmacy benefit member ID (which may differ from their overall health insurance ID)" />
       <max value="1" />
       <mustSupport value="true" />
