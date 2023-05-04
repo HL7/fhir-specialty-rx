@@ -12,4 +12,4 @@ The Coverage elements available to be used by the Specialty Rx process include:
 
 **Must Support elements.** The elements identified as Must Support are the typical set used in US pharmacy benefit processing.  
 
-**Note:**  This Coverage profile is pharmacy benefits-focused. For additional guidance on population of health plan benefits see the US Core Coverage profile.
+**Note:**  This Coverage profile is pharmacy benefits-focused. For additional guidance on population of health plan benefits see the [US Core Coverage profile](https://hl7.org/fhir/us/core/STU6/StructureDefinition/us-core-coverage).
