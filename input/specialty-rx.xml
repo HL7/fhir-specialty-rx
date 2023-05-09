@@ -11,7 +11,7 @@
 		</div>
 	</text>
 	<url value="http://hl7.org/fhir/us/specialty-rx/ImplementationGuide/specialty-rx"/>
-	<version value="2.0.0"/>
+	<version value="2.1.0"/>
 	<name value="SpecialtyRx"/>
 	<title value="Specialty Medication Enrollment"/>
 	<status value="active"/>
@@ -643,7 +643,7 @@
 		</parameter>
 		<parameter>
 			<code value="releaselabel"/>
-			<value value="STU2 US"/>
+			<value value="CI Build"/>
 		</parameter>
 		<parameter>
 			<code value="path-expansion-params"/>
